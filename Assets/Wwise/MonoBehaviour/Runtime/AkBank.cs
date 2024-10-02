@@ -30,6 +30,8 @@ public class AkBank : AkTriggerHandler
 	/// Decode this SoundBank upon load
 	public bool decodeBank = false;
 
+	public bool overrideLoadSetting = false;
+
 	/// Check this to load the SoundBank in the background. Be careful, if Events are triggered and the SoundBank hasn't finished loading, you'll have "Event not found" errors.
 	public bool loadAsynchronous = false;
 
@@ -44,7 +46,9 @@ public class AkBank : AkTriggerHandler
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+		{
 			return;
+		}
 
 		var reference = AkWwiseTypes.DragAndDropObjectReference;
 		if (reference)
@@ -53,6 +57,7 @@ public class AkBank : AkTriggerHandler
 			data.ObjectReference = reference;
 			AkWwiseTypes.DragAndDropObjectReference = null;
 		}
+		AkSoundEngineInitialization.Instance.initializationDelegate += HandleEvent;
 #endif
 
 		base.Awake();
@@ -60,27 +65,60 @@ public class AkBank : AkTriggerHandler
 		RegisterTriggers(unloadTriggerList, UnloadBank);
 	}
 
+
+#if UNITY_EDITOR
+	public override void OnEnable()
+	{
+		if (UnityEditor.BuildPipeline.isBuildingPlayer)
+        {
+			return;
+        }
+		if (!UnityEditor.EditorApplication.isPlaying)
+		{
+			HandleEvent();
+		}
+		base.OnEnable();
+	}
+#endif
 	protected override void Start()
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+		{
 			return;
+		}
 #endif
 
 		base.Start();
 
 		//Call the UnloadBank function if registered to the Start Trigger
 		if (unloadTriggerList.Contains(START_TRIGGER_ID))
+		{
 			UnloadBank(null);
+		}
 	}
 
 	/// Loads the SoundBank
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
 	{
-		if (!loadAsynchronous)
-			data.Load(decodeBank, saveDecodedBank);
-		else
+		bool asyncResult = loadAsynchronous;
+		if(!overrideLoadSetting)
+		{
+			asyncResult = AkWwiseInitializationSettings.ActivePlatformSettings.LoadBanksAsynchronously;
+		}
+		if (asyncResult)
+		{
 			data.LoadAsync();
+		}
+		else
+		{
+			data.Load(decodeBank, saveDecodedBank);
+		}
+	}
+
+	private void HandleEvent()
+	{
+		HandleEvent(gameObject);
 	}
 
 	/// Unloads a SoundBank
@@ -93,7 +131,10 @@ public class AkBank : AkTriggerHandler
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+		{
 			return;
+		}
+		AkSoundEngineInitialization.Instance.initializationDelegate -= HandleEvent;
 #endif
 
 		base.OnDestroy();

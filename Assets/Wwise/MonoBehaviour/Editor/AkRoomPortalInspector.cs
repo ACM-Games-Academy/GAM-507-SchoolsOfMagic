@@ -89,7 +89,7 @@ public class AkRoomPortalInspector : UnityEditor.Editor
 				UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
 
 				UnityEditor.EditorGUILayout.HelpBox(
-					"Front and back rooms are identical. The AkRoomPortal will not be sent to Spatial Audio.",
+					"Portal placement is invalid. It will not be set in the Spatial Audio engine. The front and back Rooms of the Portal cannot be the same or have a ReverbZone-parent relationship.",
 					UnityEditor.MessageType.Warning);
 			}
 		}

@@ -89,6 +89,7 @@ public static class AkCallbackManager
 		{
 			if (io_Flags == 0 || in_cb == null)
 			{
+				io_Flags = 0;
 				return null;
 			}
 

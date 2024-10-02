@@ -33,6 +33,7 @@ public class AkEventCallbackMsg
 }
 
 [UnityEngine.AddComponentMenu("Wwise/AkEvent")]
+[UnityEngine.ExecuteInEditMode]
 [UnityEngine.RequireComponent(typeof(AkGameObj))]
 /// @brief Helper class that knows a Wwise Event and when to trigger it in Unity. As of 2017.2.0, the AkEvent inspector has buttons for play/stop, play multiple, stop multiple, and stop all.
 /// Play/Stop will play or stop the event such that it can be previewed both in edit mode and play mode. When multiple objects are selected, Play Multiple and Stop Multiple will play or stop the associated AkEvent for each object.
@@ -79,10 +80,24 @@ public class AkEvent : AkDragDropTriggerHandler
 	/// Game object onto which the Event will be posted.  By default, when empty, it is posted on the same object on which the component was added.
 	public UnityEngine.GameObject soundEmitterObject;
 
-	/// Duration of the fade, in milliseconds. See <a href="https://www.audiokinetic.com/library/edge/?source=SDK&id=namespace_a_k_1_1_sound_engine_ac55e3d6ac464b0579a8487c88a755d8c.html" target="_blank">AK::SoundEngine::ExecuteEventOnAction()</a>.
+	/// Duration of the fade.  See AK::SoundEngine::ExecuteEventOnAction()
 	public float transitionDuration = 0.0f;
 
 	private AkEventCallbackMsg EventCallbackMsg = null;
+	
+	protected override void Awake()
+	{
+		base.Awake();
+#if UNITY_EDITOR
+		var reference = AkWwiseTypes.DragAndDropObjectReference;
+		if (reference)
+		{
+			UnityEngine.GUIUtility.hotControl = 0;
+			data.ObjectReference = reference;
+			AkWwiseTypes.DragAndDropObjectReference = null;
+		}
+#endif
+	}
 
 	protected override void Start()
 	{
@@ -92,7 +107,9 @@ public class AkEvent : AkDragDropTriggerHandler
 #endif
 
 		if (useCallbacks)
+		{
 			EventCallbackMsg = new AkEventCallbackMsg { sender = gameObject };
+		}
 
 		soundEmitterObject = gameObject;
 
@@ -105,7 +122,9 @@ public class AkEvent : AkDragDropTriggerHandler
 		EventCallbackMsg.info = in_info;
 
 		for (var i = 0; i < Callbacks.Count; ++i)
+		{
 			Callbacks[i].CallFunction(EventCallbackMsg);
+		}
 	}
 
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
@@ -124,10 +143,8 @@ public class AkEvent : AkDragDropTriggerHandler
 			uint flags = 0;
 			for (var i = 0; i < Callbacks.Count; ++i)
 			{
-				if (Callbacks[i].GameObject)
-				{
+				if (Callbacks[i].GameObject && !string.IsNullOrEmpty(Callbacks[i].FunctionName))
 					flags |= Callbacks[i].Flags.value;
-				}
 			}
 
 			if (flags != 0)

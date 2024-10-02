@@ -30,6 +30,8 @@ public class AkMacBuildPreprocessor
 		{
 			WwisePlatformName = "Mac"
 		});
+		
+		WwiseSetupWizard.AddBuildTargetGroup(UnityEditor.BuildTargetGroup.Standalone);
 	}
 }
 #endif

@@ -32,6 +32,7 @@ public class AkWindowsBuildPreprocessor
 		};
 		AkBuildPreprocessor.RegisterBuildTarget(UnityEditor.BuildTarget.StandaloneWindows, buildConfig);
 		AkBuildPreprocessor.RegisterBuildTarget(UnityEditor.BuildTarget.StandaloneWindows64, buildConfig);
+		WwiseSetupWizard.AddBuildTargetGroup(UnityEditor.BuildTargetGroup.Standalone);
 	}
 }
 #endif
