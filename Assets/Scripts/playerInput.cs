@@ -28,22 +28,19 @@ public class playerInput : MonoBehaviour
 
     public Vector2 getCameraInput()
     {
+        cameraInput = playerLook.ReadValue<Vector2>();
         return cameraInput;
     }
     
     public Vector2 GetMovementInput()
     {
+        movementInput = playerMovement.ReadValue<Vector2>();
         return movementInput;   
     }
-    
-    
-    // Update is called once per frame
-    void Update()
+
+    private void OnDisabled()
     {
-        cameraInput = playerLook.ReadValue<Vector2>();
-        movementInput = playerMovement.ReadValue<Vector2>();
-        
-        Debug.Log("Camera movement is: " + cameraInput);
-        //Debug.Log("General movement is: " + movementInput);
+        playerMovement.Disable();
+        playerLook.Disable();
     }
 }
