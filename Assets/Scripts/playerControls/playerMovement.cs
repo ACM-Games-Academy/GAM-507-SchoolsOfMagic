@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerScript : MonoBehaviour
+public class playerMovement : MonoBehaviour
 {
     public Vector3 velocity;
     public Vector3 cameraDirection;
     public CharacterController controller;
     public Camera camera;
+    public playerInput inputModule;
     [Header("Weapon System")]
     public weapon heldWeapon;
     public weapon[] weapons;
@@ -42,8 +43,8 @@ public class playerScript : MonoBehaviour
 
     void CameraUpdate()
     {
-        cameraDirection.y += Input.GetAxis("Mouse X");
-        cameraDirection.x = Mathf.Clamp(cameraDirection.x - Input.GetAxis("Mouse Y"), -90, 90);
+        cameraDirection.y += inputModule.getCameraInput().x;
+        cameraDirection.x = Mathf.Clamp(cameraDirection.x - inputModule.getCameraInput().y, -90, 90);
 
         transform.rotation = Quaternion.Euler(0, cameraDirection.y, 0);
         camera.transform.rotation = Quaternion.Euler(cameraDirection.x, transform.eulerAngles.y, 0);
@@ -51,7 +52,7 @@ public class playerScript : MonoBehaviour
 
     void MovementUpdate()
     {
-        Vector2 leftStick = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        Vector2 leftStick = inputModule.GetMovementInput().normalized;
         if (controller.isGrounded)
         {
             velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * movementSpeed, velocity.y, leftStick.y * movementSpeed), Time.deltaTime * groundedAcceleration);

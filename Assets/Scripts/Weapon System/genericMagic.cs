@@ -16,7 +16,7 @@ public class genericMagic : weapon
 
     }
 
-    public override void HeldUpdate(playerScript player)
+    public override void HeldUpdate(playerMovement player)
     {
         base.HeldUpdate(player);
     }

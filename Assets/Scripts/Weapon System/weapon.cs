@@ -25,7 +25,7 @@ public class weapon : MonoBehaviour
 
     }
 
-    public virtual void HeldUpdate(playerScript player)
+    public virtual void HeldUpdate(playerMovement player)
     {
         transform.position = player.transform.position;
         transform.rotation = player.transform.rotation;
