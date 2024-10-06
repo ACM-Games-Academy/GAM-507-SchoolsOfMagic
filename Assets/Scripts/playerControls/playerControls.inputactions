@@ -219,8 +219,30 @@
                 },
                 {
                     "name": "",
+                    "id": "9f78b2a9-b596-4277-8be6-f295b4d39ee4",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "primaryAbility",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "04312440-bfdc-4031-8ce4-1a0c0ee35a0f",
                     "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "secondaryAbility",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3de4db1e-c85d-4cd4-aa5f-27a196847efd",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

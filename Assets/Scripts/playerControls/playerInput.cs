@@ -12,13 +12,10 @@ public class playerInput : MonoBehaviour
     private Vector2 movementInput;
     private Vector2 cameraInput;
 
-    void Awake()
-    {
-        controls = new PlayerControls();
-    }
-
     void OnEnable()
     {
+        controls = new PlayerControls();    
+
         playerMovement = controls.Player.Move;
         playerLook = controls.Player.Camera;
 
