@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AFED8336-CD5E-496F-ACCA-854FF401F669}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{AFED8336-CD5E-496F-ACCA-854FF401F669}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AFED8336-CD5E-496F-ACCA-854FF401F669}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="WizardStates" ID="{A6FD0577-0528-4F0B-916A-408060315CD6}">
+					<ChildrenList>
+						<State Name="None" ID="{51803136-7B20-40B7-BF0A-32DD981D7BD7}"/>
+						<State Name="Nature" ID="{72F99C31-2C61-459A-A0D2-5DBE3A4F472A}"/>
+						<State Name="Arcane" ID="{B26EE7D3-25A0-4DE0-B64E-41564C573823}"/>
+						<State Name="Metal" ID="{937A2B04-1DD3-4846-AF7F-E5D9C7F3E961}"/>
+						<State Name="Blood" ID="{2F0E5191-6EDD-4189-84DA-20764E41973D}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
