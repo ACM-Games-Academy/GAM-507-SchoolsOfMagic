@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Nature Wizard SFX" ID="{351D93AA-33F3-4EB2-A563-0099DB5A64B5}" ShortID="151779847"/>
+				<Folder Name="Blood Wizard SFX" ID="{D4C1D137-0E34-4D04-B4A8-DB351AC9EAF1}" ShortID="610960724"/>
+				<Folder Name="Metal Wizard SFX" ID="{6FA3C4CF-B737-4858-ACB8-E334E87846B2}" ShortID="44641392"/>
+				<Folder Name="Arcane Wizard SFX" ID="{C135387E-17B0-497F-9687-1531B940EE55}" ShortID="723326362"/>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
