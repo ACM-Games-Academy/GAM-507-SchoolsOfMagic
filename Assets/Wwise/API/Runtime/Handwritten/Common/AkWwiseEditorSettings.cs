@@ -42,6 +42,7 @@ public class WwiseSettings
 	public bool CreateWwiseGlobal = true;
 	public bool CreateWwiseListener = true;
 	public bool ObjectReferenceAutoCleanup = true;
+	public bool LoadSoundEngineInEditMode = true;
 	public bool ShowMissingRigidBodyWarning = true;
 	public bool ShowSpatialAudioWarningMsg = true;
 	public string WwiseInstallationPathMac;
@@ -113,12 +114,7 @@ public class WwiseSettings
 					baseDir = System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(platformSoundBankPaths.Values.First()));
 				}
 			}
-
-			var wwiseProjectPath = System.IO.Path.Combine(UnityEngine.Application.dataPath, System.IO.Path.GetDirectoryName(settings.WwiseProjectPath));
-			wwiseProjectPath = System.IO.Path.GetFullPath(wwiseProjectPath);
-			var generatedSoundbanksDir = System.IO.Path.Combine(wwiseProjectPath, baseDir);
-			generatedSoundbanksDir = System.IO.Path.GetFullPath(generatedSoundbanksDir);
-			generatedSoundbanksDir = generatedSoundbanksDir.Remove(0, (UnityEngine.Application.dataPath + "/").Length);
+			var generatedSoundbanksDir = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(settings.WwiseProjectPath), baseDir);
 			settings.GeneratedSoundbanksPath = generatedSoundbanksDir;
 		}
 		settings.CheckGeneratedBanksPath();
@@ -219,6 +215,7 @@ public class AkWwiseEditorSettings
 			public static UnityEngine.GUIContent CreateWwiseGlobal = new UnityEngine.GUIContent("Create WwiseGlobal GameObject", "The WwiseGlobal object is a GameObject that contains the Initializing and Terminating scripts for the Wwise Sound Engine. In the Editor workflow, it is added to every scene, so that it can be properly previewed in the Editor. In the game, only one instance is created, in the first scene, and it is persisted throughout the game. It is recommended to leave this box checked.");
 			public static UnityEngine.GUIContent CreateWwiseListener = new UnityEngine.GUIContent("Add Listener to Main Camera", "In order for positioning to work, the AkAudioListener script needs to be attached to the main camera in every scene. If you wish for your listener to be attached to another GameObject, uncheck this box.");
 			public static UnityEngine.GUIContent ObjectReferenceAutoCleanup = new UnityEngine.GUIContent("Auto-delete WwiseObjectReferences", "Components that reference Wwise objects such as Events, Banks, and Busses track these references using WwiseObjectReference assets that are created in the Wwise/ScriptableObjects folder. If this option is checked and a Wwise Object has been removed from the Wwise Project, when parsing the Wwise project structure, the corresponding asset in the Wwise/ScriptableObjects folder will be deleted.");
+			public static UnityEngine.GUIContent LoadSoundEngineInEditMode = new UnityEngine.GUIContent("Load Sound Engine in Edit Mode", "Load the Sound Engine in Edit Mode. Disable this setting to verify the Sound Engine is properly enabled in-game.");
 
 			public static string InEditorWarnings = "In Editor Warnings";
 			public static UnityEngine.GUIContent ShowSpatialAudioWarningMsg = new UnityEngine.GUIContent("Show Spatial Audio Warnings", "Warnings will be displayed on Wwise components that are not configured for Spatial Audio to function properly. It is recommended to leave this box checked.");
@@ -278,6 +275,19 @@ public class AkWwiseEditorSettings
 		public static UnityEditor.SettingsProvider CreateMyCustomSettingsProvider()
 		{
 			return new SettingsProvider("Project/Wwise Editor") { keywords = GetSearchKeywordsFromGUIContentProperties<Styles>() };
+		}
+
+		public override void OnDeactivate()
+		{
+			base.OnDeactivate();
+			if(Instance.LoadSoundEngineInEditMode && !AkSoundEngine.IsInitialized())
+			{
+				AkSoundEngineInitialization.Instance.InitializeSoundEngine();
+			}
+			else if (!Instance.LoadSoundEngineInEditMode && AkSoundEngine.IsInitialized())
+			{
+				AkSoundEngineInitialization.Instance.TerminateSoundEngine();
+			}
 		}
 
 		public override void OnGUI(string searchContext)
@@ -475,6 +485,7 @@ public class AkWwiseEditorSettings
 				settings.CreateWwiseGlobal = UnityEditor.EditorGUILayout.Toggle(Styles.CreateWwiseGlobal, settings.CreateWwiseGlobal);
 				settings.CreateWwiseListener = UnityEditor.EditorGUILayout.Toggle(Styles.CreateWwiseListener, settings.CreateWwiseListener);
 				settings.ObjectReferenceAutoCleanup = UnityEditor.EditorGUILayout.Toggle(Styles.ObjectReferenceAutoCleanup, settings.ObjectReferenceAutoCleanup);
+				settings.LoadSoundEngineInEditMode = UnityEditor.EditorGUILayout.Toggle(Styles.LoadSoundEngineInEditMode, settings.LoadSoundEngineInEditMode);
 			}
 
 			UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);

@@ -15,7 +15,10 @@ in a written agreement between you and Audiokinetic Inc.
 Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
-﻿#if UNITY_EDITOR
+#if UNITY_EDITOR
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using UnityEditor;
 public class WwiseSetupWizard
 {
 	public static void RunModify()
@@ -419,6 +422,8 @@ public class WwiseSetupWizard
 
 	public static void PerformMigration(int migrateStart)
 	{
+		AkUtilities.BeginMigration(migrateStart);
+
 		UpdateProgressBar(0);
 
 		UnityEngine.Debug.Log("WwiseUnity: Migrating from Unity Integration Version " + migrateStart + " to " + AkUtilities.MigrationStopIndex);
@@ -430,7 +435,7 @@ public class WwiseSetupWizard
 		// Get the name of the currently opened scene.
 		var activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 		var loadedScenePath = activeScene.path;
-		
+
 		if (!string.IsNullOrEmpty(loadedScenePath))
 			AkUtilities.FixSlashes(ref loadedScenePath, '\\', '/', false);
 
@@ -439,31 +444,47 @@ public class WwiseSetupWizard
 		// obtain a list of ScriptableObjects before any migration is performed
 		ScriptableObjectGuids = UnityEditor.AssetDatabase.FindAssets("t:ScriptableObject", new[] { "Assets" });
 
-		AkUtilities.BeginMigration(migrateStart);
-
 		if (AkUtilities.IsMigrationRequired(AkUtilities.MigrationStep.NewScriptableObjectFolder_v2019_2_0))
 		{
 			var oldScriptableObjectPath = System.IO.Path.Combine(System.IO.Path.Combine("Assets", "Wwise"), "Resources");
 			AkUtilities.MoveFolder(oldScriptableObjectPath, AkWwiseEditorSettings.WwiseScriptableObjectRelativePath);
 		}
 
+		if (!UnityEditor.AssetDatabase.IsValidFolder(AkWwiseEditorSettings.WwiseScriptableObjectRelativePath))
+		{
+			UnityEngine.Debug.LogFormat("WwiseUnity: Creating ScriptableObjects folder at <{0}>", AkWwiseEditorSettings.WwiseScriptableObjectRelativePath);
+			AkUtilities.CreateFolder(AkWwiseEditorSettings.WwiseScriptableObjectRelativePath);
+		}
+
 		AkWwiseProjectInfo.GetData().Migrate();
 		AkWwiseWWUBuilder.UpdateWwiseObjectReferenceData();
 
+		UnityEngine.Debug.LogFormat("WwiseUnity: Migrating Prefabs...");
 		MigratePrefabs();
+		UnityEngine.Debug.LogFormat("WwiseUnity: Done migrating Prefabs");
+		
+		UnityEngine.Debug.LogFormat("WwiseUnity: Migrating Scenes...");
 		MigrateScenes();
+		UnityEngine.Debug.LogFormat("WwiseUnity: Done migrating Scenes");
+		
+		UnityEngine.Debug.LogFormat("WwiseUnity: Migrating ScriptableObjects...");
 		MigrateScriptableObjects();
+		UnityEngine.Debug.LogFormat("WwiseUnity: Done migrating ScriptableObjects");
 
 		UnityEditor.EditorUtility.UnloadUnusedAssetsImmediate();
-
+		
 		UnityEditor.SceneManagement.EditorSceneManager.NewScene(UnityEditor.SceneManagement.NewSceneSetup.DefaultGameObjects);
 		AkUtilities.EndMigration();
-
+		
 		UpdateProgressBar(TotalNumberOfSections);
 
 		// Reopen the scene that was opened before the migration process started.
 		if (!string.IsNullOrEmpty(loadedScenePath))
+		{
 			UnityEditor.SceneManagement.EditorSceneManager.OpenScene(loadedScenePath);
+		}
+
+		SetAddressablesDefines();
 
 		UnityEngine.Debug.Log("WwiseUnity: Removing lock for launcher.");
 
@@ -490,6 +511,8 @@ public class WwiseSetupWizard
 		AkPluginActivator.DeactivateAllPlugins();
 		AkPluginActivator.Update();
 		AkPluginActivator.ActivatePluginsForEditor();
+		
+		SetAddressablesDefines();
 	}
 
 	// Perform all necessary steps to use the Wwise Unity integration.
@@ -538,6 +561,38 @@ public class WwiseSetupWizard
 
 		// 11. Activate XboxOne network sockets.
 		AkXboxOneUtils.EnableXboxOneNetworkSockets();
+		
+		// 12. Add addressables version define
+		SetAddressablesDefines();
+	}
+
+	private static HashSet<BuildTargetGroup> AvailableBuildTargetGroups = new HashSet<BuildTargetGroup>();
+
+	public static void AddBuildTargetGroup(BuildTargetGroup NewGroup)
+	{
+		AvailableBuildTargetGroups.Add(NewGroup);
+	}
+	private static void SetAddressablesDefines()
+	{
+		string wwiseVersion = AkSoundEngine.WwiseVersion;
+		string shortWwiseVersion = wwiseVersion.Substring(0, 4);
+		int wwiseVersionAsInteger = int.Parse(shortWwiseVersion);
+		string wwiseAddressablePost2023 = "WWISE_ADDRESSABLES_POST_2023";
+
+		if (wwiseVersionAsInteger >= 2023)
+		{
+			foreach (var TargetGroup in AvailableBuildTargetGroups)
+			{
+				string defines = PlayerSettings.GetScriptingDefineSymbolsForGroup(TargetGroup);
+				Match match = Regex.Match(defines, wwiseAddressablePost2023);
+				if (!match.Success)
+				{
+					defines += ";" + wwiseAddressablePost2023;
+				}
+
+				PlayerSettings.SetScriptingDefineSymbolsForGroup(TargetGroup, defines);
+			}
+		}
 	}
 
 	// Create a Wwise Global object containing the initializer and terminator scripts. Set the SoundBank path of the initializer script.

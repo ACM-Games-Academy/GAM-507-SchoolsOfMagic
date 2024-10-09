@@ -33,8 +33,12 @@ public abstract class AkBaseInspector : UnityEditor.Editor
 		using (new UnityEngine.GUILayout.HorizontalScope("box"))
 			UnityEditor.EditorGUILayout.PropertyField(serializedObject.FindProperty("data"), new UnityEngine.GUIContent("Name: "));
 
-		if (serializedObject.ApplyModifiedProperties() && UnityEngine.GUI.changed)
+		serializedObject.ApplyModifiedProperties();
+
+		if (UnityEngine.GUI.changed)
+		{
 			UnityEditor.EditorUtility.SetDirty(serializedObject.targetObject);
+		}
 	}
 }
 #endif
