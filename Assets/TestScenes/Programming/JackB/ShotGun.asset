@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2caee3fcf652acf4cafa074ef126ff97, type: 3}
-  m_Name: Pistol
+  m_Script: {fileID: 11500000, guid: 46bb2d73608c251438f6e2387f4a2ccb, type: 3}
+  m_Name: ShotGun
   m_EditorClassIdentifier: 
-  magazineCapacity: 10
-  fireRate: 0.1
+  magazineCapacity: 30
+  fireRate: 1
   bulletSpread: 0.05
+  bulletRange: 0
+  maxAmmo: 0
+  bulletFireEffect: {fileID: 6476493045043737330, guid: 504cf555f8c647740a626bd2d48d4be8, type: 3}
