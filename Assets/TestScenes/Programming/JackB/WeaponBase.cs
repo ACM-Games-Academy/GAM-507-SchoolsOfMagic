@@ -61,7 +61,7 @@ public class WeaponBase : MonoBehaviour
             Debug.Log("Out of ammo! Reload.");
         }
 
-        ammoCount.text = ("Current weapon: " + currentWeaponStats.name);
+      //  ammoCount.text = ("Current weapon: " + currentWeaponStats.name);
     }
 
     // Set the current weapon and its related properties
