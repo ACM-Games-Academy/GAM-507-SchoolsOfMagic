@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2570796037854814450}
-  - component: {fileID: 9162683542008599574}
+  - component: {fileID: 9108266336605214186}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -97,7 +97,7 @@ Transform:
   - {fileID: 1161406940426140224}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9162683542008599574
+--- !u!114 &9108266336605214186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,10 +106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7135344671489522682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09f5e9ea8bc0ebc40829d52c27ddf401, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a5bb108dcc31ec41b4f824e657c6df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStats: {fileID: 11400000, guid: 9413d9f155b5d0f45b6bc265fcdc54b0, type: 2}
+  weaponStats: {fileID: 11400000, guid: cae567ebae1ad4e4ba01349135609823, type: 2}
   bulletFireEffect: {fileID: 6279698459998768998}
   raycastOrigin: {fileID: 5076684761906984283}
 --- !u!1 &7436017945062256648

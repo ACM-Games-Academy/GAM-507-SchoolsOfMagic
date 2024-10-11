@@ -4905,10 +4905,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8140863717068360654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09f5e9ea8bc0ebc40829d52c27ddf401, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a5bb108dcc31ec41b4f824e657c6df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStats: {fileID: 11400000, guid: 7324caa41e62d534c8f67c7238d2b736, type: 2}
+  weaponStats: {fileID: 11400000, guid: bd40342fb37092148ae87de2f34eb2b8, type: 2}
   bulletFireEffect: {fileID: 341491197808259009}
   raycastOrigin: {fileID: 5233399388342057427}
 --- !u!1 &8434004570909906367
