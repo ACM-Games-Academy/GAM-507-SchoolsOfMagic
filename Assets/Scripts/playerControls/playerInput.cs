@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class playerInput : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class playerInput : MonoBehaviour
    
     private Vector2 movementInput;
     private Vector2 cameraInput;
+
+    [SerializeField] UnityEvent primaryFire;
+    [SerializeField] UnityEvent secondaryFire;
 
     void OnEnable()
     {
@@ -46,14 +50,14 @@ public class playerInput : MonoBehaviour
     }
 
     //This functions only calls when one of the abilities are performed from the input action asset
-    public void PrimaryAbility(InputAction.CallbackContext primary)
+    void PrimaryAbility(InputAction.CallbackContext primary)
     {
-        Debug.Log("Bang!");
+        primaryFire.Invoke();
     }
 
-    public void SecondaryAbility(InputAction.CallbackContext secondary)
+    void SecondaryAbility(InputAction.CallbackContext secondary)
     {
-        Debug.Log("Boom");
+        secondaryFire.Invoke();
     }
 
     private void OnDisabled()
