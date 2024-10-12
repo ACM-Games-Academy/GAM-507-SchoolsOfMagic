@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 11005846}
   - component: {fileID: 11005850}
   - component: {fileID: 11005851}
+  - component: {fileID: 11005853}
+  - component: {fileID: 11005852}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -293,6 +295,111 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerFiring:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1353560282}
+        m_TargetAssemblyTypeName: TestEventFire, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  classChangeOne:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11005853}
+        m_TargetAssemblyTypeName: TestEventChangeClass, Assembly-CSharp
+        m_MethodName: ClassOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  classChangeTwo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11005853}
+        m_TargetAssemblyTypeName: TestEventChangeClass, Assembly-CSharp
+        m_MethodName: ClassTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  classChangeThree:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11005853}
+        m_TargetAssemblyTypeName: TestEventChangeClass, Assembly-CSharp
+        m_MethodName: ClassThree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  classChangeFour:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11005853}
+        m_TargetAssemblyTypeName: TestEventChangeClass, Assembly-CSharp
+        m_MethodName: ClassFour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  movingAbility:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11005852}
+        m_TargetAssemblyTypeName: TestEventMovementChange, Assembly-CSharp
+        m_MethodName: MoveAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerRunning:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11005852}
+        m_TargetAssemblyTypeName: TestEventMovementChange, Assembly-CSharp
+        m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &11005851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +410,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bab7af531ac405849aeccc0d2f389dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11005852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471e7031d1612b4468c560afb0dddfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11005853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b7d3620312e1642aec2d05c1d781d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &679248786

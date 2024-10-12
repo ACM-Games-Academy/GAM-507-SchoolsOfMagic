@@ -13,4 +13,9 @@ public class TestEventFire : MonoBehaviour
     {
         Debug.Log("Secondary Fire!");
     }
+
+    public void Fire()
+    {
+        Debug.Log("Pew Pew");
+    }
 }
