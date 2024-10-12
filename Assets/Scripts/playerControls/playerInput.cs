@@ -9,12 +9,14 @@ public class playerInput : MonoBehaviour
     private PlayerControls controls;
     private InputAction playerMovement;
     private InputAction playerLook;
+    private InputAction playerJump;
     private InputAction playerPrimary; //This is the Variable for the Primary Ability
     private InputAction playerSecondary; //This is the Variable for the Second Ability
    
     private Vector2 movementInput;
     private Vector2 cameraInput;
 
+    [SerializeField] UnityEvent playerJumping;
     [SerializeField] UnityEvent primaryFire;
     [SerializeField] UnityEvent secondaryFire;
 
@@ -24,15 +26,18 @@ public class playerInput : MonoBehaviour
 
         playerMovement = controls.Player.Move;
         playerLook = controls.Player.Camera;
+        playerJump = controls.Player.Jump;
         playerPrimary = controls.Player.primaryAbility;
         playerSecondary = controls.Player.secondaryAbility;
 
         //Whenever the player presses either primary or secondary ability, this calls a function to happen
+        playerJump.performed += PlayerJump;
         playerPrimary.performed += PrimaryAbility;
         playerSecondary.performed += SecondaryAbility;
         
         playerMovement.Enable();
         playerLook.Enable();
+        playerJump.Enable();
         playerPrimary.Enable();
         playerSecondary.Enable();
     }
@@ -58,6 +63,11 @@ public class playerInput : MonoBehaviour
     void SecondaryAbility(InputAction.CallbackContext secondary)
     {
         secondaryFire.Invoke();
+    }
+
+    void PlayerJump(InputAction.CallbackContext jump)
+    {
+        playerJumping.Invoke();
     }
 
     private void OnDisabled()
