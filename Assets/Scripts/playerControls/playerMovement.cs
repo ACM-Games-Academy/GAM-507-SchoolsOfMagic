@@ -12,10 +12,12 @@ public class playerMovement : MonoBehaviour
     [Header("Weapon System")]
     public weapon heldWeapon;
     public weapon[] weapons;
+    public movementAbility movementAbility;
     [Header("Stats")]
     public float movementSpeed = 5;
     public float groundedAcceleration = 10;
     public float aerialAcceleration = 2.5f;
+    public float jumpHeight = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,14 @@ public class playerMovement : MonoBehaviour
 
     void CameraUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         cameraDirection.y += inputModule.getCameraInput().x;
         cameraDirection.x = Mathf.Clamp(cameraDirection.x - inputModule.getCameraInput().y, -90, 90);
 
@@ -52,6 +62,8 @@ public class playerMovement : MonoBehaviour
 
     void MovementUpdate()
     {
+        movementAbility.MovementUpdate(this);
+
         Vector2 leftStick = inputModule.GetMovementInput().normalized;
         if (controller.isGrounded)
         {
@@ -60,7 +72,7 @@ public class playerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-                velocity.y = 5;
+                velocity.y = jumpHeight;
             }
         }
         else
