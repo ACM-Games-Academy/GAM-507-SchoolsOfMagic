@@ -17,4 +17,8 @@ MonoBehaviour:
   bulletSpread: 0.05
   bulletRange: 0
   maxAmmo: 0
+  damage: 25
+  damageDropOffStart: 50
   bulletFireEffect: {fileID: 6476493045043737330, guid: 504cf555f8c647740a626bd2d48d4be8, type: 3}
+  isAutomatic: 0
+  reloadSpeed: 1.5
