@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -164,12 +164,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 13458613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1dabc48a981b6b4086839d31be3f026, type: 3}
+  m_Script: {fileID: 11500000, guid: c20f5da59ec649e4f86be18eeb9df59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponStatsArray:
-  - {fileID: 11400000, guid: a85304e097d413744b12cdf54a4575e5, type: 2}
-  - {fileID: 11400000, guid: 2d5a5005cc7db0b449900cacd87c38e9, type: 2}
+  - {fileID: 11400000, guid: 70ab65fa9ef677346befb80004d5eaba, type: 2}
+  - {fileID: 11400000, guid: 5a486bdd5797d2b48bac6c3fdd0a52c7, type: 2}
   raycastOrigin: {fileID: 1864936490}
   particleEffectSpawnPoint: {fileID: 410448454}
   playerSpeed: 5
