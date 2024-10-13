@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}" SchemaVersion="119">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Wizard OST Switch" ID="{91AFD251-23BD-4CFF-99C8-CAB70D733489}" ShortID="335851757">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{2585E820-136C-4DED-BB9E-87C550EFCCFD}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{46D8CCA5-3C08-499B-9D93-0CCFB0208ED5}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Arcane Wizard OST" ID="{76C3F4A7-AABE-48AB-B6E0-A84BDEE53740}" ShortID="807140077"/>
+						<Folder Name="Blood Wizard OST" ID="{0EB25B30-3D57-4651-A52B-8F314776FAA3}" ShortID="367406566"/>
+						<Folder Name="Metal Wizard OST" ID="{800F0C20-B1DA-450C-AB8C-257E49561B22}" ShortID="1072887461"/>
+						<Folder Name="Nature Wizard OST" ID="{24CC13D1-0791-4BED-BD66-A2874369BED1}" ShortID="307582265"/>
+					</ChildrenList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
