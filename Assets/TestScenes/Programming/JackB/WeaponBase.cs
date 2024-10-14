@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class WeaponBase : MonoBehaviour
 {
@@ -9,38 +10,76 @@ public class WeaponBase : MonoBehaviour
     private ParticleSystem bulletFireEffect;                     // Reference to the particle system
     private int currentAmmo;                                     // Ammo tracking
     private float nextFireTime;                                  // Fire rate control
-    private int currentWeaponIndex = 0;                          // To track which weapon is currently active
-    private WeaponStats currentWeaponStats;                      // To store the current weapon's stats
+    private int currentWeaponIndex = 0;                          // Track which weapon is currently active
+    private WeaponStats currentWeaponStats;                      // Store the current weapon's stats
+    private bool isShooting;                                     // Track whether automatic fire is enabled
+    private bool isReloading = false;                            // Track if the weapon is currently reloading
 
-    //temp
-    public TextMeshProUGUI currentWeapon, ammoCount;
+    // Player speed reduction vars
+    private float originalSpeed;
+    [SerializeField] private float playerSpeed = 5f;
+    [SerializeField] private float shootSpeedReduction;
+    [SerializeField] private float holdGunSpeedReduction;
 
+    // UI elements
+    public TextMeshProUGUI currentWeapon, ammoCount, reloadingNotif;
 
     private void Start()
     {
+        originalSpeed = playerSpeed; // Save the original player speed
+        reloadingNotif.text = ""; //Hide reload text
+
         if (weaponStatsArray.Length > 0)
         {
             SetWeapon(0); // Initialize the first weapon
+            reloadAmmoCount();
         }
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse button to fire
+        // Handle automatic or manual fire
+        if (Input.GetMouseButton(0) && currentWeaponStats.IsAutomatic && !isReloading)
+        {
+            isShooting = true;
+            Fire();
+        }
+        else if (Input.GetMouseButtonDown(0) && !currentWeaponStats.IsAutomatic && !isReloading)
         {
             Fire();
         }
 
-        // Switch weapon with number keys 
-        if (Input.GetKeyDown(KeyCode.Alpha1)){SetWeapon(0);}
-        if (Input.GetKeyDown(KeyCode.Alpha2)){SetWeapon(1);}
+        // Stop firing when mouse button is released
+        if (Input.GetMouseButtonUp(0))
+        {
+            isShooting = false;
+        }
 
+        // Switch weapon with number keys 
+        if (Input.GetKeyDown(KeyCode.Alpha1)) { SetWeapon(0); }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) { SetWeapon(1); }
+
+        // Adjust player speed while holding gun or shooting
+        if (isShooting)
+        {
+            playerSpeed = originalSpeed - shootSpeedReduction;
+        }
+        else
+        {
+            playerSpeed = originalSpeed - holdGunSpeedReduction;
+        }
+
+        // Reload when 'R' key is pressed and not already reloading
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
+        {
+            StartCoroutine(ReloadCoroutine());
+        }
     }
 
     public virtual void Fire()
     {
-        if (Time.time < nextFireTime)
-            return; // Wait until the next fire time
+        if (Time.time < nextFireTime || isReloading)
+            return; // Wait until the next fire time or finish reloading
 
         if (currentAmmo > 0)
         {
@@ -61,7 +100,8 @@ public class WeaponBase : MonoBehaviour
             Debug.Log("Out of ammo! Reload.");
         }
 
-      //  ammoCount.text = ("Current weapon: " + currentWeaponStats.name);
+        reloadAmmoCount();
+
     }
 
     // Set the current weapon and its related properties
@@ -78,6 +118,7 @@ public class WeaponBase : MonoBehaviour
 
         // Initialize ammo for the new weapon
         currentAmmo = currentWeaponStats.MagazineCapacity;
+        reloadAmmoCount();
 
         // Destroy the previous particle system if it exists
         if (bulletFireEffect != null)
@@ -93,9 +134,8 @@ public class WeaponBase : MonoBehaviour
                                            particleEffectSpawnPoint.rotation,
                                            particleEffectSpawnPoint);
         }
-
-        Debug.Log("Switched to: " + currentWeaponStats.name);
         currentWeapon.text = ("Current weapon: " + currentWeaponStats.name);
+        reloadAmmoCount();
     }
 
     // Placeholder for raycasting logic
@@ -108,9 +148,11 @@ public class WeaponBase : MonoBehaviour
                               Random.Range(-currentWeaponStats.BulletSpread, currentWeaponStats.BulletSpread), 0);
         spread.Normalize();
 
-        if (Physics.Raycast(raycastOrigin.position, spread, out hit))
+        if (Physics.Raycast(raycastOrigin.position, spread, out hit, currentWeaponStats.BulletRange))
         {
-            Debug.Log("Hit: " + hit.collider.name);
+            // Apply damage based on distance
+            float damage = CalculateDamage(hit.distance);
+            Debug.Log("Hit: " + hit.collider.name + " with damage: " + damage);
         }
         else
         {
@@ -118,9 +160,37 @@ public class WeaponBase : MonoBehaviour
         }
     }
 
-    public virtual void Reload()
+    // Calculate damage with drop-off over distance
+    private float CalculateDamage(float distance)
     {
+        if (distance <= currentWeaponStats.DamageDropOffStart)
+        {
+            return currentWeaponStats.Damage;
+        }
+
+        float damageFalloff = (distance - currentWeaponStats.DamageDropOffStart) / (currentWeaponStats.BulletRange - currentWeaponStats.DamageDropOffStart);
+        return Mathf.Clamp(currentWeaponStats.Damage * (1 - damageFalloff), 0, currentWeaponStats.Damage);
+    }
+
+    // Coroutine to handle reloading speed based on reloadSpeed
+    private IEnumerator ReloadCoroutine()
+    {
+        isReloading = true;
+        reloadingNotif.text = "Reloading...";
+
+
+        yield return new WaitForSeconds(currentWeaponStats.ReloadSpeed);
+
         currentAmmo = currentWeaponStats.MagazineCapacity;
-        Debug.Log("Reloading... Ammo refilled.");
+        reloadAmmoCount();
+
+        reloadingNotif.text = ""; // Clear reloading notification
+        isReloading = false;
+
+    }
+
+    public void reloadAmmoCount()
+    {
+        ammoCount.text = $"Ammo: {currentAmmo}/{currentWeaponStats.MagazineCapacity}";
     }
 }

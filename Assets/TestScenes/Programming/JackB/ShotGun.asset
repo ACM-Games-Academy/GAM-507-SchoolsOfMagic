@@ -9,12 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46bb2d73608c251438f6e2387f4a2ccb, type: 3}
+  m_Script: {fileID: 11500000, guid: 136dc0cfd3ab9804496cecf5152f11d9, type: 3}
   m_Name: ShotGun
   m_EditorClassIdentifier: 
-  magazineCapacity: 30
+  magazineCapacity: 10
   fireRate: 1
   bulletSpread: 0.05
-  bulletRange: 0
-  maxAmmo: 0
-  bulletFireEffect: {fileID: 6476493045043737330, guid: 504cf555f8c647740a626bd2d48d4be8, type: 3}
+  bulletRange: 100
+  maxAmmo: 120
+  damage: 25
+  damageDropOffStart: 50
+  bulletFireEffect: {fileID: 6476493045043737330, guid: 6e337cd696f02cc489920b452fa8a3a4, type: 3}
+  isAutomatic: 0
+  reloadSpeed: 5
