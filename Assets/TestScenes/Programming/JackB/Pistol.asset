@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46bb2d73608c251438f6e2387f4a2ccb, type: 3}
-  m_Name: Pistol
+  m_Name: pistol
   m_EditorClassIdentifier: 
   magazineCapacity: 10
-  fireRate: 0.5
-  bulletSpread: 0
+  fireRate: 0.4
+  bulletSpread: 0.05
   bulletRange: 0
   maxAmmo: 0
   bulletFireEffect: {fileID: 449117808673969829, guid: da6ef01900024c144b4896e83bf38224, type: 3}
