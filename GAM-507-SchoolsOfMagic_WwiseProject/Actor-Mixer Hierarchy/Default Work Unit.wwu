@@ -5,7 +5,252 @@
 			<ChildrenList>
 				<Folder Name="Nature Wizard SFX" ID="{351D93AA-33F3-4EB2-A563-0099DB5A64B5}" ShortID="151779847"/>
 				<Folder Name="Blood Wizard SFX" ID="{D4C1D137-0E34-4D04-B4A8-DB351AC9EAF1}" ShortID="610960724"/>
-				<Folder Name="Metal Wizard SFX" ID="{6FA3C4CF-B737-4858-ACB8-E334E87846B2}" ShortID="44641392"/>
+				<Folder Name="Metal Wizard SFX" ID="{6FA3C4CF-B737-4858-ACB8-E334E87846B2}" ShortID="44641392">
+					<ChildrenList>
+						<Sound Name="MetalGunShoot" ID="{12F54F23-D1AE-438E-B7C4-0689B9B95CC0}" ShortID="535259236">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalGunShoot" ID="{24FA6763-7DCD-4EDB-A1FF-434E1F1F06D5}">
+									<Language>SFX</Language>
+									<AudioFile>MetalGunShoot.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="210512629"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalGunShoot" ID="{24FA6763-7DCD-4EDB-A1FF-434E1F1F06D5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalWhoosh" ID="{520EEC19-672B-4B81-9E11-E0D40B34F2C5}" ShortID="786165755">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalWhoosh" ID="{90729697-76FF-44BF-A368-79C9FCBA9C24}">
+									<Language>SFX</Language>
+									<AudioFile>MetalWhoosh.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="955364764"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalWhoosh" ID="{90729697-76FF-44BF-A368-79C9FCBA9C24}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalSwoosh" ID="{0D7278D0-2647-4B39-BEBB-93DE96162425}" ShortID="549499953">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalSwoosh" ID="{C1CF006E-B986-4D88-8F0D-D1BE95E7CA6A}">
+									<Language>SFX</Language>
+									<AudioFile>MetalSwoosh.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="177902892"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalSwoosh" ID="{C1CF006E-B986-4D88-8F0D-D1BE95E7CA6A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalShards" ID="{F3266621-65BF-43FC-813A-9BCBF01A6208}" ShortID="655063193">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalShards" ID="{D92F3CBA-A8C9-4AC7-8C50-DBF623CEFA7B}">
+									<Language>SFX</Language>
+									<AudioFile>MetalShards.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="82729239"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalShards" ID="{D92F3CBA-A8C9-4AC7-8C50-DBF623CEFA7B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalOutOfAmmo" ID="{D4FFF3D2-9BA6-4856-95FE-B870EB64B826}" ShortID="157523506">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalOutOfAmmo" ID="{AC282776-85CC-42EB-9D44-CC0084F9DB7D}">
+									<Language>SFX</Language>
+									<AudioFile>MetalOutOfAmmo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="283505818"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalOutOfAmmo" ID="{AC282776-85CC-42EB-9D44-CC0084F9DB7D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalMagneticHum" ID="{ADB7A150-0695-4E33-BE81-1C65583E17C9}" ShortID="1066452886">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalMagneticHum" ID="{2E9EEFCA-98B0-4309-A434-7990F2302C26}">
+									<Language>SFX</Language>
+									<AudioFile>MetalMagneticHum.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="6507678"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalMagneticHum" ID="{2E9EEFCA-98B0-4309-A434-7990F2302C26}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalGunReload" ID="{2BFAE2E0-F2FB-454D-BC10-1EC92676D1E0}" ShortID="702181265">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalGunReload" ID="{DEA825CF-8009-47D6-8CEF-8F2FB69F0360}">
+									<Language>SFX</Language>
+									<AudioFile>MetalGunReload.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="874305292"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalGunReload" ID="{DEA825CF-8009-47D6-8CEF-8F2FB69F0360}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalFootstep4" ID="{7E40AA15-C524-4C1A-8110-F1EE598EEFF9}" ShortID="300268285">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalFootstep4" ID="{1D6A0ED3-1B97-4934-B639-BC2953651E14}">
+									<Language>SFX</Language>
+									<AudioFile>MetalFootstep4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="823293862"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalFootstep4" ID="{1D6A0ED3-1B97-4934-B639-BC2953651E14}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalFootstep3" ID="{ED0CB3E1-9FD0-4004-9D9D-ABF1654A231C}" ShortID="269235605">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalFootstep3" ID="{B376C9D8-7AE2-4D69-8BB6-EB7A338F3DC2}">
+									<Language>SFX</Language>
+									<AudioFile>MetalFootstep3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="570731692"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalFootstep3" ID="{B376C9D8-7AE2-4D69-8BB6-EB7A338F3DC2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalFootstep2" ID="{3EF6834B-CC5A-4CB3-8C78-4BA55A35F629}" ShortID="584239355">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalFootstep2" ID="{2FD228D7-8F88-4818-93B2-ECC14C3B2365}">
+									<Language>SFX</Language>
+									<AudioFile>MetalFootstep2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1071389353"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalFootstep2" ID="{2FD228D7-8F88-4818-93B2-ECC14C3B2365}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalFootstep1" ID="{6418BAE5-6A2F-48D2-898D-6B24A8C37F2C}" ShortID="801595413">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalFootstep1" ID="{F0940562-7B63-4821-8BEB-64CC85486BC1}">
+									<Language>SFX</Language>
+									<AudioFile>MetalFootstep1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="473163145"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalFootstep1" ID="{F0940562-7B63-4821-8BEB-64CC85486BC1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="Arcane Wizard SFX" ID="{C135387E-17B0-497F-9687-1531B940EE55}" ShortID="723326362"/>
 			</ChildrenList>
 		</WorkUnit>
