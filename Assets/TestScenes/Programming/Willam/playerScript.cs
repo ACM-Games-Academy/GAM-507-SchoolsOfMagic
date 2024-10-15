@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerScript : MonoBehaviour
+public class playerMovement : MonoBehaviour
 {
     public Vector3 velocity;
     public Vector3 cameraDirection;
     public CharacterController controller;
     public Camera camera;
+    public playerInput inputModule;
     [Header("Weapon System")]
     public weapon heldWeapon;
     public weapon[] weapons;
+    public movementAbility movementAbility;
     [Header("Stats")]
     public float movementSpeed = 5;
     public float groundedAcceleration = 10;
     public float aerialAcceleration = 2.5f;
+    public float jumpHeight = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +45,16 @@ public class playerScript : MonoBehaviour
 
     void CameraUpdate()
     {
-        cameraDirection.y += Input.GetAxis("Mouse X");
-        cameraDirection.x = Mathf.Clamp(cameraDirection.x - Input.GetAxis("Mouse Y"), -90, 90);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        cameraDirection.y += inputModule.getCameraInput().x;
+        cameraDirection.x = Mathf.Clamp(cameraDirection.x - inputModule.getCameraInput().y, -90, 90);
 
         transform.rotation = Quaternion.Euler(0, cameraDirection.y, 0);
         camera.transform.rotation = Quaternion.Euler(cameraDirection.x, transform.eulerAngles.y, 0);
@@ -51,7 +62,9 @@ public class playerScript : MonoBehaviour
 
     void MovementUpdate()
     {
-        Vector2 leftStick = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        movementAbility.MovementUpdate(this);
+
+        Vector2 leftStick = inputModule.GetMovementInput().normalized;
         if (controller.isGrounded)
         {
             velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * movementSpeed, velocity.y, leftStick.y * movementSpeed), Time.deltaTime * groundedAcceleration);
@@ -59,7 +72,7 @@ public class playerScript : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-                velocity.y = 5;
+                velocity.y = jumpHeight;
             }
         }
         else
