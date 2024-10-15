@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    WeaponBaseTest currentGun;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +15,12 @@ public class WeaponController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            currentGun.Fire();
             Debug.Log("Fired");
         }
     }
 
     void UpdateGun()
     {
-        currentGun = GetComponentInChildren<WeaponBaseTest>();
+
     }
 }
