@@ -9,8 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e13c7c9c4a42747b3f7cac7f80858f, type: 3}
+  m_Script: {fileID: 11500000, guid: 28094f5ffcdfe1b4ea4f632c78722447, type: 3}
   m_Name: SMG
   m_EditorClassIdentifier: 
-  damage: 0
-  fireRate: 0
+  magazineCapacity: 30
+  fireRate: 0.1
+  bulletSpread: 0.05
+  bulletRange: 100
+  maxAmmo: 120
+  damage: 25
+  damageDropOffStart: 50
+  bulletFireEffect: {fileID: 0}
+  isAutomatic: 0
+  reloadSpeed: 1.5

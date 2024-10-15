@@ -4846,7 +4846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8619414968972261800
 Transform:
   m_ObjectHideFlags: 0
@@ -4874,12 +4874,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3792090345284082128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5bb108dcc31ec41b4f824e657c6df0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fdd99e51b16c0645a95d1390008065e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStats: {fileID: 11400000, guid: d98f7ccaa362efc499d16e529cb509fc, type: 2}
-  bulletFireEffect: {fileID: 8891239144128978998}
+  weaponStatsArray:
+  - {fileID: 11400000, guid: 6b30f02d8de04be4ebb8b46747f7cb83, type: 2}
   raycastOrigin: {fileID: 2611820289616450970}
+  particleEffectSpawnPoint: {fileID: 3108708809387450851}
+  playerSpeed: 5
+  shootSpeedReduction: 0
+  holdGunSpeedReduction: 0
+  currentWeapon: {fileID: 0}
+  ammoCount: {fileID: 0}
+  reloadingNotif: {fileID: 0}
 --- !u!1 &4365705855628671481
 GameObject:
   m_ObjectHideFlags: 0
