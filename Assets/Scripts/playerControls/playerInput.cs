@@ -62,7 +62,7 @@ public class playerInput : MonoBehaviour
         classThree.performed += ChangeClassThree;
         classFour.performed += ChangeClassFour;
         abilityMovement.performed += AbilityMovement;
-        playerRun.performed += PlayerRun;
+        playerRun.started += runPressed;
 
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
@@ -94,55 +94,55 @@ public class playerInput : MonoBehaviour
     //This functions only calls when one of the abilities are performed from the input action asset
     private void PrimaryAbility(InputAction.CallbackContext primary)
     {
-        onButtonPress(EventArgs.Empty, primaryAbil);
+        onButton(EventArgs.Empty, primaryAbil);
     }
 
     private void SecondaryAbility(InputAction.CallbackContext secondary)
     {
-        onButtonPress(EventArgs.Empty, secondaryAbil);
+        onButton(EventArgs.Empty, secondaryAbil);
     }
 
     private void PlayerJump(InputAction.CallbackContext jump)
     {
-        onButtonPress(EventArgs.Empty, playerJumping);
+        onButton(EventArgs.Empty, playerJumping);
     }
 
     private void PlayerFiring(InputAction.CallbackContext fire)
     {
-        onButtonPress(EventArgs.Empty, playerFiring);
+        onButton(EventArgs.Empty, playerFiring);
     }
 
     private void ChangeClassOne(InputAction.CallbackContext oneClass)
     {
-        onButtonPress(EventArgs.Empty, classChangeOne);
+        onButton(EventArgs.Empty, classChangeOne);
     }
 
     private void ChangeClassTwo(InputAction.CallbackContext twoClass)
     {
-        onButtonPress(EventArgs.Empty, classChangeTwo);
+        onButton(EventArgs.Empty, classChangeTwo);
     }
 
     private void ChangeClassThree(InputAction.CallbackContext threeClass)
     {
-        onButtonPress(EventArgs.Empty, classChangeThree);
+        onButton(EventArgs.Empty, classChangeThree);
     }
 
     private void ChangeClassFour(InputAction.CallbackContext fourClass)
     {
-        onButtonPress(EventArgs.Empty, classChangeFour);
+        onButton(EventArgs.Empty, classChangeFour);
     }
 
     private void AbilityMovement(InputAction.CallbackContext movement)
     {
-        onButtonPress(EventArgs.Empty, movingAbility);
+        onButton(EventArgs.Empty, movingAbility);
     }
 
-    private void PlayerRun(InputAction.CallbackContext run)
+    private void runPressed(InputAction.CallbackContext run)
     {
-        onButtonPress(EventArgs.Empty, playerRunning);
+        onButton(EventArgs.Empty, playerRunning);
     }
 
-    private void onButtonPress(EventArgs e, EventHandler button)
+    private void onButton(EventArgs e, EventHandler button)
     {
         button.Invoke(this ,e);
     }
