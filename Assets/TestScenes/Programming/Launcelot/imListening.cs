@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class imListening : MonoBehaviour
 {
-    public playerController playerController;
+    public playerInput playerController;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        playerController.playerDeath += iDied; 
+        playerController.playerJumping += jump; 
     }
 
     // Update is called once per frame
@@ -19,8 +20,8 @@ public class imListening : MonoBehaviour
         
     }
 
-    private void iDied(object sender, EventArgs e)
+    private void jump(object sender, EventArgs e)
     {
-        Debug.Log("I Died");
+        Debug.Log("Jump button pressed");
     }
 }

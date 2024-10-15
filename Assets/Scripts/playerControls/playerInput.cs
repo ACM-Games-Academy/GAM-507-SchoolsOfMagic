@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using System;
 
 public class playerInput : MonoBehaviour
 {
@@ -23,16 +24,16 @@ public class playerInput : MonoBehaviour
     private Vector2 movementInput;
     private Vector2 cameraInput;
 
-    [SerializeField] UnityEvent playerJumping;
-    [SerializeField] UnityEvent primaryFire;
-    [SerializeField] UnityEvent secondaryFire;
-    [SerializeField] UnityEvent playerFiring;
-    [SerializeField] UnityEvent classChangeOne;
-    [SerializeField] UnityEvent classChangeTwo;
-    [SerializeField] UnityEvent classChangeThree;
-    [SerializeField] UnityEvent classChangeFour;
-    [SerializeField] UnityEvent movingAbility;
-    [SerializeField] UnityEvent playerRunning;
+    public event EventHandler playerJumping;
+    public event EventHandler primaryAbil;
+    public event EventHandler secondaryAbil;
+    public event EventHandler playerFiring;
+    public event EventHandler classChangeOne;
+    public event EventHandler classChangeTwo;
+    public event EventHandler classChangeThree;
+    public event EventHandler classChangeFour;
+    public event EventHandler movingAbility;
+    public event EventHandler playerRunning;
 
     void OnEnable()
     {
@@ -91,57 +92,60 @@ public class playerInput : MonoBehaviour
     }
 
     //This functions only calls when one of the abilities are performed from the input action asset
-    void PrimaryAbility(InputAction.CallbackContext primary)
+    private void PrimaryAbility(InputAction.CallbackContext primary)
     {
-        primaryFire.Invoke();
+        onButtonPress(EventArgs.Empty, primaryAbil);
     }
 
-    void SecondaryAbility(InputAction.CallbackContext secondary)
+    private void SecondaryAbility(InputAction.CallbackContext secondary)
     {
-        secondaryFire.Invoke();
+        onButtonPress(EventArgs.Empty, secondaryAbil);
     }
 
-    void PlayerJump(InputAction.CallbackContext jump)
+    private void PlayerJump(InputAction.CallbackContext jump)
     {
-        playerJumping.Invoke();
+        onButtonPress(EventArgs.Empty, playerJumping);
     }
 
-    void PlayerFiring(InputAction.CallbackContext fire)
+    private void PlayerFiring(InputAction.CallbackContext fire)
     {
-        playerFiring.Invoke();
+        onButtonPress(EventArgs.Empty, playerFiring);
     }
 
-    void ChangeClassOne(InputAction.CallbackContext oneClass)
+    private void ChangeClassOne(InputAction.CallbackContext oneClass)
     {
-        classChangeOne.Invoke();
+        onButtonPress(EventArgs.Empty, classChangeOne);
     }
 
-    void ChangeClassTwo(InputAction.CallbackContext twoClass)
+    private void ChangeClassTwo(InputAction.CallbackContext twoClass)
     {
-        classChangeTwo.Invoke();
+        onButtonPress(EventArgs.Empty, classChangeTwo);
     }
 
-    void ChangeClassThree(InputAction.CallbackContext threeClass)
+    private void ChangeClassThree(InputAction.CallbackContext threeClass)
     {
-        classChangeThree.Invoke();
+        onButtonPress(EventArgs.Empty, classChangeThree);
     }
 
-    void ChangeClassFour(InputAction.CallbackContext fourClass)
+    private void ChangeClassFour(InputAction.CallbackContext fourClass)
     {
-        classChangeFour.Invoke();
+        onButtonPress(EventArgs.Empty, classChangeFour);
     }
 
-    void AbilityMovement(InputAction.CallbackContext movement)
+    private void AbilityMovement(InputAction.CallbackContext movement)
     {
-        movingAbility.Invoke();
+        onButtonPress(EventArgs.Empty, movingAbility);
     }
 
-    void PlayerRun(InputAction.CallbackContext run)
+    private void PlayerRun(InputAction.CallbackContext run)
     {
-        playerRunning.Invoke();
+        onButtonPress(EventArgs.Empty, playerRunning);
     }
 
-
+    private void onButtonPress(EventArgs e, EventHandler button)
+    {
+        button.Invoke(this ,e);
+    }
 
     private void OnDisabled()
     {
@@ -157,6 +161,5 @@ public class playerInput : MonoBehaviour
         classFour.Disable();
         abilityMovement.Disable();
         playerRun.Disable();
-
     }
 }
