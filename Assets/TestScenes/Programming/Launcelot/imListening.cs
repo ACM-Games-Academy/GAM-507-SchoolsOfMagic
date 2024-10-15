@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class imListening : MonoBehaviour
 {
-    public playerInput playerController;
-    
+    public playerInput playerInput;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        playerController.playerJumping += jump; 
+        playerInput.jumpPressed += jump;
     }
 
     // Update is called once per frame
@@ -23,5 +21,10 @@ public class imListening : MonoBehaviour
     private void jump(object sender, EventArgs e)
     {
         Debug.Log("Jump button pressed");
+    }
+
+    void OnDisabled()
+    {
+        playerInput.jumpPressed -= jump;
     }
 }

@@ -24,13 +24,13 @@ public class playerInput : MonoBehaviour
     private Vector2 movementInput;
     private Vector2 cameraInput;
 
-    public event EventHandler playerJumping;
-
     public event EventHandler primaryAbil;
     public event EventHandler secondaryAbil;
 
     public event EventHandler firePressed;
     public event EventHandler fireReleased;
+
+    public event EventHandler jumpPressed;
 
     public event EventHandler classChangeOne;
     public event EventHandler classChangeTwo;
@@ -42,7 +42,7 @@ public class playerInput : MonoBehaviour
     public event EventHandler runPressed;
     public event EventHandler runReleased;
 
-    void OnEnable()
+    void Awake()
     {
         controls = new PlayerControls();    
 
@@ -76,8 +76,11 @@ public class playerInput : MonoBehaviour
         abilityMovement.started += AbilityMovement;
 
         playerRun.started += onRunPressed;
-        playerRun.canceled += onRunReleased;
+        playerRun.canceled += onRunReleased; 
+    }
 
+    private void OnEnable()
+    {
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
         playerLook.Enable();
@@ -118,7 +121,7 @@ public class playerInput : MonoBehaviour
 
     private void PlayerJump(InputAction.CallbackContext jump)
     {
-        onButton(EventArgs.Empty, playerJumping);
+        onButton(EventArgs.Empty, jumpPressed);
     }
 
     private void onFirePressed(InputAction.CallbackContext fire)
