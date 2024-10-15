@@ -25,15 +25,22 @@ public class playerInput : MonoBehaviour
     private Vector2 cameraInput;
 
     public event EventHandler playerJumping;
+
     public event EventHandler primaryAbil;
     public event EventHandler secondaryAbil;
-    public event EventHandler playerFiring;
+
+    public event EventHandler firePressed;
+    public event EventHandler fireReleased;
+
     public event EventHandler classChangeOne;
     public event EventHandler classChangeTwo;
     public event EventHandler classChangeThree;
     public event EventHandler classChangeFour;
+
     public event EventHandler movingAbility;
-    public event EventHandler playerRunning;
+
+    public event EventHandler runPressed;
+    public event EventHandler runReleased;
 
     void OnEnable()
     {
@@ -53,16 +60,23 @@ public class playerInput : MonoBehaviour
         playerRun = controls.Player.Running;
 
         //Whenever the player presses either primary or secondary ability, this calls a function to happen
-        playerJump.performed += PlayerJump;
-        playerFire.performed += PlayerFiring;
+        playerJump.started += PlayerJump;
+
+        playerFire.performed += onFirePressed;
+        playerFire.canceled += onFireCancelled;
+
         playerPrimary.performed += PrimaryAbility;
         playerSecondary.performed += SecondaryAbility;
+
         classOne.performed += ChangeClassOne;
         classTwo.performed += ChangeClassTwo;
         classThree.performed += ChangeClassThree;
         classFour.performed += ChangeClassFour;
+
         abilityMovement.performed += AbilityMovement;
-        playerRun.started += runPressed;
+
+        playerRun.started += onRunPressed;
+        playerRun.canceled += onRunReleased;
 
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
@@ -107,9 +121,14 @@ public class playerInput : MonoBehaviour
         onButton(EventArgs.Empty, playerJumping);
     }
 
-    private void PlayerFiring(InputAction.CallbackContext fire)
+    private void onFirePressed(InputAction.CallbackContext fire)
     {
-        onButton(EventArgs.Empty, playerFiring);
+        onButton(EventArgs.Empty, firePressed);
+    }
+
+    private void onFireCancelled(InputAction.CallbackContext fire)
+    {
+        onButton(EventArgs.Empty, fireReleased);
     }
 
     private void ChangeClassOne(InputAction.CallbackContext oneClass)
@@ -137,9 +156,14 @@ public class playerInput : MonoBehaviour
         onButton(EventArgs.Empty, movingAbility);
     }
 
-    private void runPressed(InputAction.CallbackContext run)
+    private void onRunPressed(InputAction.CallbackContext run)
     {
-        onButton(EventArgs.Empty, playerRunning);
+        onButton(EventArgs.Empty, runPressed);
+    }
+
+    private void onRunReleased(InputAction.CallbackContext run)
+    {
+        onButton(EventArgs.Empty, runReleased);
     }
 
     private void onButton(EventArgs e, EventHandler button)
