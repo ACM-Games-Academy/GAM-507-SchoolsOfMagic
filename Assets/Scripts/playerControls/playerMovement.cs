@@ -9,9 +9,6 @@ public class playerMovement : MonoBehaviour
     public CharacterController controller;
     public Camera camera;
     public playerInput inputModule;
-    [Header("Weapon System")]
-    public weapon heldWeapon;
-    public weapon[] weapons;
     public movementAbility movementAbility;
     [Header("Stats")]
     public float movementSpeed = 5;
@@ -30,17 +27,6 @@ public class playerMovement : MonoBehaviour
     {
         CameraUpdate();
         MovementUpdate();
-
-        foreach (weapon w in weapons)
-        {
-            w.gameObject.SetActive(w == heldWeapon);
-            w.transform.position = transform.position;
-            w.transform.rotation = transform.rotation;
-        }
-        if (heldWeapon != null)
-        {
-            heldWeapon.HeldUpdate(this);
-        }
     }
 
     void CameraUpdate()
