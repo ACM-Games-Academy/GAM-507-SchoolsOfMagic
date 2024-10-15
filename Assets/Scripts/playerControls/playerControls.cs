@@ -71,6 +71,69 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Fire"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ebd8484-27ab-41cd-8f30-cf3b9b0ba390"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""class1"",
+                    ""type"": ""Button"",
+                    ""id"": ""b1324984-abf4-42b0-bc51-24c5d499a7f3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""class2"",
+                    ""type"": ""Button"",
+                    ""id"": ""f39cc386-d359-4484-83d6-f252e8d123c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""class3"",
+                    ""type"": ""Button"",
+                    ""id"": ""3699dabc-1079-4bad-9858-8ca887c4150d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""class4"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb474350-3ec0-4b9d-97f4-531dde96d4bd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""movementAbility"",
+                    ""type"": ""Button"",
+                    ""id"": ""8adb816c-abbf-4ddb-b080-1aaec2a2f74a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Running"",
+                    ""type"": ""Button"",
+                    ""id"": ""c8d44c2c-54a9-40ad-9cae-5900229240fb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -271,6 +334,160 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""secondaryAbility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b3932ff5-6e5e-4837-adae-d5fb376d6e32"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8af1876-9bdb-4f8a-bed8-b6e865c70f2a"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""67cc28e4-a67b-493c-a9fb-7fdd4035acae"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eaf7ceae-c257-424f-884e-9fa8d9d2e45d"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b737082b-c744-4a66-ab88-63ff33b89609"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""470d1028-3e36-41c4-85a2-fc7e2889acb5"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8affdb65-a16b-44fa-9e39-7d1ce959cc52"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8009303-da11-4199-9314-0d780350f89e"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0b8a05ca-2366-4a05-b467-1835bce547a9"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1aee251d-487f-43cc-97fa-cb25ecd95491"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""class4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21eb481b-fd17-42fd-b5a0-9b84d6b240d3"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movementAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfd0d32d-6aa1-4df0-b0e5-f70533b82e35"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movementAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5a1b3451-e152-4d7a-a1d0-88f73dfe9714"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Running"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a8bca00-81ae-49c7-8213-7fb2493485a7"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Running"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -284,6 +501,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Camera = m_Player.FindAction("Camera", throwIfNotFound: true);
         m_Player_primaryAbility = m_Player.FindAction("primaryAbility", throwIfNotFound: true);
         m_Player_secondaryAbility = m_Player.FindAction("secondaryAbility", throwIfNotFound: true);
+        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+        m_Player_class1 = m_Player.FindAction("class1", throwIfNotFound: true);
+        m_Player_class2 = m_Player.FindAction("class2", throwIfNotFound: true);
+        m_Player_class3 = m_Player.FindAction("class3", throwIfNotFound: true);
+        m_Player_class4 = m_Player.FindAction("class4", throwIfNotFound: true);
+        m_Player_movementAbility = m_Player.FindAction("movementAbility", throwIfNotFound: true);
+        m_Player_Running = m_Player.FindAction("Running", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -350,6 +574,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Camera;
     private readonly InputAction m_Player_primaryAbility;
     private readonly InputAction m_Player_secondaryAbility;
+    private readonly InputAction m_Player_Fire;
+    private readonly InputAction m_Player_class1;
+    private readonly InputAction m_Player_class2;
+    private readonly InputAction m_Player_class3;
+    private readonly InputAction m_Player_class4;
+    private readonly InputAction m_Player_movementAbility;
+    private readonly InputAction m_Player_Running;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -359,6 +590,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Camera => m_Wrapper.m_Player_Camera;
         public InputAction @primaryAbility => m_Wrapper.m_Player_primaryAbility;
         public InputAction @secondaryAbility => m_Wrapper.m_Player_secondaryAbility;
+        public InputAction @Fire => m_Wrapper.m_Player_Fire;
+        public InputAction @class1 => m_Wrapper.m_Player_class1;
+        public InputAction @class2 => m_Wrapper.m_Player_class2;
+        public InputAction @class3 => m_Wrapper.m_Player_class3;
+        public InputAction @class4 => m_Wrapper.m_Player_class4;
+        public InputAction @movementAbility => m_Wrapper.m_Player_movementAbility;
+        public InputAction @Running => m_Wrapper.m_Player_Running;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -383,6 +621,27 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @secondaryAbility.started += instance.OnSecondaryAbility;
             @secondaryAbility.performed += instance.OnSecondaryAbility;
             @secondaryAbility.canceled += instance.OnSecondaryAbility;
+            @Fire.started += instance.OnFire;
+            @Fire.performed += instance.OnFire;
+            @Fire.canceled += instance.OnFire;
+            @class1.started += instance.OnClass1;
+            @class1.performed += instance.OnClass1;
+            @class1.canceled += instance.OnClass1;
+            @class2.started += instance.OnClass2;
+            @class2.performed += instance.OnClass2;
+            @class2.canceled += instance.OnClass2;
+            @class3.started += instance.OnClass3;
+            @class3.performed += instance.OnClass3;
+            @class3.canceled += instance.OnClass3;
+            @class4.started += instance.OnClass4;
+            @class4.performed += instance.OnClass4;
+            @class4.canceled += instance.OnClass4;
+            @movementAbility.started += instance.OnMovementAbility;
+            @movementAbility.performed += instance.OnMovementAbility;
+            @movementAbility.canceled += instance.OnMovementAbility;
+            @Running.started += instance.OnRunning;
+            @Running.performed += instance.OnRunning;
+            @Running.canceled += instance.OnRunning;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -402,6 +661,27 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @secondaryAbility.started -= instance.OnSecondaryAbility;
             @secondaryAbility.performed -= instance.OnSecondaryAbility;
             @secondaryAbility.canceled -= instance.OnSecondaryAbility;
+            @Fire.started -= instance.OnFire;
+            @Fire.performed -= instance.OnFire;
+            @Fire.canceled -= instance.OnFire;
+            @class1.started -= instance.OnClass1;
+            @class1.performed -= instance.OnClass1;
+            @class1.canceled -= instance.OnClass1;
+            @class2.started -= instance.OnClass2;
+            @class2.performed -= instance.OnClass2;
+            @class2.canceled -= instance.OnClass2;
+            @class3.started -= instance.OnClass3;
+            @class3.performed -= instance.OnClass3;
+            @class3.canceled -= instance.OnClass3;
+            @class4.started -= instance.OnClass4;
+            @class4.performed -= instance.OnClass4;
+            @class4.canceled -= instance.OnClass4;
+            @movementAbility.started -= instance.OnMovementAbility;
+            @movementAbility.performed -= instance.OnMovementAbility;
+            @movementAbility.canceled -= instance.OnMovementAbility;
+            @Running.started -= instance.OnRunning;
+            @Running.performed -= instance.OnRunning;
+            @Running.canceled -= instance.OnRunning;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -426,5 +706,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnCamera(InputAction.CallbackContext context);
         void OnPrimaryAbility(InputAction.CallbackContext context);
         void OnSecondaryAbility(InputAction.CallbackContext context);
+        void OnFire(InputAction.CallbackContext context);
+        void OnClass1(InputAction.CallbackContext context);
+        void OnClass2(InputAction.CallbackContext context);
+        void OnClass3(InputAction.CallbackContext context);
+        void OnClass4(InputAction.CallbackContext context);
+        void OnMovementAbility(InputAction.CallbackContext context);
+        void OnRunning(InputAction.CallbackContext context);
     }
 }
