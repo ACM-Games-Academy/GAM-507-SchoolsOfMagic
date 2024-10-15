@@ -62,18 +62,18 @@ public class playerInput : MonoBehaviour
         //Whenever the player presses either primary or secondary ability, this calls a function to happen
         playerJump.started += PlayerJump;
 
-        playerFire.performed += onFirePressed;
+        playerFire.started += onFirePressed;
         playerFire.canceled += onFireCancelled;
 
-        playerPrimary.performed += PrimaryAbility;
-        playerSecondary.performed += SecondaryAbility;
+        playerPrimary.started += PrimaryAbility;
+        playerSecondary.started += SecondaryAbility;
 
-        classOne.performed += ChangeClassOne;
-        classTwo.performed += ChangeClassTwo;
-        classThree.performed += ChangeClassThree;
-        classFour.performed += ChangeClassFour;
+        classOne.started += ChangeClassOne;
+        classTwo.started += ChangeClassTwo;
+        classThree.started += ChangeClassThree;
+        classFour.started += ChangeClassFour;
 
-        abilityMovement.performed += AbilityMovement;
+        abilityMovement.started += AbilityMovement;
 
         playerRun.started += onRunPressed;
         playerRun.canceled += onRunReleased;
