@@ -48,7 +48,10 @@ public class playerMovement : MonoBehaviour
 
     void MovementUpdate()
     {
-        movementAbility.MovementUpdate(this);
+        if (movementAbility != null)
+        {
+            movementAbility.MovementUpdate(this);
+        }
 
         Vector2 leftStick = inputModule.GetMovementInput().normalized;
         if (controller.isGrounded)
