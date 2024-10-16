@@ -16,7 +16,7 @@ public class bloodBoost : movementAbility
             print(hit.transform.gameObject.name);
             if (hit.transform.gameObject.name.Contains("Blood"))
             {
-                player.controller.Move(new Vector3(player.velocity.x * 0.5f, player.velocity.y, player.velocity.z * 0.5f) * Time.deltaTime);
+                player.controller.Move(new Vector3(player.Velocity.x * 0.5f, player.Velocity.y, player.Velocity.z * 0.5f) * Time.deltaTime);
             }
         }
     }

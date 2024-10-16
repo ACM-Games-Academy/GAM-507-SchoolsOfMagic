@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class doubleJumpAbility : movementAbility
 {
-    public bool hasDoubleJump;
+    private bool hasDoubleJump;
 
     public override void MovementUpdate(playerMovement player)
     {
         base.MovementUpdate(player);
 
-        Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
-
         if (player.controller.isGrounded)
         {
             hasDoubleJump = true;
         }
+    }
+
+    public override void Jump(playerMovement player)
+    {
+        base.Jump(player);
+
+        Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
 
         if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump"))
         {
             hasDoubleJump = false;
-            player.velocity = transform.TransformDirection(leftStick.x * player.stats.movementSpeed, player.stats.jumpHeight, leftStick.y * player.stats.movementSpeed);
+            player.Velocity = transform.TransformDirection(leftStick.x * player.getStats().movementSpeed, player.getStats().jumpHeight, leftStick.y * player.getStats().movementSpeed);
         }
     }
 }

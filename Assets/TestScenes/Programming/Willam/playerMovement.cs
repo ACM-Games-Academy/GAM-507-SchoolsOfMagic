@@ -5,12 +5,16 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     private Vector3 velocity;
+    public Vector3 Velocity { get { return velocity; } set { velocity = value; } }
     private Vector3 cameraDirection;
-    private CharacterController controller;
+    public CharacterController controller;
+    [SerializeField]
     private Camera cameraComponent;
-    private playerInput inputModule;
+    public playerInput inputModule;
+    [SerializeField]
     private movementAbility movementAbility;
     [Header("Stats")]
+    [SerializeField]
     private movementStats stats;
 
     private void OnEnable()
@@ -56,7 +60,7 @@ public class playerMovement : MonoBehaviour
         }
 
         Vector2 leftStick = inputModule.GetMovementInput().normalized;
-        if (controller.isGrounded)
+        if (controller.isGrounded && velocity.y < 0)
         {
             velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * stats.movementSpeed, velocity.y, leftStick.y * stats.movementSpeed), Time.deltaTime * stats.groundedAcceleration);
             velocity.y = -0.5f;
@@ -72,13 +76,18 @@ public class playerMovement : MonoBehaviour
 
     void Jump(object sender, System.EventArgs e)
     {
+        if (movementAbility != null)
+        {
+            movementAbility.Jump(this);
+        }
         if (controller.isGrounded)
         {
-            if (Input.GetButtonDown("Jump"))
-            {
-                velocity.y = stats.jumpHeight;
-                controller.Move(Vector3.zero);
-            }
+            velocity.y = stats.jumpHeight;
         }
+    }
+
+    public movementStats getStats()
+    {
+        return stats;
     }
 }
