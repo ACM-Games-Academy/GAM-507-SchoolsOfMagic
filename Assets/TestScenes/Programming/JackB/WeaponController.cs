@@ -3,18 +3,13 @@ using System;
 
 public class WeaponController : MonoBehaviour
 {
-    [SerializeField] private GameObject[] weaponPrefabs; // Array of weapon prefabs for different classes
+    [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
-    [SerializeField] private playerModel playerModel;                     // Reference to the player's data (class, resources)
+    [SerializeField] private playerModel PlayerModel;                     // Reference to the player's data (class, resources)
     [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
 
-    private int currentClassIndex = 0;                   // To track which class is currently active
-
-    private void OnEnable()
-    {
-        playerModel = GetComponent<playerModel>();       
-        playerInput = GetComponent<playerInput>();       
-
+    private void Start()
+    {            
         // Subscribe to class change events from the playerInput
         playerInput.classChangeOne += OnClassOneSelected;
         playerInput.classChangeTwo += OnClassTwoSelected;
@@ -28,7 +23,25 @@ public class WeaponController : MonoBehaviour
         //we currently don't have the reload keys added yet
 
         // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(playerModel.getClass());
+        InitializeWeaponForClass(PlayerModel.getClass());
+    }
+
+    private void OnEnable()
+    {            
+        // Subscribe to class change events from the playerInput
+        playerInput.classChangeOne += OnClassOneSelected;
+        playerInput.classChangeTwo += OnClassTwoSelected;
+        playerInput.classChangeThree += OnClassThreeSelected;
+        playerInput.classChangeFour += OnClassFourSelected;
+
+        // Subscribe to fire events
+        playerInput.firePressed += OnFirePressed;
+        playerInput.fireReleased += OnFireReleased;
+
+        //we currently don't have the reload keys added yet
+
+        // Initialize the correct weapon based on player's class
+        InitializeWeaponForClass(PlayerModel.getClass());
     }
 
     private void InitializeWeaponForClass(string playerClass)
@@ -61,8 +74,8 @@ public class WeaponController : MonoBehaviour
         }
 
         // Enable the new weapon
-        weaponPrefabs[weaponIndex].SetActive(true);
-        currentWeapon = weaponPrefabs[weaponIndex].GetComponent<WeaponBase>();
+        weaponGameobject[weaponIndex].SetActive(true);
+        currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
     }
 
     private void OnClassOneSelected(object sender, EventArgs e)

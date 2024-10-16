@@ -11,15 +11,13 @@ public class playerController : MonoBehaviour
     //this where the player will access runtime variables
     [SerializeField] playerModel playerModel;
 
-    
-
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         //sends out debug if playerdata script isnt present
         if (playerModel == null)
         {
-            Debug.Log("Needs playerdata");
+            Debug.Log("Needs playermodel");
         }
     }
 
@@ -41,6 +39,6 @@ public class playerController : MonoBehaviour
 
     private void onPlayerDeath(EventArgs e)
     {
-        playerDeath.Invoke(this, e);
+        //playerDeath.Invoke(this, e);
     }
 }

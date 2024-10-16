@@ -134,6 +134,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""39b0c062-97b0-4191-83d9-d8a38bd183ef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -488,6 +497,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Running"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c9daf1f-4794-413e-8dfb-d62329a70332"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4a52a26b-4a8b-4fac-a495-df94e537124f"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -508,6 +539,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_class4 = m_Player.FindAction("class4", throwIfNotFound: true);
         m_Player_movementAbility = m_Player.FindAction("movementAbility", throwIfNotFound: true);
         m_Player_Running = m_Player.FindAction("Running", throwIfNotFound: true);
+        m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -581,6 +613,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_class4;
     private readonly InputAction m_Player_movementAbility;
     private readonly InputAction m_Player_Running;
+    private readonly InputAction m_Player_Reload;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -597,6 +630,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @class4 => m_Wrapper.m_Player_class4;
         public InputAction @movementAbility => m_Wrapper.m_Player_movementAbility;
         public InputAction @Running => m_Wrapper.m_Player_Running;
+        public InputAction @Reload => m_Wrapper.m_Player_Reload;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -642,6 +676,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Running.started += instance.OnRunning;
             @Running.performed += instance.OnRunning;
             @Running.canceled += instance.OnRunning;
+            @Reload.started += instance.OnReload;
+            @Reload.performed += instance.OnReload;
+            @Reload.canceled += instance.OnReload;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -682,6 +719,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Running.started -= instance.OnRunning;
             @Running.performed -= instance.OnRunning;
             @Running.canceled -= instance.OnRunning;
+            @Reload.started -= instance.OnReload;
+            @Reload.performed -= instance.OnReload;
+            @Reload.canceled -= instance.OnReload;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -713,5 +753,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnClass4(InputAction.CallbackContext context);
         void OnMovementAbility(InputAction.CallbackContext context);
         void OnRunning(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }

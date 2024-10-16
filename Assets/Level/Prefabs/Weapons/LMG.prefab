@@ -4935,16 +4935,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fdd99e51b16c0645a95d1390008065e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatsArray:
-  - {fileID: 11400000, guid: 6b30f02d8de04be4ebb8b46747f7cb83, type: 2}
   raycastOrigin: {fileID: 2611820289616450970}
-  particleEffectSpawnPoint: {fileID: 3108708809387450851}
+  bulletFireEffect: {fileID: 8891239144128978998}
+  weaponStats: {fileID: 11400000, guid: 6b30f02d8de04be4ebb8b46747f7cb83, type: 2}
   playerSpeed: 5
   shootSpeedReduction: 0
   holdGunSpeedReduction: 0
-  currentWeapon: {fileID: 0}
-  ammoCount: {fileID: 0}
-  reloadingNotif: {fileID: 0}
 --- !u!1 &4365705855628671481
 GameObject:
   m_ObjectHideFlags: 0

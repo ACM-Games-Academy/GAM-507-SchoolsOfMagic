@@ -5,7 +5,8 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     private Vector3 velocity;
-    public Vector3 Velocity { get { return velocity; } set { velocity = value; } }
+    public Vector3 Velocity 
+    { get { return velocity; } set { velocity = value; } }
     private Vector3 cameraDirection;
     public CharacterController controller;
     [SerializeField]

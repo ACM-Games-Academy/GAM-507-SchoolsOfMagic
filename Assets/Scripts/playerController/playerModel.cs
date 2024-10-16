@@ -17,7 +17,7 @@ public class playerModel : MonoBehaviour
     private float stamina;
     [SerializeField] private string currentClass;
 
-    private void OnAwake()
+    void Awake()
     {
         //setting playerData scriptableObj values to this script
         maxBlood = playerData.maxBlood;

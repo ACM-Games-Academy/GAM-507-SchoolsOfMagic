@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using System;
+using Unity.VisualScripting;
 
 public class playerInput : MonoBehaviour
 {
@@ -20,7 +21,6 @@ public class playerInput : MonoBehaviour
     private InputAction classFour;
     private InputAction abilityMovement;
     private InputAction playerRun;
-    private InputAction playerReload;
 
     private Vector2 movementInput;
     private Vector2 cameraInput;
@@ -82,7 +82,7 @@ public class playerInput : MonoBehaviour
         playerRun.canceled += onRunReleased;
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
@@ -179,7 +179,7 @@ public class playerInput : MonoBehaviour
     }
 
 
-    private void OnDisabled()
+    private void OnDisable()
     {
         playerMovement.Disable();
         playerLook.Disable();
@@ -193,6 +193,5 @@ public class playerInput : MonoBehaviour
         classFour.Disable();
         abilityMovement.Disable();
         playerRun.Disable();
-
     }
 }
