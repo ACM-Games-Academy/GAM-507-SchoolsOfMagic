@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class forwardBurstAbility : movementAbility
 {
-    public bool hasDoubleJump;
+    private bool hasForwardBurst;
 
     public override void MovementUpdate(playerMovement player)
     {
         base.MovementUpdate(player);
 
-        Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
-
         if (player.controller.isGrounded)
         {
-            hasDoubleJump = true;
+            hasForwardBurst = true;
         }
+    }
 
-        if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump"))
+    public override void Jump(playerMovement player)
+    {
+        base.Jump(player);
+
+        if (hasForwardBurst && !player.controller.isGrounded && Input.GetButtonDown("Jump"))
         {
-            hasDoubleJump = false;
-            player.velocity = transform.TransformDirection(0, player.stats.jumpHeight, player.stats.movementSpeed * 2.5f);
+            hasForwardBurst = false;
+            player.Velocity = transform.TransformDirection(0, player.getStats().jumpHeight, player.getStats().movementSpeed * 2.5f);
         }
     }
 }

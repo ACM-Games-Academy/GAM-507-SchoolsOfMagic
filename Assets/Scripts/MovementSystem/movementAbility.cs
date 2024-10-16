@@ -20,4 +20,9 @@ public class movementAbility : MonoBehaviour
     {
         Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
     }
+
+    public virtual void Jump(playerMovement player)
+    {
+
+    }
 }
