@@ -21,6 +21,9 @@
 										<MusicTransition Name="Transition" ID="{46D8CCA5-3C08-499B-9D93-0CCFB0208ED5}">
 											<TransitionInfo/>
 										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{CB300457-E9B2-4814-85EF-A6513207E339}">
+											<TransitionInfo/>
+										</MusicTransition>
 									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
@@ -33,6 +36,13 @@
 						<Folder Name="Metal Wizard OST" ID="{800F0C20-B1DA-450C-AB8C-257E49561B22}" ShortID="1072887461"/>
 						<Folder Name="Nature Wizard OST" ID="{24CC13D1-0791-4BED-BD66-A2874369BED1}" ShortID="307582265"/>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<Reference>
+								<ObjectRef Name="WizardStates" ID="{A6FD0577-0528-4F0B-916A-408060315CD6}" WorkUnitID="{AFED8336-CD5E-496F-ACCA-854FF401F669}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</MusicSwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
