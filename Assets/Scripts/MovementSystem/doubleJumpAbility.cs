@@ -20,7 +20,7 @@ public class doubleJumpAbility : movementAbility
         if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump"))
         {
             hasDoubleJump = false;
-            player.velocity = transform.TransformDirection(leftStick.x * player.movementSpeed, player.jumpHeight, leftStick.y * player.movementSpeed);
+            player.velocity = transform.TransformDirection(leftStick.x * player.stats.movementSpeed, player.stats.jumpHeight, leftStick.y * player.stats.movementSpeed);
         }
     }
 }

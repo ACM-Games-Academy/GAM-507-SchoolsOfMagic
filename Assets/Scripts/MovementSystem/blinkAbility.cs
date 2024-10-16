@@ -22,7 +22,7 @@ public class blinkAbility : movementAbility
         {
             blinks--;
             blinkTime = 0.1f;
-            player.velocity = transform.TransformDirection(leftStick.x * player.movementSpeed * 5, 0, leftStick.y * player.movementSpeed * 5);
+            player.velocity = transform.TransformDirection(leftStick.x * player.stats.movementSpeed * 5, 0, leftStick.y * player.stats.movementSpeed * 5);
         }
         if (blinkTime > 0)
         {

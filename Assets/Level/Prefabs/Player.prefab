@@ -130,11 +130,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8480493298082489981}
-  - component: {fileID: 8274428097679686484}
+  - component: {fileID: 329390663849144202}
   - component: {fileID: 3092784167919089598}
   - component: {fileID: 2928461748652367338}
   - component: {fileID: 3321366431093143120}
-  m_Layer: 0
+  - component: {fileID: 1460535965476682322}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +158,7 @@ Transform:
   - {fileID: 8743385549606290329}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8274428097679686484
+--- !u!114 &329390663849144202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,22 +167,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6289195554900992926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a886f33b388c86645bb984dac3da6b66, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ad29dfaf6f14d8429305a33ca68bbf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
   cameraDirection: {x: 0, y: 0, z: 0}
   controller: {fileID: 3321366431093143120}
-  camera: {fileID: 8644982040416778567}
-  heldWeapon: {fileID: 0}
-  weapons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  movementSpeed: 5
-  groundedAcceleration: 10
-  aerialAcceleration: 2.5
+  cameraComponent: {fileID: 8644982040416778567}
+  inputModule: {fileID: 1460535965476682322}
+  movementAbility: {fileID: 0}
+  stats: {fileID: 11400000, guid: a1e9e9c37f309f84f9115e088911e25b, type: 2}
 --- !u!33 &3092784167919089598
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -258,3 +253,15 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1460535965476682322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289195554900992926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35f0ea2fa4a14943950e3f1be9a459c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
