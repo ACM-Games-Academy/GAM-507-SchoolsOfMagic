@@ -1,15 +1,16 @@
 using UnityEngine;
+using System;
 
 public class WeaponController : MonoBehaviour
 {
     [SerializeField] private GameObject[] weaponPrefabs; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
-    private playerModel playerModel;                     // Reference to the player's data (class, resources)
-    private playerInput playerInput;                     // Reference to the player's input script
+    [SerializeField] private playerModel playerModel;                     // Reference to the player's data (class, resources)
+    [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
 
     private int currentClassIndex = 0;                   // To track which class is currently active
 
-    private void Start()
+    private void OnEnable()
     {
         playerModel = GetComponent<playerModel>();       
         playerInput = GetComponent<playerInput>();       
@@ -23,6 +24,8 @@ public class WeaponController : MonoBehaviour
         // Subscribe to fire events
         playerInput.firePressed += OnFirePressed;
         playerInput.fireReleased += OnFireReleased;
+
+        //we currently don't have the reload keys added yet
 
         // Initialize the correct weapon based on player's class
         InitializeWeaponForClass(playerModel.getClass());
@@ -58,18 +61,16 @@ public class WeaponController : MonoBehaviour
         }
 
         // Enable the new weapon
-        GameObject weaponObject = Instantiate(weaponPrefabs[weaponIndex], transform);
-        currentWeapon = weaponObject.GetComponent<WeaponBase>();
-
-        currentWeapon.gameObject.SetActive(true);  // Enable the new weapon
+        weaponPrefabs[weaponIndex].SetActive(true);
+        currentWeapon = weaponPrefabs[weaponIndex].GetComponent<WeaponBase>();
     }
 
-    private void OnClassOneSelected(object sender, System.EventArgs e)
+    private void OnClassOneSelected(object sender, EventArgs e)
     {
         ActivateWeapon(0);
     }
 
-    private void OnClassTwoSelected(object sender, System.EventArgs e)
+    private void OnClassTwoSelected(object sender, EventArgs e)
     {
         ActivateWeapon(1);
     }
@@ -98,5 +99,18 @@ public class WeaponController : MonoBehaviour
         {
             currentWeapon.StopFiring();   // Stop firing the current weapon
         }
+    }
+
+    private void OnDisable()
+    {
+        // unSubscribe to class change events from the playerInput
+        playerInput.classChangeOne -= OnClassOneSelected;
+        playerInput.classChangeTwo -= OnClassTwoSelected;
+        playerInput.classChangeThree -= OnClassThreeSelected;
+        playerInput.classChangeFour -= OnClassFourSelected;
+
+        // unSubscribe to fire events
+        playerInput.firePressed -= OnFirePressed;
+        playerInput.fireReleased -= OnFireReleased;
     }
 }

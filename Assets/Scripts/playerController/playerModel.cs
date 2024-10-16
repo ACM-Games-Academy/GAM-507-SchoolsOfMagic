@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class playerModel : MonoBehaviour
@@ -14,9 +15,9 @@ public class playerModel : MonoBehaviour
     private float blood;
     private float health;
     private float stamina;
-    private string currentClass;
+    [SerializeField] private string currentClass;
 
-    private void Start()
+    private void OnAwake()
     {
         //setting playerData scriptableObj values to this script
         maxBlood = playerData.maxBlood;
@@ -25,6 +26,7 @@ public class playerModel : MonoBehaviour
         blood = playerData.startingBlood;
         health = playerData.startingHealth;
         stamina = playerData.startingStamina;
+        currentClass = playerData.startingClass;
     }
     
     public string getClass()

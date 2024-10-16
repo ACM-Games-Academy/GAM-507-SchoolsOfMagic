@@ -12,5 +12,7 @@ public class playerData : ScriptableObject
     public float startingHealth;
     public float startingBlood;
     public float startingStamina;
+
+    public string startingClass;
     //add other things as required
 }

@@ -43,10 +43,6 @@ public class playerInput : MonoBehaviour
     public event EventHandler runPressed;
     public event EventHandler runReleased;
 
-
-    public event EventHandler reloadPressed;
-    public event EventHandler reloadReleased;
-
     void Awake()
     {
         controls = new PlayerControls();    
@@ -63,8 +59,6 @@ public class playerInput : MonoBehaviour
         classFour = controls.Player.class4;
         abilityMovement = controls.Player.movementAbility;
         playerRun = controls.Player.Running;
-
-        playerReload = controls.Player.Reload;
 
 
 
@@ -86,9 +80,6 @@ public class playerInput : MonoBehaviour
 
         playerRun.started += onRunPressed;
         playerRun.canceled += onRunReleased;
-
-        playerReload.started += onReloadPressed;
-        playerReload.canceled += onReloadReleased;
     }
 
     private void OnEnable()
@@ -106,8 +97,6 @@ public class playerInput : MonoBehaviour
         classFour.Enable();
         abilityMovement.Enable();
         playerRun.Enable();
-
-        playerReload.Enable();
 
     }
 
@@ -189,15 +178,6 @@ public class playerInput : MonoBehaviour
         button.Invoke(this ,e);
     }
 
-    private void onReloadPressed(InputAction.CallbackContext context)
-    {
-        onButton(EventArgs.Empty, reloadPressed);
-    }
-    private void onReloadReleased(InputAction.CallbackContext context)
-    {
-        onButton(EventArgs.Empty, reloadReleased);
-    }
-
 
     private void OnDisabled()
     {
@@ -213,8 +193,6 @@ public class playerInput : MonoBehaviour
         classFour.Disable();
         abilityMovement.Disable();
         playerRun.Disable();
-
-        playerReload.Disable();
 
     }
 }

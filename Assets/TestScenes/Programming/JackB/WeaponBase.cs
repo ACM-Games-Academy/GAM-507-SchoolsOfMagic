@@ -4,14 +4,12 @@ using System.Collections;
 
 public class WeaponBase : MonoBehaviour
 {
-    [SerializeField] private WeaponStats[] weaponStatsArray;     // Array to store multiple weapon configurations
+    //[SerializeField] private WeaponStats[] weaponStatsArray;     // Array to store multiple weapon configurations
     [SerializeField] private Transform raycastOrigin;            // Raycast position
-    [SerializeField] private Transform particleEffectSpawnPoint; // Transform for spawning particle systems
-    private ParticleSystem bulletFireEffect;                     // Reference to the particle system
+    [SerializeField] private ParticleSystem bulletFireEffect; // Transform for spawning particle systems
     private int currentAmmo;                                     // Ammo tracking
     private float nextFireTime;                                  // Fire rate control
-    private int currentWeaponIndex = 0;                          // Track which weapon is currently active
-    private WeaponStats currentWeaponStats;                      // Store the current weapon's stats
+    [SerializeField] private WeaponStats weaponStats;                      // Store the current weapon's stats
     private bool isShooting;                                     // Track whether automatic fire is enabled
     private bool isReloading = false;                            // Track if the weapon is currently reloading
 
@@ -22,20 +20,17 @@ public class WeaponBase : MonoBehaviour
     [SerializeField] private float holdGunSpeedReduction;
 
     // UI elements
-    public TextMeshProUGUI currentWeapon, ammoCount, reloadingNotif;
+    //public TextMeshProUGUI currentWeapon, ammoCount, reloadingNotif;
 
     private Coroutine firingCoroutine;
 
     private void Start()
     {
         originalSpeed = playerSpeed; // Save the original player speed
-        reloadingNotif.text = ""; // Hide reload text
+        //reloadingNotif.text = ""; // Hide reload text
 
-        if (weaponStatsArray.Length > 0)
-        {
-            SetWeapon(0); // Initialize the first weapon
-            reloadAmmoCount();
-        }
+        
+        //reloadAmmoCount();       
     }
 
     private void Update()
@@ -70,21 +65,22 @@ public class WeaponBase : MonoBehaviour
                 bulletFireEffect.Play();
             }
 
-            Debug.Log("Fired: " + currentWeaponStats.name);
+            Debug.Log("Fired: " + weaponStats.name);
             ShootRay();
 
             currentAmmo--;
-            nextFireTime = Time.time + currentWeaponStats.FireRate;
+            nextFireTime = Time.time + weaponStats.FireRate;
         }
         else
         {
             Debug.Log("Out of ammo! Reload.");
         }
 
-        reloadAmmoCount();
+        //reloadAmmoCount();
     }
 
     // Set the current weapon and its related properties
+    /*
     public void SetWeapon(int weaponIndex)
     {
         if (weaponIndex < 0 || weaponIndex >= weaponStatsArray.Length)
@@ -94,10 +90,10 @@ public class WeaponBase : MonoBehaviour
         }
 
         currentWeaponIndex = weaponIndex;
-        currentWeaponStats = weaponStatsArray[weaponIndex];
+        weaponStats = weaponStatsArray[weaponIndex];
 
         // Initialize ammo for the new weapon
-        currentAmmo = currentWeaponStats.MagazineCapacity;
+        currentAmmo = weaponStats.MagazineCapacity;
         reloadAmmoCount();
 
         // Destroy the previous particle system if it exists
@@ -107,16 +103,17 @@ public class WeaponBase : MonoBehaviour
         }
 
         // Instantiate the new ParticleSystem from WeaponStats at the appropriate spawn point
-        if (currentWeaponStats.BulletFireEffect != null)
+        if (weaponStats.BulletFireEffect != null)
         {
-            bulletFireEffect = Instantiate(currentWeaponStats.BulletFireEffect,
+            bulletFireEffect = Instantiate(weaponStats.BulletFireEffect,
                                            particleEffectSpawnPoint.position,
                                            particleEffectSpawnPoint.rotation,
                                            particleEffectSpawnPoint);
         }
-        currentWeapon.text = ("Current weapon: " + currentWeaponStats.name);
+        currentWeapon.text = ("Current weapon: " + weaponStats.name);
         reloadAmmoCount();
     }
+    */
 
     // Placeholder for raycasting logic
     protected virtual void ShootRay()
@@ -124,11 +121,11 @@ public class WeaponBase : MonoBehaviour
         RaycastHit hit;
 
         Vector3 spread = raycastOrigin.forward;
-        spread += new Vector3(Random.Range(-currentWeaponStats.BulletSpread, currentWeaponStats.BulletSpread),
-                              Random.Range(-currentWeaponStats.BulletSpread, currentWeaponStats.BulletSpread), 0);
+        spread += new Vector3(Random.Range(-weaponStats.BulletSpread, weaponStats.BulletSpread),
+                              Random.Range(-weaponStats.BulletSpread, weaponStats.BulletSpread), 0);
         spread.Normalize();
 
-        if (Physics.Raycast(raycastOrigin.position, spread, out hit, currentWeaponStats.BulletRange))
+        if (Physics.Raycast(raycastOrigin.position, spread, out hit, weaponStats.BulletRange))
         {
             // Apply damage based on distance
             float damage = CalculateDamage(hit.distance);
@@ -144,47 +141,49 @@ public class WeaponBase : MonoBehaviour
     // Calculate damage with drop-off over distance
     private float CalculateDamage(float distance)
     {
-        if (distance <= currentWeaponStats.DamageDropOffStart)
+        if (distance <= weaponStats.DamageDropOffStart)
         {
-            return currentWeaponStats.Damage;
+            return weaponStats.Damage;
         }
 
-        float damageFalloff = (distance - currentWeaponStats.DamageDropOffStart) / (currentWeaponStats.BulletRange - currentWeaponStats.DamageDropOffStart);
-        return Mathf.Clamp(currentWeaponStats.Damage * (1 - damageFalloff), 0, currentWeaponStats.Damage);
+        float damageFalloff = (distance - weaponStats.DamageDropOffStart) / (weaponStats.BulletRange - weaponStats.DamageDropOffStart);
+        return Mathf.Clamp(weaponStats.Damage * (1 - damageFalloff), 0, weaponStats.Damage);
     }
 
     // Coroutine to handle reloading speed based on reloadSpeed
     private IEnumerator ReloadCoroutine()
     {
         isReloading = true;
-        reloadingNotif.text = "Reloading...";
+        //reloadingNotif.text = "Reloading...";
 
-        yield return new WaitForSeconds(currentWeaponStats.ReloadSpeed);
+        yield return new WaitForSeconds(weaponStats.ReloadSpeed);
 
-        currentAmmo = currentWeaponStats.MagazineCapacity;
-        reloadAmmoCount();
+        currentAmmo = weaponStats.MagazineCapacity;
+        //reloadAmmoCount();
 
-        reloadingNotif.text = ""; // Clear reloading notification
+        //reloadingNotif.text = ""; // Clear reloading notification
         isReloading = false;
     }
 
+    /*
     public void reloadAmmoCount()
     {
-        ammoCount.text = $"Ammo: {currentAmmo}/{currentWeaponStats.MagazineCapacity}";
+        ammoCount.text = $"Ammo: {currentAmmo}/{weaponStats.MagazineCapacity}";
     }
+    */
 
 
 
     public void StartFiring()
     {
-        if (currentWeaponStats.IsAutomatic && !isReloading)
+        if (weaponStats.IsAutomatic && !isReloading)
         {
             if (firingCoroutine == null)
             {
                 firingCoroutine = StartCoroutine(AutoFire());
             }
         }
-        else if (!currentWeaponStats.IsAutomatic && !isReloading)
+        else if (!weaponStats.IsAutomatic && !isReloading)
         {
             Fire();
         }
@@ -194,7 +193,7 @@ public class WeaponBase : MonoBehaviour
 
     public void StopFiring()
     {
-        if (currentWeaponStats.IsAutomatic && firingCoroutine != null)
+        if (weaponStats.IsAutomatic && firingCoroutine != null)
         {
             StopCoroutine(firingCoroutine);
             firingCoroutine = null;
@@ -208,7 +207,7 @@ public class WeaponBase : MonoBehaviour
         while (isShooting && !isReloading)
         {
             Fire();
-            yield return new WaitForSeconds(currentWeaponStats.FireRate);
+            yield return new WaitForSeconds(weaponStats.FireRate);
         }
     }
 

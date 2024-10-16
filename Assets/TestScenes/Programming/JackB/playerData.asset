@@ -18,3 +18,4 @@ MonoBehaviour:
   startingHealth: 100
   startingBlood: 100
   startingStamina: 100
+  startingClass: ClassOne
