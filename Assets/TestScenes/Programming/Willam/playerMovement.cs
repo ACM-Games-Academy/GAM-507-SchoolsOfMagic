@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public Vector3 velocity;
-    public Vector3 cameraDirection;
-    public CharacterController controller;
-    public Camera camera;
-    public playerInput inputModule;
-    public movementAbility movementAbility;
+    private Vector3 velocity;
+    private Vector3 cameraDirection;
+    private CharacterController controller;
+    private Camera cameraComponent;
+    private playerInput inputModule;
+    private movementAbility movementAbility;
     [Header("Stats")]
-    public float movementSpeed = 5;
-    public float groundedAcceleration = 10;
-    public float aerialAcceleration = 2.5f;
-    public float jumpHeight = 5;
+    private movementStats stats;
+
+    private void OnEnable()
+    {
+        inputModule.jumpPressed += Jump;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +45,7 @@ public class playerMovement : MonoBehaviour
         cameraDirection.x = Mathf.Clamp(cameraDirection.x - inputModule.getCameraInput().y, -90, 90);
 
         transform.rotation = Quaternion.Euler(0, cameraDirection.y, 0);
-        camera.transform.rotation = Quaternion.Euler(cameraDirection.x, transform.eulerAngles.y, 0);
+        cameraComponent.transform.rotation = Quaternion.Euler(cameraDirection.x, transform.eulerAngles.y, 0);
     }
 
     void MovementUpdate()
@@ -56,20 +58,27 @@ public class playerMovement : MonoBehaviour
         Vector2 leftStick = inputModule.GetMovementInput().normalized;
         if (controller.isGrounded)
         {
-            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * movementSpeed, velocity.y, leftStick.y * movementSpeed), Time.deltaTime * groundedAcceleration);
+            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * stats.movementSpeed, velocity.y, leftStick.y * stats.movementSpeed), Time.deltaTime * stats.groundedAcceleration);
             velocity.y = -0.5f;
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                velocity.y = jumpHeight;
-            }
         }
         else
         {
-            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * movementSpeed, velocity.y, leftStick.y * movementSpeed), Time.deltaTime * aerialAcceleration);
+            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * stats.movementSpeed, velocity.y, leftStick.y * stats.movementSpeed), Time.deltaTime * stats.aerialAcceleration);
             velocity.y += Physics.gravity.y * Time.deltaTime;
         }
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void Jump(object sender, System.EventArgs e)
+    {
+        if (controller.isGrounded)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                velocity.y = stats.jumpHeight;
+                controller.Move(Vector3.zero);
+            }
+        }
     }
 }

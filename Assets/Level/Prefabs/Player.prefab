@@ -173,13 +173,10 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   cameraDirection: {x: 0, y: 0, z: 0}
   controller: {fileID: 3321366431093143120}
-  camera: {fileID: 8644982040416778567}
+  cameraComponent: {fileID: 8644982040416778567}
   inputModule: {fileID: 1460535965476682322}
   movementAbility: {fileID: 0}
-  movementSpeed: 5
-  groundedAcceleration: 10
-  aerialAcceleration: 2.5
-  jumpHeight: 5
+  stats: {fileID: 11400000, guid: a1e9e9c37f309f84f9115e088911e25b, type: 2}
 --- !u!33 &3092784167919089598
 MeshFilter:
   m_ObjectHideFlags: 0

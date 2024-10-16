@@ -20,7 +20,7 @@ public class forwardBurstAbility : movementAbility
         if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump"))
         {
             hasDoubleJump = false;
-            player.velocity = transform.TransformDirection(0, player.jumpHeight, player.movementSpeed * 2.5f);
+            player.velocity = transform.TransformDirection(0, player.stats.jumpHeight, player.stats.movementSpeed * 2.5f);
         }
     }
 }
