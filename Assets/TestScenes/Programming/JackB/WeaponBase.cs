@@ -5,7 +5,7 @@ using System.Collections;
 public class WeaponBase : MonoBehaviour
 {
     [SerializeField] private WeaponStats[] weaponStatsArray;     // Array to store multiple weapon configurations
-    [SerializeField] private Transform raycastOrigin;            // Raycast position (gun barrel)
+    [SerializeField] private Transform raycastOrigin;            // Raycast position
     [SerializeField] private Transform particleEffectSpawnPoint; // Transform for spawning particle systems
     private ParticleSystem bulletFireEffect;                     // Reference to the particle system
     private int currentAmmo;                                     // Ammo tracking
@@ -24,10 +24,12 @@ public class WeaponBase : MonoBehaviour
     // UI elements
     public TextMeshProUGUI currentWeapon, ammoCount, reloadingNotif;
 
+    private Coroutine firingCoroutine;
+
     private void Start()
     {
         originalSpeed = playerSpeed; // Save the original player speed
-        reloadingNotif.text = ""; //Hide reload text
+        reloadingNotif.text = ""; // Hide reload text
 
         if (weaponStatsArray.Length > 0)
         {
@@ -38,27 +40,6 @@ public class WeaponBase : MonoBehaviour
 
     private void Update()
     {
-        // Handle automatic or manual fire
-        if (Input.GetMouseButton(0) && currentWeaponStats.IsAutomatic && !isReloading)
-        {
-            isShooting = true;
-            Fire();
-        }
-        else if (Input.GetMouseButtonDown(0) && !currentWeaponStats.IsAutomatic && !isReloading)
-        {
-            Fire();
-        }
-
-        // Stop firing when mouse button is released
-        if (Input.GetMouseButtonUp(0))
-        {
-            isShooting = false;
-        }
-
-        // Switch weapon with number keys 
-        if (Input.GetKeyDown(KeyCode.Alpha1)) { SetWeapon(0); }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) { SetWeapon(1); }
-
         // Adjust player speed while holding gun or shooting
         if (isShooting)
         {
@@ -101,7 +82,6 @@ public class WeaponBase : MonoBehaviour
         }
 
         reloadAmmoCount();
-
     }
 
     // Set the current weapon and its related properties
@@ -153,6 +133,7 @@ public class WeaponBase : MonoBehaviour
             // Apply damage based on distance
             float damage = CalculateDamage(hit.distance);
             Debug.Log("Hit: " + hit.collider.name + " with damage: " + damage);
+            // Implement damage application here
         }
         else
         {
@@ -178,7 +159,6 @@ public class WeaponBase : MonoBehaviour
         isReloading = true;
         reloadingNotif.text = "Reloading...";
 
-
         yield return new WaitForSeconds(currentWeaponStats.ReloadSpeed);
 
         currentAmmo = currentWeaponStats.MagazineCapacity;
@@ -186,11 +166,51 @@ public class WeaponBase : MonoBehaviour
 
         reloadingNotif.text = ""; // Clear reloading notification
         isReloading = false;
-
     }
 
     public void reloadAmmoCount()
     {
         ammoCount.text = $"Ammo: {currentAmmo}/{currentWeaponStats.MagazineCapacity}";
     }
+
+
+
+    public void StartFiring()
+    {
+        if (currentWeaponStats.IsAutomatic && !isReloading)
+        {
+            if (firingCoroutine == null)
+            {
+                firingCoroutine = StartCoroutine(AutoFire());
+            }
+        }
+        else if (!currentWeaponStats.IsAutomatic && !isReloading)
+        {
+            Fire();
+        }
+
+        isShooting = true;
+    }
+
+    public void StopFiring()
+    {
+        if (currentWeaponStats.IsAutomatic && firingCoroutine != null)
+        {
+            StopCoroutine(firingCoroutine);
+            firingCoroutine = null;
+        }
+
+        isShooting = false;
+    }
+
+    private IEnumerator AutoFire()
+    {
+        while (isShooting && !isReloading)
+        {
+            Fire();
+            yield return new WaitForSeconds(currentWeaponStats.FireRate);
+        }
+    }
+
+    
 }

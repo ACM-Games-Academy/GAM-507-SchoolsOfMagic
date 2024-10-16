@@ -20,7 +20,8 @@ public class playerInput : MonoBehaviour
     private InputAction classFour;
     private InputAction abilityMovement;
     private InputAction playerRun;
-   
+    private InputAction playerReload;
+
     private Vector2 movementInput;
     private Vector2 cameraInput;
 
@@ -42,6 +43,10 @@ public class playerInput : MonoBehaviour
     public event EventHandler runPressed;
     public event EventHandler runReleased;
 
+
+    public event EventHandler reloadPressed;
+    public event EventHandler reloadReleased;
+
     void Awake()
     {
         controls = new PlayerControls();    
@@ -58,6 +63,10 @@ public class playerInput : MonoBehaviour
         classFour = controls.Player.class4;
         abilityMovement = controls.Player.movementAbility;
         playerRun = controls.Player.Running;
+
+        playerReload = controls.Player.Reload;
+
+
 
         //Whenever the player presses either primary or secondary ability, this calls a function to happen
         playerJump.started += PlayerJump;
@@ -76,7 +85,10 @@ public class playerInput : MonoBehaviour
         abilityMovement.started += AbilityMovement;
 
         playerRun.started += onRunPressed;
-        playerRun.canceled += onRunReleased; 
+        playerRun.canceled += onRunReleased;
+
+        playerReload.started += onReloadPressed;
+        playerReload.canceled += onReloadReleased;
     }
 
     private void OnEnable()
@@ -94,6 +106,9 @@ public class playerInput : MonoBehaviour
         classFour.Enable();
         abilityMovement.Enable();
         playerRun.Enable();
+
+        playerReload.Enable();
+
     }
 
     public Vector2 getCameraInput()
@@ -174,6 +189,16 @@ public class playerInput : MonoBehaviour
         button.Invoke(this ,e);
     }
 
+    private void onReloadPressed(InputAction.CallbackContext context)
+    {
+        onButton(EventArgs.Empty, reloadPressed);
+    }
+    private void onReloadReleased(InputAction.CallbackContext context)
+    {
+        onButton(EventArgs.Empty, reloadReleased);
+    }
+
+
     private void OnDisabled()
     {
         playerMovement.Disable();
@@ -188,5 +213,8 @@ public class playerInput : MonoBehaviour
         classFour.Disable();
         abilityMovement.Disable();
         playerRun.Disable();
+
+        playerReload.Disable();
+
     }
 }
