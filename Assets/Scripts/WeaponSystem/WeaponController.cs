@@ -12,7 +12,7 @@ public class WeaponController : MonoBehaviour
     private void Start()
     {            
         // Subscribe to class change events from the playerInput
-        playerInput.BloodMagic += OnClassOneSelected;
+        playerInput.NatureMagic += OnClassOneSelected;
         playerInput.BloodMagic += OnClassTwoSelected;
         playerInput.MetalMagic += OnClassThreeSelected;
         playerInput.ArcaneMagic += OnClassFourSelected;
