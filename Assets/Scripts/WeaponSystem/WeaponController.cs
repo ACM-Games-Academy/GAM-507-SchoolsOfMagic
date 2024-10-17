@@ -3,6 +3,7 @@ using System;
 
 public class WeaponController : MonoBehaviour
 {
+    [Header("Weapon prefab array \n in order of Nature, Blood, Metal, Arcane")]
     [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
     [SerializeField] private playerModel PlayerModel;                     // Reference to the player's data (class, resources)
