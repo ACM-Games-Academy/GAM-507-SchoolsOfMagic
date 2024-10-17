@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerModel : MonoBehaviour
@@ -10,12 +11,16 @@ public class playerModel : MonoBehaviour
 
     //these are the runtime variables. besides the max values they will be read and written during runtime
     private float maxBlood;
-    private float maxStamina;
+    
     private float maxHealth;
     private float blood;
     private float health;
+
+    private float maxStamina;
     private float stamina;
+
     [SerializeField] private string currentClass;
+    public string CurrentClass {get { return currentClass; } set { currentClass = value; } }
 
     void Awake()
     {
@@ -28,25 +33,12 @@ public class playerModel : MonoBehaviour
         stamina = playerData.startingStamina;
         currentClass = playerData.startingClass;
     }
-    
-    public string getClass()
-    {
-        return currentClass;
-    }
 
-    public float getBlood()
-    {
-        return blood;
-    }
+    //stamina methods
 
-    public float getHealth()
+    public float[] getStamina()
     {
-        return health;
-    }
-
-    public float getStamina()
-    {
-        return stamina;
+        return new float[] { stamina , maxStamina};
     }
 
     public void reduceStamina(float amount)
@@ -61,6 +53,13 @@ public class playerModel : MonoBehaviour
         }
     }
 
+    //blood methods
+
+    public float getBlood()
+    {
+        return blood;
+    }
+
     public void reduceBlood(float amount)
     {
         if (blood - amount < 0)
@@ -71,6 +70,13 @@ public class playerModel : MonoBehaviour
         {
             blood -= amount;
         }
+    }
+
+    //health methods
+
+    public float getHealth()
+    {
+        return health;
     }
 
     public void reduceHealth(float amount)  //my understanding is someone wouldnt want to reduce their own health so i guess this is fine being somewhat insecure for now?
@@ -84,6 +90,8 @@ public class playerModel : MonoBehaviour
             blood -= amount;
         }
     }
+
+    
 
     //for things that will give buffs like more blood or health this will use events cus secure code *nerd face*
 }

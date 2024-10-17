@@ -11,10 +11,10 @@ public class WeaponController : MonoBehaviour
     private void Start()
     {            
         // Subscribe to class change events from the playerInput
-        playerInput.classChangeOne += OnClassOneSelected;
-        playerInput.classChangeTwo += OnClassTwoSelected;
-        playerInput.classChangeThree += OnClassThreeSelected;
-        playerInput.classChangeFour += OnClassFourSelected;
+        playerInput.BloodMagic += OnClassOneSelected;
+        playerInput.BloodMagic += OnClassTwoSelected;
+        playerInput.MetalMagic += OnClassThreeSelected;
+        playerInput.ArcaneMagic += OnClassFourSelected;
 
         // Subscribe to fire events
         playerInput.firePressed += OnFirePressed;
@@ -23,16 +23,16 @@ public class WeaponController : MonoBehaviour
         //we currently don't have the reload keys added yet
 
         // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(PlayerModel.getClass());
+        InitializeWeaponForClass(PlayerModel.CurrentClass);
     }
 
     private void OnEnable()
     {            
         // Subscribe to class change events from the playerInput
-        playerInput.classChangeOne += OnClassOneSelected;
-        playerInput.classChangeTwo += OnClassTwoSelected;
-        playerInput.classChangeThree += OnClassThreeSelected;
-        playerInput.classChangeFour += OnClassFourSelected;
+        playerInput.BloodMagic += OnClassOneSelected;
+        playerInput.BloodMagic += OnClassTwoSelected;
+        playerInput.MetalMagic += OnClassThreeSelected;
+        playerInput.ArcaneMagic += OnClassFourSelected;
 
         // Subscribe to fire events
         playerInput.firePressed += OnFirePressed;
@@ -41,27 +41,27 @@ public class WeaponController : MonoBehaviour
         //we currently don't have the reload keys added yet
 
         // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(PlayerModel.getClass());
+        InitializeWeaponForClass(PlayerModel.CurrentClass);
     }
 
     private void InitializeWeaponForClass(string playerClass)
     {
         switch (playerClass)
         {
-            case "ClassOne":
+            case "Nature":
                 ActivateWeapon(0);
                 break;
-            case "ClassTwo":
+            case "Blood":
                 ActivateWeapon(1);
                 break;
-            case "ClassThree":
+            case "Metal":
                 ActivateWeapon(2);
                 break;
-            case "ClassFour":
+            case "Arcane":
                 ActivateWeapon(3);
                 break;
             default:
-                Debug.LogWarning("Unknown class: " + playerClass);
+                Debug.LogWarning("Weapon Init: invalid magic " + playerClass);
                 break;
         }
     }
@@ -117,10 +117,10 @@ public class WeaponController : MonoBehaviour
     private void OnDisable()
     {
         // unSubscribe to class change events from the playerInput
-        playerInput.classChangeOne -= OnClassOneSelected;
-        playerInput.classChangeTwo -= OnClassTwoSelected;
-        playerInput.classChangeThree -= OnClassThreeSelected;
-        playerInput.classChangeFour -= OnClassFourSelected;
+        playerInput.BloodMagic -= OnClassOneSelected;
+        playerInput.BloodMagic -= OnClassTwoSelected;
+        playerInput.MetalMagic -= OnClassThreeSelected;
+        playerInput.ArcaneMagic -= OnClassFourSelected;
 
         // unSubscribe to fire events
         playerInput.firePressed -= OnFirePressed;

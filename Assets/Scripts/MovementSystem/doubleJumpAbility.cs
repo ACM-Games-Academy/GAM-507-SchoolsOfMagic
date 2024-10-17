@@ -6,7 +6,7 @@ public class doubleJumpAbility : movementAbility
 {
     private bool hasDoubleJump;
 
-    public override void MovementUpdate(playerMovement player)
+    public override void MovementUpdate(movementController player)
     {
         base.MovementUpdate(player);
 
@@ -16,7 +16,7 @@ public class doubleJumpAbility : movementAbility
         }
     }
 
-    public override void Jump(playerMovement player)
+    public override void Jump(movementController player)
     {
         base.Jump(player);
 

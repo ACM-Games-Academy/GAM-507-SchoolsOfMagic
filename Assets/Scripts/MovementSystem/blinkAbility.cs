@@ -7,7 +7,7 @@ public class blinkAbility : movementAbility
     private int blinks;
     private float blinkTime;
 
-    public override void MovementUpdate(playerMovement player)
+    public override void MovementUpdate(movementController player)
     {
         base.MovementUpdate(player);
 

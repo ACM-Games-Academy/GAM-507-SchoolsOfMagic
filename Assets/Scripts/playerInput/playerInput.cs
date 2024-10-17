@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Events;
-using System;
-using Unity.VisualScripting;
 
 public class playerInput : MonoBehaviour
 {
@@ -15,10 +11,10 @@ public class playerInput : MonoBehaviour
     private InputAction playerFire;
     private InputAction playerPrimary; //This is the Variable for the Primary Ability
     private InputAction playerSecondary; //This is the Variable for the Second Ability
-    private InputAction classOne;
-    private InputAction classTwo;
-    private InputAction classThree;
-    private InputAction classFour;
+    private InputAction natureMagic;
+    private InputAction bloodMagic;
+    private InputAction metalMagic;
+    private InputAction arcaneMagic;
     private InputAction abilityMovement;
     private InputAction playerRun;
 
@@ -33,10 +29,10 @@ public class playerInput : MonoBehaviour
 
     public event EventHandler jumpPressed;
 
-    public event EventHandler classChangeOne;
-    public event EventHandler classChangeTwo;
-    public event EventHandler classChangeThree;
-    public event EventHandler classChangeFour;
+    public event EventHandler NatureMagic;
+    public event EventHandler BloodMagic;
+    public event EventHandler MetalMagic;
+    public event EventHandler ArcaneMagic;
 
     public event EventHandler movingAbility;
 
@@ -53,10 +49,10 @@ public class playerInput : MonoBehaviour
         playerFire = controls.Player.Fire;
         playerPrimary = controls.Player.primaryAbility;
         playerSecondary = controls.Player.secondaryAbility;
-        classOne = controls.Player.class1;
-        classTwo = controls.Player.class2;
-        classThree = controls.Player.class3;
-        classFour = controls.Player.class4;
+        natureMagic = controls.Player.natureMagic;
+        bloodMagic = controls.Player.bloodMagic;
+        metalMagic = controls.Player.metalMagic;
+        arcaneMagic = controls.Player.arcaneMagic;
         abilityMovement = controls.Player.movementAbility;
         playerRun = controls.Player.Running;
 
@@ -71,10 +67,10 @@ public class playerInput : MonoBehaviour
         playerPrimary.started += PrimaryAbility;
         playerSecondary.started += SecondaryAbility;
 
-        classOne.started += ChangeClassOne;
-        classTwo.started += ChangeClassTwo;
-        classThree.started += ChangeClassThree;
-        classFour.started += ChangeClassFour;
+        natureMagic.started += ChangeClassOne;
+        bloodMagic.started += ChangeClassTwo;
+        metalMagic.started += ChangeClassThree;
+        arcaneMagic.started += ChangeClassFour;
 
         abilityMovement.started += AbilityMovement;
 
@@ -91,10 +87,10 @@ public class playerInput : MonoBehaviour
         playerFire.Enable();
         playerPrimary.Enable();
         playerSecondary.Enable();
-        classOne.Enable();
-        classTwo.Enable();
-        classThree.Enable();
-        classFour.Enable();
+        natureMagic.Enable();
+        bloodMagic.Enable();
+        metalMagic.Enable();
+        arcaneMagic.Enable();
         abilityMovement.Enable();
         playerRun.Enable();
 
@@ -140,22 +136,22 @@ public class playerInput : MonoBehaviour
 
     private void ChangeClassOne(InputAction.CallbackContext oneClass)
     {
-        onButton(EventArgs.Empty, classChangeOne);
+        onButton(EventArgs.Empty, NatureMagic);
     }
 
     private void ChangeClassTwo(InputAction.CallbackContext twoClass)
     {
-        onButton(EventArgs.Empty, classChangeTwo);
+        onButton(EventArgs.Empty, BloodMagic);
     }
 
     private void ChangeClassThree(InputAction.CallbackContext threeClass)
     {
-        onButton(EventArgs.Empty, classChangeThree);
+        onButton(EventArgs.Empty, MetalMagic);
     }
 
     private void ChangeClassFour(InputAction.CallbackContext fourClass)
     {
-        onButton(EventArgs.Empty, classChangeFour);
+        onButton(EventArgs.Empty, ArcaneMagic);
     }
 
     private void AbilityMovement(InputAction.CallbackContext movement)
@@ -178,7 +174,6 @@ public class playerInput : MonoBehaviour
         button.Invoke(this ,e);
     }
 
-
     private void OnDisable()
     {
         playerMovement.Disable();
@@ -187,10 +182,10 @@ public class playerInput : MonoBehaviour
         playerFire.Disable();
         playerPrimary.Disable();
         playerSecondary.Disable();
-        classOne.Disable();
-        classTwo.Disable();
-        classThree.Disable();
-        classFour.Disable();
+        natureMagic.Disable();
+        bloodMagic.Disable();
+        metalMagic.Disable();
+        arcaneMagic.Disable();
         abilityMovement.Disable();
         playerRun.Disable();
     }

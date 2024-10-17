@@ -60,7 +60,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "class1",
+                    "name": "natureMagic",
                     "type": "Button",
                     "id": "b1324984-abf4-42b0-bc51-24c5d499a7f3",
                     "expectedControlType": "Button",
@@ -69,7 +69,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "class2",
+                    "name": "bloodMagic",
                     "type": "Button",
                     "id": "f39cc386-d359-4484-83d6-f252e8d123c9",
                     "expectedControlType": "Button",
@@ -78,7 +78,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "class3",
+                    "name": "metalMagic",
                     "type": "Button",
                     "id": "3699dabc-1079-4bad-9858-8ca887c4150d",
                     "expectedControlType": "Button",
@@ -87,7 +87,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "class4",
+                    "name": "arcaneMagic",
                     "type": "Button",
                     "id": "eb474350-3ec0-4b9d-97f4-531dde96d4bd",
                     "expectedControlType": "Button",
@@ -351,7 +351,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class1",
+                    "action": "natureMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -362,7 +362,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class1",
+                    "action": "natureMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -373,7 +373,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class2",
+                    "action": "bloodMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -384,7 +384,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class2",
+                    "action": "bloodMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -395,7 +395,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class3",
+                    "action": "metalMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -406,7 +406,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class3",
+                    "action": "metalMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -417,7 +417,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class4",
+                    "action": "arcaneMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -428,7 +428,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "class4",
+                    "action": "arcaneMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

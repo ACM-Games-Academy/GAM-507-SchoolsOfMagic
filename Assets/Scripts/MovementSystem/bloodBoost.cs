@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bloodBoost : movementAbility
 {
-    public override void MovementUpdate(playerMovement player)
+    public override void MovementUpdate(movementController player)
     {
         base.MovementUpdate(player);
 

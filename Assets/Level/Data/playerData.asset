@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   maxHealth: 200
-  maxBlood: 10
-  maxStamina: 10
   startingHealth: 180
+  maxBlood: 10
   startingBlood: 10
+  startingClass: Nature
+  maxStamina: 10
   startingStamina: 10
-  startingClass: ClassThree
+  staminaRegen: 0
