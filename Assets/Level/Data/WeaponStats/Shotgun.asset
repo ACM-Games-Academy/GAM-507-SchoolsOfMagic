@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   magazineCapacity: 30
-  fireRate: 0.1
+  fireRate: 1
   bulletSpread: 0.05
   bulletRange: 100
   maxAmmo: 120

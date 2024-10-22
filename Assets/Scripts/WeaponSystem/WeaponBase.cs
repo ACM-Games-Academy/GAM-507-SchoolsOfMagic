@@ -57,8 +57,8 @@ public class WeaponBase : MonoBehaviour
         if (Time.time < nextFireTime || isReloading)
             return; // Wait until the next fire time or finish reloading
 
-        if (currentAmmo > 0)
-        {
+       /* if (currentAmmo > 0)
+        {*/
             // Play the particle system when firing
             if (bulletFireEffect != null)
             {
@@ -70,11 +70,11 @@ public class WeaponBase : MonoBehaviour
 
             currentAmmo--;
             nextFireTime = Time.time + weaponStats.FireRate;
-        }
+       /*}
         else
-        {
+       {
             Debug.Log("Out of ammo! Reload.");
-        }
+       }*/
 
         //reloadAmmoCount();
     }
