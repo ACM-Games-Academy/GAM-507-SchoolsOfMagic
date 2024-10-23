@@ -1027,7 +1027,186 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Arcane Wizard SFX" ID="{C135387E-17B0-497F-9687-1531B940EE55}" ShortID="723326362"/>
+				<Folder Name="Arcane Wizard SFX" ID="{C135387E-17B0-497F-9687-1531B940EE55}" ShortID="723326362">
+					<ChildrenList>
+						<Sound Name="Autocannon Fire" ID="{F7242C7F-F410-495B-AAB1-FE7495FD1E6D}" ShortID="1001873824">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Autocannon Fire" ID="{495DA0A1-475B-43BE-A413-7D9977A9B1D1}">
+									<Language>SFX</Language>
+									<AudioFile>Autocannon Fire.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="986974176"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Autocannon Fire" ID="{495DA0A1-475B-43BE-A413-7D9977A9B1D1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Autocannon Reload" ID="{2995C314-29B4-4C63-AB04-D88B6FF2FC29}" ShortID="318652928">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Autocannon Reload" ID="{D5D3A0DB-468E-4AC4-9C1A-EB24C53F4098}">
+									<Language>SFX</Language>
+									<AudioFile>Autocannon Reload.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1047728583"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Autocannon Reload" ID="{D5D3A0DB-468E-4AC4-9C1A-EB24C53F4098}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Hat switch 1" ID="{11E421CD-D45A-46B3-95FF-2E824A6E3E83}" ShortID="830390018">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hat switch 1" ID="{6DB19CD3-E68B-4544-9741-3A3F07518C2C}">
+									<Language>SFX</Language>
+									<AudioFile>Hat switch 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="661984101"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hat switch 1" ID="{6DB19CD3-E68B-4544-9741-3A3F07518C2C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Hat switch 2" ID="{AABA8096-EC53-477C-B14B-5766D9D24D06}" ShortID="317925770">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hat switch 2" ID="{8615BDD3-D2E0-4F2C-8024-044A36AF1DD4}">
+									<Language>SFX</Language>
+									<AudioFile>Hat switch 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="43449202"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hat switch 2" ID="{8615BDD3-D2E0-4F2C-8024-044A36AF1DD4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Hat switch 3" ID="{FDB3964F-EC6C-43B5-BDC6-BC4D0479C599}" ShortID="771764562">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hat switch 3" ID="{27A471D1-95AB-4806-9E6B-C700A5D55610}">
+									<Language>SFX</Language>
+									<AudioFile>Hat switch 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="286465795"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hat switch 3" ID="{27A471D1-95AB-4806-9E6B-C700A5D55610}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Mana Flux Stack 1" ID="{D31E26E2-3112-4672-98E0-9A3D4C7C738C}" ShortID="828982998">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Mana Flux Stack 1" ID="{603DD359-295A-4842-A7E8-0350C6036526}">
+									<Language>SFX</Language>
+									<AudioFile>Mana Flux Stack 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="502250634"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Mana Flux Stack 1" ID="{603DD359-295A-4842-A7E8-0350C6036526}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Mana Flux Stack 2" ID="{5A1EAB7E-A9E9-4CCC-A53A-D4DB6E75622E}" ShortID="877394892">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Mana Flux Stack 2" ID="{E1F74E22-BD9D-4A28-A75E-DCB0FA240EEB}">
+									<Language>SFX</Language>
+									<AudioFile>Mana Flux Stack 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1061088957"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Mana Flux Stack 2" ID="{E1F74E22-BD9D-4A28-A75E-DCB0FA240EEB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Mana Flux Stack 3" ID="{70A14059-39D6-49DD-A60C-7FAB7B70DA04}" ShortID="633119859">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Mana Flux Stack 3" ID="{96E05E3E-F3BB-4103-97AA-BAFDFD25C774}">
+									<Language>SFX</Language>
+									<AudioFile>Mana Flux Stack 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="825697857"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Mana Flux Stack 3" ID="{96E05E3E-F3BB-4103-97AA-BAFDFD25C774}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
