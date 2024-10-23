@@ -11,9 +11,11 @@ public class playerModel : MonoBehaviour
 
     //these are the runtime variables. besides the max values they will be read and written during runtime
     private float maxBlood;
+    private float maxIron;
     
     private float maxHealth;
     private float blood;
+    private float iron;
     private float health;
 
     private float maxStamina;
@@ -26,9 +28,11 @@ public class playerModel : MonoBehaviour
     {
         //setting playerData scriptableObj values to this script
         maxBlood = playerData.maxBlood;
+        maxIron = playerData.maxIron;
         maxHealth = playerData.maxHealth;
         maxStamina = playerData.maxStamina;
         blood = playerData.startingBlood;
+        iron = playerData.startingIron;
         health = playerData.startingHealth;
         stamina = playerData.startingStamina;
         currentClass = playerData.startingClass;
@@ -69,6 +73,49 @@ public class playerModel : MonoBehaviour
         else
         {
             blood -= amount;
+        }
+    }
+
+    public void addBlood(float amount)
+    {
+        if(blood + amount > maxBlood)
+        {
+            blood = maxBlood;
+        }
+        else
+        {
+            blood += amount;
+        }
+    }
+
+    //iron methods
+
+    public float getIron()
+    {
+        return iron;
+    }
+
+    public void reduceIron(float amount)
+    {
+        if (iron - amount < 0)
+        {
+            iron = 0;
+        }
+        else
+        {
+            iron -= amount;
+        }
+    }
+
+    public void addIron(float amount)
+    {
+        if (iron + amount > maxIron)
+        {
+            iron = maxIron;
+        }
+        else
+        {
+            iron += amount;
         }
     }
 
