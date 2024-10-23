@@ -1205,6 +1205,28 @@
 								<ActiveSource Name="Mana Flux Stack 3" ID="{96E05E3E-F3BB-4103-97AA-BAFDFD25C774}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Blink" ID="{A287C81B-D364-4E07-B241-F7E047A723C5}" ShortID="397834730">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Blink" ID="{E090B0C5-1B1B-471E-8220-C4AC0506BE61}">
+									<Language>SFX</Language>
+									<AudioFile>Blink.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="680495708"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Blink" ID="{E090B0C5-1B1B-471E-8220-C4AC0506BE61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI SFX" ID="{75F30A89-F870-440A-8E02-ACC0FDBA554A}" ShortID="47656135">
