@@ -1207,6 +1207,142 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI SFX" ID="{75F30A89-F870-440A-8E02-ACC0FDBA554A}" ShortID="47656135">
+					<ChildrenList>
+						<Sound Name="UI Back" ID="{1CA0301E-2DD7-424F-9B74-8D4559225F24}" ShortID="154404325">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI Back" ID="{5D36C46D-608A-4510-B12A-C6BEA2027AD8}">
+									<Language>SFX</Language>
+									<AudioFile>UI Back.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="809101366"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI Back" ID="{5D36C46D-608A-4510-B12A-C6BEA2027AD8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI Hover" ID="{7D4E8717-DD1A-4D43-98FD-3E6A266250A3}" ShortID="83083512">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI Hover" ID="{6FF81F57-F2A3-49DE-BE33-D1A98BCAA823}">
+									<Language>SFX</Language>
+									<AudioFile>UI Hover.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="86633116"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI Hover" ID="{6FF81F57-F2A3-49DE-BE33-D1A98BCAA823}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI Pause" ID="{A3D93585-61BE-4BAB-8E17-F5C04E1DAE4E}" ShortID="138559504">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI Pause" ID="{26C49832-C825-40E3-95E3-3960CA03638F}">
+									<Language>SFX</Language>
+									<AudioFile>UI Pause.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="757080791"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI Pause" ID="{26C49832-C825-40E3-95E3-3960CA03638F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI Select 1" ID="{A16CB2C6-A319-4F52-A153-43051D026E75}" ShortID="71899731">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI Select 1" ID="{217C4BFF-6B4C-4EED-9515-13E1FCB186D4}">
+									<Language>SFX</Language>
+									<AudioFile>UI Select 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="744141565"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI Select 1" ID="{217C4BFF-6B4C-4EED-9515-13E1FCB186D4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI Select 2" ID="{9F72A8FF-57B9-4FF4-B131-F3A102A10DA4}" ShortID="293808874">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI Select 2" ID="{69FE08AF-6249-4FAF-9904-491F1CCCAE68}">
+									<Language>SFX</Language>
+									<AudioFile>UI Select 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1072828595"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI Select 2" ID="{69FE08AF-6249-4FAF-9904-491F1CCCAE68}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ultimate Bar" ID="{29749FB9-17DA-4040-9CFC-3020484E5905}" ShortID="961578338">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ultimate Bar" ID="{D734392F-C134-4124-8ED1-9B702ECB030B}">
+									<Language>SFX</Language>
+									<AudioFile>Ultimate Bar.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="921554595"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ultimate Bar" ID="{D734392F-C134-4124-8ED1-9B702ECB030B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
