@@ -216,14 +216,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e527935db598cb4ea765c8fbc67e5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 7635839297485463869}
   controller: {fileID: 3321366431093143120}
   cameraComponent: {fileID: 8644982040416778567}
   inputModule: {fileID: 1460535965476682322}
   playerModel: {fileID: 2745041297156247173}
-  natureMovement: {fileID: 0}
+  natureMovement: {fileID: 2122806117344850857}
   bloodMovement: {fileID: 7040819900456318970}
-  metalMovement: {fileID: 0}
-  arcaneMovement: {fileID: 0}
+  metalMovement: {fileID: 8859678799373355387}
+  arcaneMovement: {fileID: 633953071133318730}
   stats: {fileID: 11400000, guid: 11c87484548b0f24dab025cf1c494af5, type: 2}
 --- !u!33 &3092784167919089598
 MeshFilter:

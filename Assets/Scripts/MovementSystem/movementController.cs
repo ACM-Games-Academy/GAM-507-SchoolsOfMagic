@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class movementController : MonoBehaviour
 {
+    public playerController playerController;
     private Vector3 velocity;
     public Vector3 Velocity 
     { get { return velocity; } set { velocity = value; } }
