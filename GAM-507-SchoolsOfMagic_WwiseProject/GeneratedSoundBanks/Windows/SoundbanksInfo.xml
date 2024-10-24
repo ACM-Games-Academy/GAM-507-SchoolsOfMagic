@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{474E6D0F-2326-7E64-A0E8-2B804D91066A}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="Health"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="146841814" Name="WizardStates">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2114153135" Name="Arcane"/>
+						<State Id="2473969246" Name="Metal"/>
+						<State Id="3501062356" Name="Nature"/>
+						<State Id="3934470635" Name="Blood"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A13D907A-62ED-9133-1BA2-F4DCACE99277}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="43449202" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat switch 2.wav</ShortName>
+					<CachePath>SFX/Hat switch 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="118111049" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalOutOfAmmo.wav</ShortName>
+					<CachePath>SFX/MetalOutOfAmmo_818F3B66.wem</CachePath>
+				</File>
+				<File Id="120560503" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat Rustle 1.wav</ShortName>
+					<CachePath>SFX/Hat Rustle 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="161432319" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep1.wav</ShortName>
+					<CachePath>SFX/Footstep1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="286465795" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat switch 3.wav</ShortName>
+					<CachePath>SFX/Hat switch 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="312105102" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalMagneticHum.wav</ShortName>
+					<CachePath>SFX/MetalMagneticHum_818F3B66.wem</CachePath>
+				</File>
+				<File Id="320129865" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalSwoosh.wav</ShortName>
+					<CachePath>SFX/MetalSwoosh_818F3B66.wem</CachePath>
+				</File>
+				<File Id="422319167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep2.wav</ShortName>
+					<CachePath>SFX/Footstep2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="457077370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat Rustle 2.wav</ShortName>
+					<CachePath>SFX/Hat Rustle 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="475365285" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice 5.wav</ShortName>
+					<CachePath>SFX/Slice 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="479973183" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalGunShoot.wav</ShortName>
+					<CachePath>SFX/MetalGunShoot_818F3B66.wem</CachePath>
+				</File>
+				<File Id="483639679" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shotgun Boom.wav</ShortName>
+					<CachePath>SFX/Shotgun Boom_1CD8E2D6.wem</CachePath>
+				</File>
+				<File Id="502250634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mana Flux Stack 1.wav</ShortName>
+					<CachePath>SFX/Mana Flux Stack 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="574592468" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice1.wav</ShortName>
+					<CachePath>SFX/Slice1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="601160109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep3.wav</ShortName>
+					<CachePath>SFX/Footstep3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="607323947" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep4.wav</ShortName>
+					<CachePath>SFX/MetalFootstep4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="625086626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep2.wav</ShortName>
+					<CachePath>SFX/MetalFootstep2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="661984101" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat switch 1.wav</ShortName>
+					<CachePath>SFX/Hat switch 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="663334928" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice2.wav</ShortName>
+					<CachePath>SFX/Slice2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="680495708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blink.wav</ShortName>
+					<CachePath>SFX/Blink_818F3B66.wem</CachePath>
+				</File>
+				<File Id="794819962" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice3.wav</ShortName>
+					<CachePath>SFX/Slice3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="825697857" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mana Flux Stack 3.wav</ShortName>
+					<CachePath>SFX/Mana Flux Stack 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="851393941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Passive Hum.wav</ShortName>
+					<CachePath>SFX/Passive Hum_73E78141.wem</CachePath>
+				</File>
+				<File Id="920056555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalShards.wav</ShortName>
+					<CachePath>SFX/MetalShards_818F3B66.wem</CachePath>
+				</File>
+				<File Id="964515548" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep4.wav</ShortName>
+					<CachePath>SFX/Footstep4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="979254127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep3.wav</ShortName>
+					<CachePath>SFX/MetalFootstep3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="986974176" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Autocannon Fire.wav</ShortName>
+					<CachePath>SFX/Autocannon Fire_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1033323481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalWhoosh.wav</ShortName>
+					<CachePath>SFX/MetalWhoosh_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1040569390" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice4.wav</ShortName>
+					<CachePath>SFX/Slice4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1047636975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalGunReload.wav</ShortName>
+					<CachePath>SFX/MetalGunReload_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1047728583" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Autocannon Reload.wav</ShortName>
+					<CachePath>SFX/Autocannon Reload_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1059275467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep1.wav</ShortName>
+					<CachePath>SFX/MetalFootstep1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1061088957" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mana Flux Stack 2.wav</ShortName>
+					<CachePath>SFX/Mana Flux Stack 2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3209639876" Name="Play_Arcane_Autocannon_Fire" DurationType="OneShot" DurationMin="2.9364853" DurationMax="2.9364853">
+					<MediaRefs>
+						<MediaRef Id="986974176"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1562330543" Name="Play_Arcane_Autocannon_Reload" DurationType="OneShot" DurationMin="2.8701813" DurationMax="2.8701813">
+					<MediaRefs>
+						<MediaRef Id="1047728583"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2725967099" Name="Play_Arcane_Blink" DurationType="OneShot" DurationMin="2.8701813" DurationMax="2.8701813">
+					<MediaRefs>
+						<MediaRef Id="680495708"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1535985346" Name="Play_Arcane_Hat_Rustle" DurationType="OneShot" DurationMin="0.6583447" DurationMax="0.6583447">
+					<MediaRefs>
+						<MediaRef Id="43449202"/>
+						<MediaRef Id="286465795"/>
+						<MediaRef Id="661984101"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3122977081" Name="Play_Arcane_Mana_Flux_Stack_1" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="502250634"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3122977082" Name="Play_Arcane_Mana_Flux_Stack_2" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="1061088957"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3122977083" Name="Play_Arcane_Mana_Flux_Stack_3" DurationType="OneShot" DurationMin="5.8423357" DurationMax="5.8423357">
+					<MediaRefs>
+						<MediaRef Id="825697857"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2561067092" Name="Play_Metal_Footstep" DurationType="OneShot" DurationMin="0.44635418" DurationMax="0.47447917">
+					<MediaRefs>
+						<MediaRef Id="607323947"/>
+						<MediaRef Id="625086626"/>
+						<MediaRef Id="979254127"/>
+						<MediaRef Id="1059275467"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1688851195" Name="Play_Metal_GunReload" DurationType="OneShot" DurationMin="4" DurationMax="4">
+					<MediaRefs>
+						<MediaRef Id="1047636975"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2232792937" Name="Play_Metal_GunShoot" DurationType="OneShot" DurationMin="0.13020833" DurationMax="0.13020833">
+					<MediaRefs>
+						<MediaRef Id="479973183"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3370461538" Name="Play_Metal_MagneticHum" DurationType="OneShot" DurationMin="2" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="312105102"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2437099115" Name="Play_Metal_OutOfAmmo" DurationType="OneShot" DurationMin="0.47916666" DurationMax="0.47916666">
+					<MediaRefs>
+						<MediaRef Id="118111049"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1582782641" Name="Play_Metal_Shards" DurationType="OneShot" DurationMin="12" DurationMax="12">
+					<MediaRefs>
+						<MediaRef Id="920056555"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2233504167" Name="Play_Metal_Swoosh" DurationType="OneShot" DurationMin="2" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="320129865"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3044732116" Name="Play_Metal_Whoosh" DurationType="OneShot" DurationMin="1.3125" DurationMax="1.3125">
+					<MediaRefs>
+						<MediaRef Id="1033323481"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2072576824" Name="Play_Nature_Footstep" DurationType="OneShot" DurationMin="1.3593333" DurationMax="1.3593333">
+					<MediaRefs>
+						<MediaRef Id="161432319"/>
+						<MediaRef Id="422319167"/>
+						<MediaRef Id="601160109"/>
+						<MediaRef Id="964515548"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3049387599" Name="Play_Nature_Hat_Rustle" DurationType="OneShot" DurationMin="1.3593333" DurationMax="1.3593333">
+					<MediaRefs>
+						<MediaRef Id="120560503"/>
+						<MediaRef Id="457077370"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1540153786" Name="Play_Nature_Passive_Hum" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="851393941"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4053513558" Name="Play_Nature_Shotgun_Boom" DurationType="OneShot" DurationMin="0.74119896" DurationMax="1.115043">
+					<MediaRefs>
+						<MediaRef Id="483639679"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="275810172" Name="Play_Nature_Spike" DurationType="OneShot" DurationMin="0.25" DurationMax="1.3593333">
+					<MediaRefs>
+						<MediaRef Id="475365285"/>
+						<MediaRef Id="574592468"/>
+						<MediaRef Id="663334928"/>
+						<MediaRef Id="794819962"/>
+						<MediaRef Id="1040569390"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{F0E35B84-EB83-3840-8358-7EEB106F606C}</FileHash>
+</SoundBanksInfo>

@@ -1,0 +1,17 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	146841814	WizardStates			\Default Work Unit\WizardStates	
+
+State	ID	Name	State Group			Notes
+	748895195	None	WizardStates			
+	2114153135	Arcane	WizardStates			
+	2473969246	Metal	WizardStates			
+	3501062356	Nature	WizardStates			
+	3934470635	Blood	WizardStates			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

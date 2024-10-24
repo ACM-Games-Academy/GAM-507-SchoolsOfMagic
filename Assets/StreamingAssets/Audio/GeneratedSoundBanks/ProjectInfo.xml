@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="GAM-507-SchoolsOfMagic_WwiseProject" GUID="{01C94D62-A180-4DA7-8E75-90E37F27274D}" Generator="2023.1.4.8496"/>
+	<CacheRoot>../../../../GAM-507-SchoolsOfMagic_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{74FDB29D-661A-467A-B657-3CCB91F20D39}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../GAM-507-SchoolsOfMagic_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{ADA91D39-A386-47ED-9160-BCEA90D0A9C2}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../GAM-507-SchoolsOfMagic_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{8D26A0AA-0E2B-4357-BE2B-87F3FA70971D}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{9984ACA0-1ADC-269B-5061-07EB1807D36E}</FileHash>
+</ProjectInfo>

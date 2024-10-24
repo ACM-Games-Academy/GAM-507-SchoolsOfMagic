@@ -1,0 +1,57 @@
+Event	ID	Name			Wwise Object Path	Notes
+	275810172	Play_Nature_Spike			\Default Work Unit\Nature Events\Play_Nature_Spike	
+	1535985346	Play_Arcane_Hat_Rustle			\Default Work Unit\Arcane Events\Play_Arcane_Hat_Rustle	
+	1540153786	Play_Nature_Passive_Hum			\Default Work Unit\Nature Events\Play_Nature_Passive_Hum	
+	1562330543	Play_Arcane_Autocannon_Reload			\Default Work Unit\Arcane Events\Play_Arcane_Autocannon_Reload	
+	1582782641	Play_Metal_Shards			\Default Work Unit\Metal Events\Play_Metal_Shards	
+	1688851195	Play_Metal_GunReload			\Default Work Unit\Metal Events\Play_Metal_GunReload	
+	2072576824	Play_Nature_Footstep			\Default Work Unit\Nature Events\Play_Nature_Footstep	
+	2232792937	Play_Metal_GunShoot			\Default Work Unit\Metal Events\Play_Metal_GunShoot	
+	2233504167	Play_Metal_Swoosh			\Default Work Unit\Metal Events\Play_Metal_Swoosh	
+	2437099115	Play_Metal_OutOfAmmo			\Default Work Unit\Metal Events\Play_Metal_OutOfAmmo	
+	2561067092	Play_Metal_Footstep			\Default Work Unit\Metal Events\Play_Metal_Footstep	
+	2725967099	Play_Arcane_Blink			\Default Work Unit\Arcane Events\Play_Arcane_Blink	
+	3044732116	Play_Metal_Whoosh			\Default Work Unit\Metal Events\Play_Metal_Whoosh	
+	3049387599	Play_Nature_Hat_Rustle			\Default Work Unit\Nature Events\Play_Nature_Hat_Rustle	
+	3122977081	Play_Arcane_Mana_Flux_Stack_1			\Default Work Unit\Arcane Events\Play_Arcane_Mana_Flux_Stack_1	
+	3122977082	Play_Arcane_Mana_Flux_Stack_2			\Default Work Unit\Arcane Events\Play_Arcane_Mana_Flux_Stack_2	
+	3122977083	Play_Arcane_Mana_Flux_Stack_3			\Default Work Unit\Arcane Events\Play_Arcane_Mana_Flux_Stack_3	
+	3209639876	Play_Arcane_Autocannon_Fire			\Default Work Unit\Arcane Events\Play_Arcane_Autocannon_Fire	
+	3370461538	Play_Metal_MagneticHum			\Default Work Unit\Metal Events\Play_Metal_MagneticHum	
+	4053513558	Play_Nature_Shotgun_Boom			\Default Work Unit\Nature Events\Play_Nature_Shotgun_Boom	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	43449202	Hat switch 2	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Hat switch 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Arcane Hat Switch Random\Hat switch 2		116228
+	118111049	MetalOutOfAmmo	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalOutOfAmmo_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalOutOfAmmo		92160
+	120560503	Hat Rustle 1	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Hat Rustle 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Hat Rustle Random\Hat Rustle 1		261152
+	161432319	Footstep1	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Footstep1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Nature Footstep Random\Footstep1		261152
+	286465795	Hat switch 3	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Hat switch 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Arcane Hat Switch Random\Hat switch 3		116228
+	312105102	MetalMagneticHum	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalMagneticHum_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalMagneticHum		384160
+	320129865	MetalSwoosh	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalSwoosh_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalSwoosh		384160
+	422319167	Footstep2	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Footstep2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Nature Footstep Random\Footstep2		261152
+	457077370	Hat Rustle 2	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Hat Rustle 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Hat Rustle Random\Hat Rustle 2		261152
+	475365285	Slice 5	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Slice 5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Slice Random\Slice 5		261152
+	479973183	MetalGunShoot	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalGunShoot_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalGunShoot		25160
+	483639679	Shotgun Boom	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Shotgun Boom_1CD8E2D6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Shotgun Boom		172092
+	502250634	Mana Flux Stack 1	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Mana Flux Stack 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Mana Flux Stack 1		244252
+	574592468	Slice1	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Slice1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Slice Random\Slice1		48160
+	601160109	Footstep3	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Footstep3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Nature Footstep Random\Footstep3		261152
+	607323947	MetalFootstep4	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalFootstep4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\Metal Footstep Random\MetalFootstep4		85860
+	625086626	MetalFootstep2	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalFootstep2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\Metal Footstep Random\MetalFootstep2		91260
+	661984101	Hat switch 1	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Hat switch 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Arcane Hat Switch Random\Hat switch 1		116228
+	663334928	Slice2	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Slice2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Slice Random\Slice2		261152
+	680495708	Blink	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Blink_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Blink		506396
+	794819962	Slice3	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Slice3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Slice Random\Slice3		261152
+	825697857	Mana Flux Stack 3	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Mana Flux Stack 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Mana Flux Stack 3		1030684
+	851393941	Passive Hum	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Passive Hum_73E78141.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Passive Hum		947700
+	920056555	MetalShards	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalShards_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalShards		2304160
+	964515548	Footstep4	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Footstep4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Nature Footstep Random\Footstep4		261152
+	979254127	MetalFootstep3	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalFootstep3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\Metal Footstep Random\MetalFootstep3		91260
+	986974176	Autocannon Fire	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Autocannon Fire_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Autocannon Fire		518092
+	1033323481	MetalWhoosh	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalWhoosh_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalWhoosh		252160
+	1040569390	Slice4	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Slice4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Slice Random\Slice4		261152
+	1047636975	MetalGunReload	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalGunReload_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalGunReload		768160
+	1047728583	Autocannon Reload	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Autocannon Reload_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Autocannon Reload		506396
+	1059275467	MetalFootstep1	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\MetalFootstep1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\Metal Footstep Random\MetalFootstep1		90460
+	1061088957	Mana Flux Stack 2	C:\Users\Jack Ralph Thatcher\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Windows\SFX\Mana Flux Stack 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arcane Wizard SFX\Mana Flux Stack 2		244252
+
