@@ -503,7 +503,638 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Blood Wizard SFX" ID="{D4C1D137-0E34-4D04-B4A8-DB351AC9EAF1}" ShortID="610960724"/>
+				<Folder Name="Blood Wizard SFX" ID="{D4C1D137-0E34-4D04-B4A8-DB351AC9EAF1}" ShortID="610960724">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Blood Wizard_Primary Ability" ID="{7948CF3E-9F9B-4899-B23E-AF5DA63CCAB7}" ShortID="269972414">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F68B3098-DA2D-4403-821D-2F44F046EABA}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Blood Wizard_Primary Ability1 [KB]" ID="{8C463D45-5857-4516-AE54-595B3D92D3C6}" ShortID="915840064">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Primary Ability1 [KB]" ID="{BB2C93A9-CF23-4487-AD12-4E440E9A0F1D}">
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Primary Ability1 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="595160429"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Primary Ability1 [KB]" ID="{BB2C93A9-CF23-4487-AD12-4E440E9A0F1D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Primary Ability2 [KB]" ID="{210B1C56-5C03-4344-89EC-03B40201FFB2}" ShortID="1025724843">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Primary Ability2 [KB]" ID="{51E028EF-1EA3-4C2E-8A78-8500A66F3B72}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.909477103395471"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Primary Ability2 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="729945790"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Primary Ability2 [KB]" ID="{51E028EF-1EA3-4C2E-8A78-8500A66F3B72}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Blood Wizard_Footstep" ID="{98A090B0-3F11-4514-8683-3C9A4F892871}" ShortID="676774169">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DA284CEC-71AA-4FD9-B9FC-6E0938FEE626}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Blood Wizard_Footsteps1 [KB]" ID="{13AEA6BE-5451-48CE-8E8D-391F43EFD264}" ShortID="758272226">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps1 [KB]" ID="{5EFFD98C-D101-4F66-8F9A-7E50C5F4529F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.117048266925818"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0275692198957505"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.274724857908531"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps1 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="738174852"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps1 [KB]" ID="{5EFFD98C-D101-4F66-8F9A-7E50C5F4529F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps2 [KB]" ID="{0C2BCF1E-C3AB-4479-AB74-92D1AF4F9314}" ShortID="895281682">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps2 [KB]" ID="{C9195B4D-B4D2-496C-9C96-D429AE7B71E7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0446433913879688"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0561005449300139"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0367419061865584"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.271020942408377"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps2 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="390903953"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps2 [KB]" ID="{C9195B4D-B4D2-496C-9C96-D429AE7B71E7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps3 [KB]" ID="{C9D79525-7B79-40DC-AD16-B498B1F5004A}" ShortID="948818545">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps3 [KB]" ID="{361AF740-6C45-409A-8FD8-6A7486D8900F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.145388752359583"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0515895572888841"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.338849592192898"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps3 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="967121522"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps3 [KB]" ID="{361AF740-6C45-409A-8FD8-6A7486D8900F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps4 [KB]" ID="{FB3AFD33-8BF3-4FE7-977D-1AB3D55B451E}" ShortID="170085388">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps4 [KB]" ID="{9AD8A250-BBCF-4B71-A2F5-C960F65C3227}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0700937006565279"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.03028047868362"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.404861214992105"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps4 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="818263443"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps4 [KB]" ID="{9AD8A250-BBCF-4B71-A2F5-C960F65C3227}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps6 [KB]" ID="{8D8FD2B0-E3B9-4C1C-B8F7-07BA97A1B8E7}" ShortID="680402893">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps6 [KB]" ID="{F1AC8568-21DD-4183-9764-AABB085F7BA7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.132061533164749"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0253742683809999"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.364466764017998"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps6 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="498352530"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps6 [KB]" ID="{F1AC8568-21DD-4183-9764-AABB085F7BA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps7 [KB]" ID="{484763D9-E46C-4BC9-B3C4-CCB3ED7572C0}" ShortID="845593647">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps7 [KB]" ID="{9B03DA3F-F1F3-40EA-86B7-C56952796AA0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0189250988353457"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0757003953413826"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0525697189870713"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.378501976706913"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps7 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="981205382"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps7 [KB]" ID="{9B03DA3F-F1F3-40EA-86B7-C56952796AA0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps8 [KB]" ID="{305A708D-CF59-4C30-B5B1-101DAD6AD0B9}" ShortID="273823820">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps8 [KB]" ID="{65BE284B-6401-476D-BD98-B1890E3F1881}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.137218304424737"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0480971376334129"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.514214986168988"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps8 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="346264929"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps8 [KB]" ID="{65BE284B-6401-476D-BD98-B1890E3F1881}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Blood Wizard_Gun Reload [KB]" ID="{24786123-42E2-4E7B-A806-3B1390A94486}" ShortID="866349825">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8320D721-B647-4EC1-B96B-2D3AAED81B8F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Blood Wizard_Gun Reload [KB]" ID="{67FEF2DC-8375-42BC-A6E3-9B6D1C54F75B}">
+									<Language>SFX</Language>
+									<AudioFile>Blood Wizard_Gun Reload [KB].wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="56531854"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Blood Wizard_Gun Reload [KB]" ID="{67FEF2DC-8375-42BC-A6E3-9B6D1C54F75B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Blood Wizard_Armour Hit" ID="{C8DCB4F8-09E0-4AE2-AAE1-E65FB5D049D3}" ShortID="447188187">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{529B9FCE-D6B7-460D-8583-2A3BD0D76FDF}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Blood Wizard_Gun_Armour Hit3 [KB]" ID="{18F9FB23-7D5C-4304-8FD3-0414598E9468}" ShortID="496063346">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Gun_Armour Hit3 [KB]" ID="{324D0DD6-8345-4F73-9BED-CA1DAAF9F390}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0249955479574028"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.061239092495637"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.306612054944142"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Gun_Armour Hit3 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="25896100"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Gun_Armour Hit3 [KB]" ID="{324D0DD6-8345-4F73-9BED-CA1DAAF9F390}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Gun_Armour Hit5 [KB]" ID="{68B2B1B0-A163-4F6E-A345-C0E6AE483A00}" ShortID="35288409">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Gun_Armour Hit5 [KB]" ID="{911C87D6-DA55-4805-B568-0EE6574741CA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0500160273533497"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0198988495921929"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.361406133133882"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Gun_Armour Hit5 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="867227185"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Gun_Armour Hit5 [KB]" ID="{911C87D6-DA55-4805-B568-0EE6574741CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Gun_Armour Hit6 [KB]" ID="{4A25FAD5-DFA8-419D-BE59-725E597BC549}" ShortID="785081733">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Gun_Armour Hit6 [KB]" ID="{E3087335-5B0E-497D-8BCB-CA8C8871E8A7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0546894848689912"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0575678788094644"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.385129109235317"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Gun_Armour Hit6 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="354559576"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Gun_Armour Hit6 [KB]" ID="{E3087335-5B0E-497D-8BCB-CA8C8871E8A7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Gun_Armour Hit2 [KB]" ID="{394EC4CC-F97C-4216-B700-96434E554DAD}" ShortID="758149929">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Gun_Armour Hit2 [KB]" ID="{02410F96-B4E8-4A2B-ACDB-60FE4FD1C494}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0179973821989529"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0758071553228622"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.384489528795811"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Gun_Armour Hit2 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="684144736"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Gun_Armour Hit2 [KB]" ID="{02410F96-B4E8-4A2B-ACDB-60FE4FD1C494}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Gun_Armour Hit1 [KB]" ID="{D6251038-1E16-41B3-A887-28E853FB41D6}" ShortID="681105877">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Gun_Armour Hit1 [KB]" ID="{FF5CCFF3-5033-4081-96F0-23FA6BB2EEB9}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0387828709145089"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0336705833848691"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Gun_Armour Hit1 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="641837714"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Gun_Armour Hit1 [KB]" ID="{FF5CCFF3-5033-4081-96F0-23FA6BB2EEB9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Gun_Armour Hit4 [KB]" ID="{815395A3-FA11-4AB7-9344-66D1BC382800}" ShortID="337959614">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Gun_Armour Hit4 [KB]" ID="{A7674652-21FE-49D6-BF68-553C1FE0E8F4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0285572413956857"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0507137217888901"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.345148727903029"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Gun_Armour Hit4 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="675469865"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Gun_Armour Hit4 [KB]" ID="{A7674652-21FE-49D6-BF68-553C1FE0E8F4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Blood Wizard_Gun_Fire [KB]" ID="{BCC06257-86E2-4B08-AEC0-C6E616D3D273}" ShortID="392118241">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Blood Wizard_Gun_Fire [KB]" ID="{C17B76A0-2DD9-4C29-942F-3921A4A38DB7}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.510078237228574"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0248146169462549"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.693430684664791"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Blood Wizard_Gun_Fire [KB].wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1050520816"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Blood Wizard_Gun_Fire [KB]" ID="{C17B76A0-2DD9-4C29-942F-3921A4A38DB7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Blood Wizard_Gun Bullets Falling" ID="{9A813AFE-CF50-42EB-BD3E-729B946196C4}" ShortID="37807387">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{989E69BD-A587-4FED-954B-09307140B1EC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Gun_Bullets Falling1 [KB]" ID="{21337F43-4E26-4E05-9F72-722B1CEE2008}" ShortID="384275573">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Gun_Bullets Falling1 [KB]" ID="{1D19F7FE-723D-4E60-A801-AA3891191F76}">
+											<Language>SFX</Language>
+											<AudioFile>Gun_Bullets Falling1 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="29113532"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Gun_Bullets Falling1 [KB]" ID="{1D19F7FE-723D-4E60-A801-AA3891191F76}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Gun_Bullets Falling2 [KB]" ID="{F84C19D7-21DA-4496-A70A-55A6AE83C4BB}" ShortID="814386753">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Gun_Bullets Falling2 [KB]" ID="{C7B06B19-0233-4B50-9DDB-E7FE5E8772EA}">
+											<Language>SFX</Language>
+											<AudioFile>Gun_Bullets Falling2 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="949915330"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Gun_Bullets Falling2 [KB]" ID="{C7B06B19-0233-4B50-9DDB-E7FE5E8772EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="Metal Wizard SFX" ID="{6FA3C4CF-B737-4858-ACB8-E334E87846B2}" ShortID="44641392">
 					<ChildrenList>
 						<Sound Name="MetalGunReload" ID="{CB5F7A1A-93C5-4ED2-8DE1-3B7602CDB7C8}" ShortID="233916020">

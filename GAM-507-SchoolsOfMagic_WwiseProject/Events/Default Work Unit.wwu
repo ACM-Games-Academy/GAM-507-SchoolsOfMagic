@@ -235,6 +235,76 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Blood Events" ID="{BB76FF34-5447-4E49-AE18-5081D4D6EC8B}" ShortID="915480403">
+					<ChildrenList>
+						<Event Name="Play_Blood_Primary_Ability" ID="{75F4F036-7E5B-4414-8867-292DB82CD90A}">
+							<ChildrenList>
+								<Action Name="" ID="{0D4E4745-6BE3-400D-B462-ED8146F7E6A1}" ShortID="97466614">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blood Wizard_Primary Ability" ID="{7948CF3E-9F9B-4899-B23E-AF5DA63CCAB7}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blood_Armour_Hit" ID="{94276734-7A70-4A2D-8C39-6CD4831AA8C1}">
+							<ChildrenList>
+								<Action Name="" ID="{664584AE-4FED-4C04-A20B-3A3D7FBB78E6}" ShortID="631484835">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blood Wizard_Armour Hit" ID="{C8DCB4F8-09E0-4AE2-AAE1-E65FB5D049D3}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blood_Gun_Bullets" ID="{B4548FFB-091D-4961-A51C-240045D785FB}">
+							<ChildrenList>
+								<Action Name="" ID="{DB8C38AF-8105-46E9-9523-D01A59241F1A}" ShortID="377479952">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blood Wizard_Gun Bullets Falling" ID="{9A813AFE-CF50-42EB-BD3E-729B946196C4}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blood_Footstep" ID="{BC91817D-2D5E-4714-9596-3824B7E59711}">
+							<ChildrenList>
+								<Action Name="" ID="{0B489A6E-E939-4BBA-A22D-EA510904DDAD}" ShortID="18046750">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blood Wizard_Footstep" ID="{98A090B0-3F11-4514-8683-3C9A4F892871}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blood_Gun_Reload" ID="{53EF0A7B-F92C-400B-9FC3-7507426192C1}">
+							<ChildrenList>
+								<Action Name="" ID="{C9827E5A-CF0A-4F88-92F4-2102CE28F235}" ShortID="32704864">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blood Wizard_Gun Reload [KB]" ID="{24786123-42E2-4E7B-A806-3B1390A94486}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blood_Gun_Fire" ID="{5E245D47-F665-4749-8740-C026380E2FB8}">
+							<ChildrenList>
+								<Action Name="" ID="{6291831C-0463-4EE9-94C4-BB1E26BA822A}" ShortID="78451841">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blood Wizard_Gun_Fire [KB]" ID="{BCC06257-86E2-4B08-AEC0-C6E616D3D273}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
