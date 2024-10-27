@@ -11,7 +11,7 @@ public class playerController : MonoBehaviour
 
     //this where the player will access runtime variables
     [SerializeField] playerModel playerModel;
-    [SerializeField] playerInput playerInput;
+    [SerializeField] inputManager playerInput;
 
     private float cooldownTimer;
 
