@@ -7,6 +7,12 @@ public class passiveController : MonoBehaviour
 {
     [SerializeField] playerInput playerInput;
 
+    private passiveBase currentPassive;
+    [SerializeField] passiveBase naturePassive;
+    [SerializeField] passiveBase bloodPassive;
+    [SerializeField] passiveBase metalPassive;
+    [SerializeField] passiveBase arcanePassive;
+
     private void OnEnable()
     {
         playerInput.NatureMagic += changeMagicNature;
@@ -17,22 +23,22 @@ public class passiveController : MonoBehaviour
 
     private void changeMagicNature(object sender, EventArgs e)
     {
-
+        currentPassive = naturePassive;
     }
 
     private void changeMagicBlood(object sender, EventArgs e)
     {
-
+        currentPassive = bloodPassive;
     }
 
     private void changeMagicMetal(object sender, EventArgs e)
     {
-
+        currentPassive = metalPassive;
     }
 
     private void changeMagicArcane(object sender, EventArgs e)
     {
-
+        currentPassive = arcanePassive;
     }
 
     private void OnDisable()

@@ -136,7 +136,8 @@ GameObject:
   - component: {fileID: 11005847}
   - component: {fileID: 11005846}
   - component: {fileID: 11005851}
-  - component: {fileID: 11005850}
+  - component: {fileID: 11005853}
+  - component: {fileID: 11005852}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -236,7 +237,19 @@ Transform:
   - {fileID: 1353560283}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11005850
+--- !u!114 &11005851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35f0ea2fa4a14943950e3f1be9a459c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11005852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,7 +262,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 11005851}
---- !u!114 &11005851
+  naturePassive: {fileID: 11005853}
+  bloodPassive: {fileID: 11005853}
+  metalPassive: {fileID: 11005853}
+  arcanePassive: {fileID: 11005853}
+--- !u!114 &11005853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,7 +275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 11005845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35f0ea2fa4a14943950e3f1be9a459c, type: 3}
+  m_Script: {fileID: 11500000, guid: e018c0c9ea74a1b4abeb548e59629a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &679248786
