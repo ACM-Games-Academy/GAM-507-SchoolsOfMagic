@@ -41,6 +41,11 @@ public class passiveController : MonoBehaviour
         currentPassive = arcanePassive;
     }
 
+    private void Update()
+    {
+        currentPassive.updatePassive();
+    }
+
     private void OnDisable()
     {
         playerInput.NatureMagic -= changeMagicNature;
