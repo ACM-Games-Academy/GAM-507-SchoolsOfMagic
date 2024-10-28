@@ -137,6 +137,9 @@ GameObject:
   - component: {fileID: 11005846}
   - component: {fileID: 11005851}
   - component: {fileID: 11005852}
+  - component: {fileID: 11005856}
+  - component: {fileID: 11005855}
+  - component: {fileID: 11005854}
   - component: {fileID: 11005853}
   m_Layer: 0
   m_Name: Player
@@ -263,9 +266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 11005851}
   naturePassive: {fileID: 11005853}
-  bloodPassive: {fileID: 0}
-  metalPassive: {fileID: 0}
-  arcanePassive: {fileID: 0}
+  bloodPassive: {fileID: 11005854}
+  metalPassive: {fileID: 11005855}
+  arcanePassive: {fileID: 11005856}
 --- !u!114 &11005853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +279,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab634cf6875852b4786a75be289e5081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11005854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c3d9fe37751314c93b06dbfe11f026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11005855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32911edd77f4cbd4aa1036cf9649210a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11005856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087d3313d3b191147a9e48033988f3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &679248786
