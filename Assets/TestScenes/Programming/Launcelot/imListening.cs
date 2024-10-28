@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class imListening : MonoBehaviour
 {
-    public inputManager playerInput;
+    public playerInput playerInput;
 
     private void OnEnable()
     {

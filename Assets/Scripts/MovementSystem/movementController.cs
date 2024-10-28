@@ -15,7 +15,7 @@ public class movementController : MonoBehaviour
     public CharacterController controller;
 
     [SerializeField] private Camera cameraComponent;
-    public inputManager inputModule;
+    public playerInput inputModule;
     [SerializeField] private playerModel playerModel;
 
     private movementAbility currentMovement;

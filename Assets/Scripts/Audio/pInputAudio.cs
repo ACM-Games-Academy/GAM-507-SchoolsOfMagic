@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class playerInputAudio : MonoBehaviour
 {
-    inputManager input;
+    playerInput input;
 
     private void OnEnable()
     {   

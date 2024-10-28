@@ -7,7 +7,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
     [SerializeField] private playerModel PlayerModel;                     // Reference to the player's data (class, resources)
-    [SerializeField] private inputManager playerInput;                     // Reference to the player's input script
+    [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
 
     private void Start()
     {            
