@@ -7,7 +7,20 @@ using UnityEngine.InputSystem;
 public class playerInputAudio : MonoBehaviour
 {
     playerInput input;
-
+    public GameObject player; 
+    public AK.Wwise.Event footsteps;
+    public AK.Wwise.Event heartbeat;
+    private AK.Wwise.RTPC health = null;
+    
+    private void Awake()
+    {
+        playerStats = GetComponent<playerController>;
+    }
+    
+    private void Update
+    {
+        health.SetValue(player, playerStats.health)
+    }
     private void OnEnable()
     {   
         input.NatureMagic += natureClass;
