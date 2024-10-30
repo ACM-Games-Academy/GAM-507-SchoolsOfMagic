@@ -15,7 +15,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
-    motionNodeName: Root_Body_Controller
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -23,7 +23,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -49,102 +49,18 @@ ModelImporter:
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Body_LP
-        weight: 1
-      - path: Crystal_jnt1
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt10
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt10/Crystal_jnt11
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt10/Crystal_jnt11/Crystal_jnt12
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt10/Crystal_jnt11/Crystal_jnt12/Crystal_jnt13
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt10/Crystal_jnt11/Crystal_jnt12/Crystal_jnt13/Crystal_jnt14
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21/Crystal_jnt18
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21/Crystal_jnt18/Mouth_down
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21/Crystal_jnt18/Mouth_down/Crystal_jnt25
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21/Mouth_Up
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21/Mouth_Up/Crystal_jnt23
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21/Mouth_Up/Crystal_jnt23/Crystal_jnt15
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt21/Mouth_Up/Crystal_jnt23/Crystal_jnt15/Crystal_jnt16
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt32
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt32/Crystal_jnt33
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt32/Crystal_jnt33/Crystal_jnt34
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt32/Crystal_jnt33/Crystal_jnt34/Crystal_jnt35
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt3/Crystal_jnt24/Crystal_jnt32/Crystal_jnt33/Crystal_jnt34/Crystal_jnt35/Crystal_jnt36
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt4
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt4/Crystal_jnt5
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt4/Crystal_jnt5/Crystal_jnt6
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt4/Crystal_jnt5/Crystal_jnt6/Crystal_jnt7
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt4/Crystal_jnt5/Crystal_jnt6/Crystal_jnt7/Crystal_jnt8
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt4/Crystal_jnt5/Crystal_jnt6/Crystal_jnt7/Crystal_jnt8/Crystal_jnt9
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt26
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt26/Crystal_jnt27
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt26/Crystal_jnt27/Crystal_jnt28
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt26/Crystal_jnt27/Crystal_jnt28/Crystal_jnt29
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt26/Crystal_jnt27/Crystal_jnt28/Crystal_jnt29/Crystal_jnt30
-        weight: 1
-      - path: Crystal_jnt1/Crystal_jnt26/Crystal_jnt27/Crystal_jnt28/Crystal_jnt29/Crystal_jnt30/Crystal_jnt31
-        weight: 1
-      - path: L_Arm
-        weight: 1
-      - path: L_Leg
-        weight: 1
-      - path: R_Arm
-        weight: 1
-      - path: R_Leg
-        weight: 1
-      - path: Root_Body_Controller
-        weight: 1
-      - path: Spine
-        weight: 1
-      - path: Spine_Controller
-        weight: 1
-      maskType: 0
+      transformMask: []
+      maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 19.800001
+      additiveReferencePoseFrame: 20
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -208,11 +124,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 45d2ec18e4540244c961934744e96ed4, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

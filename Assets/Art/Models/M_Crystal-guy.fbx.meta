@@ -24,7 +24,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 1
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -43,8 +43,8 @@ ModelImporter:
     importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
@@ -57,7 +57,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    optimizeBones: 0
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -78,186 +78,11 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: M_Crystal-guy(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Body_LP
-      parentName: M_Crystal-guy(Clone)
-      position: {x: -0, y: 0.64145917, z: 0.029363917}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt1
-      parentName: M_Crystal-guy(Clone)
-      position: {x: -0.000041607676, y: 0.011449717, z: -0.002182537}
-      rotation: {x: 0.5640121, y: -0.40776384, z: 0.58191466, w: -0.42070684}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt3
-      parentName: Crystal_jnt1
-      position: {x: 0.011069323, y: 0.004285523, z: -0.0000030346284}
-      rotation: {x: 0.57081306, y: -0.4257368, z: 0.56278753, w: -0.41975105}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt24
-      parentName: Crystal_jnt3
-      position: {x: -0.14811736, y: -2.4046778e-16, z: -1.1608277e-16}
-      rotation: {x: -0.5909037, y: -0.5198783, z: -0.25852025, w: 0.5601131}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt10
-      parentName: Crystal_jnt24
-      position: {x: 0.049779516, y: 0.13624832, z: -0.04123988}
-      rotation: {x: 0.5822514, y: 0.7759191, z: -0.16938105, w: 0.173905}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt11
-      parentName: Crystal_jnt10
-      position: {x: -7.0970463e-10, y: 2.1004117e-10, z: -0.0000000016686399}
-      rotation: {x: 0.6811114, y: 0.71835095, z: -0.13180864, w: 0.051823176}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt12
-      parentName: Crystal_jnt11
-      position: {x: 6.791745e-11, y: -8.632971e-10, z: -6.791048e-10}
-      rotation: {x: 0.690626, y: 0.7046599, z: -0.15067509, w: 0.061540443}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt13
-      parentName: Crystal_jnt12
-      position: {x: -0.3321713, y: 2.2215083e-17, z: -1.0725705e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt14
-      parentName: Crystal_jnt13
-      position: {x: 3.7495045e-17, y: -2.0983924e-16, z: 4.5234433e-31}
-      rotation: {x: 0.94565165, y: 0.08382288, z: -0.31296518, w: 0.027741337}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt21
-      parentName: Crystal_jnt24
-      position: {x: 0.049779516, y: 0.13624832, z: -0.041239876}
-      rotation: {x: 0.5924092, y: -0.37332645, z: 0.60398996, w: -0.38062444}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt18
-      parentName: Crystal_jnt21
-      position: {x: -6.501834e-11, y: 7.3470857e-10, z: 1.608315e-10}
-      rotation: {x: -0.40627596, y: -0.5787399, z: 0.5787399, w: -0.40627596}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt19
-      parentName: Crystal_jnt18
-      position: {x: -0.2909037, y: -1.1191685e-16, z: 1.9376323e-15}
-      rotation: {x: 0, y: -0, z: -0.006829161, w: 0.9999767}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt25
-      parentName: Crystal_jnt19
-      position: {x: -0.16609971, y: 1.6392442e-15, z: 1.2494423e-16}
-      rotation: {x: 0.6956623, y: 0.12670417, z: -0.6956623, w: 0.12670417}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt22
-      parentName: Crystal_jnt21
-      position: {x: -0.065673105, y: 3.075532e-17, z: -3.8109905e-17}
-      rotation: {x: 0.9090293, y: 0.4166198, z: 0.00015887678, w: 0.009677923}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt23
-      parentName: Crystal_jnt22
-      position: {x: 0.041435104, y: 0.051528044, z: -0.0007514388}
-      rotation: {x: 0.5591361, y: 0.43867582, z: -0.43425032, w: 0.5534954}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt15
-      parentName: Crystal_jnt23
-      position: {x: -0.08355498, y: 3.350259e-17, z: -4.59502e-19}
-      rotation: {x: -0.0008080569, y: -0.005004839, z: -0.08012526, w: 0.99677193}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt16
-      parentName: Crystal_jnt15
-      position: {x: -0.34125915, y: -8.874062e-17, z: 4.231756e-18}
-      rotation: {x: 0.9917003, y: 0.12857102, z: 7.744516e-15, w: 5.9735386e-14}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt32
-      parentName: Crystal_jnt24
-      position: {x: 0.049779516, y: 0.13624832, z: -0.04123988}
-      rotation: {x: -0.1929648, y: 0.19157669, z: 0.5766755, w: 0.7703949}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt33
-      parentName: Crystal_jnt32
-      position: {x: 4.3171236e-10, y: 0.0000000013750963, z: 2.0759917e-10}
-      rotation: {x: 0.026973337, y: 0.1335692, z: -0.71974975, w: 0.68072903}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt34
-      parentName: Crystal_jnt33
-      position: {x: 0.00011874071, y: 0.000020499354, z: 0.00016155154}
-      rotation: {x: 0.07300853, y: 0.26010743, z: -0.6839822, w: 0.6776299}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt35
-      parentName: Crystal_jnt34
-      position: {x: -0.33216983, y: 3.6838333e-17, z: 1.6460103e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt36
-      parentName: Crystal_jnt35
-      position: {x: -8.32935e-17, y: -4.6255728e-17, z: -1.1126372e-16}
-      rotation: {x: -0.3129668, y: -0.02774186, z: 0.945651, w: -0.08382397}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt4
-      parentName: Crystal_jnt1
-      position: {x: 0.011556051, y: 0.0015188399, z: 0.00010976516}
-      rotation: {x: -0.110784255, y: -0.17748709, z: 0.87572956, w: 0.43511257}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt5
-      parentName: Crystal_jnt4
-      position: {x: 0.0007975805, y: -0.00082786736, z: -0.000035258567}
-      rotation: {x: 0.34363127, y: 0.27330694, z: 0.7031676, w: 0.55926394}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt6
-      parentName: Crystal_jnt5
-      position: {x: -0.14403544, y: 3.6866292e-17, z: 4.8938367e-18}
-      rotation: {x: 0.29159665, y: -0.12385789, z: 0.16482809, w: 0.93405694}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt7
-      parentName: Crystal_jnt6
-      position: {x: 0.13251053, y: -0.055165436, z: -0.02027824}
-      rotation: {x: -0.70669156, y: -0.024229364, z: 0.70669156, w: 0.024229364}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt8
-      parentName: Crystal_jnt7
-      position: {x: -0.20824464, y: -7.239333e-17, z: 8.95007e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt9
-      parentName: Crystal_jnt8
-      position: {x: 6.0832e-19, y: -8.8609275e-18, z: -1.7763568e-17}
-      rotation: {x: 0.70669156, y: 0.024229364, z: -0.70669156, w: 0.024229364}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt26
-      parentName: Crystal_jnt1
-      position: {x: 0.011556051, y: 0.00151884, z: 0.0001097652}
-      rotation: {x: 0.88810664, y: 0.39766616, z: -0.118057154, w: -0.19796652}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt27
-      parentName: Crystal_jnt26
-      position: {x: 0.0009443825, y: -0.00024849523, z: 0.000848043}
-      rotation: {x: 0.7031674, y: 0.5592644, z: 0.34363103, w: 0.27330706}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt28
-      parentName: Crystal_jnt27
-      position: {x: -0.14403602, y: 3.7747583e-17, z: 1.3242677e-18}
-      rotation: {x: -0.291597, y: 0.12385839, z: 0.16483022, w: 0.9340564}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt29
-      parentName: Crystal_jnt28
-      position: {x: 0.13152766, y: -0.055615786, z: 0.018551493}
-      rotation: {x: 0.70669156, y: 0.024229338, z: -0.70669156, w: -0.024229338}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt30
-      parentName: Crystal_jnt29
-      position: {x: -0.2082444, y: 5.239559e-18, z: 3.974371e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Crystal_jnt31
-      parentName: Crystal_jnt30
-      position: {x: 1.9546814e-17, y: -2.5366144e-17, z: -5.615088e-25}
-      rotation: {x: 0.70669156, y: 0.024229338, z: -0.70669156, w: 0.024229338}
-      scale: {x: 1, y: 1, z: 1}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -266,9 +91,9 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Root_Body_Controller
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
