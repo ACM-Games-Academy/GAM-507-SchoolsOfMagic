@@ -18,7 +18,7 @@ public class playerInputAudio : MonoBehaviour
         playerStats = GetComponent<playerController>;
     }
     
-    private void Update
+    private void Update()
     {
         health.SetValue(player, playerStats.health)
     }
