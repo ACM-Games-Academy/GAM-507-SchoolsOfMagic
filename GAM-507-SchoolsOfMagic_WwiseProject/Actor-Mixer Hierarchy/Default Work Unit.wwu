@@ -95,120 +95,6 @@
 								<ActiveSource Name="Passive Hum" ID="{53972FD3-3515-4705-99BA-96D351FD609D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="Nature Footstep Random" ID="{381AF4CE-DD05-416D-81D8-8B0651E4D238}" ShortID="898073901">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{5CFB8F67-0D4F-4367-8032-50D982444074}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Footstep1" ID="{4FD64893-A89B-4A43-BAA3-6C8D3C5DE5B6}" ShortID="21611182">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Footstep1" ID="{C0543618-0778-4577-99C7-12443D2566D6}">
-											<Language>SFX</Language>
-											<AudioFile>Footstep1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="161432319"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Footstep1" ID="{C0543618-0778-4577-99C7-12443D2566D6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Footstep2" ID="{5A2E0006-CBB6-4029-9286-29D6DDD858F5}" ShortID="161602248">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Footstep2" ID="{28B94569-C4D5-4DED-ACC9-46B31BD59AA9}">
-											<Language>SFX</Language>
-											<AudioFile>Footstep2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="422319167"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Footstep2" ID="{28B94569-C4D5-4DED-ACC9-46B31BD59AA9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Footstep3" ID="{973E5CFE-E5D7-4C83-94A0-2516B171AACB}" ShortID="84473550">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Footstep3" ID="{7899C630-CFD3-445F-90AC-80B1280ADAF6}">
-											<Language>SFX</Language>
-											<AudioFile>Footstep3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="601160109"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Footstep3" ID="{7899C630-CFD3-445F-90AC-80B1280ADAF6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Footstep4" ID="{C1C051C2-BA59-42CF-ACEB-602E6D931EF9}" ShortID="1048289314">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Footstep4" ID="{14469C75-B33B-4554-8C4F-61E795C6A678}">
-											<Language>SFX</Language>
-											<AudioFile>Footstep4.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="964515548"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Footstep4" ID="{14469C75-B33B-4554-8C4F-61E795C6A678}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Hat Rustle Random" ID="{E658C5B6-2CA6-4F89-9B25-A69BAC7BA18A}" ShortID="15414530">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
@@ -571,232 +457,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Blood Wizard_Primary Ability2 [KB]" ID="{51E028EF-1EA3-4C2E-8A78-8500A66F3B72}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Blood Wizard_Footstep" ID="{98A090B0-3F11-4514-8683-3C9A4F892871}" ShortID="676774169">
-							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{DA284CEC-71AA-4FD9-B9FC-6E0938FEE626}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="100"/>
-													<Property Name="Min" Type="Real64" Value="-100"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Blood Wizard_Footsteps1 [KB]" ID="{13AEA6BE-5451-48CE-8E8D-391F43EFD264}" ShortID="758272226">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Blood Wizard_Footsteps1 [KB]" ID="{5EFFD98C-D101-4F66-8F9A-7E50C5F4529F}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.117048266925818"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0275692198957505"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.274724857908531"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Blood Wizard_Footsteps1 [KB].wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="738174852"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Blood Wizard_Footsteps1 [KB]" ID="{5EFFD98C-D101-4F66-8F9A-7E50C5F4529F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Blood Wizard_Footsteps2 [KB]" ID="{0C2BCF1E-C3AB-4479-AB74-92D1AF4F9314}" ShortID="895281682">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Blood Wizard_Footsteps2 [KB]" ID="{C9195B4D-B4D2-496C-9C96-D429AE7B71E7}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0446433913879688"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0561005449300139"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0367419061865584"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.271020942408377"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Blood Wizard_Footsteps2 [KB].wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="390903953"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Blood Wizard_Footsteps2 [KB]" ID="{C9195B4D-B4D2-496C-9C96-D429AE7B71E7}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Blood Wizard_Footsteps3 [KB]" ID="{C9D79525-7B79-40DC-AD16-B498B1F5004A}" ShortID="948818545">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Blood Wizard_Footsteps3 [KB]" ID="{361AF740-6C45-409A-8FD8-6A7486D8900F}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.145388752359583"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0515895572888841"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.338849592192898"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Blood Wizard_Footsteps3 [KB].wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="967121522"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Blood Wizard_Footsteps3 [KB]" ID="{361AF740-6C45-409A-8FD8-6A7486D8900F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Blood Wizard_Footsteps4 [KB]" ID="{FB3AFD33-8BF3-4FE7-977D-1AB3D55B451E}" ShortID="170085388">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Blood Wizard_Footsteps4 [KB]" ID="{9AD8A250-BBCF-4B71-A2F5-C960F65C3227}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0700937006565279"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.03028047868362"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.404861214992105"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Blood Wizard_Footsteps4 [KB].wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="818263443"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Blood Wizard_Footsteps4 [KB]" ID="{9AD8A250-BBCF-4B71-A2F5-C960F65C3227}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Blood Wizard_Footsteps6 [KB]" ID="{8D8FD2B0-E3B9-4C1C-B8F7-07BA97A1B8E7}" ShortID="680402893">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Blood Wizard_Footsteps6 [KB]" ID="{F1AC8568-21DD-4183-9764-AABB085F7BA7}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.132061533164749"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0253742683809999"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.364466764017998"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Blood Wizard_Footsteps6 [KB].wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="498352530"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Blood Wizard_Footsteps6 [KB]" ID="{F1AC8568-21DD-4183-9764-AABB085F7BA7}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Blood Wizard_Footsteps7 [KB]" ID="{484763D9-E46C-4BC9-B3C4-CCB3ED7572C0}" ShortID="845593647">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Blood Wizard_Footsteps7 [KB]" ID="{9B03DA3F-F1F3-40EA-86B7-C56952796AA0}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0189250988353457"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0757003953413826"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0525697189870713"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.378501976706913"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Blood Wizard_Footsteps7 [KB].wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="981205382"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Blood Wizard_Footsteps7 [KB]" ID="{9B03DA3F-F1F3-40EA-86B7-C56952796AA0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Blood Wizard_Footsteps8 [KB]" ID="{305A708D-CF59-4C30-B5B1-101DAD6AD0B9}" ShortID="273823820">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Blood Wizard_Footsteps8 [KB]" ID="{65BE284B-6401-476D-BD98-B1890E3F1881}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.137218304424737"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0480971376334129"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.514214986168988"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Blood Wizard_Footsteps8 [KB].wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="346264929"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Blood Wizard_Footsteps8 [KB]" ID="{65BE284B-6401-476D-BD98-B1890E3F1881}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1309,115 +969,6 @@
 								<ActiveSource Name="MetalMagneticHum" ID="{0815E13C-57AD-4B11-8A60-A9CCED11F143}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="Metal Footstep Random" ID="{4C4F906A-BE28-497E-A067-95D55336502D}" ShortID="51143551">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{9F4DCB31-5C26-4665-95DE-F1442A5B28D9}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="MetalFootstep1" ID="{5780A7A0-5E72-4176-9D0D-9D8F00B9B026}" ShortID="302330948">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="MetalFootstep1" ID="{97E6FFA6-954D-4417-A77C-6D2C55A37E92}">
-											<Language>SFX</Language>
-											<AudioFile>MetalFootstep1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1059275467"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="MetalFootstep1" ID="{97E6FFA6-954D-4417-A77C-6D2C55A37E92}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="MetalFootstep2" ID="{90FF26D6-2E37-4C6C-97FC-5D135285F846}" ShortID="372126811">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="MetalFootstep2" ID="{309E01F3-0D9B-412E-98AB-4E5C253B4473}">
-											<Language>SFX</Language>
-											<AudioFile>MetalFootstep2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="625086626"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="MetalFootstep2" ID="{309E01F3-0D9B-412E-98AB-4E5C253B4473}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="MetalFootstep3" ID="{AF99B8F2-AE00-49D7-BC79-E46AC83606DF}" ShortID="576525850">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="MetalFootstep3" ID="{31893A9D-B9EE-4D78-8FE6-7D1E5CBEEB55}">
-											<Language>SFX</Language>
-											<AudioFile>MetalFootstep3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="979254127"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="MetalFootstep3" ID="{31893A9D-B9EE-4D78-8FE6-7D1E5CBEEB55}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="MetalFootstep4" ID="{86763B6D-903A-4860-B9DA-D0292FF561EA}" ShortID="333682912">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="MetalFootstep4" ID="{7EDF99B4-1B00-46D0-9DBB-ADDD38C43627}">
-											<Language>SFX</Language>
-											<AudioFile>MetalFootstep4.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="607323947"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="MetalFootstep4" ID="{7EDF99B4-1B00-46D0-9DBB-ADDD38C43627}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Arcane Wizard SFX" ID="{C135387E-17B0-497F-9687-1531B940EE55}" ShortID="723326362">
@@ -1770,6 +1321,531 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<SwitchContainer Name="Footstep Switch" ID="{83CF8FBD-517E-463F-8FC3-1916AA750D74}" ShortID="244198282">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="None" ID="{51803136-7B20-40B7-BF0A-32DD981D7BD7}" WorkUnitID="{AFED8336-CD5E-496F-ACCA-854FF401F669}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="WizardStates" ID="{A6FD0577-0528-4F0B-916A-408060315CD6}" WorkUnitID="{AFED8336-CD5E-496F-ACCA-854FF401F669}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Blood Wizard_Footstep" ID="{98A090B0-3F11-4514-8683-3C9A4F892871}" ShortID="676774169">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DA284CEC-71AA-4FD9-B9FC-6E0938FEE626}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Blood Wizard_Footsteps1 [KB]" ID="{13AEA6BE-5451-48CE-8E8D-391F43EFD264}" ShortID="758272226">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps1 [KB]" ID="{5EFFD98C-D101-4F66-8F9A-7E50C5F4529F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.117048266925818"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0275692198957505"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.274724857908531"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps1 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="738174852"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps1 [KB]" ID="{5EFFD98C-D101-4F66-8F9A-7E50C5F4529F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps2 [KB]" ID="{0C2BCF1E-C3AB-4479-AB74-92D1AF4F9314}" ShortID="895281682">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps2 [KB]" ID="{C9195B4D-B4D2-496C-9C96-D429AE7B71E7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0446433913879688"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0561005449300139"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0367419061865584"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.271020942408377"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps2 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="390903953"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps2 [KB]" ID="{C9195B4D-B4D2-496C-9C96-D429AE7B71E7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps3 [KB]" ID="{C9D79525-7B79-40DC-AD16-B498B1F5004A}" ShortID="948818545">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps3 [KB]" ID="{361AF740-6C45-409A-8FD8-6A7486D8900F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.145388752359583"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0515895572888841"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.338849592192898"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps3 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="967121522"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps3 [KB]" ID="{361AF740-6C45-409A-8FD8-6A7486D8900F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps4 [KB]" ID="{FB3AFD33-8BF3-4FE7-977D-1AB3D55B451E}" ShortID="170085388">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps4 [KB]" ID="{9AD8A250-BBCF-4B71-A2F5-C960F65C3227}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0700937006565279"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.03028047868362"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.404861214992105"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps4 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="818263443"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps4 [KB]" ID="{9AD8A250-BBCF-4B71-A2F5-C960F65C3227}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps6 [KB]" ID="{8D8FD2B0-E3B9-4C1C-B8F7-07BA97A1B8E7}" ShortID="680402893">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps6 [KB]" ID="{F1AC8568-21DD-4183-9764-AABB085F7BA7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.132061533164749"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0253742683809999"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.364466764017998"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps6 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="498352530"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps6 [KB]" ID="{F1AC8568-21DD-4183-9764-AABB085F7BA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps7 [KB]" ID="{484763D9-E46C-4BC9-B3C4-CCB3ED7572C0}" ShortID="845593647">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps7 [KB]" ID="{9B03DA3F-F1F3-40EA-86B7-C56952796AA0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0189250988353457"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0757003953413826"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0525697189870713"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.378501976706913"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps7 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="981205382"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps7 [KB]" ID="{9B03DA3F-F1F3-40EA-86B7-C56952796AA0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Blood Wizard_Footsteps8 [KB]" ID="{305A708D-CF59-4C30-B5B1-101DAD6AD0B9}" ShortID="273823820">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Blood Wizard_Footsteps8 [KB]" ID="{65BE284B-6401-476D-BD98-B1890E3F1881}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.137218304424737"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0480971376334129"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.514214986168988"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Blood Wizard_Footsteps8 [KB].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="346264929"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Blood Wizard_Footsteps8 [KB]" ID="{65BE284B-6401-476D-BD98-B1890E3F1881}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Metal Footstep Random" ID="{4C4F906A-BE28-497E-A067-95D55336502D}" ShortID="51143551">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9F4DCB31-5C26-4665-95DE-F1442A5B28D9}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MetalFootstep1" ID="{5780A7A0-5E72-4176-9D0D-9D8F00B9B026}" ShortID="302330948">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MetalFootstep1" ID="{97E6FFA6-954D-4417-A77C-6D2C55A37E92}">
+											<Language>SFX</Language>
+											<AudioFile>MetalFootstep1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1059275467"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MetalFootstep1" ID="{97E6FFA6-954D-4417-A77C-6D2C55A37E92}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MetalFootstep2" ID="{90FF26D6-2E37-4C6C-97FC-5D135285F846}" ShortID="372126811">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MetalFootstep2" ID="{309E01F3-0D9B-412E-98AB-4E5C253B4473}">
+											<Language>SFX</Language>
+											<AudioFile>MetalFootstep2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="625086626"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MetalFootstep2" ID="{309E01F3-0D9B-412E-98AB-4E5C253B4473}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MetalFootstep3" ID="{AF99B8F2-AE00-49D7-BC79-E46AC83606DF}" ShortID="576525850">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MetalFootstep3" ID="{31893A9D-B9EE-4D78-8FE6-7D1E5CBEEB55}">
+											<Language>SFX</Language>
+											<AudioFile>MetalFootstep3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="979254127"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MetalFootstep3" ID="{31893A9D-B9EE-4D78-8FE6-7D1E5CBEEB55}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MetalFootstep4" ID="{86763B6D-903A-4860-B9DA-D0292FF561EA}" ShortID="333682912">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MetalFootstep4" ID="{7EDF99B4-1B00-46D0-9DBB-ADDD38C43627}">
+											<Language>SFX</Language>
+											<AudioFile>MetalFootstep4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="607323947"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MetalFootstep4" ID="{7EDF99B4-1B00-46D0-9DBB-ADDD38C43627}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Nature Footstep Random" ID="{381AF4CE-DD05-416D-81D8-8B0651E4D238}" ShortID="898073901">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5CFB8F67-0D4F-4367-8032-50D982444074}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Footstep1" ID="{4FD64893-A89B-4A43-BAA3-6C8D3C5DE5B6}" ShortID="21611182">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footstep1" ID="{C0543618-0778-4577-99C7-12443D2566D6}">
+											<Language>SFX</Language>
+											<AudioFile>Footstep1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="161432319"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footstep1" ID="{C0543618-0778-4577-99C7-12443D2566D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footstep2" ID="{5A2E0006-CBB6-4029-9286-29D6DDD858F5}" ShortID="161602248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footstep2" ID="{28B94569-C4D5-4DED-ACC9-46B31BD59AA9}">
+											<Language>SFX</Language>
+											<AudioFile>Footstep2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="422319167"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footstep2" ID="{28B94569-C4D5-4DED-ACC9-46B31BD59AA9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footstep3" ID="{973E5CFE-E5D7-4C83-94A0-2516B171AACB}" ShortID="84473550">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footstep3" ID="{7899C630-CFD3-445F-90AC-80B1280ADAF6}">
+											<Language>SFX</Language>
+											<AudioFile>Footstep3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="601160109"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footstep3" ID="{7899C630-CFD3-445F-90AC-80B1280ADAF6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footstep4" ID="{C1C051C2-BA59-42CF-ACEB-602E6D931EF9}" ShortID="1048289314">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footstep4" ID="{14469C75-B33B-4554-8C4F-61E795C6A678}">
+											<Language>SFX</Language>
+											<AudioFile>Footstep4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="964515548"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footstep4" ID="{14469C75-B33B-4554-8C4F-61E795C6A678}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="WizardStates" ID="{A6FD0577-0528-4F0B-916A-408060315CD6}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Blood" ID="{2F0E5191-6EDD-4189-84DA-20764E41973D}"/>
+								<CustomState Name="" ID="{2CF7F4E2-8E57-496F-B2DB-992F28E5290C}" ShortID="23732022"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Nature" ID="{72F99C31-2C61-459A-A0D2-5DBE3A4F472A}"/>
+								<CustomState Name="" ID="{11A81685-0D64-43D2-A560-D1E500AFA8C0}" ShortID="661670577"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Metal" ID="{937A2B04-1DD3-4846-AF7F-E5D9C7F3E961}"/>
+								<CustomState Name="" ID="{16E9DC30-7444-47EB-8028-B317786AC74B}" ShortID="1027593886"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Arcane" ID="{B26EE7D3-25A0-4DE0-B64E-41564C573823}"/>
+								<CustomState Name="" ID="{E7B647CB-89D2-4039-B917-8687382CAC79}" ShortID="336438629"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Metal Footstep Random" ID="{4C4F906A-BE28-497E-A067-95D55336502D}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Blood Wizard_Footstep" ID="{98A090B0-3F11-4514-8683-3C9A4F892871}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Nature Footstep Random" ID="{381AF4CE-DD05-416D-81D8-8B0651E4D238}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{937A2B04-1DD3-4846-AF7F-E5D9C7F3E961}"/>
+								<ItemList>
+									<ItemRef Name="Metal Footstep Random" ID="{4C4F906A-BE28-497E-A067-95D55336502D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Nature" ID="{72F99C31-2C61-459A-A0D2-5DBE3A4F472A}"/>
+								<ItemList>
+									<ItemRef Name="Nature Footstep Random" ID="{381AF4CE-DD05-416D-81D8-8B0651E4D238}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Blood" ID="{2F0E5191-6EDD-4189-84DA-20764E41973D}"/>
+								<ItemList>
+									<ItemRef Name="Blood Wizard_Footstep" ID="{98A090B0-3F11-4514-8683-3C9A4F892871}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -5,17 +5,6 @@
 			<ChildrenList>
 				<Folder Name="Metal Events" ID="{986593E5-411C-4D3B-A159-9BC1E72409D3}" ShortID="33563107">
 					<ChildrenList>
-						<Event Name="Play_Metal_Footstep" ID="{7BF4C157-E73B-4561-BF78-05BF8DEBFCD0}">
-							<ChildrenList>
-								<Action Name="" ID="{1F31C2E4-88AE-4AC1-932D-039B7415B61D}" ShortID="781524643">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Metal Footstep Random" ID="{4C4F906A-BE28-497E-A067-95D55336502D}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Metal_GunReload" ID="{A242B614-E449-405E-B290-8B1E94B5DF67}">
 							<ChildrenList>
 								<Action Name="" ID="{E8448931-3F79-400E-8AD8-FE454AE0F900}" ShortID="878768012">
@@ -97,17 +86,6 @@
 				</Folder>
 				<Folder Name="Nature Events" ID="{350A3874-F5DE-481D-921F-A9B4047EF467}" ShortID="729230566">
 					<ChildrenList>
-						<Event Name="Play_Nature_Footstep" ID="{D0CF762A-4846-4483-95CF-E907C73D8234}">
-							<ChildrenList>
-								<Action Name="" ID="{7E0292F4-654D-4826-89B4-259B934408B1}" ShortID="429755484">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Nature Footstep Random" ID="{381AF4CE-DD05-416D-81D8-8B0651E4D238}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Nature_Hat_Rustle" ID="{11453ABA-5D63-4BA9-BBD5-5AFBE5955E84}">
 							<ChildrenList>
 								<Action Name="" ID="{EB5E4ECE-C28A-4E1B-AFEC-7A2C3CD51DD2}" ShortID="103145215">
@@ -270,17 +248,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Blood_Footstep" ID="{BC91817D-2D5E-4714-9596-3824B7E59711}">
-							<ChildrenList>
-								<Action Name="" ID="{0B489A6E-E939-4BBA-A22D-EA510904DDAD}" ShortID="18046750">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Blood Wizard_Footstep" ID="{98A090B0-3F11-4514-8683-3C9A4F892871}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Blood_Gun_Reload" ID="{53EF0A7B-F92C-400B-9FC3-7507426192C1}">
 							<ChildrenList>
 								<Action Name="" ID="{C9827E5A-CF0A-4F88-92F4-2102CE28F235}" ShortID="32704864">
@@ -305,6 +272,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="PlayFootsteps" ID="{B5E9B737-25D1-4AC9-97AE-DBF19ECDBD83}">
+					<ChildrenList>
+						<Action Name="" ID="{9F00B92E-2A68-4CB4-B837-70D93B986547}" ShortID="881968816">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep Switch" ID="{83CF8FBD-517E-463F-8FC3-1916AA750D74}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
