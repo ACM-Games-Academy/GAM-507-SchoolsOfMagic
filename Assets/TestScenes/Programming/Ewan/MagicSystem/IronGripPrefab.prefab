@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9036340997256305106}
-  - component: {fileID: 7964421329362304454}
+  - component: {fileID: 7558720732609595944}
   m_Layer: 0
   m_Name: IronGripPrefab
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7964421329362304454
+--- !u!114 &7558720732609595944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,6 +41,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1798843676700145038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4238aeb88aad1848a7a0d4bcc0d60a7, type: 3}
+  m_Script: {fileID: 11500000, guid: b36bb3dc3d9955b439f373f0888d6537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 10
+  power: 2
+  maxAxisVelocity: 20
+  explosionChargeTime: 3
+  maxExplosionAxisVelocity: 40
+  negativeMask:
+    serializedVersion: 2
+    m_Bits: 0

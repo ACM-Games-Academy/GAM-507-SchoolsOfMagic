@@ -1,10 +1,7 @@
-/*
-Author:     Ewan Mason
-Purpose:    Script for the IronGrip ability
-*/
+//Ewan Mason
+//Script for the IronGrip ability
 
 using System.Collections;
-using System.Linq.Expressions;
 using UnityEngine;
 
 namespace Magic
@@ -19,10 +16,7 @@ namespace Magic
         public LayerMask negativeMask;
         private bool pull = true;
 
-        /*
-        Method:     Explode
-        Function:   Called by a Metal IMagic object, causes enemies within the effective area to be exploded outwards, taking damage relative to the distance from the center
-        */
+        //Called by a Metal IMagic object, causes enemies within the effective area to be exploded outwards, taking damage relative to the distance from the center
         public IEnumerator Explode()
         {
             pull = false;
@@ -41,15 +35,7 @@ namespace Magic
             yield return null;
         }
 
-        void Start()
-        {
-            StartCoroutine(Explode());
-        }
-
-        /*
-        Method:     FixedUpdate
-        Function:   Called each frame, detects enemies within effective area and pulls them in
-        */    
+        //Called each frame, detects enemies within effective area and pulls them in
         void FixedUpdate()
         {
             if (!pull) return;
@@ -75,10 +61,7 @@ namespace Magic
             }
         }
 
-        /*
-        Method:     OnDrawGizmos
-        Function:   Called each type Gizmos call to be redrawn, used for debugging
-        */
+        //Called each type Gizmos call to be redrawn, used for debugging
         void OnDrawGizmos()
         {
             Gizmos.color = Color.white;

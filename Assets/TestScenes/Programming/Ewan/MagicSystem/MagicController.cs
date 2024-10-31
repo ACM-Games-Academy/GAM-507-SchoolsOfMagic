@@ -1,7 +1,5 @@
-/*
-Author:     Ewan Mason
-Function:   MonoBehaviour script controlling IMagic objects, functionality similar to a StateMachine
-*/
+//Ewan Mason
+//MonoBehaviour script controlling MagicBase objects, functionality similar to a StateMachine
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,30 +8,48 @@ namespace Magic
 {
     public enum MagicType { None, Blood, Metal, Nature, Arcane }
 
+    [System.Serializable]
+    public struct MagicPrefab
+    {
+        public string name;
+        public GameObject prefab;
+    }
+
     public class MagicController : MonoBehaviour
     {
-        private Dictionary<MagicType, IMagic> magics;
-        private IMagic activeMagic;
+        public List<MagicPrefab> magicPrefabs;
+        private Dictionary<MagicType, MagicBase> magics;
+        private MagicBase activeMagic;
 
-        /*
-        Method:     Awake
-        Function:   Called at runtime, initializes the magics dictionary and sets the initially equipped magic
-        */
+        //Attempts to find a prefab of given name in the magicPrefabs array
+        public bool TryGetPrefab(string prefabName, out GameObject gameObject)
+        {
+            foreach (MagicPrefab magicPrefab in magicPrefabs)
+            {
+                if (magicPrefab.name == prefabName)
+                {
+                    gameObject = magicPrefab.prefab;
+                    return true;
+                }
+            }
+
+            gameObject = null;
+            return false;
+        }
+
+        //Called at runtime, initializes the magics dictionary and sets the initially equipped magic
         void Awake()
         {
             // Initialize magics dictionary
-            magics = new Dictionary<MagicType, IMagic>
+            magics = new Dictionary<MagicType, MagicBase>
             {
-                { MagicType.Metal, new Metal() },
+                { MagicType.Metal, new Metal(this) },
             };
 
             EquipMagic(MagicType.Metal);
         }
 
-        /*
-        Method:     Update
-        Function:   Calls the Update method of the currently active magic (if any)
-        */
+        //Calls the Update method of the currently active magic
         void Update()
         {
             if (activeMagic != null)
@@ -42,10 +58,7 @@ namespace Magic
             }
         }
 
-        /*
-        Method:     UnequipCurrentMagic
-        Function:   Calls the Unequip method of the currently active magic (if any) and sets activeMagic to null   
-        */
+        //Calls the unequip method of the currently active magic
         private void UnequipCurrentMagic()
         {
             if (activeMagic != null)
@@ -55,18 +68,15 @@ namespace Magic
             }
         }
 
-        /*
-        Method:     EquipMagic
-        Function:   Unequips the currently active magic (if any), updates the currently active magic, and calls the Equip method of the newly active magic
-        */
+        //Unequips the currently active magic, changes the currently active magic, and calls the Equip method of the newly active magic
         public void EquipMagic(MagicType magicType)
         {
-            // Validate parsed MagicType
-            if (magics.TryGetValue(magicType, out IMagic magic))
+            //Validate parsed MagicType
+            if (magics.TryGetValue(magicType, out MagicBase magic))
             {
                 UnequipCurrentMagic();
 
-                // Update active magic and call the Equip method
+                //Update active magic and call the Equip method
                 activeMagic = magic;
                 activeMagic.Equip();
             } 
