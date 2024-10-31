@@ -10,6 +10,7 @@ public class playerInputAudio : MonoBehaviour
     public GameObject player; 
     public AK.Wwise.Event footsteps;
     public AK.Wwise.Event heartbeat;
+    public AK.Wwise.State wizardState;
     private AK.Wwise.RTPC health = null;
     
     private void Awake()
@@ -31,23 +32,23 @@ public class playerInputAudio : MonoBehaviour
 
     private void metalClass(object sender, EventArgs e)
     {
-        
+        AkSoundEngine.SetState(WizardStates, Metal);
     }
 
     private void natureClass(object sender, EventArgs e)
     {
-      
+        AkSoundEngine.SetState(WizardStates, Nature);
     }
 
     private void bloodClass(object sender, EventArgs e)
     {
-        
-    }
+        AkSoundEngine.SetState(WizardStates, Blood);
+}
 
     private void arcaneClass(object sender, EventArgs e)
     {
-        
-    }
+        AkSoundEngine.SetState(WizardStates, Arcane);
+}
 
     private void OnDisable()
     {
