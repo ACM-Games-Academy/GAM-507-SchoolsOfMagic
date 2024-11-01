@@ -22,3 +22,5 @@ MonoBehaviour:
   bulletFireEffect: {fileID: 0}
   isAutomatic: 0
   reloadSpeed: 1.5
+  armourMultiplier: 1
+  causesStagger: 1
