@@ -9,7 +9,12 @@ public class playerInputAudio : MonoBehaviour
     playerInput input;
     public GameObject player;
     public AK.Wwise.Event footsteps;
-    public AK.Wwise.State wizardState;
+    
+    public AK.Wwise.State bloodState;
+    public AK.Wwise.State natureState;
+    public AK.Wwise.State metalState;
+    public AK.Wwise.State arcaneState;
+
     public CharacterController controller;
     private AK.Wwise.RTPC health = null;
     private float speed = 0f;
@@ -49,23 +54,23 @@ public class playerInputAudio : MonoBehaviour
 
     private void metalClass(object sender, EventArgs e)
     {
-        AkSoundEngine.SetState(WizardStates, Metal);
+        metalState.SetValue();
     }
 
     private void natureClass(object sender, EventArgs e)
     {
-        AkSoundEngine.SetState(WizardStates, Nature);
+        natureState.SetValue();
     }
 
     private void bloodClass(object sender, EventArgs e)
     {
-        AkSoundEngine.SetState(WizardStates, Blood);
-}
+        bloodState.SetValue();
+    }
 
     private void arcaneClass(object sender, EventArgs e)
     {
-        AkSoundEngine.SetState(WizardStates, Arcane);
-}
+        arcaneState.SetValue();
+    }
 
     private void OnDisable()
     {
