@@ -14,6 +14,10 @@ public class playerData : ScriptableObject
     public float maxBlood;
     public float startingBlood;
 
+    [Header("Iron stats")]
+    public float maxIron;
+    public float startingIron;
+
     public string startingClass;
 
     [Header("Stamina stats")]
