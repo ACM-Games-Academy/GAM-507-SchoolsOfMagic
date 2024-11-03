@@ -1,48 +1,44 @@
-/*
-Author:     Ewan Mason
-Purpose:    IMagic object for Metal magic
-*/
+//Ewan Mason
+//MagicBase object for Metal magic
+
+using UnityEngine;
 
 namespace Magic
 {
-    public class Metal : IMagic
+    public class Metal : MagicBase
     {
-        public MagicType magicType { get; private set; }
+        public const MagicType magicType = MagicType.Metal;
+        private MagicController magicController;
+        private GameObject ironGripPrefab;
 
-        /*
-        Method:     Metal
-        Function:   Constructs a new Metal object
-        */
-        public Metal()
+        //Constructs a new Metal object
+        public Metal(MagicController _magicController)
         {
-            magicType = MagicType.Metal;
+            magicController = _magicController;
+            _magicController.TryGetPrefab("IronGrip", out ironGripPrefab);
         }
 
-        /*
-        Method:     Equip
-        Function:   Called when Metal is equipped in a MagicController
-        */
+        // Called when Metal is equipped in MagicController object
         public override void Equip()
         {
             
         }
 
-        /*
-        Method:     Unequip
-        Function:   Called when Metal is unequipped in a MagicController
-        */
+        //Called when Metal is unequipped in a MagicController object
         public override void Unequip()
         {
             
         }
 
-        /*
-        Method:     Update
-        Function:   Called when Metal is updated in a MagicController
-        */
+        //Called when Metal is updated in a MagicController object
         public override void Update()
         {
-            
+            //TODO: Write in input controls for Metal abilities
+            //Example of how an input control and subsequent prefab instantiation may look
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                GameObject grip = Object.Instantiate(ironGripPrefab);
+            }
         }
     }
 }
