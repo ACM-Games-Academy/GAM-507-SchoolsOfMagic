@@ -22,8 +22,9 @@ public class doubleJumpAbility : movementAbility
 
         Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
 
-        if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump"))
+        if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump") && player.playerController.getPlayerModel().getIron() > 0)
         {
+            player.playerController.getPlayerModel().reduceIron(1);
             hasDoubleJump = false;
             player.Velocity = transform.TransformDirection(leftStick.x * player.getStats().movementSpeed, player.getStats().jumpHeight, leftStick.y * player.getStats().movementSpeed);
         }

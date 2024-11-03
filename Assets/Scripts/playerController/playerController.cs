@@ -81,4 +81,14 @@ public class playerController : MonoBehaviour
     {
         playerModel.CurrentClass = "Arcane";
     }
+
+    public playerModel getPlayerModel()
+    {
+        return playerModel;
+    }
+
+    public playerInput getPlayerInput()
+    {
+        return playerInput;
+    }
 }
