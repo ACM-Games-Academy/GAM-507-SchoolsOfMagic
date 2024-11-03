@@ -13,6 +13,8 @@ public class WeaponStats : ScriptableObject
     [SerializeField] private ParticleSystem bulletFireEffect;
     [SerializeField] private bool isAutomatic = false;
     [SerializeField] private float reloadSpeed = 1.5f;
+    [SerializeField] private float armourMultiplier = 0f;
+    [SerializeField] private bool causesStagger;   
 
 
     public int MagazineCapacity => magazineCapacity;
@@ -25,4 +27,9 @@ public class WeaponStats : ScriptableObject
     public ParticleSystem BulletFireEffect => bulletFireEffect;
     public bool IsAutomatic => isAutomatic;
     public float ReloadSpeed => reloadSpeed;
+
+    public float ArmourMultiplier => armourMultiplier;
+    public bool CausesStagger => causesStagger;
+
+
 }

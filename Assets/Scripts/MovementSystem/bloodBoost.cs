@@ -13,7 +13,7 @@ public class bloodBoost : movementAbility
         RaycastHit hit;
         if (player.controller.isGrounded && Physics.Raycast(transform.position + (Vector3.down * 0.95f), transform.TransformDirection(Vector3.down), out hit, 1, layersToIgnore))
         {
-            print(hit.transform.gameObject.name);
+            //print(hit.transform.gameObject.name);
             if (hit.transform.gameObject.name.Contains("Blood"))
             {
                 player.controller.Move(new Vector3(player.Velocity.x * 0.5f, player.Velocity.y, player.Velocity.z * 0.5f) * Time.deltaTime);
