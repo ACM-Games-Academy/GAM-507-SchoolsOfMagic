@@ -46,6 +46,14 @@ public class passiveController : MonoBehaviour
         currentPassive.updatePassive();
     }
 
+    void OnTriggerEnter(Collider water)
+    {
+        if (water.gameObject.tag == "Water" && currentPassive == naturePassive)
+        {
+            currentPassive.updatePassive();
+        }
+    }
+
     private void OnDisable()
     {
         playerInput.NatureMagic -= changeMagicNature;
