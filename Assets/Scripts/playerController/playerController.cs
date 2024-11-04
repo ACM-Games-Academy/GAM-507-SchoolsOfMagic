@@ -51,6 +51,12 @@ public class playerController : MonoBehaviour
             onPlayerDeath(EventArgs.Empty);
         }
     }
+    
+    public void giveDamage(float amount)
+    {
+        float processedDamage = amount - (amount * playerModel.DamageReductionBuff);
+        playerModel.reduceHealth(processedDamage);
+    }
 
     private void onPlayerDeath(EventArgs e)
     {

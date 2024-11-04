@@ -12,11 +12,18 @@ public class playerModel : MonoBehaviour
     //these are the runtime variables. besides the max values they will be read and written during runtime
     private float maxBlood;
     private float maxIron;
-    
-    private float maxHealth;
     private float blood;
     private float iron;
+
+    private float maxHealth;
+    public float MaxHealth
+    { get { return MaxHealth; } set { MaxHealth = value; } }
+        
     private float health;
+
+    private float damageReductionBuff;
+    public float DamageReductionBuff
+    { get { return damageReductionBuff; } set { damageReductionBuff = value; } } 
 
     private float maxStamina;
     private float stamina;
@@ -128,17 +135,28 @@ public class playerModel : MonoBehaviour
 
     public void reduceHealth(float amount)  //my understanding is someone wouldnt want to reduce their own health so i guess this is fine being somewhat insecure for now?
     {                                       //we'll probably end up using events for the rest anyway maybe?
-        if (blood - amount < 0)
+        if (health - amount < 0)
         {
-            blood = 0;
+            health = 0;           
         }
         else
         {
-            blood -= amount;
+            health -= amount;
         }
     }
 
-    
+    public void IncreaseHealth(float amount)
+    {
+        if (blood + amount > maxHealth)
+        {
+            Debug.Log("PlayerModel IncreaseHealth: exceeds maximum health");
+            return;
+        }
+        else
+        {
+            health += amount;
+        }
+    }
 
     //for things that will give buffs like more blood or health this will use events cus secure code *nerd face*
 }
