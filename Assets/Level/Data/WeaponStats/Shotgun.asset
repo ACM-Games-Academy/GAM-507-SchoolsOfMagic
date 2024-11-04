@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   magazineCapacity: 30
-  fireRate: 0.1
+  fireRate: 1
   bulletSpread: 0.05
   bulletRange: 100
   maxAmmo: 120
@@ -22,3 +22,5 @@ MonoBehaviour:
   bulletFireEffect: {fileID: 0}
   isAutomatic: 0
   reloadSpeed: 1.5
+  armourMultiplier: 1
+  causesStagger: 1

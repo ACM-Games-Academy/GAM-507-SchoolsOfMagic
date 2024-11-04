@@ -15,7 +15,7 @@ public class blinkAbility : movementAbility
 
         if (player.controller.isGrounded)
         {
-            blinks = 2;
+            blinks = player.getStats().blinkAmount;
         }
 
         if (blinks > 0 && blinkTime <= 0 && Input.GetKeyDown(KeyCode.LeftShift))

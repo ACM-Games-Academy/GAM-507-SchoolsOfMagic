@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{474E6D0F-2326-7E64-A0E8-2B804D91066A}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="Health"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="146841814" Name="WizardStates">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2114153135" Name="Arcane"/>
+						<State Id="2473969246" Name="Metal"/>
+						<State Id="3501062356" Name="Nature"/>
+						<State Id="3934470635" Name="Blood"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{744A3B4B-DC4F-07D8-0403-858AA7EB8C4F}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="25896100" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun_Armour Hit3 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun_Armour Hit3 [KB]_CD8F9C15.wem</CachePath>
+				</File>
+				<File Id="29113532" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gun_Bullets Falling1 [KB].wav</ShortName>
+					<CachePath>SFX/Gun_Bullets Falling1 [KB]_818F3B66.wem</CachePath>
+				</File>
+				<File Id="43449202" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat switch 2.wav</ShortName>
+					<CachePath>SFX/Hat switch 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="56531854" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun Reload [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun Reload [KB]_818F3B66.wem</CachePath>
+				</File>
+				<File Id="118111049" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalOutOfAmmo.wav</ShortName>
+					<CachePath>SFX/MetalOutOfAmmo_818F3B66.wem</CachePath>
+				</File>
+				<File Id="120560503" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat Rustle 1.wav</ShortName>
+					<CachePath>SFX/Hat Rustle 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="161432319" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep1.wav</ShortName>
+					<CachePath>SFX/Footstep1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="286465795" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat switch 3.wav</ShortName>
+					<CachePath>SFX/Hat switch 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="312105102" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalMagneticHum.wav</ShortName>
+					<CachePath>SFX/MetalMagneticHum_818F3B66.wem</CachePath>
+				</File>
+				<File Id="320129865" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalSwoosh.wav</ShortName>
+					<CachePath>SFX/MetalSwoosh_818F3B66.wem</CachePath>
+				</File>
+				<File Id="346264929" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Footsteps8 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Footsteps8 [KB]_07201C5B.wem</CachePath>
+				</File>
+				<File Id="354559576" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun_Armour Hit6 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun_Armour Hit6 [KB]_DA0F9895.wem</CachePath>
+				</File>
+				<File Id="390903953" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Footsteps2 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Footsteps2 [KB]_7420D3BE.wem</CachePath>
+				</File>
+				<File Id="422319167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep2.wav</ShortName>
+					<CachePath>SFX/Footstep2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="457077370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat Rustle 2.wav</ShortName>
+					<CachePath>SFX/Hat Rustle 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="475365285" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice 5.wav</ShortName>
+					<CachePath>SFX/Slice 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="479973183" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalGunShoot.wav</ShortName>
+					<CachePath>SFX/MetalGunShoot_818F3B66.wem</CachePath>
+				</File>
+				<File Id="483639679" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shotgun Boom.wav</ShortName>
+					<CachePath>SFX/Shotgun Boom_A4C2ED3C.wem</CachePath>
+				</File>
+				<File Id="498352530" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Footsteps6 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Footsteps6 [KB]_94CE4976.wem</CachePath>
+				</File>
+				<File Id="502250634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mana Flux Stack 1.wav</ShortName>
+					<CachePath>SFX/Mana Flux Stack 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="574592468" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice1.wav</ShortName>
+					<CachePath>SFX/Slice1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="595160429" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Primary Ability1 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Primary Ability1 [KB]_818F3B66.wem</CachePath>
+				</File>
+				<File Id="601160109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep3.wav</ShortName>
+					<CachePath>SFX/Footstep3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="607323947" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep4.wav</ShortName>
+					<CachePath>SFX/MetalFootstep4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="625086626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep2.wav</ShortName>
+					<CachePath>SFX/MetalFootstep2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="641837714" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun_Armour Hit1 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun_Armour Hit1 [KB]_BB92AFE3.wem</CachePath>
+				</File>
+				<File Id="661984101" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hat switch 1.wav</ShortName>
+					<CachePath>SFX/Hat switch 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="663334928" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice2.wav</ShortName>
+					<CachePath>SFX/Slice2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="675469865" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun_Armour Hit4 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun_Armour Hit4 [KB]_5A0F20A9.wem</CachePath>
+				</File>
+				<File Id="680495708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blink.wav</ShortName>
+					<CachePath>SFX/Blink_818F3B66.wem</CachePath>
+				</File>
+				<File Id="684144736" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun_Armour Hit2 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun_Armour Hit2 [KB]_6CEBF3A2.wem</CachePath>
+				</File>
+				<File Id="729945790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Primary Ability2 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Primary Ability2 [KB]_D954E8DD.wem</CachePath>
+				</File>
+				<File Id="738174852" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Footsteps1 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Footsteps1 [KB]_72309AE6.wem</CachePath>
+				</File>
+				<File Id="794819962" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice3.wav</ShortName>
+					<CachePath>SFX/Slice3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="818263443" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Footsteps4 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Footsteps4 [KB]_DEFDAEF4.wem</CachePath>
+				</File>
+				<File Id="825697857" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mana Flux Stack 3.wav</ShortName>
+					<CachePath>SFX/Mana Flux Stack 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="851393941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Passive Hum.wav</ShortName>
+					<CachePath>SFX/Passive Hum_2945E187.wem</CachePath>
+				</File>
+				<File Id="867227185" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun_Armour Hit5 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun_Armour Hit5 [KB]_230212E6.wem</CachePath>
+				</File>
+				<File Id="920056555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalShards.wav</ShortName>
+					<CachePath>SFX/MetalShards_818F3B66.wem</CachePath>
+				</File>
+				<File Id="949915330" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gun_Bullets Falling2 [KB].wav</ShortName>
+					<CachePath>SFX/Gun_Bullets Falling2 [KB]_818F3B66.wem</CachePath>
+				</File>
+				<File Id="964515548" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep4.wav</ShortName>
+					<CachePath>SFX/Footstep4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="967121522" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Footsteps3 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Footsteps3 [KB]_39AAF59A.wem</CachePath>
+				</File>
+				<File Id="979254127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep3.wav</ShortName>
+					<CachePath>SFX/MetalFootstep3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="981205382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Footsteps7 [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Footsteps7 [KB]_48EBE2B3.wem</CachePath>
+				</File>
+				<File Id="986974176" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Autocannon Fire.wav</ShortName>
+					<CachePath>SFX/Autocannon Fire_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1033323481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalWhoosh.wav</ShortName>
+					<CachePath>SFX/MetalWhoosh_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1040569390" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slice4.wav</ShortName>
+					<CachePath>SFX/Slice4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1047636975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalGunReload.wav</ShortName>
+					<CachePath>SFX/MetalGunReload_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1047728583" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Autocannon Reload.wav</ShortName>
+					<CachePath>SFX/Autocannon Reload_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1050520816" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blood Wizard_Gun_Fire [KB].wav</ShortName>
+					<CachePath>SFX/Blood Wizard_Gun_Fire [KB]_F412FDF0.wem</CachePath>
+				</File>
+				<File Id="1059275467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MetalFootstep1.wav</ShortName>
+					<CachePath>SFX/MetalFootstep1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1061088957" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mana Flux Stack 2.wav</ShortName>
+					<CachePath>SFX/Mana Flux Stack 2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3209639876" Name="Play_Arcane_Autocannon_Fire" DurationType="OneShot" DurationMin="2.9364853" DurationMax="2.9364853">
+					<MediaRefs>
+						<MediaRef Id="986974176"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1562330543" Name="Play_Arcane_Autocannon_Reload" DurationType="OneShot" DurationMin="2.8701813" DurationMax="2.8701813">
+					<MediaRefs>
+						<MediaRef Id="1047728583"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2725967099" Name="Play_Arcane_Blink" DurationType="OneShot" DurationMin="2.8701813" DurationMax="2.8701813">
+					<MediaRefs>
+						<MediaRef Id="680495708"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1535985346" Name="Play_Arcane_Hat_Rustle" DurationType="OneShot" DurationMin="0.6583447" DurationMax="0.6583447">
+					<MediaRefs>
+						<MediaRef Id="43449202"/>
+						<MediaRef Id="286465795"/>
+						<MediaRef Id="661984101"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3122977081" Name="Play_Arcane_Mana_Flux_Stack_1" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="502250634"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3122977082" Name="Play_Arcane_Mana_Flux_Stack_2" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="1061088957"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3122977083" Name="Play_Arcane_Mana_Flux_Stack_3" DurationType="OneShot" DurationMin="5.8423357" DurationMax="5.8423357">
+					<MediaRefs>
+						<MediaRef Id="825697857"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1481612363" Name="Play_Blood_Armour_Hit" DurationType="OneShot" DurationMin="0.21860246" DurationMax="0.4818729">
+					<MediaRefs>
+						<MediaRef Id="25896100"/>
+						<MediaRef Id="354559576"/>
+						<MediaRef Id="641837714"/>
+						<MediaRef Id="675469865"/>
+						<MediaRef Id="684144736"/>
+						<MediaRef Id="867227185"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4087362955" Name="Play_Blood_Gun_Bullets" DurationType="OneShot" DurationMin="0.5572099" DurationMax="0.6683026">
+					<MediaRefs>
+						<MediaRef Id="29113532"/>
+						<MediaRef Id="949915330"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3474052788" Name="Play_Blood_Gun_Fire" DurationType="OneShot" DurationMin="0.66861606" DurationMax="0.66861606">
+					<MediaRefs>
+						<MediaRef Id="1050520816"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3903496159" Name="Play_Blood_Gun_Reload" DurationType="OneShot" DurationMin="0.82489944" DurationMax="0.98097634">
+					<MediaRefs>
+						<MediaRef Id="56531854"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="16303742" Name="Play_Blood_Primary_Ability" DurationType="OneShot" DurationMin="4.2585487" DurationMax="5.2261">
+					<MediaRefs>
+						<MediaRef Id="595160429"/>
+						<MediaRef Id="729945790"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1688851195" Name="Play_Metal_GunReload" DurationType="OneShot" DurationMin="4" DurationMax="4">
+					<MediaRefs>
+						<MediaRef Id="1047636975"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2232792937" Name="Play_Metal_GunShoot" DurationType="OneShot" DurationMin="0.13020833" DurationMax="0.13020833">
+					<MediaRefs>
+						<MediaRef Id="479973183"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3370461538" Name="Play_Metal_MagneticHum" DurationType="OneShot" DurationMin="2" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="312105102"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2437099115" Name="Play_Metal_OutOfAmmo" DurationType="OneShot" DurationMin="0.47916666" DurationMax="0.47916666">
+					<MediaRefs>
+						<MediaRef Id="118111049"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1582782641" Name="Play_Metal_Shards" DurationType="OneShot" DurationMin="12" DurationMax="12">
+					<MediaRefs>
+						<MediaRef Id="920056555"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2233504167" Name="Play_Metal_Swoosh" DurationType="OneShot" DurationMin="2" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="320129865"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3044732116" Name="Play_Metal_Whoosh" DurationType="OneShot" DurationMin="1.3125" DurationMax="1.3125">
+					<MediaRefs>
+						<MediaRef Id="1033323481"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3049387599" Name="Play_Nature_Hat_Rustle" DurationType="OneShot" DurationMin="1.3593333" DurationMax="1.3593333">
+					<MediaRefs>
+						<MediaRef Id="120560503"/>
+						<MediaRef Id="457077370"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1540153786" Name="Play_Nature_Passive_Hum" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="851393941"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4053513558" Name="Play_Nature_Shotgun_Boom" DurationType="OneShot" DurationMin="0.74119896" DurationMax="1.115043">
+					<MediaRefs>
+						<MediaRef Id="483639679"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="275810172" Name="Play_Nature_Spike" DurationType="OneShot" DurationMin="0.25" DurationMax="1.3593333">
+					<MediaRefs>
+						<MediaRef Id="475365285"/>
+						<MediaRef Id="574592468"/>
+						<MediaRef Id="663334928"/>
+						<MediaRef Id="794819962"/>
+						<MediaRef Id="1040569390"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1088348632" Name="PlayFootsteps" DurationType="OneShot" DurationMin="0.22112995" DurationMax="1.3593333">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="146841814" Id="2473969246"/>
+							<MediaRefs>
+								<MediaRef Id="607323947"/>
+								<MediaRef Id="625086626"/>
+								<MediaRef Id="979254127"/>
+								<MediaRef Id="1059275467"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="146841814" Id="3501062356"/>
+							<MediaRefs>
+								<MediaRef Id="161432319"/>
+								<MediaRef Id="422319167"/>
+								<MediaRef Id="601160109"/>
+								<MediaRef Id="964515548"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="146841814" Id="3934470635"/>
+							<MediaRefs>
+								<MediaRef Id="346264929"/>
+								<MediaRef Id="390903953"/>
+								<MediaRef Id="498352530"/>
+								<MediaRef Id="738174852"/>
+								<MediaRef Id="818263443"/>
+								<MediaRef Id="967121522"/>
+								<MediaRef Id="981205382"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="146841814" Name="WizardStates">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2114153135" Name="Arcane"/>
+						<State Id="2473969246" Name="Metal"/>
+						<State Id="3501062356" Name="Nature"/>
+						<State Id="3934470635" Name="Blood"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{289633B5-1D06-9F30-8E11-392BE8389369}</FileHash>
+</SoundBanksInfo>

@@ -30,7 +30,7 @@ public class WeaponController : MonoBehaviour
     private void OnEnable()
     {            
         // Subscribe to class change events from the playerInput
-        playerInput.BloodMagic += OnClassOneSelected;
+        playerInput.NatureMagic += OnClassOneSelected;
         playerInput.BloodMagic += OnClassTwoSelected;
         playerInput.MetalMagic += OnClassThreeSelected;
         playerInput.ArcaneMagic += OnClassFourSelected;
@@ -118,7 +118,7 @@ public class WeaponController : MonoBehaviour
     private void OnDisable()
     {
         // unSubscribe to class change events from the playerInput
-        playerInput.BloodMagic -= OnClassOneSelected;
+        playerInput.NatureMagic -= OnClassOneSelected;
         playerInput.BloodMagic -= OnClassTwoSelected;
         playerInput.MetalMagic -= OnClassThreeSelected;
         playerInput.ArcaneMagic -= OnClassFourSelected;

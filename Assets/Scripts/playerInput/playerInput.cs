@@ -171,7 +171,10 @@ public class playerInput : MonoBehaviour
 
     private void onButton(EventArgs e, EventHandler button)
     {
-        button.Invoke(this ,e);
+        if (button != null)
+        {
+            button.Invoke(this, e);
+        }
     }
 
     private void OnDisable()
