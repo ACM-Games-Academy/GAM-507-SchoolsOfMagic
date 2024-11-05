@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class arcanePassiveAbility : passiveBase
 {
-    public override void updatePassive()
-    {
 
-    }
 }

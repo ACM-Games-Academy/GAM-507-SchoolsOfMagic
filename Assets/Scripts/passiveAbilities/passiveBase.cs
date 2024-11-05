@@ -6,8 +6,4 @@ public class passiveBase : MonoBehaviour
 {
     playerModel playerModel;
 
-    public virtual void updatePassive()
-    {
-        
-    }
 }

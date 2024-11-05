@@ -9,16 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a64715d100e1a140b19e0074f465a66, type: 3}
-  m_Name: JakeAshPlayer
+  m_Script: {fileID: 11500000, guid: 6370f1e89eda43143a61ed5d9316fc46, type: 3}
+  m_Name: NaturePassiveData
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  startingHealth: 100
-  maxBlood: 100
-  startingBlood: 50
-  maxIron: 20
-  startingIron: 10
-  startingClass: 
-  maxStamina: 0
-  startingStamina: 0
-  staminaRegen: 0
+  passiveName: BodyOfTheLostCity
+  additionalHealth: 1.1
+  damageReduction: 0.8

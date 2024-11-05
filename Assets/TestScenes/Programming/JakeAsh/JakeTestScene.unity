@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 11005848}
   - component: {fileID: 11005847}
   - component: {fileID: 11005846}
+  - component: {fileID: 11005861}
+  - component: {fileID: 11005860}
   - component: {fileID: 11005858}
   - component: {fileID: 11005852}
   - component: {fileID: 11005856}
@@ -271,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab634cf6875852b4786a75be289e5081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  passiveAbilityData: {fileID: 11400000, guid: dce20c65f8ee8634c9e0a1bf81577180, type: 2}
 --- !u!114 &11005854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +372,34 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11005860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0741b60fb4431274091b1d5af1c80919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerModel: {fileID: 11005861}
+  playerInput: {fileID: 11005858}
+--- !u!114 &11005861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f169818eeb07041a64a3dfa3292fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 9899d4727f11be043b0d3ef7f9e6f815, type: 2}
+  currentClass: 
 --- !u!1 &679248786
 GameObject:
   m_ObjectHideFlags: 0

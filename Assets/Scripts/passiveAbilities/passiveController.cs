@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class passiveController : MonoBehaviour
 {
+    
+    
     [SerializeField] playerInput playerInput;
 
     private passiveBase currentPassive;
@@ -23,36 +25,33 @@ public class passiveController : MonoBehaviour
 
     private void changeMagicNature(object sender, EventArgs e)
     {
+        currentPassive.enabled = false;
         currentPassive = naturePassive;
+        currentPassive.enabled = true;
+        
     }
 
     private void changeMagicBlood(object sender, EventArgs e)
     {
+        currentPassive.enabled = false;
         currentPassive = bloodPassive;
+        currentPassive.enabled = true;
     }
 
     private void changeMagicMetal(object sender, EventArgs e)
     {
+        currentPassive.enabled = false;
         currentPassive = metalPassive;
+        currentPassive.enabled = true;
     }
 
     private void changeMagicArcane(object sender, EventArgs e)
     {
+        currentPassive.enabled = false;
         currentPassive = arcanePassive;
+        currentPassive.enabled = true;
     }
 
-    private void Update()
-    {
-        currentPassive.updatePassive();
-    }
-
-    void OnTriggerEnter(Collider water)
-    {
-        if (water.gameObject.tag == "Water" && currentPassive == naturePassive)
-        {
-            currentPassive.updatePassive();
-        }
-    }
 
     private void OnDisable()
     {
