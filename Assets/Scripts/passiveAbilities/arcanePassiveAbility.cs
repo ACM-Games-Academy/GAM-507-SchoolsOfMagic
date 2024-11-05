@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class arcanePassiveAbility : passiveBase
 {
+    private void Start()
+    {
 
+    }
 }

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class metalPassiveAbility : passiveBase
 {
+    private void Start()
+    {
 
+    }
 }
