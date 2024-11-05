@@ -17,7 +17,7 @@ public class playerModel : MonoBehaviour
 
     private float maxHealth;
     public float MaxHealth
-    { get { return MaxHealth; } set { MaxHealth = value; } }
+    { get { return maxHealth; } set { maxHealth = value; } }
         
     private float health;
 
