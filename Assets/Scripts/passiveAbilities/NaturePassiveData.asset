@@ -15,4 +15,4 @@ MonoBehaviour:
   passiveName: BodyOfTheLostCity
   detectionRadius: 2
   additionalHealth: 1.1
-  damageReduction: 0.8
+  damageReduction: 0.2
