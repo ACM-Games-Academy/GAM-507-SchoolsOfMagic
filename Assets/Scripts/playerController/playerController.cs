@@ -3,59 +3,74 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem.Composites;
+using UnityEditor;
+using Magic;
+using TMPro;
 
 public class playerController : MonoBehaviour
 {
-    //this is the event it will send in the event the player dies
+    //Events
     public event EventHandler playerDeath;
 
-    //this where the player will access runtime variables
-    [SerializeField] playerModel playerModel;
-    [SerializeField] playerInput playerInput;
+    //runtime data and input 
+    protected playerModel model;
+    playerInput input;
 
-    private float cooldownTimer;
+    //player data
+    [SerializeField] playerData data;
 
     // Start is called before the first frame update
+    void Start()
+    {
+        model = new playerModel(data);
+        input = new playerInput();
+    }
     void OnEnable()
     {
         //sends out debug if playerdata script isnt present
-        if (playerModel == null)
+        if (data == null)
         {
             Debug.Log("Needs playermodel");
         }
 
-        playerInput.NatureMagic += natureClass;
-        playerInput.MetalMagic += metalClass;
-        playerInput.BloodMagic += bloodClass;
-        playerInput.ArcaneMagic += arcaneClass;
+        input.NatureMagic += natureClass;
+        input.MetalMagic += metalClass;
+        input.BloodMagic += bloodClass;
+        input.ArcaneMagic += arcaneClass;
     }
 
-    private void Start()
+    void OnDisable()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //checking if the player has died
-        deathCheck();
-    }
-
-    //this checks whether the player has died or not. health = 0
-    private void deathCheck()
-    {
-        if (playerModel.getHealth() <= 0)
-        {
-            Debug.Log("You have died");
-            onPlayerDeath(EventArgs.Empty);
-        }
+        input.NatureMagic -= natureClass;
+        input.MetalMagic -= metalClass;
+        input.BloodMagic -= bloodClass;
+        input.ArcaneMagic -= arcaneClass;
     }
     
     public void giveDamage(float amount)
     {
-        float processedDamage = amount - (amount * playerModel.DamageReductionBuff);
-        playerModel.reduceHealth(processedDamage);
+        float processedDamage = amount * model.DmgModifier;
+        model.Health =- processedDamage;
+
+        if (model.Health < 0)
+        {
+            onPlayerDeath(EventArgs.Empty);
+        }
+    }
+
+    public IEnumerator addHealthModT(float modifier, float time)
+    {
+        float increasedMaxHealth = model.MaxHealth * modifier;
+        float increasedHealth = model.Health * modifier;
+
+        model.MaxHealth =+ increasedMaxHealth;
+        model.Health =+ increasedHealth;
+
+        yield return new WaitForSeconds(time);
+
+        model.MaxHealth =- model.MaxHealth * (increasedMaxHealth/model.MaxHealth);
+        model.Health =- model.Health * (increasedHealth/model.Health);
     }
 
     private void onPlayerDeath(EventArgs e)
@@ -63,38 +78,127 @@ public class playerController : MonoBehaviour
         playerDeath.Invoke(this, e);
     }
 
-    private void updateClass(string name)
-    {
-        playerModel.CurrentClass = name;
-    }
-
     private void metalClass(object sender, EventArgs e)
     {
-        playerModel.CurrentClass = "Metal";
+        model.CurrentClass = "Metal";
     }
 
     private void natureClass(object sender, EventArgs e)
     {
-        playerModel.CurrentClass = "Nature";
+        model.CurrentClass = "Nature";
     }
 
     private void bloodClass(object sender, EventArgs e)
     {
-        playerModel.CurrentClass = "Blood";
+        model.CurrentClass = "Blood";
     }
 
     private void arcaneClass(object sender, EventArgs e)
     {
-        playerModel.CurrentClass = "Arcane";
+        model.CurrentClass = "Arcane";
+    }
+}
+
+//this is specficially for buffs
+//you can apply a new a buff then you can remove the buff by calling the remove method of the buff
+public class newBuff : playerController
+{
+    public enum buffType { Health, Dmg, Blood, Iron };
+    public buffType type;
+    private float modifier;
+    private float startingValue;
+    private float startingMaxValue;
+    private float valueIncrease;
+    private float maxValueIncrease;
+
+    public newBuff(buffType Type, float Modifier)
+    {
+        modifier = Modifier;
+
+        buffType type = new buffType();
+        type = Type;
+
+        switch (type)
+        {
+            case buffType.Health:
+                healthBuff();
+                break;
+            case buffType.Blood:
+                bloodBuff();
+                break;
+            case buffType.Dmg:
+                DmgBuff();
+                break;
+            case buffType.Iron:
+                ironBuff();
+                break;
+            default:
+                return;
+        }
     }
 
-    public playerModel getPlayerModel()
+    void healthBuff()
     {
-        return playerModel;
+        startingValue = model.Health;
+        startingMaxValue = model.MaxHealth;
+
+        valueIncrease = model.Health * modifier;
+        maxValueIncrease = model.MaxHealth * modifier;
+
+        model.Health =+ valueIncrease;
+        model.MaxHealth =+ maxValueIncrease;
     }
 
-    public playerInput getPlayerInput()
+    void DmgBuff()
     {
-        return playerInput;
+        model.DmgModifier =- modifier;
+    }
+
+    void bloodBuff()
+    {
+        startingValue = model.Blood;
+        valueIncrease = model.Blood * modifier;
+
+        valueIncrease = model.Blood * modifier;
+        maxValueIncrease = model.Blood * modifier;
+
+        model.Blood =+ valueIncrease;
+        model.MaxBlood =+ maxValueIncrease;
+    }
+
+    void ironBuff()
+    {
+        startingValue = model.Iron;
+        valueIncrease = model.Iron * modifier;
+
+        valueIncrease = model.Iron * modifier;
+        maxValueIncrease = model.Iron * modifier;
+
+        model.Iron =+ valueIncrease;
+        model.MaxIron =+ maxValueIncrease;
+    }
+
+    public void removeBuff()
+    {
+        switch(type)
+        {
+            case buffType.Health:
+                model.MaxHealth =- model.MaxHealth * (maxValueIncrease/model.MaxHealth);
+                model.Health =- model.Health * (valueIncrease/model.Health);
+                break;
+            case buffType.Blood:
+                model.MaxHealth =- model.MaxHealth * (maxValueIncrease/model.MaxHealth);
+                model.Health =- model.Health * (valueIncrease/model.Health);
+                break;
+            case buffType.Iron:
+                model.MaxHealth =- model.MaxHealth * (maxValueIncrease/model.MaxHealth);
+                model.Health =- model.Health * (valueIncrease/model.Health);
+                break;
+            case buffType.Dmg:
+                model.DmgModifier =+ modifier;
+                break;
+            default:
+                return;
+        }
     }
 }
