@@ -1024,6 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e527935db598cb4ea765c8fbc67e5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   controller: {fileID: 95919108}
   cameraComponent: {fileID: 393408154}
   inputModule: {fileID: 95919106}
