@@ -18,7 +18,7 @@ MonoBehaviour:
   startingBlood: 50
   maxIron: 20
   startingIron: 10
-  startingClass: 
+  startingClass: Nature
   maxStamina: 0
   startingStamina: 0
   staminaRegen: 0

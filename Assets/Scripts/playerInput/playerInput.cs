@@ -67,10 +67,10 @@ public class playerInput : MonoBehaviour
         playerPrimary.started += PrimaryAbility;
         playerSecondary.started += SecondaryAbility;
 
-        natureMagic.started += ChangeClassOne;
-        bloodMagic.started += ChangeClassTwo;
-        metalMagic.started += ChangeClassThree;
-        arcaneMagic.started += ChangeClassFour;
+        natureMagic.performed += ChangeClassOne;
+        bloodMagic.performed += ChangeClassTwo;
+        metalMagic.performed += ChangeClassThree;
+        arcaneMagic.performed += ChangeClassFour;
 
         abilityMovement.started += AbilityMovement;
 

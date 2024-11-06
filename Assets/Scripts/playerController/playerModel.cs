@@ -17,7 +17,7 @@ public class playerModel : MonoBehaviour
 
     private float maxHealth;
     public float MaxHealth
-    { get { return MaxHealth; } set { MaxHealth = value; } }
+    { get { return maxHealth; } set { maxHealth = value; } }
         
     private float health;
 
@@ -133,6 +133,11 @@ public class playerModel : MonoBehaviour
         return health;
     }
 
+    public void setHealth(float amount)
+    {
+        health = amount;
+    }
+
     public void reduceHealth(float amount)  //my understanding is someone wouldnt want to reduce their own health so i guess this is fine being somewhat insecure for now?
     {                                       //we'll probably end up using events for the rest anyway maybe?
         if (health - amount < 0)
@@ -147,9 +152,10 @@ public class playerModel : MonoBehaviour
 
     public void IncreaseHealth(float amount)
     {
-        if (blood + amount > maxHealth)
+        if (health + amount > maxHealth)
         {
             Debug.Log("PlayerModel IncreaseHealth: exceeds maximum health");
+            health = maxHealth;
             return;
         }
         else
@@ -157,6 +163,4 @@ public class playerModel : MonoBehaviour
             health += amount;
         }
     }
-
-    //for things that will give buffs like more blood or health this will use events cus secure code *nerd face*
 }

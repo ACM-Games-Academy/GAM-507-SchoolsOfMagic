@@ -6,50 +6,55 @@ public class naturePassiveAbility : passiveBase
 {
     [SerializeField] passiveAbilityData passiveAbilityData;
     playerController controller;
+    playerModel model;
+
+    [SerializeField]SphereCollider detect;
 
     float additionalHealth;
     float damageReduction;
+    float detectRadius;
     bool nearWater;
 
     private void Awake()
     {
         additionalHealth = passiveAbilityData.additionalHealth;
         damageReduction = passiveAbilityData.damageReduction;
+        detectRadius = passiveAbilityData.detectionRadius;
     }
 
     private void Start()
     {
         controller = GetComponent<playerController>();
+        detect = GetComponentInChildren<SphereCollider>();
+        model = controller.getPlayerModel();
+        
+        detect.radius = detectRadius;
     }
 
     private void Update()
     {
-        if (nearWater) 
-        {
-            controller.GetComponent<playerModel>().MaxHealth *= additionalHealth;
-            controller.GetComponent<playerModel>().DamageReductionBuff = damageReduction;
-        }
+        Debug.Log("MaxHealth: " + model.MaxHealth);
+        Debug.Log("CurrentHeath: " + model.getHealth());
+        Debug.Log("DamageReduction: " + model.DamageReductionBuff);
+    }
 
-        if (!nearWater) 
+    private void OnTriggerEnter(Collider other)
+    {  
+        if (other.gameObject.tag == "Water")
         {
-            controller.GetComponent<playerModel>().MaxHealth /= additionalHealth;
-            controller.GetComponent<playerModel>().DamageReductionBuff = 1f;
+            model.MaxHealth = model.MaxHealth * (1 + additionalHealth);
+            model.setHealth(model.getHealth() * (1 + additionalHealth));
+            model.DamageReductionBuff = damageReduction;
         }
     }
 
-    void OnTriggerEnter(Collider water)
-    {
-        if (water.gameObject.tag == "Water")
-        {
-            nearWater = true;
-        }
-   }
-
     private void OnTriggerExit(Collider other)
     {
-      if(other.gameObject.tag == "Water")
-        {
-            nearWater = false;
-        }   
+        if (other.gameObject.tag == "Water")
+        {          
+            model.MaxHealth = model.MaxHealth / (1 + additionalHealth);
+            model.setHealth(model.getHealth() / (1 + additionalHealth));
+            model.DamageReductionBuff = 0f;
+        }
     }
 }
