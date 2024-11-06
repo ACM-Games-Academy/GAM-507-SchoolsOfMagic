@@ -829,6 +829,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="MetalShards" ID="{6F05C125-0CD2-4A78-9726-EFE1FF08E829}" ShortID="557786943">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>460</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -839,6 +846,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="MetalShards" ID="{15076A52-B1EF-484C-A8C9-926C59E0E870}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.613368283093053"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.07994757536043"/>
+										<Property Name="TrimEnd" Type="Real64" Value="7.9737876802097"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>MetalShards.wav</AudioFile>
 									<MediaIDList>
@@ -851,6 +864,31 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="MetalWhoosh" ID="{19B38F67-BA7C-4426-9E49-B4B393124B12}" ShortID="9836786">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>55</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{114CFE1D-B953-4147-9B18-C92067183D66}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="480"/>
+													<Property Name="Min" Type="Real64" Value="-606"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -861,6 +899,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="MetalWhoosh" ID="{D7349AD6-0F5A-4C69-8DC7-39FBB954DF93}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.385321100917431"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.344036697247706"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.486811926605505"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.24025229357798"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>MetalWhoosh.wav</AudioFile>
 									<MediaIDList>
@@ -883,6 +928,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="MetalSwoosh" ID="{B7CB6902-95D1-478A-9CF8-80316655CF5E}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.196592398427261"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.587155963302752"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.5910878112713"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>MetalSwoosh.wav</AudioFile>
 									<MediaIDList>
@@ -895,6 +946,23 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="MetalOutOfAmmo" ID="{F6444D96-DA14-42FB-87D5-849FB5061A5F}" ShortID="368377861">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>1360</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E25CCE74-6EEE-40D4-86D1-37570A181AA6}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -905,6 +973,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="MetalOutOfAmmo" ID="{75218934-AA6B-4B4F-9A8F-E0D896B9ACC7}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.044588248143294"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.401294233289646"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>MetalOutOfAmmo.wav</AudioFile>
 									<MediaIDList>
@@ -921,7 +994,13 @@
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{CA357596-DAFD-4371-B15F-BC1C8DC7E2FC}"/>
+											<Modifier Name="" ID="{CA357596-DAFD-4371-B15F-BC1C8DC7E2FC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="227"/>
+													<Property Name="Min" Type="Real64" Value="-152"/>
+												</PropertyList>
+											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
@@ -943,6 +1022,33 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{F22E1A41-4017-4D5C-86D8-ABE9EEE7E345}" ShortID="39206007">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="RoomVerb (Custom)" ID="{839D657F-5D42-406C-9D8B-08CF859EE6C2}" ShortID="920967940" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<PropertyList>
+																	<Property Name="DecayTime" Type="Real32" Value="0.7"/>
+																	<Property Name="DryLevel" Type="Real32" Value="-16.3"/>
+																	<Property Name="ERPattern" Type="int32" Value="24"/>
+																	<Property Name="EnableEarlyReflections" Type="bool" Value="False"/>
+																	<Property Name="InputLFELevel" Type="Real32" Value="-87.3"/>
+																	<Property Name="PreDelay" Type="Real32" Value="1"/>
+																	<Property Name="RoomShape" Type="Real32" Value="88"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="MetalGunShoot" ID="{8F2C6D6D-100D-4DCC-A71D-FBD102EC54E6}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -958,6 +1064,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="MetalMagneticHum" ID="{0815E13C-57AD-4B11-8A60-A9CCED11F143}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.583862194016319"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.085222121486854"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>MetalMagneticHum.wav</AudioFile>
 									<MediaIDList>
