@@ -30,7 +30,7 @@ namespace Magic
         }
 
         //Called when Metal is updated in a MagicController object
-        public override void Update()
+        public override void MagicUpdate()
         {
             //TODO: Write in input controls for Metal abilities
             //Example of how an input control and subsequent prefab instantiation may look

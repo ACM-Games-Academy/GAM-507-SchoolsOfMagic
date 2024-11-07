@@ -59,7 +59,7 @@ namespace Magic
         {
             if (activeMagic != null)
             {
-                activeMagic.Update();
+                activeMagic.MagicUpdate();
             }
         }
 

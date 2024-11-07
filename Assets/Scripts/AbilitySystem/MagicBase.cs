@@ -9,6 +9,6 @@ namespace Magic
     {
         public virtual void Equip() {}
         public virtual void Unequip() {}
-        public abstract void Update();
+        public abstract void MagicUpdate();
     }
 }
