@@ -3,12 +3,11 @@
 
 using UnityEngine;
 
-namespace Magic
+
+public abstract class MagicBase : MonoBehaviour
 {
-    public abstract class MagicBase : MonoBehaviour
-    {
         public virtual void Equip() {}
         public virtual void Unequip() {}
         public abstract void MagicUpdate();
-    }
 }
+

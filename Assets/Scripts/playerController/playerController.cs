@@ -16,23 +16,27 @@ public class playerController : MonoBehaviour
 
     //runtime data and input 
     private playerModel model;
-    playerInput input;
+
+    [SerializeField] playerInput input;
 
     //player data
     [SerializeField] playerData data;
 
     //the currently active buff list
-    List<newBuff> buffList; 
+    Dictionary<string, newBuff> activeBuffs = new Dictionary<string, newBuff>();
 
     //value types
     public enum ValueType { Health, Iron, Blood }
 
+    //debug values (visible in the editor)
+    public float health;
+    public float iron;
+    public float blood;
+
     // Start is called before the first frame update
     void Awake()
     {
-        model = new playerModel(data);
-        input = new playerInput();
-        input.Initialise();
+        model = new playerModel(data);      
     }
     void OnEnable()
     {
@@ -57,7 +61,15 @@ public class playerController : MonoBehaviour
 
         input.Disable();
     }
-    
+
+    private void Update()
+    {
+        //updating debug values
+        health = model.Health;
+        iron = model.Iron;
+        blood = model.Blood;    
+    }
+
     public void giveDamage(float amount)
     {
         float processedDamage = amount * model.DmgModifier;
@@ -154,43 +166,55 @@ public class playerController : MonoBehaviour
 
 
     public enum buffType { Health, Dmg, Blood, Iron };
-    public newBuff AddBuff(buffType type, float modifier)
+    public void AddBuff(buffType type, float modifier, string name, bool keepHealth)
     {
-        newBuff buff = new newBuff(newBuff.buffType.Health, modifier, this);
+        if (activeBuffs.ContainsKey(name))
+        {
+            Debug.LogError("playerController: already contains buff with this name!");
+            return;
+        }
+
+        newBuff buff = null;
 
         switch (type)
         {
             case buffType.Health:
-                buff = new newBuff(newBuff.buffType.Health, modifier, this);
+                buff = new newBuff(newBuff.buffType.Health, modifier, this, keepHealth);
                 break;
             case buffType.Blood:
-                buff = new newBuff(newBuff.buffType.Blood, modifier, this);
+                buff = new newBuff(newBuff.buffType.Blood, modifier, this, keepHealth);
                 break;
             case buffType.Iron:
-                buff = new newBuff(newBuff.buffType.Iron, modifier, this);
+                buff = new newBuff(newBuff.buffType.Iron, modifier, this, keepHealth);
                 break;
             case buffType.Dmg:
-                buff = new newBuff(newBuff.buffType.Iron, modifier, this);
+                buff = new newBuff(newBuff.buffType.Iron, modifier, this, keepHealth);
                 break;
             default:
                 Debug.LogError("playerController: invalid buff type");
                 break;
         }
 
-        buffList.Add(buff);
-        return buff;
+        activeBuffs.Add(name, buff);
+        
     }
 
-    public void removeBuff(newBuff buff)
+    public void removeBuff(string name)
     {
-        buff.removeBuff();
-        buffList.Remove(buff);
+        if (activeBuffs.ContainsKey(name))
+        {
+            activeBuffs[name].removeBuff();
+            activeBuffs.Remove(name);
+        }
+        else
+        {
+            Debug.LogError("playerController: invalid buff name, cannot remove!");
+        }
     }
-
-
 
     public class newBuff
     {
+        
         playerModel model;
 
         public enum buffType { Health, Dmg, Blood, Iron };
@@ -201,7 +225,7 @@ public class playerController : MonoBehaviour
         private float valueIncrease;
         private float maxValueIncrease;
 
-        public newBuff(buffType Type, float Modifier, playerController controller)
+        public newBuff(buffType Type, float Modifier, playerController controller, bool keepHealth)
         {
             modifier = Modifier;
             model = controller.model;
@@ -249,7 +273,7 @@ public class playerController : MonoBehaviour
         void bloodBuff()
         {
             startingValue = model.Blood;
-            valueIncrease = model.Blood * modifier;
+            startingMaxValue = model.Blood * modifier;
 
             valueIncrease = model.Blood * modifier;
             maxValueIncrease = model.Blood * modifier;
@@ -261,7 +285,7 @@ public class playerController : MonoBehaviour
         void ironBuff()
         {
             startingValue = model.Iron;
-            valueIncrease = model.Iron * modifier;
+            startingMaxValue = model.Iron * modifier;
 
             valueIncrease = model.Iron * modifier;
             maxValueIncrease = model.Iron * modifier;
@@ -292,6 +316,8 @@ public class playerController : MonoBehaviour
                 default:
                     return;
             }
+
+            Debug.Log("Remove Buff");
         }
     }
 }

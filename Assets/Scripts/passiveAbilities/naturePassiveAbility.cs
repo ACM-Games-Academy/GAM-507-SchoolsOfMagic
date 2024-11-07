@@ -12,10 +12,7 @@ public class naturePassiveAbility : passiveBase
     float additionalHealth;
     float damageReduction;
     float detectRadius;
-    bool nearWater;
-
-    playerController.newBuff healthBuff;
-    playerController.newBuff dmgBuff;
+    bool nearWater;   
 
     private void Awake()
     {
@@ -42,17 +39,21 @@ public class naturePassiveAbility : passiveBase
     {  
         if (other.gameObject.tag == "Water")
         {
-            healthBuff = controller.AddBuff(playerController.buffType.Health, additionalHealth);
-            dmgBuff = controller.AddBuff(playerController.buffType.Dmg, damageReduction);
+            controller.AddBuff(playerController.buffType.Health, additionalHealth, "NaturePassiveHealth", true);
+            controller.AddBuff(playerController.buffType.Dmg, additionalHealth, "NaturePassiveDmg", true);
+            //healthBuff = controller.AddBuff(playerController.buffType.Health, additionalHealth);
+            //dmgBuff = controller.AddBuff(playerController.buffType.Dmg, damageReduction);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Water")
-        {          
-            controller.removeBuff(healthBuff);
-            controller.removeBuff(dmgBuff);
+        {
+            controller.removeBuff("NaturePassiveHealth");
+            controller.removeBuff("NaturePassiveDmg");
+            //controller.removeBuff(healthBuff);
+            //controller.removeBuff(dmgBuff);
         }
     }
 }

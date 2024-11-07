@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class playerInput
+public class playerInput : MonoBehaviour
 {
     private PlayerControls controls;
     private InputAction playerMovement;
@@ -39,7 +39,7 @@ public class playerInput
     public event EventHandler runPressed;
     public event EventHandler runReleased;
 
-    public void Initialise()
+    public void Awake()
     {
         controls = new PlayerControls();    
 

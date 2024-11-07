@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passiveName: BodyOfTheLostCity
   detectionRadius: 2
-  additionalHealth: 1.1
+  additionalHealth: 0.2
   damageReduction: 0.2

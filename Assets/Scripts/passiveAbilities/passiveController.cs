@@ -8,7 +8,7 @@ public class passiveController : MonoBehaviour
     
     
     [SerializeField] playerInput playerInput;
-    playerModel model;
+    [SerializeField] playerController controller;
 
     private passiveBase currentPassive;
     [SerializeField] passiveBase naturePassive;
@@ -26,23 +26,23 @@ public class passiveController : MonoBehaviour
 
     private void Start()
     {
-        model = GetComponentInChildren<playerModel>();
-        if (model.CurrentClass == "Nature")
+        
+        if (controller.GetCurrentClass() == "Nature")
         {
             currentPassive = naturePassive;
             currentPassive.enabled = true;
         }
-        else if (model.CurrentClass == "Metal")
+        else if (controller.GetCurrentClass() == "Metal")
         {
             currentPassive = metalPassive;
             currentPassive.enabled = true;
         }
-        else if (model.CurrentClass == "Blood")
+        else if (controller.GetCurrentClass() == "Blood")
         {
             currentPassive = bloodPassive;
             currentPassive.enabled = true;
         }
-        else if (model.CurrentClass == "Arcane")
+        else if (controller.GetCurrentClass() == "Arcane")
         {
             currentPassive = arcanePassive;
             currentPassive.enabled = true;

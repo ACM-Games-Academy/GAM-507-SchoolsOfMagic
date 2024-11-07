@@ -6,13 +6,12 @@ public class WeaponController : MonoBehaviour
     [Header("Weapon prefab array \n in order of Nature, Blood, Metal, Arcane")]
     [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
-    private playerInput playerInput;                     // Reference to the player's input script
+    [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
     [SerializeField] private playerController controller;
 
     private void Awake()
     {
-        playerInput = new playerInput();
-        playerInput.Initialise();
+        
     }
 
     private void Start()

@@ -134,9 +134,8 @@ GameObject:
   - component: {fileID: 11005849}
   - component: {fileID: 11005848}
   - component: {fileID: 11005847}
-  - component: {fileID: 11005861}
+  - component: {fileID: 11005865}
   - component: {fileID: 11005860}
-  - component: {fileID: 11005858}
   - component: {fileID: 11005852}
   - component: {fileID: 11005856}
   - component: {fileID: 11005855}
@@ -229,7 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81badc01cd049ba4cb5931df5b846a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 11005858}
+  playerInput: {fileID: 11005865}
+  controller: {fileID: 11005860}
   naturePassive: {fileID: 11005853}
   bloodPassive: {fileID: 11005854}
   metalPassive: {fileID: 11005855}
@@ -284,18 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087d3313d3b191147a9e48033988f3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11005858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11005845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6db6f6c55da7d742bacf718430a24e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11005860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,22 +296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0741b60fb4431274091b1d5af1c80919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerModel: {fileID: 11005861}
-  playerInput: {fileID: 11005858}
---- !u!114 &11005861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11005845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07f169818eeb07041a64a3dfa3292fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 9899d4727f11be043b0d3ef7f9e6f815, type: 2}
-  currentClass: 
+  input: {fileID: 11005865}
+  data: {fileID: 11400000, guid: 61a650d288da05845860bf204c166ce2, type: 2}
+  health: 0
+  iron: 0
+  blood: 0
 --- !u!143 &11005862
 CharacterController:
   m_ObjectHideFlags: 0
@@ -377,6 +354,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11005865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11005845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6db6f6c55da7d742bacf718430a24e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &679248786
 GameObject:
   m_ObjectHideFlags: 0

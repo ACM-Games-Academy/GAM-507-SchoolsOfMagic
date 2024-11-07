@@ -28,9 +28,7 @@ public class movementController : MonoBehaviour
     [SerializeField] private movementStats stats;
 
     private void OnEnable()
-    {
-        inputModule = new playerInput();
-        inputModule.Initialise();
+    {       
 
         inputModule.jumpPressed += Jump;
 
