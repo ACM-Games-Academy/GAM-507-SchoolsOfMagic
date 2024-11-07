@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class metalPassiveAbility : passiveBase
 {
-    public override void updatePassive()
+    private void Start()
     {
 
     }

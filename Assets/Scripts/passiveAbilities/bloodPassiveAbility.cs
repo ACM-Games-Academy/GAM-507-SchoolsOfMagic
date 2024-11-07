@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class bloodPassiveAbility : passiveBase
 {
-    public override void updatePassive()
+    private void Start()
     {
-
+        
     }
 }
