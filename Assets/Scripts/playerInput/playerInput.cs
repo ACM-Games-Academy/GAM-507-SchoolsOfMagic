@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class playerInput : MonoBehaviour
+public class playerInput
 {
     private PlayerControls controls;
     private InputAction playerMovement;
@@ -39,7 +39,7 @@ public class playerInput : MonoBehaviour
     public event EventHandler runPressed;
     public event EventHandler runReleased;
 
-    void Awake()
+    public void Initialise()
     {
         controls = new PlayerControls();    
 
@@ -67,19 +67,16 @@ public class playerInput : MonoBehaviour
         playerPrimary.started += PrimaryAbility;
         playerSecondary.started += SecondaryAbility;
 
-        natureMagic.started += ChangeClassOne;
-        bloodMagic.started += ChangeClassTwo;
-        metalMagic.started += ChangeClassThree;
-        arcaneMagic.started += ChangeClassFour;
+        natureMagic.performed += ChangeClassOne;
+        bloodMagic.performed += ChangeClassTwo;
+        metalMagic.performed += ChangeClassThree;
+        arcaneMagic.performed += ChangeClassFour;
 
         abilityMovement.started += AbilityMovement;
 
         playerRun.started += onRunPressed;
         playerRun.canceled += onRunReleased;
-    }
-
-    void OnEnable()
-    {
+   
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
         playerLook.Enable();
@@ -177,7 +174,7 @@ public class playerInput : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public void Disable()
     {
         playerMovement.Disable();
         playerLook.Disable();

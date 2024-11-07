@@ -20,6 +20,7 @@ namespace Magic
         public List<MagicPrefab> magicPrefabs;
         private Dictionary<MagicType, MagicBase> magics;
         private MagicBase activeMagic;
+        private playerController controller;
 
         //Attempts to find a prefab of given name in the magicPrefabs array
         public bool TryGetPrefab(string prefabName, out GameObject gameObject)
@@ -40,10 +41,14 @@ namespace Magic
         //Called at runtime, initializes the magics dictionary and sets the initially equipped magic
         void Awake()
         {
+            controller = transform.GetComponentInParent<playerController>();
+
             // Initialize magics dictionary
             magics = new Dictionary<MagicType, MagicBase>
             {
-                { MagicType.Metal, new Metal(this) },
+                { MagicType.Metal, transform.GetComponent<Metal>() },
+                { MagicType.Nature, transform.GetComponent<Nature>() },
+                { MagicType.Blood, transform.GetComponent<Blood>() },
             };
 
             EquipMagic(MagicType.Metal);
@@ -54,7 +59,7 @@ namespace Magic
         {
             if (activeMagic != null)
             {
-                activeMagic.Update();
+                activeMagic.MagicUpdate();
             }
         }
 
