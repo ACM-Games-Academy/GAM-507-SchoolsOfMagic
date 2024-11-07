@@ -28,7 +28,6 @@ public class Blood : MagicBase
         playerController playerController = this.GetComponent<playerController>();
         playerInput = this.GetComponentInParent<playerInput>();
 
-        playerInput.primaryAbil += primaryFired;
     }
 
     // Called when Metal is equipped in MagicController object

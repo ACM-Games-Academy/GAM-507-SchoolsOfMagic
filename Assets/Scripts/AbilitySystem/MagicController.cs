@@ -88,7 +88,7 @@ public class MagicController : MonoBehaviour
             activeMagic = null;
         }
 
-        debugText = activeMagic.name;
+        debugText = activeMagic.ToString();
     }
 
     //Unequips the currently active magic, changes the currently active magic, and calls the Equip method of the newly active magic
