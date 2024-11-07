@@ -132,8 +132,9 @@ GameObject:
   - component: {fileID: 8480493298082489981}
   - component: {fileID: 7635839297485463869}
   - component: {fileID: 2745041297156247173}
-  - component: {fileID: 1460535965476682322}
   - component: {fileID: 7896978291723583060}
+  - component: {fileID: 9154042334233699206}
+  - component: {fileID: 8888815174984445473}
   - component: {fileID: 3092784167919089598}
   - component: {fileID: 2928461748652367338}
   - component: {fileID: 3321366431093143120}
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerModel: {fileID: 2745041297156247173}
-  playerInput: {fileID: 1460535965476682322}
+  playerInput: {fileID: 9154042334233699206}
 --- !u!114 &2745041297156247173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,18 +193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: f87e45078b36d04408b15bf4e5c7b563, type: 2}
   currentClass: 
---- !u!114 &1460535965476682322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289195554900992926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35f0ea2fa4a14943950e3f1be9a459c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7896978291723583060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,13 +208,46 @@ MonoBehaviour:
   playerController: {fileID: 7635839297485463869}
   controller: {fileID: 3321366431093143120}
   cameraComponent: {fileID: 8644982040416778567}
-  inputModule: {fileID: 1460535965476682322}
+  inputModule: {fileID: 9154042334233699206}
   playerModel: {fileID: 2745041297156247173}
-  natureMovement: {fileID: 2122806117344850857}
+  natureMovement: {fileID: 8859678799373355387}
   bloodMovement: {fileID: 7040819900456318970}
-  metalMovement: {fileID: 8859678799373355387}
+  metalMovement: {fileID: 2122806117344850857}
   arcaneMovement: {fileID: 633953071133318730}
   stats: {fileID: 11400000, guid: 11c87484548b0f24dab025cf1c494af5, type: 2}
+--- !u!114 &9154042334233699206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289195554900992926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6db6f6c55da7d742bacf718430a24e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8888815174984445473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289195554900992926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5be38e4cf535d4fa55ebb00007f1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicPrefabs:
+  - name: Nature
+    prefab: {fileID: 0}
+  - name: Blood
+    prefab: {fileID: 0}
+  - name: Metal
+    prefab: {fileID: 0}
+  - name: Arcane
+    prefab: {fileID: 0}
 --- !u!33 &3092784167919089598
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -254,7 +276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c498ab562957e0d4399d8bf3988e529b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
