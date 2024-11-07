@@ -6,11 +6,17 @@ public class WeaponController : MonoBehaviour
     [Header("Weapon prefab array \n in order of Nature, Blood, Metal, Arcane")]
     [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
-    [SerializeField] private playerModel PlayerModel;                     // Reference to the player's data (class, resources)
-    [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
+    private playerInput playerInput;                     // Reference to the player's input script
+    [SerializeField] private playerController controller;
+
+    private void Awake()
+    {
+        playerInput = new playerInput();
+        playerInput.Initialise();
+    }
 
     private void Start()
-    {            
+    {
         // Subscribe to class change events from the playerInput
         playerInput.NatureMagic += OnClassOneSelected;
         playerInput.BloodMagic += OnClassTwoSelected;
@@ -21,14 +27,12 @@ public class WeaponController : MonoBehaviour
         playerInput.firePressed += OnFirePressed;
         playerInput.fireReleased += OnFireReleased;
 
-        //we currently don't have the reload keys added yet
-
         // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(PlayerModel.CurrentClass);
+        InitializeWeaponForClass(controller.GetCurrentClass());
     }
 
     private void OnEnable()
-    {            
+    {
         // Subscribe to class change events from the playerInput
         playerInput.NatureMagic += OnClassOneSelected;
         playerInput.BloodMagic += OnClassTwoSelected;
@@ -42,7 +46,7 @@ public class WeaponController : MonoBehaviour
         //we currently don't have the reload keys added yet
 
         // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(PlayerModel.CurrentClass);
+        InitializeWeaponForClass(controller.GetCurrentClass());
     }
 
     private void InitializeWeaponForClass(string playerClass)
@@ -126,5 +130,7 @@ public class WeaponController : MonoBehaviour
         // unSubscribe to fire events
         playerInput.firePressed -= OnFirePressed;
         playerInput.fireReleased -= OnFireReleased;
+
+        playerInput.Disable(); 
     }
 }

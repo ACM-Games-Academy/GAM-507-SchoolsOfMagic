@@ -15,7 +15,7 @@ namespace Magic
         public Metal(MagicController _magicController)
         {
             magicController = _magicController;
-            _magicController.TryGetPrefab("IronGrip", out ironGripPrefab);
+            _magicController.TryGetPrefab("IronGripPrefab", out ironGripPrefab);
         }
 
         // Called when Metal is equipped in MagicController object

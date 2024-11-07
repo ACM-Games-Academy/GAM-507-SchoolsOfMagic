@@ -39,7 +39,7 @@ public class playerInput
     public event EventHandler runPressed;
     public event EventHandler runReleased;
 
-    void Awake()
+    public void Initialise()
     {
         controls = new PlayerControls();    
 
@@ -76,10 +76,7 @@ public class playerInput
 
         playerRun.started += onRunPressed;
         playerRun.canceled += onRunReleased;
-    }
-
-    void OnEnable()
-    {
+   
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
         playerLook.Enable();
@@ -177,7 +174,7 @@ public class playerInput
         }
     }
 
-    private void OnDisable()
+    public void Disable()
     {
         playerMovement.Disable();
         playerLook.Disable();

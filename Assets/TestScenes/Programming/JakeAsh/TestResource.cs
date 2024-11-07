@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class TestResource : MonoBehaviour
 {
-   playerModel playerModel;
+   playerController playerController;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        playerModel = GetComponent<playerModel>();
-        Debug.Log("blood = " + playerModel.getBlood());
-        Debug.Log("iron = " + playerModel.getIron());
+        playerController = GetComponent<playerController>();
+        
 
     }
 
@@ -21,29 +20,29 @@ public class TestResource : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) 
         {
-            playerModel.addBlood(20f);
-            Debug.Log("blood increase. blood = " + playerModel.getBlood());
+            playerController.AddReduceValue(playerController.ValueType.Blood, 20f, false);
+            Debug.Log("blood increase. blood = " + playerController.GetBlood());
 
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            playerModel.reduceBlood(20f);
-            Debug.Log("blood decrease. blood = " + playerModel.getBlood());
+            playerController.AddReduceValue(playerController.ValueType.Blood, -20f, false);
+            Debug.Log("blood decrease. blood = " + playerController.GetBlood());
 
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            playerModel.addIron(5f);
-            Debug.Log("iron increase. iron = " + playerModel.getIron());
+            playerController.AddReduceValue(playerController.ValueType.Iron, 5f, false);
+            Debug.Log("iron increase. iron = " + playerController.GetIron());
 
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            playerModel.reduceIron(5f);
-            Debug.Log("iron decrease. iron = " + playerModel.getIron());
+            playerController.AddReduceValue(playerController.ValueType.Iron, -5f, false);
+            Debug.Log("iron decrease. iron = " + playerController.GetIron());
         }
 
     }

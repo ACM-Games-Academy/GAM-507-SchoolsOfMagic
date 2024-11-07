@@ -6,7 +6,6 @@ public class naturePassiveAbility : passiveBase
 {
     [SerializeField] passiveAbilityData passiveAbilityData;
     playerController controller;
-    playerModel model;
 
     [SerializeField]SphereCollider detect;
 
@@ -14,6 +13,9 @@ public class naturePassiveAbility : passiveBase
     float damageReduction;
     float detectRadius;
     bool nearWater;
+
+    playerController.newBuff healthBuff;
+    playerController.newBuff dmgBuff;
 
     private void Awake()
     {
@@ -26,25 +28,22 @@ public class naturePassiveAbility : passiveBase
     {
         controller = GetComponent<playerController>();
         detect = GetComponentInChildren<SphereCollider>();
-        model = controller.getPlayerModel();
+        
         
         detect.radius = detectRadius;
     }
 
     private void Update()
     {
-        Debug.Log("MaxHealth: " + model.MaxHealth);
-        Debug.Log("CurrentHeath: " + model.getHealth());
-        Debug.Log("DamageReduction: " + model.DamageReductionBuff);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {  
         if (other.gameObject.tag == "Water")
         {
-            model.MaxHealth = model.MaxHealth * (1 + additionalHealth);
-            model.setHealth(model.getHealth() * (1 + additionalHealth));
-            model.DamageReductionBuff = damageReduction;
+            healthBuff = controller.AddBuff(playerController.buffType.Health, additionalHealth);
+            dmgBuff = controller.AddBuff(playerController.buffType.Dmg, damageReduction);
         }
     }
 
@@ -52,9 +51,8 @@ public class naturePassiveAbility : passiveBase
     {
         if (other.gameObject.tag == "Water")
         {          
-            model.MaxHealth = model.MaxHealth / (1 + additionalHealth);
-            model.setHealth(model.getHealth() / (1 + additionalHealth));
-            model.DamageReductionBuff = 0f;
+            controller.removeBuff(healthBuff);
+            controller.removeBuff(dmgBuff);
         }
     }
 }

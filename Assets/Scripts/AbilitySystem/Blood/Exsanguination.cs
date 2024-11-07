@@ -11,7 +11,7 @@ namespace Magic
         //it will then deal damage then heal the player accordingly depending on how many enemies are hit 
         [SerializeField] BloodPrimaryData data;
         
-        playerModel model;
+        playerController controller;
 
         [SerializeField] private ParticleSystem pullEffect;
 
@@ -28,7 +28,7 @@ namespace Magic
         // Start is called before the first frame update
         void OnEnable()
         {
-            model = GetComponentInParent<playerModel>();
+            controller = GetComponentInParent<playerController>();
 
             //this is for the amount the player will be healed and the position of each enemy
             float healAmount = 0;
@@ -86,12 +86,12 @@ namespace Magic
                 frameHeal = Time.deltaTime * healRate;
                 if (frameHeal > healAmount)
                 {
-                    model.IncreaseHealth(healAmount);
+                    controller.AddReduceValue(playerController.ValueType.Health, healAmount, false);
                     healAmount = 0;
                 }
                 else
                 {
-                    model.IncreaseHealth(frameHeal);
+                    controller.AddReduceValue(playerController.ValueType.Health, healAmount, false);
                     healAmount -= frameHeal;
                 }
                 yield return new WaitForEndOfFrame();

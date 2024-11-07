@@ -10,6 +10,7 @@ namespace Magic
     public class Blood : MagicBase
     {
         private playerInput playerInput;
+        private playerController controller;
 
         public const MagicType magicType = MagicType.Blood;
         private MagicController magicController;
@@ -24,7 +25,9 @@ namespace Magic
         {
             magicController = _magicController;
             _magicController.TryGetPrefab("Exsanguination", out primaryPrefab);
-            playerInput = _magicController.GetComponentInChildren<playerInput>();
+
+            playerController playerController = this.GetComponent<playerController>();
+            playerInput = new playerInput();
 
             playerInput.primaryAbil += primaryFired;
         }
@@ -55,7 +58,7 @@ namespace Magic
         {
             if (primaryCooldown == 0)
             {
-                GameObject.Instantiate(primaryPrefab, playerInput.transform);
+                GameObject.Instantiate(primaryPrefab, controller.transform);
                 primaryCooldown = primaryData.cooldown;
             }       
         }

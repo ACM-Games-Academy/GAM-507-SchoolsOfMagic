@@ -17,7 +17,6 @@ public class movementController : MonoBehaviour
 
     [SerializeField] private Camera cameraComponent;
     public playerInput inputModule;
-    [SerializeField] private playerModel playerModel;
 
     private movementAbility currentMovement;
     [SerializeField] private movementAbility natureMovement;
@@ -30,6 +29,9 @@ public class movementController : MonoBehaviour
 
     private void OnEnable()
     {
+        inputModule = new playerInput();
+        inputModule.Initialise();
+
         inputModule.jumpPressed += Jump;
 
         inputModule.NatureMagic += switchNature;
@@ -41,7 +43,7 @@ public class movementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initAbilties(playerModel.CurrentClass);
+        initAbilties(playerController.GetCurrentClass());
     }
 
     // Update is called once per frame
@@ -158,5 +160,7 @@ public class movementController : MonoBehaviour
         inputModule.BloodMagic -= switchBlood;
         inputModule.MetalMagic -= switchMetal;
         inputModule.ArcaneMagic -= switchArcane;
+
+        inputModule.Disable();
     }
 }
