@@ -28,7 +28,7 @@ namespace Magic
         // Start is called before the first frame update
         void OnEnable()
         {
-            controller = GetComponentInParent<playerController>();
+            controller = GetComponentInParent<playerController>();      
 
             //this is for the amount the player will be healed and the position of each enemy
             float healAmount = 0;

@@ -26,7 +26,7 @@ public class Blood : MagicBase
         _magicController.TryGetPrefab("Exsanguination", out primaryPrefab);
 
         playerController playerController = this.GetComponent<playerController>();
-        playerInput = new playerInput();
+        playerInput = this.GetComponentInParent<playerInput>();
 
         playerInput.primaryAbil += primaryFired;
     }
@@ -34,13 +34,13 @@ public class Blood : MagicBase
     // Called when Metal is equipped in MagicController object
     public override void Equip()
     {
-       primaryCooldown = false;
+        playerInput.primaryAbil += primaryFired;
     }
 
     //Called when Metal is unequipped in a MagicController object
     public override void Unequip()
     {
-
+        playerInput.primaryAbil -= primaryFired;
     }
 
     //Called when Metal is updated in a MagicController object
