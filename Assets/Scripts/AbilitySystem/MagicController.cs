@@ -21,6 +21,7 @@ public class MagicController : MonoBehaviour
 {
     public List<MagicPrefab> magicPrefabs;
     private Dictionary<MagicType, MagicBase> magics;
+    [SerializeField]
     private MagicBase activeMagic;
     [SerializeField] private PlayerController controller;
     [SerializeField] private playerInput input;
@@ -82,6 +83,20 @@ public class MagicController : MonoBehaviour
         if (activeMagic != null)
         {
             activeMagic.MagicUpdate();
+        }
+
+        switch (controller.GetCurrentClass())
+        {
+            case "Metal":
+                EquipMagic(MagicType.Metal);
+                break;
+            case "Nature":
+                EquipMagic(MagicType.Nature);
+                break;
+            case "Blood":
+                EquipMagic(MagicType.Blood);
+                break;
+
         }
     }
 
