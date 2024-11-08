@@ -6,6 +6,9 @@ public class Nature : MagicBase
 {
     public const MagicType magicType = MagicType.Nature;
     private MagicController magicController;
+    public GameObject cactusPrefab;
+    public float cooldown = 5;
+
     //private GameObject ironGripPrefab;
 
     //Constructs a new Metal object
@@ -36,6 +39,14 @@ public class Nature : MagicBase
         //{
         //    GameObject grip = Object.Instantiate(ironGripPrefab);
         //}
+
+        cooldown -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.E) && cooldown <= 0)
+        {
+            GameObject.Instantiate(cactusPrefab, transform.position, Quaternion.identity);
+            cooldown = 5;
+        }
     }
 }
 
