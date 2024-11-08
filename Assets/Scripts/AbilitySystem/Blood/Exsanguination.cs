@@ -11,8 +11,8 @@ namespace Magic
         //it will then deal damage then heal the player accordingly depending on how many enemies are hit 
         [SerializeField] BloodPrimaryData data;
         
-        playerController controller;
-        private MovementController movementController;
+        private PlayerController controller;
+        private movementController movementController;
 
         [SerializeField] private ParticleSystem pullEffect;
 
@@ -42,12 +42,15 @@ namespace Magic
             StartCoroutine(startAbility());
         }
 
+        public void InitAbil(PlayerController Controller, movementController MovementController)
+        {
+            controller = Controller;
+            movementController = MovementController;
+        }
+
         private IEnumerator startAbility()
         {
-            yield return new WaitForFixedUpdate();
-
-            controller = GetComponentInParent<playerController>();
-            MovementController movementController = GetComponentInParent<MovementController>();
+            yield return new WaitForFixedUpdate();           
 
             //this is for the position of each enemy
             List<Vector3> enemyPos = new List<Vector3>();            
@@ -109,12 +112,12 @@ namespace Magic
                 frameHeal = Time.deltaTime * healRate;
                 if (frameHeal > healAmount)
                 {
-                    controller.AddReduceValue(playerController.ValueType.Health, healAmount, false);
+                    controller.AddReduceValue(PlayerController.ValueType.Health, healAmount, false);
                     healAmount = 0;
                 }
                 else
                 {
-                    controller.AddReduceValue(playerController.ValueType.Health, frameHeal, false);
+                    controller.AddReduceValue(PlayerController.ValueType.Health, frameHeal, false);
                     healAmount -= frameHeal;
                 }
                 yield return new WaitForEndOfFrame();

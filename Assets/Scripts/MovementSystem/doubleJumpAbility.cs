@@ -6,7 +6,7 @@ public class doubleJumpAbility : movementAbility
 {
     private bool hasDoubleJump;
 
-    public override void MovementUpdate(MovementController player, MovementModel movementModel)
+    public override void MovementUpdate(movementController player, MovementModel movementModel)
     {
         base.MovementUpdate(player, movementModel);
 
@@ -16,7 +16,7 @@ public class doubleJumpAbility : movementAbility
         }
     }
 
-    public override void Jump(MovementController player, MovementModel movementModel)
+    public override void Jump(movementController player, MovementModel movementModel)
     {
         base.Jump(player, movementModel);
 
@@ -24,7 +24,7 @@ public class doubleJumpAbility : movementAbility
 
         if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump") && player.playerController.GetIron() > 0)
         {
-            player.playerController.AddReduceValue(playerController.ValueType.Iron, -1, false);
+            player.playerController.AddReduceValue(PlayerController.ValueType.Iron, -1, false);
             hasDoubleJump = false;
             player.Velocity = transform.TransformDirection(leftStick.x * movementModel.MovementSpeed, movementModel.JumpHeight, leftStick.y * movementModel.MovementSpeed);
         }

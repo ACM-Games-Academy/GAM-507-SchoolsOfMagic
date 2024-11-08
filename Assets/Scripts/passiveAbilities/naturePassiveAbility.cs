@@ -5,7 +5,7 @@ using UnityEngine;
 public class naturePassiveAbility : passiveBase
 {
     [SerializeField] passiveAbilityData passiveAbilityData;
-    playerController controller;
+    PlayerController controller;
 
     [SerializeField]SphereCollider detect;
 
@@ -23,7 +23,7 @@ public class naturePassiveAbility : passiveBase
 
     private void Start()
     {
-        controller = GetComponent<playerController>();
+        controller = GetComponent<PlayerController>();
         detect = GetComponentInChildren<SphereCollider>();
         
         
@@ -39,8 +39,8 @@ public class naturePassiveAbility : passiveBase
     {  
         if (other.gameObject.tag == "Water")
         {
-            controller.AddBuff(playerController.buffType.Health, additionalHealth, "NaturePassiveHealth", true);
-            controller.AddBuff(playerController.buffType.Dmg, additionalHealth, "NaturePassiveDmg", true);
+            controller.AddBuff(PlayerController.buffType.Health, additionalHealth, "NaturePassiveHealth", true);
+            controller.AddBuff(PlayerController.buffType.Dmg, additionalHealth, "NaturePassiveDmg", true);
             //healthBuff = controller.AddBuff(playerController.buffType.Health, additionalHealth);
             //dmgBuff = controller.AddBuff(playerController.buffType.Dmg, damageReduction);
         }

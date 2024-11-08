@@ -16,12 +16,12 @@ public class movementAbility : MonoBehaviour
         
     }
 
-    public virtual void MovementUpdate(MovementController player, MovementModel movementModel)
+    public virtual void MovementUpdate(movementController player, MovementModel movementModel)
     {
         Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
     }
 
-    public virtual void Jump(MovementController player, MovementModel movementModel)
+    public virtual void Jump(movementController player, MovementModel movementModel)
     {
 
     }

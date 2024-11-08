@@ -15,7 +15,7 @@ public class playerInputAudio : MonoBehaviour
     public AK.Wwise.State metalState;
     public AK.Wwise.State arcaneState;
 
-    private playerController playerController;
+    private PlayerController playerController;
     public CharacterController controller;
     private AK.Wwise.RTPC health = null;
     private float speed = 0f;
@@ -24,7 +24,7 @@ public class playerInputAudio : MonoBehaviour
     
     private void Awake()
     {
-        playerController = GetComponent<playerController>();
+        playerController = GetComponent<PlayerController>();
     }
     
     private void Update()

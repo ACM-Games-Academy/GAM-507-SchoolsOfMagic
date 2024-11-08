@@ -22,7 +22,7 @@ public class MagicController : MonoBehaviour
     public List<MagicPrefab> magicPrefabs;
     private Dictionary<MagicType, MagicBase> magics;
     private MagicBase activeMagic;
-    [SerializeField] private playerController controller;
+    [SerializeField] private PlayerController controller;
     [SerializeField] private playerInput input;
     [SerializeField] string debugText;
 

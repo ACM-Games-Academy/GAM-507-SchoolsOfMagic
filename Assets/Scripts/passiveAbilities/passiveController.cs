@@ -8,7 +8,7 @@ public class passiveController : MonoBehaviour
     
     
     [SerializeField] playerInput playerInput;
-    [SerializeField] playerController controller;
+    [SerializeField] PlayerController controller;
 
     private passiveBase currentPassive;
     [SerializeField] passiveBase naturePassive;

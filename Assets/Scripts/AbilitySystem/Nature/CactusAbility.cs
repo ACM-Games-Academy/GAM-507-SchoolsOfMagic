@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CactusAbility : MonoBehaviour
 {
-    public playerController controller;
+    public PlayerController controller;
     public float lifetime = 1;
     public AnimationCurve sizeCurve;
 

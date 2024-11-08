@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class MovementController : MonoBehaviour
+public class movementController : MonoBehaviour
 {
-    public playerController playerController;
+    public PlayerController playerController;
     private MovementModel movementModel;
 
     private Vector3 velocity;
@@ -141,11 +141,6 @@ public class MovementController : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         movementModel.MovementSpeed -= movementModel.MovementSpeed * (increasedSpeed / movementModel.MovementSpeed);
-    }
-
-    public movementStats getStats()
-    {
-        return stats;
     }
 
     private void switchNature(object sender, EventArgs e)

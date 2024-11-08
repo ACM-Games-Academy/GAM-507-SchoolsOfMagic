@@ -9,7 +9,7 @@ using Magic;
 using TMPro;
 using JetBrains.Annotations;
 
-public class playerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     //Events
     public event EventHandler playerDeath;
@@ -227,7 +227,7 @@ public class playerController : MonoBehaviour
         private float valueIncrease;
         private float maxValueIncrease;
 
-        public newBuff(buffType Type, float Modifier, playerController controller, bool keepHealth)
+        public newBuff(buffType Type, float Modifier, PlayerController controller, bool keepHealth)
         {
             modifier = Modifier;
             model = controller.model;

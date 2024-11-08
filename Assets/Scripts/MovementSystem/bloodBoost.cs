@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bloodBoost : movementAbility
 {
-    public override void MovementUpdate(MovementController player, MovementModel movementModel)
+    public override void MovementUpdate(movementController player, MovementModel movementModel)
     {
         base.MovementUpdate(player, movementModel);
 
@@ -18,7 +18,7 @@ public class bloodBoost : movementAbility
             {
                 if (!hit.transform.gameObject.name.Contains("Blood"))
                 {
-                    player.playerController.AddReduceValue(playerController.ValueType.Blood, Time.deltaTime, false);
+                    player.playerController.AddReduceValue(PlayerController.ValueType.Blood, Time.deltaTime, false);
                 }
                 player.controller.Move(new Vector3(player.Velocity.x * movementModel.BloodBoostSpeedMod, player.Velocity.y, player.Velocity.z * movementModel.BloodBoostSpeedMod) * Time.deltaTime);
             }

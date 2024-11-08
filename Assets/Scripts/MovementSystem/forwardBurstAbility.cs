@@ -6,7 +6,7 @@ public class forwardBurstAbility : movementAbility
 {
     private bool hasForwardBurst;
 
-    public override void MovementUpdate(MovementController player, MovementModel movementModel)
+    public override void MovementUpdate(movementController player, MovementModel movementModel)
     {
         base.MovementUpdate(player, movementModel);
 
@@ -16,7 +16,7 @@ public class forwardBurstAbility : movementAbility
         }
     }
 
-    public override void Jump(MovementController player, MovementModel movementModel)
+    public override void Jump(movementController player, MovementModel movementModel)
     {
         base.Jump(player, movementModel);
 

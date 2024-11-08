@@ -1,3 +1,4 @@
+using Magic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,8 +9,10 @@ using UnityEngine;
 
 public class Blood : MagicBase
 {
+    //these need to be public so that the other abilties can access them
     private playerInput playerInput;
-    private playerController controller;
+    private PlayerController controller;
+    [SerializeField] private movementController movementController;
 
     public const MagicType magicType = MagicType.Blood;
     private MagicController magicController;
@@ -25,9 +28,8 @@ public class Blood : MagicBase
         magicController = transform.GetComponent<MagicController>();
         magicController.TryGetPrefab("Exsanguination", out primaryPrefab);
 
-        playerController playerController = this.GetComponent<playerController>();
-        playerInput = this.GetComponentInParent<playerInput>();
-
+        playerInput = transform.GetComponentInParent<playerInput>();
+        controller = transform.GetComponentInParent<PlayerController>();
     }
 
     // Called when Metal is equipped in MagicController object
@@ -52,7 +54,9 @@ public class Blood : MagicBase
     {
         if (abilityReady == true)
         {
-            GameObject.Instantiate(primaryPrefab, transform.position, transform.rotation, transform);
+            GameObject instance = GameObject.Instantiate(primaryPrefab, transform.position, transform.rotation, transform);
+            instance.GetComponent<Exsanguination>().InitAbil(controller, movementController);
+
             StartCoroutine(coolDownTimer(primaryData.cooldown));
             abilityReady = false;
         }
