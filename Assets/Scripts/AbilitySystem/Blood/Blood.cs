@@ -15,15 +15,15 @@ public class Blood : MagicBase
     private MagicController magicController;
     GameObject primaryPrefab;
 
-   [SerializeField] private BloodPrimaryData primaryData;
+    [SerializeField] private BloodPrimaryData primaryData;
 
-    bool primaryCooldown;
+    [SerializeField] private bool abilityReady = true;
 
     //Constructs a new Metal object
-    public Blood(MagicController _magicController)
+    void Start()
     {
-        magicController = _magicController;
-        _magicController.TryGetPrefab("Exsanguination", out primaryPrefab);
+        magicController = transform.GetComponent<MagicController>();
+        magicController.TryGetPrefab("Exsanguination", out primaryPrefab);
 
         playerController playerController = this.GetComponent<playerController>();
         playerInput = this.GetComponentInParent<playerInput>();
@@ -50,18 +50,20 @@ public class Blood : MagicBase
 
     private void primaryFired(object sender, EventArgs e)
     {
-        if (primaryCooldown == true)
+        if (abilityReady == true)
         {
-            GameObject.Instantiate(primaryPrefab, transform);
+            GameObject.Instantiate(primaryPrefab, transform.position, transform.rotation, transform);
             StartCoroutine(coolDownTimer(primaryData.cooldown));
-            primaryCooldown = false;
-        }       
+            abilityReady = false;
+        }
+
+        Debug.Log("Blood primary");
     }
 
     private IEnumerator coolDownTimer(float time)
     {
         yield return new WaitForSeconds(time);
-        primaryCooldown = true;
+        abilityReady = true;
     }
 }
 

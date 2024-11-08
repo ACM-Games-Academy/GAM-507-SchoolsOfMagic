@@ -7,22 +7,22 @@ public class blinkAbility : movementAbility
     private int blinks;
     private float blinkTime;
 
-    public override void MovementUpdate(movementController player)
+    public override void MovementUpdate(MovementController player, MovementModel movementModel)
     {
-        base.MovementUpdate(player);
+        base.MovementUpdate(player, movementModel);
 
         Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
 
         if (player.controller.isGrounded)
         {
-            blinks = player.getStats().blinkAmount;
+            blinks = movementModel.BlinkAmount;
         }
 
         if (blinks > 0 && blinkTime <= 0 && Input.GetKeyDown(KeyCode.LeftShift))
         {
             blinks--;
             blinkTime = 0.1f;
-            player.Velocity = transform.TransformDirection(leftStick.x * player.getStats().movementSpeed * 5, 0, leftStick.y * player.getStats().movementSpeed * 5);
+            player.Velocity = transform.TransformDirection(leftStick.x * movementModel.MovementSpeed * 5, 0, leftStick.y * movementModel.MovementSpeed * 5);
         }
         if (blinkTime > 0)
         {
@@ -31,6 +31,8 @@ public class blinkAbility : movementAbility
                 player.Velocity /= 5;
             }
             blinkTime -= Time.deltaTime;
+
+            
         }
     }
 }

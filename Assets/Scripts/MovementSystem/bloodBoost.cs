@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class bloodBoost : movementAbility
 {
-    public override void MovementUpdate(movementController player)
+    public override void MovementUpdate(MovementController player, MovementModel movementModel)
     {
-        base.MovementUpdate(player);
+        base.MovementUpdate(player, movementModel);
 
         int layersToIgnore = ~LayerMask.GetMask("Player");
 
@@ -20,7 +20,7 @@ public class bloodBoost : movementAbility
                 {
                     player.playerController.AddReduceValue(playerController.ValueType.Blood, Time.deltaTime, false);
                 }
-                player.controller.Move(new Vector3(player.Velocity.x * player.getStats().bloodBoostSpeedBoostMultiplier, player.Velocity.y, player.Velocity.z * player.getStats().bloodBoostSpeedBoostMultiplier) * Time.deltaTime);
+                player.controller.Move(new Vector3(player.Velocity.x * movementModel.BloodBoostSpeedMod, player.Velocity.y, player.Velocity.z * movementModel.BloodBoostSpeedMod) * Time.deltaTime);
             }
         }
     }
