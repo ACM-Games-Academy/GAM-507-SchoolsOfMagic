@@ -1,6 +1,7 @@
 //Ewan Mason
 //MonoBehaviour script controlling MagicBase objects, functionality similar to a StateMachine
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,8 +23,8 @@ public class MagicController : MonoBehaviour
     private Dictionary<MagicType, MagicBase> magics;
     [SerializeField]
     private MagicBase activeMagic;
-    private playerController controller;
-
+    [SerializeField] private playerController controller;
+    [SerializeField] private playerInput input;
     [SerializeField] string debugText;
 
     //Attempts to find a prefab of given name in the magicPrefabs array
@@ -44,9 +45,7 @@ public class MagicController : MonoBehaviour
 
     //Called at runtime, initializes the magics dictionary and sets the initially equipped magic
     void Start()
-    {
-        controller = transform.GetComponentInParent<playerController>();
-
+    {      
         // Initialize magics dictionary
         magics = new Dictionary<MagicType, MagicBase>
         {
@@ -69,6 +68,13 @@ public class MagicController : MonoBehaviour
 
         }
 
+    }
+
+    private void OnEnable()
+    {
+        input.BloodMagic += ChangeMagicBlood;
+        input.MetalMagic += ChangeMagicMetal;
+        input.NatureMagic += ChangeMagicNature;
     }
 
     //Calls the Update method of the currently active magic
@@ -101,9 +107,7 @@ public class MagicController : MonoBehaviour
         {
             activeMagic.Unequip();
             activeMagic = null;
-        }
-
-        debugText = activeMagic.name;
+        }       
     }
 
     //Unequips the currently active magic, changes the currently active magic, and calls the Equip method of the newly active magic
@@ -124,5 +128,27 @@ public class MagicController : MonoBehaviour
         }
 
         Debug.Log("Magic changed to: " + magicType.ToString());
+    }
+
+    private void OnDisable()
+    {
+        input.BloodMagic -= ChangeMagicBlood;
+        input.MetalMagic -= ChangeMagicMetal;
+        input.NatureMagic -= ChangeMagicNature;
+    }
+
+    private void ChangeMagicBlood(object sender, EventArgs e)
+    {
+        EquipMagic(MagicType.Blood);
+    }
+
+    private void ChangeMagicNature(object sender, EventArgs e)
+    {
+        EquipMagic(MagicType.Nature);
+    }
+
+    private void ChangeMagicMetal(object sender, EventArgs e)
+    {
+        EquipMagic(MagicType.Metal);
     }
 }

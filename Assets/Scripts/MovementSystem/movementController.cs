@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class movementController : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
     public playerController playerController;
+    private MovementModel movementModel;
+
     private Vector3 velocity;
     public Vector3 Velocity 
     { get { return velocity; } set { velocity = value; } }
@@ -26,9 +28,18 @@ public class movementController : MonoBehaviour
     [Header("Stats")]
 
     [SerializeField] private movementStats stats;
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        movementModel = new MovementModel(stats);
+
+        initAbilties(playerController.GetCurrentClass());
+    }
 
     private void OnEnable()
-    {       
+    {
 
         inputModule.jumpPressed += Jump;
 
@@ -36,12 +47,6 @@ public class movementController : MonoBehaviour
         inputModule.BloodMagic += switchBlood;
         inputModule.MetalMagic += switchMetal;
         inputModule.ArcaneMagic += switchArcane;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        initAbilties(playerController.GetCurrentClass());
     }
 
     // Update is called once per frame
@@ -73,18 +78,18 @@ public class movementController : MonoBehaviour
     {
         if (currentMovement != null)
         {
-            currentMovement.MovementUpdate(this);
+            currentMovement.MovementUpdate(this, movementModel);
         }
 
         Vector2 leftStick = inputModule.GetMovementInput().normalized;
         if (controller.isGrounded && velocity.y < 0)
         {
-            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * stats.movementSpeed, velocity.y, leftStick.y * stats.movementSpeed), Time.deltaTime * stats.groundedAcceleration);
+            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * movementModel.MovementSpeed, velocity.y, leftStick.y * movementModel.MovementSpeed), Time.deltaTime * movementModel.GroundedAcceleration);
             velocity.y = -0.5f;
         }
         else
         {
-            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * stats.movementSpeed, velocity.y, leftStick.y * stats.movementSpeed), Time.deltaTime * stats.aerialAcceleration);
+            velocity = Vector3.Lerp(velocity, transform.TransformDirection(leftStick.x * movementModel.MovementSpeed, velocity.y, leftStick.y * movementModel.MovementSpeed), Time.deltaTime * movementModel.AerialAcceleration);
             velocity.y += Physics.gravity.y * Time.deltaTime;
         }
 
@@ -95,11 +100,11 @@ public class movementController : MonoBehaviour
     {
         if (currentMovement != null)
         {
-            currentMovement.Jump(this);
+            currentMovement.Jump(this, movementModel);
         }
         if (controller.isGrounded)
         {
-            velocity.y = stats.jumpHeight;
+            velocity.y = movementModel.JumpHeight;
         }
     }
 
@@ -123,6 +128,19 @@ public class movementController : MonoBehaviour
                 Debug.LogWarning("Movement ability init: Invalid magic");
                 break;
         }
+    }
+
+    //this is for speed buffs this was taken from the playerController - Launcelot
+    public IEnumerator addSpeedModT(float modifier, float time)
+    {   
+        float increasedSpeed = movementModel.MovementSpeed * modifier;
+
+
+        movementModel.MovementSpeed += increasedSpeed;
+
+        yield return new WaitForSeconds(time);
+
+        movementModel.MovementSpeed -= movementModel.MovementSpeed * (increasedSpeed / movementModel.MovementSpeed);
     }
 
     public movementStats getStats()

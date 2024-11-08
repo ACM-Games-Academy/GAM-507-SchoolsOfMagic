@@ -12,6 +12,7 @@ namespace Magic
         [SerializeField] BloodPrimaryData data;
         
         playerController controller;
+        private MovementController movementController;
 
         [SerializeField] private ParticleSystem pullEffect;
 
@@ -28,12 +29,6 @@ namespace Magic
         // Start is called before the first frame update
         void OnEnable()
         {
-            controller = GetComponentInParent<playerController>();      
-
-            //this is for the amount the player will be healed and the position of each enemy
-            float healAmount = 0;
-            List<Vector3> enemyPos = new List<Vector3>();
-
             //setting all the variables from the scriptable obj
             cooldown = data.cooldown;
             radiusRange = data.radiusRange;
@@ -43,37 +38,65 @@ namespace Magic
             speedBoost = data.speedBoost;
             boostDuration = data.boostDuration;
 
-            //this finds all objects within a sphere
-            Collider[] colliders = Physics.OverlapSphere(transform.position, radiusRange);
+            Debug.Log(healAmount + "healAmout");
+            StartCoroutine(startAbility());
+        }
 
-            //fining all the enemies within the sphere
+        private IEnumerator startAbility()
+        {
+            yield return new WaitForFixedUpdate();
+
+            controller = GetComponentInParent<playerController>();
+            MovementController movementController = GetComponentInParent<MovementController>();
+
+            //this is for the position of each enemy
+            List<Vector3> enemyPos = new List<Vector3>();            
+
+            //this is for counting how much health will be healed
+            int healCounter = 0;
+
+            //this finds all objects within a sphere
+            Collider[] colliders = null;
+            colliders = Physics.OverlapSphere(transform.position, radiusRange);
+            
+
             foreach (Collider collider in colliders)
             {
-                if (collider.TryGetComponent<TempEnemy>(out TempEnemy enemyScript) == true)
+                Debug.Log("Collider");
+
+                if (collider.gameObject.TryGetComponent<TempEnemy>(out TempEnemy enemyScript) == true)
                 {
                     //dealing damge to the enemy this will be changed when enemies are made
                     enemyScript.health = enemyScript.health - damage;
 
                     //the heal amount increases as more enmies are damaged by this ability
                     //the position of each enemy is then saved for the visual effect
-                    healAmount++;
-                    enemyPos.Add(enemyScript.GetComponent<Transform>().position);   
+                    healCounter++;
+                    enemyPos.Add(enemyScript.GetComponent<Transform>().position);
+
+                    Debug.Log("Enemy hit: " + healCounter);
                 }
             }
 
+            healAmount *= healCounter;
+            Debug.Log("Healcounter: " + healCounter + " Heal Amount: " + healAmount);
+
             if (healAmount > 0)
             {
-                
+                StartCoroutine(movementController.addSpeedModT(speedBoost, boostDuration));
+                StartCoroutine(healPlayer());
+                visualEffect(enemyPos);
             }
-
-            Debug.Log("Enemies hit: " +  healAmount);
-
-            StartCoroutine(healPlayer());
-            visualEffect(enemyPos);
+            else
+            {
+                Debug.Log("NO HITS");
+                Destroy(this.gameObject);               
+            }
         }
 
         private IEnumerator healPlayer()
         {
+            Debug.Log("Started healing: " + healAmount);
             //while the healamount is above 0 it will heal the player
             //the healrate is the amount it will heal in one second 
 
@@ -91,7 +114,7 @@ namespace Magic
                 }
                 else
                 {
-                    controller.AddReduceValue(playerController.ValueType.Health, healAmount, false);
+                    controller.AddReduceValue(playerController.ValueType.Health, frameHeal, false);
                     healAmount -= frameHeal;
                 }
                 yield return new WaitForEndOfFrame();
@@ -119,11 +142,13 @@ namespace Magic
 
         private IEnumerator updateParticle(ParticleSystem[] particleSyss)
         {
+            Debug.Log("updating particle rotation");
+
             while (healing == true)
             {
                 foreach(ParticleSystem particle in particleSyss)
                 {
-                    particle.transform.rotation = Quaternion.LookRotation(transform.position);
+                    particle.transform.LookAt(transform.position);  
                 }
 
                 yield return new WaitForEndOfFrame();
@@ -135,6 +160,8 @@ namespace Magic
             }
 
             Destroy(this.gameObject);
+
+            Debug.Log("finished updating particles");
         }
     }
 }

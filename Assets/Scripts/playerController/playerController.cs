@@ -32,6 +32,7 @@ public class playerController : MonoBehaviour
     public float health;
     public float iron;
     public float blood;
+    public string currentMagic;
 
     // Start is called before the first frame update
     void Awake()
@@ -67,7 +68,8 @@ public class playerController : MonoBehaviour
         //updating debug values
         health = model.Health;
         iron = model.Iron;
-        blood = model.Blood;    
+        blood = model.Blood;
+        currentMagic = model.CurrentClass;
     }
 
     public void giveDamage(float amount)
