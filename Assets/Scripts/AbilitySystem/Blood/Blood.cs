@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class Blood : MagicBase
@@ -37,6 +38,7 @@ public class Blood : MagicBase
     {
         playerInput.primaryAbil += primaryFired;
     }
+
 
     //Called when Metal is unequipped in a MagicController object
     public override void Unequip()

@@ -1,33 +1,43 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 public class Nature : MagicBase
 {
     public const MagicType magicType = MagicType.Nature;
     private MagicController magicController;
-    public GameObject cactusPrefab;
-    public float cooldown = 5;
+    private GameObject cactusPrefab;
+    [SerializeField] float primaryCooldown = 5;
+    private bool cooldown;
+
+    playerInput playerInput;
+    PlayerController controller;
 
     //private GameObject ironGripPrefab;
 
     //Constructs a new Metal object
-    public Nature(MagicController _magicController)
+    public void Start()
     {
-        magicController = _magicController;
-        //_magicController.TryGetPrefab("IronGrip", out ironGripPrefab);
+        magicController = transform.GetComponent<MagicController>();
+        magicController.TryGetPrefab("cactusPrefab", out cactusPrefab);
+
+        playerInput = transform.GetComponentInParent<playerInput>();
+        controller = transform.GetComponentInParent<PlayerController>();
     }
 
     // Called when Metal is equipped in MagicController object
     public override void Equip()
-    {
-
+    {   
+        playerInput.primaryAbil += primaryFired;
+        cooldown = false;
     }
 
     //Called when Metal is unequipped in a MagicController object
     public override void Unequip()
     {
-
+        playerInput.primaryAbil -= primaryFired;
     }
 
     //Called when Metal is updated in a MagicController object
@@ -39,14 +49,24 @@ public class Nature : MagicBase
         //{
         //    GameObject grip = Object.Instantiate(ironGripPrefab);
         //}
+    }
 
-        cooldown -= Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.E) && cooldown <= 0)
+    //this has been changed to use the current input system not the legacy version - Launcelot
+    private void primaryFired(object sender, EventArgs e)
+    {
+        if (!cooldown)
         {
-            GameObject.Instantiate(cactusPrefab, transform.position, Quaternion.identity);
-            cooldown = 5;
+            GameObject cactus = GameObject.Instantiate(cactusPrefab, transform.position, Quaternion.identity);
+            cactus.GetComponent<CactusAbility>().controller = controller;
+            startCooldown(primaryCooldown);
         }
+    }
+
+    //cooldown has changed to IEnumerator to avoid overflow errors after prolonged use - Launcelot
+    private IEnumerator startCooldown(float cooldownTime)
+    {
+        yield return new WaitForSeconds(cooldownTime);
+        cooldown = false;
     }
 }
 
