@@ -19,6 +19,11 @@ public class WeaponBase : MonoBehaviour
 
     private Coroutine firingCoroutine;
 
+    private void OnEnable()
+    {
+        
+    }
+
     private void Start()
     {
         originalSpeed = playerSpeed;
@@ -65,12 +70,7 @@ public class WeaponBase : MonoBehaviour
                 float damage = CalculateDamage(enemy.IsArmoured);
                 Debug.Log("Hit: " + hit.collider.name + " with damage: " + damage);
 
-
-                // Apply stagger if weapon has stagger ability
-                if (weaponStats.CausesStagger)
-                {
-                    enemy.Stagger();
-                }
+                enemy.GiveDamage(damage, weaponStats.CausesStagger);
             }
         }
     }
@@ -123,5 +123,10 @@ public class WeaponBase : MonoBehaviour
             Fire();
             yield return new WaitForSeconds(weaponStats.FireRate);
         }
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 }

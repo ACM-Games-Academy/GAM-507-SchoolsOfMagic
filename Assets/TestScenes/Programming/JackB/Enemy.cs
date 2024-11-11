@@ -5,35 +5,46 @@ using TMPro;
 
 public class Enemy : MonoBehaviour
 {
-    public bool IsArmoured;
-    public bool IsStaggered;
-    public float health = 100;
+    private bool isArmoured;
+    public bool IsArmoured
+    { get { return isArmoured; } }
 
-    public float staggerDuration = 1.0f;
+    private float health;
+    public float Health
+    { get { return health; } }
 
-    public TMPro.TextMeshPro staggered;
-   
-
-
-    public void Stagger()
+    public void GiveDamage(float damage, bool isStaggerable)
     {
-       
-            IsStaggered = true;
-            Debug.Log("Staggered!");
-            StartCoroutine(StaggerCoroutine());
-        staggered.text = ("Staggered!");
-    }
+        if (isStaggerable)
+        {
+            GiveStagger();
+        }
 
-    private IEnumerator StaggerCoroutine()
-    {
-        yield return new WaitForSeconds(staggerDuration);
-        IsStaggered = false;
-        Debug.Log("Staggered over!");
-        staggered.text = (" ");
-    }
-
-    public void Damage(float damage)
-    {
         health -= damage;
+
+        if (health < 0)
+        {
+            EnemyDeath();
+        }
+    }
+
+    protected void EnemyInitiate(float initHealth, bool initIsArmoured)
+    {
+        //this is where you input all the variables from the enemies scriptableObj for their values 
+        //this needs to be ran first otherwise the enemy will not have any health
+        health = initHealth;
+        isArmoured = initIsArmoured;
+    }
+
+    protected virtual void GiveStagger()
+    {
+        //do something specific to the enemy when staggered
+        //this will be overriden in the specific enemy class
+    }
+
+    protected virtual void EnemyDeath()
+    {
+        //do something when the enemy dies
+        //this will be overriden in the specific enemy class
     }
 }
