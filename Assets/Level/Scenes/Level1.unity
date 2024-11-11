@@ -217,7 +217,6 @@ GameObject:
   m_Component:
   - component: {fileID: 95919107}
   - component: {fileID: 95919106}
-  - component: {fileID: 95919105}
   - component: {fileID: 95919104}
   - component: {fileID: 95919108}
   m_Layer: 0
@@ -239,22 +238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0741b60fb4431274091b1d5af1c80919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerModel: {fileID: 95919105}
-  playerInput: {fileID: 95919106}
---- !u!114 &95919105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95919103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07f169818eeb07041a64a3dfa3292fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 61a650d288da05845860bf204c166ce2, type: 2}
-  currentClass: 
+  input: {fileID: 95919106}
+  data: {fileID: 11400000, guid: 61a650d288da05845860bf204c166ce2, type: 2}
+  health: 0
+  iron: 0
+  blood: 0
+  currentMagic: 
 --- !u!114 &95919106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +253,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 95919103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35f0ea2fa4a14943950e3f1be9a459c, type: 3}
+  m_Script: {fileID: 11500000, guid: b6db6f6c55da7d742bacf718430a24e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &95919107
@@ -630,6 +619,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5156434350984336768, guid: 8ba4e5d1a6361164bb3a62584507c245, type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: -928544475344799442, guid: 8ba4e5d1a6361164bb3a62584507c245, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.334
@@ -658,6 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393408155}
   - component: {fileID: 393408154}
+  - component: {fileID: 393408156}
   m_Layer: 0
   m_Name: camera
   m_TagString: Untagged
@@ -732,6 +726,50 @@ Transform:
   - {fileID: 1223802240}
   m_Father: {fileID: 95919107}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393408156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393408153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &411740161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1029,7 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentClass: {fileID: 1022353641}
-  playerModel: {fileID: 95919105}
+  playerController: {fileID: 95919104}
 --- !u!114 &799521636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1620,11 +1658,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e527935db598cb4ea765c8fbc67e5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 95919104}
   controller: {fileID: 95919108}
   cameraComponent: {fileID: 393408154}
   inputModule: {fileID: 95919106}
-  playerModel: {fileID: 95919105}
   natureMovement: {fileID: 1215735809}
   bloodMovement: {fileID: 1215735807}
   metalMovement: {fileID: 1215735808}
@@ -1731,8 +1768,8 @@ MonoBehaviour:
   - {fileID: 91005860}
   - {fileID: 1478163202}
   - {fileID: 1664843946}
-  PlayerModel: {fileID: 95919105}
   playerInput: {fileID: 95919106}
+  controller: {fileID: 95919104}
 --- !u!1 &1291748811
 GameObject:
   m_ObjectHideFlags: 0
@@ -6856,9 +6893,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897969864}
+  - component: {fileID: 1897969868}
+  - component: {fileID: 1897969867}
+  - component: {fileID: 1897969866}
   - component: {fileID: 1897969865}
   m_Layer: 0
-  m_Name: abilityController
+  m_Name: magicController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6886,16 +6926,62 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897969863}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee11c54870f7874d8b258a14866fb1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 72637469616d6e6498e6c1054d0c4d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentClass: 
-  tempButton: 0
-  naturePrefabs: []
-  metalPrefabs: []
-  bloodPrefabs: []
+--- !u!114 &1897969866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897969863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ec475442aee894294ceb29e4b56e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryCooldown: 5
+--- !u!114 &1897969867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897969863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e300d5833314a4ba1557ddc746b13b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementController: {fileID: 1215735805}
+  primaryData: {fileID: 11400000, guid: 451085d5e13993840b646d011fdd9ad4, type: 2}
+  abilityReady: 1
+--- !u!114 &1897969868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897969863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5be38e4cf535d4fa55ebb00007f1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicPrefabs:
+  - name: ironGripPrefab
+    prefab: {fileID: 1798843676700145038, guid: 11c49e0bdb1efe44085afac489ad80dd, type: 3}
+  - name: Exsanguination
+    prefab: {fileID: 208495982726873714, guid: efdee5b6b721d12459c9374ad961ff25, type: 3}
+  - name: cactusPrefab
+    prefab: {fileID: 3891811614100984207, guid: befaf3852e2563c42bc3e0416a71e718, type: 3}
+  activeMagic: {fileID: 0}
+  controller: {fileID: 95919104}
+  input: {fileID: 95919106}
+  debugText: 
 --- !u!1001 &1994670707
 PrefabInstance:
   m_ObjectHideFlags: 0
