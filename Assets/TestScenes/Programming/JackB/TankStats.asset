@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a64715d100e1a140b19e0074f465a66, type: 3}
-  m_Name: playerData
+  m_Script: {fileID: 11500000, guid: 2e80ea1cfd135a54c9c5838b7c6e9752, type: 3}
+  m_Name: TankStats
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  maxBlood: 100
-  maxStamina: 100
-  startingHealth: 100
-  startingBlood: 100
-  startingStamina: 100
-  startingClass: ClassOne
+  health: 100
+  movementSpeed: 1
+  attackSpeed: 1
+  attackDamage: 10
+  isArmoured: 1
