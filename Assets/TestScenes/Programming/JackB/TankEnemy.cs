@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TankEnemy : Enemy
 {
     [SerializeField] private TankStats tankStats;
+    public Transform playerPos;
+    public NavMeshAgent agent;
 
     // Override the GiveStagger method from Enemy
     protected override void GiveStagger()
@@ -23,6 +26,6 @@ public class TankEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-     
+        agent.SetDestination(playerPos.position);
     }
 }
