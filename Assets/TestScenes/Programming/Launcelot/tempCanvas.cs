@@ -6,7 +6,7 @@ using UnityEngine;
 public class tempCanvas : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI currentClass;
-    [SerializeField] private playerModel playerModel;
+    [SerializeField] private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,6 @@ public class tempCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentClass.text = playerModel.CurrentClass;
+        currentClass.text = playerController.GetCurrentClass();
     }
 }

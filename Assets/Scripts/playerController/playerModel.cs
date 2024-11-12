@@ -2,30 +2,76 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.Search;
 using UnityEngine;
 
-public class playerModel : MonoBehaviour
+public class playerModel
 {
-    //this just holds data for the player 
-    [SerializeField] playerData playerData;
+    playerData playerData;
 
-    //these are the runtime variables. besides the max values they will be read and written during runtime
-    private float maxBlood;
-    private float maxIron;
-    
     private float maxHealth;
-    private float blood;
-    private float iron;
+    public float  MaxHealth
+    { get { return maxHealth; } set { maxHealth = value; } }
+
     private float health;
+    public float  Health
+    { get { return health; } set { health = value; } }
+    private float healthModifier;
+    public float HealthModifier
+    { get { return healthModifier; } set { healthModifier = value; }}
+
+    private float dmgModifier;
+    public float  DmgModifier
+    { get { return dmgModifier; } set { dmgModifier = value; } }
 
     private float maxStamina;
+    public float  MaxStamina
+    { get { return maxStamina; } set { maxStamina = value; } }
+
     private float stamina;
+    public float  Stamina
+    { get { return stamina; } set { stamina = value; } }
 
-    [SerializeField] private string currentClass;
-    public string CurrentClass {get { return currentClass; } set { currentClass = value; } }
+    private float staminaModifier;
+    public float  StaminaModifier
+    { get { return staminaModifier; } set { staminaModifier = value; } }
 
-    void Awake()
+
+    private float maxBlood;
+    public float  MaxBlood
+    { get { return maxBlood; } set { maxBlood = value; } }
+
+    private float blood;
+    public float  Blood
+    { get { return blood; } set { blood = value; } }
+
+    private float bloodModifier;
+    public float BloodModifier
+    { get { return bloodModifier; } set { bloodModifier = value; } }
+
+
+    private float maxIron;
+    public float  MaxIron
+    { get { return maxIron; } set { maxIron = value; } }
+
+    private float iron;
+    public float  Iron
+    { get { return iron; } set { iron = value; } }
+
+    private float ironModifier;
+    public float  IronModifier
+    { get { return ironModifier; } set { ironModifier = value; } }
+
+
+    private string currentClass;
+    public string  CurrentClass
+    { get { return currentClass; } set { currentClass = value; } }
+
+
+    public playerModel(playerData PlayerData)
     {
+        playerData = PlayerData;
+
         //setting playerData scriptableObj values to this script
         maxBlood = playerData.maxBlood;
         maxIron = playerData.maxIron;
@@ -37,108 +83,4 @@ public class playerModel : MonoBehaviour
         stamina = playerData.startingStamina;
         currentClass = playerData.startingClass;
     }
-
-    //stamina methods
-
-    public float[] getStamina()
-    {
-        return new float[] { stamina , maxStamina};
-    }
-
-    public void reduceStamina(float amount)
-    {
-        if (stamina - amount < 0)
-        {
-            stamina = 0;
-        }
-        else
-        {
-            stamina -= amount;
-        }
-    }
-
-    //blood methods
-
-    public float getBlood()
-    {
-        return blood;
-    }
-
-    public void reduceBlood(float amount)
-    {
-        if (blood - amount < 0)
-        {
-            blood = 0;
-        }
-        else
-        {
-            blood -= amount;
-        }
-    }
-
-    public void addBlood(float amount)
-    {
-        if(blood + amount > maxBlood)
-        {
-            blood = maxBlood;
-        }
-        else
-        {
-            blood += amount;
-        }
-    }
-
-    //iron methods
-
-    public float getIron()
-    {
-        return iron;
-    }
-
-    public void reduceIron(float amount)
-    {
-        if (iron - amount < 0)
-        {
-            iron = 0;
-        }
-        else
-        {
-            iron -= amount;
-        }
-    }
-
-    public void addIron(float amount)
-    {
-        if (iron + amount > maxIron)
-        {
-            iron = maxIron;
-        }
-        else
-        {
-            iron += amount;
-        }
-    }
-
-    //health methods
-
-    public float getHealth()
-    {
-        return health;
-    }
-
-    public void reduceHealth(float amount)  //my understanding is someone wouldnt want to reduce their own health so i guess this is fine being somewhat insecure for now?
-    {                                       //we'll probably end up using events for the rest anyway maybe?
-        if (blood - amount < 0)
-        {
-            blood = 0;
-        }
-        else
-        {
-            blood -= amount;
-        }
-    }
-
-    
-
-    //for things that will give buffs like more blood or health this will use events cus secure code *nerd face*
 }
