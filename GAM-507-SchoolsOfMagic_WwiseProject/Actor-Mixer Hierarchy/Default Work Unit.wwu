@@ -1957,6 +1957,262 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<Folder Name="Enemies SFX" ID="{EF841DD4-51D5-48A2-A09F-61F607C8D44F}" ShortID="716261270">
+					<ChildrenList>
+						<Folder Name="Melee Armoured SFX" ID="{59AD9C58-8FA8-44C3-93FF-CBCDA290AFB9}" ShortID="22638872">
+							<ChildrenList>
+								<RandomSequenceContainer Name="ArmourWalk" ID="{A01DF710-CC76-40FB-8B90-9AEFE431559F}" ShortID="184325883">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ArmourMeleeWalk" ID="{4F0A7A95-FE28-40E6-9D20-EB837EB8949C}" ShortID="729266410">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FDA81DE7-CE32-4C19-9E3D-2F179C271486}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1112"/>
+																	<Property Name="Min" Type="Real64" Value="-152"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOLYProp_Foley Tin Container Lid Put Downs_PSE_BR-C_LQ3Nz" ID="{9087F7EC-FF0B-4836-9578-2C8EC6C6AEB5}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.67082920644113"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.39665449265209"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>FOLYProp_Foley Tin Container Lid Put Downs_PSE_BR-C_LQ3Nz.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="343686517"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FOLYProp_Foley Tin Container Lid Put Downs_PSE_BR-C_LQ3Nz" ID="{9087F7EC-FF0B-4836-9578-2C8EC6C6AEB5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ArmourMeleeWalk2" ID="{6A208158-B1CC-485D-B035-4D32CE32A2D8}" ShortID="85093007">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-450</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{EC1753AD-98B0-49B0-B411-295E5D6D65D6}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="228"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MetalShards" ID="{C4C1DB07-F597-4708-9551-46E0F74F01BD}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.341548682992632"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.85550574222294"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.32396394342944"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>MetalShards.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="563203599"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MetalShards" ID="{C4C1DB07-F597-4708-9551-46E0F74F01BD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="ArmourMeleeWalk" ID="{4F0A7A95-FE28-40E6-9D20-EB837EB8949C}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ArmourMeleeWalk2" ID="{6A208158-B1CC-485D-B035-4D32CE32A2D8}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<Sound Name="EnemySpawn" ID="{CB7FD870-4480-4C35-8C2A-72A8B071F6BD}" ShortID="35165863">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>1790</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FCB12D21-94BC-420E-BB9E-66C429F6728E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="556"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ROCKCrsh_Huge Rock Slide Build_PSE_CDGEN_dH7FW" ID="{3F24EC48-9B1F-46D4-9CE2-A6415C89D186}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="2.14364277320799"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.18984723854289"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.60647473560516"/>
+												<Property Name="TrimEnd" Type="Real64" Value="9.50023501762631"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ROCKCrsh_Huge Rock Slide Build_PSE_CDGEN_dH7FW.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="705611737"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ROCKCrsh_Huge Rock Slide Build_PSE_CDGEN_dH7FW" ID="{3F24EC48-9B1F-46D4-9CE2-A6415C89D186}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Melee Enemy SFX" ID="{E7B2A6D0-261E-4132-B8BB-6E2EBAC5CEFE}" ShortID="1045466731">
+							<ChildrenList>
+								<Sound Name="MeleeSwordHit" ID="{0B5313A0-08BF-4F87-BEBD-F869E23A10F5}" ShortID="121915515">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{44219CAA-3A72-48BA-A0EB-FF667A228FE8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="429"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WEAPSwrd_Sword Broad Hits Hard 1_PSE_BR-C_I5QP9" ID="{1134336B-6A4B-4135-AB02-A91AB8F0A03E}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.86853305555555"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WEAPSwrd_Sword Broad Hits Hard 1_PSE_BR-C_I5QP9.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="884371142"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WEAPSwrd_Sword Broad Hits Hard 1_PSE_BR-C_I5QP9" ID="{1134336B-6A4B-4135-AB02-A91AB8F0A03E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Sound Name="MeleeFootstep" ID="{2571EE78-D1DC-43A8-A9DA-6DEEA7CA5293}" ShortID="168608321">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-580</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{00CDDC42-4A66-4A32-8004-DCB7D9753874}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="581"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYFeet_Footsteps Sneakers Icy Snow Step06 Stereo_PSE_SL-FL_Bacz5" ID="{64F9442A-26D7-4806-8857-29240E2027D0}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0441833137485311"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.124089306698002"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.425851938895417"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.651468860164512"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>FOLYFeet_Footsteps Sneakers Icy Snow Step06 Stereo_PSE_SL-FL_Bacz5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1057499054"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYFeet_Footsteps Sneakers Icy Snow Step06 Stereo_PSE_SL-FL_Bacz5" ID="{64F9442A-26D7-4806-8857-29240E2027D0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
