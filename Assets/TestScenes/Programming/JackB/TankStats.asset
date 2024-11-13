@@ -17,3 +17,4 @@ MonoBehaviour:
   attackSpeed: 1
   attackDamage: 10
   isArmoured: 1
+  staggerDuration: 2

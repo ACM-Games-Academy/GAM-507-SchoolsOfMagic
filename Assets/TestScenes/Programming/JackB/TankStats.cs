@@ -8,4 +8,5 @@ public class TankStats : ScriptableObject
     public float attackSpeed;
     public float attackDamage;
     public bool isArmoured;
+    public float staggerDuration;
 }
