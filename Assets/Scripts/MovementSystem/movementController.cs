@@ -20,7 +20,7 @@ public class movementController : MonoBehaviour
     [SerializeField] private Camera cameraComponent;
     public playerInput inputModule;
 
-    private movementAbility currentMovement;
+    [SerializeField] private movementAbility currentMovement;
     [SerializeField] private movementAbility natureMovement;
     [SerializeField] private movementAbility bloodMovement;
     [SerializeField] private movementAbility metalMovement;

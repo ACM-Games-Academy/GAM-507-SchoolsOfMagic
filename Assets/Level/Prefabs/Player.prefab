@@ -75,7 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e300d5833314a4ba1557ddc746b13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementController: {fileID: 0}
   primaryData: {fileID: 0}
+  abilityReady: 1
 --- !u!1 &4738240439918315596
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,8 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ec475442aee894294ceb29e4b56e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cactusPrefab: {fileID: 3891811614100984207, guid: befaf3852e2563c42bc3e0416a71e718, type: 3}
-  cooldown: 0
+  primaryCooldown: 5
 --- !u!1 &6289195554900992926
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,11 +303,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0741b60fb4431274091b1d5af1c80919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 0}
+  input: {fileID: 9154042334233699206}
   data: {fileID: 11400000, guid: f87e45078b36d04408b15bf4e5c7b563, type: 2}
   health: 0
   iron: 0
   blood: 0
+  currentMagic: 
 --- !u!114 &7896978291723583060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +364,8 @@ MonoBehaviour:
   - name: Arcane
     prefab: {fileID: 45023859030767809}
   activeMagic: {fileID: 0}
+  controller: {fileID: 7635839297485463869}
+  input: {fileID: 9154042334233699206}
   debugText: 
 --- !u!33 &3092784167919089598
 MeshFilter:

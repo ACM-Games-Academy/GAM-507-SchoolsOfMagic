@@ -22,7 +22,7 @@ public class doubleJumpAbility : movementAbility
 
         Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
 
-        if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump") && player.playerController.GetIron() > 0)
+        if (hasDoubleJump && !player.controller.isGrounded && player.playerController.GetIron() > 0)
         {
             player.playerController.AddReduceValue(PlayerController.ValueType.Iron, -1, false);
             hasDoubleJump = false;
