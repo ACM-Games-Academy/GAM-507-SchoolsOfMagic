@@ -16,17 +16,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Metal_GunShoot" ID="{6C203C04-19ED-4FBE-8122-BBDF9BCA0964}">
-							<ChildrenList>
-								<Action Name="" ID="{959BBE2C-BC85-4470-819B-DD405E83BF71}" ShortID="821774512">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MetalGunShoot" ID="{57D19C4D-6EAD-4694-96AC-D07D1E93CC70}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Metal_MagneticHum" ID="{284916A1-7ABD-47A6-A07F-15405E23C5C3}">
 							<ChildrenList>
 								<Action Name="" ID="{990AB7C3-EB5A-4251-A48E-C1F15193CB05}" ShortID="719553176">
@@ -114,17 +103,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Slice Random" ID="{2DE1B5FF-CE8B-4350-88F2-0B7EF0687DC0}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Nature_Shotgun_Boom" ID="{41531F92-066A-407E-8501-0442196BDE2B}">
-							<ChildrenList>
-								<Action Name="" ID="{1F1BF54B-DB23-408F-8770-A469EC96BE74}" ShortID="697647849">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Shotgun Boom" ID="{0CC9AD3E-695F-4FC8-9B1D-84B4BABD3001}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -259,17 +237,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Blood_Gun_Fire" ID="{5E245D47-F665-4749-8740-C026380E2FB8}">
-							<ChildrenList>
-								<Action Name="" ID="{6291831C-0463-4EE9-94C4-BB1E26BA822A}" ShortID="78451841">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Blood Wizard_Gun_Fire [KB]" ID="{BCC06257-86E2-4B08-AEC0-C6E616D3D273}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="PlayFootsteps" ID="{B5E9B737-25D1-4AC9-97AE-DBF19ECDBD83}">
@@ -278,6 +245,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Footstep Switch" ID="{83CF8FBD-517E-463F-8FC3-1916AA750D74}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Shot_Switch" ID="{7E6B8A1D-DA0C-4823-8BFD-72CFAC425BC8}">
+					<ChildrenList>
+						<Action Name="" ID="{6D70AAFB-E3D7-4EC1-8DD4-67C46BCFEB11}" ShortID="95075447">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shot Switch" ID="{41838948-B0DC-412C-85C8-B7F830AB4458}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

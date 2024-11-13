@@ -339,6 +339,8 @@ GameObject:
   - component: {fileID: 95919106}
   - component: {fileID: 95919104}
   - component: {fileID: 95919108}
+  - component: {fileID: 95919109}
+  - component: {fileID: 95919110}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -421,6 +423,72 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &95919109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95919103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee9c69dcaa4f13439c15609a2b28879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 95919103}
+  footsteps:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 302d6ba28076eec478a629b4ce6a5881, type: 2}
+  bloodState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3d942bb7db705ca48949121596adc402, type: 2}
+  natureState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 49cf118b2234b184bba6da32f7dcec37, type: 2}
+  metalState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6da2845019ab8154e8b67ec2ffab3553, type: 2}
+  arcaneState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b1c99a1dc404a2243bd73b819cef334b, type: 2}
+  controller: {fileID: 95919108}
+--- !u!114 &95919110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95919103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b86d6f1d618a02478745d59f1f48cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 49cf118b2234b184bba6da32f7dcec37, type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1001 &101434551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -878,6 +946,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1223802240}
     m_Modifications:
+    - target: {fileID: 1180791638496317048, guid: 29ca055083a4e9a46853daa09330b6b2, type: 3}
+      propertyPath: gunShoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d5949f73c270804597950e5a802e1ab, type: 2}
     - target: {fileID: 3792090345284082128, guid: 29ca055083a4e9a46853daa09330b6b2, type: 3}
       propertyPath: m_Name
       value: LMG
@@ -1779,6 +1851,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5130424436108802372, guid: c1c5f6c2c801670438617fb9acfa9037, type: 3}
+      propertyPath: gunShoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d5949f73c270804597950e5a802e1ab, type: 2}
     - target: {fileID: 8140863717068360654, guid: c1c5f6c2c801670438617fb9acfa9037, type: 3}
       propertyPath: m_Name
       value: SMG
@@ -2490,6 +2566,7 @@ MonoBehaviour:
   - {fileID: 1664843946}
   playerInput: {fileID: 95919106}
   controller: {fileID: 95919104}
+  isReloading: 0
 --- !u!1 &1291748811
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,6 +2872,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9108266336605214186, guid: 972014f84e6468d4ea60d9ed63b689f1, type: 3}
+      propertyPath: gunShoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d5949f73c270804597950e5a802e1ab, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7906,6 +7987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016453147}
   - component: {fileID: 2016453146}
+  - component: {fileID: 2016453148}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -7953,6 +8035,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2016453148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016453145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff11c94daf351144b64182104b7e655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b8b23ff5d0635e140bde0e65eaf83700, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

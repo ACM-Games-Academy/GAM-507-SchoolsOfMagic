@@ -4,6 +4,9 @@ using System.Collections;
 
 public class WeaponBase : MonoBehaviour
 {
+    [Header("Gun Switch Event")]
+    public AK.Wwise.Event gunShoot;
+
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private ParticleSystem bulletFireEffect;
     private int currentAmmo;
@@ -41,8 +44,11 @@ public class WeaponBase : MonoBehaviour
     {
         if (Time.time < nextFireTime || isReloading) return;
 
-        if (bulletFireEffect != null) bulletFireEffect.Play();
-
+        if (bulletFireEffect != null)
+        {
+            bulletFireEffect.Play();
+            gunShoot.Post(this.gameObject);
+        }
 
         ShootRay();
 
