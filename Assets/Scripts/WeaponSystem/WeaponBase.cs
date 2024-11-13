@@ -9,6 +9,9 @@ public class WeaponBase : MonoBehaviour
     private int currentAmmo;
     private float nextFireTime;
     [SerializeField] private WeaponStats weaponStats;
+    public WeaponStats WeaponStats
+    { get { return weaponStats; } }
+     
     private bool isShooting;
     private bool isReloading = false;
 
@@ -32,11 +35,6 @@ public class WeaponBase : MonoBehaviour
     private void Update()
     {
         playerSpeed = isShooting ? originalSpeed - shootSpeedReduction : originalSpeed - holdGunSpeedReduction;
-
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
-        {
-            StartCoroutine(ReloadCoroutine());
-        }
     }
 
     public virtual void Fire()
@@ -82,13 +80,10 @@ public class WeaponBase : MonoBehaviour
         return isArmored ? baseDamage * weaponStats.ArmourMultiplier : baseDamage;
     }
 
-    private IEnumerator ReloadCoroutine()
+    public void ReloadWeapon(int ammo)
     {
-        isReloading = true;
-        yield return new WaitForSeconds(weaponStats.ReloadSpeed);
-        currentAmmo = weaponStats.MagazineCapacity;
-        isReloading = false;
-    }
+        currentAmmo = ammo;
+    }  
 
     public void StartFiring()
     {
