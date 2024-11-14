@@ -37,7 +37,7 @@ public class playerInputAudio : MonoBehaviour
     private void FixedUpdate()
     {
         speed = (transform.position - lastPos).magnitude;
-        if (speed > 0f && timer <= 0)
+        if (speed > 0f && timer <= 0 && controller.isGrounded)
         {
             Debug.Log("FOOTSTEP LOL");
             footsteps.Post(this.gameObject);
@@ -58,25 +58,25 @@ public class playerInputAudio : MonoBehaviour
     private void metalClass(object sender, EventArgs e)
     {
         metalState.SetValue();
-        Debug.Log("I have Changed State");
+        
     }
 
     private void natureClass(object sender, EventArgs e)
     {
         natureState.SetValue();
-        Debug.Log("I have Changed State");
+        
     }
 
     private void bloodClass(object sender, EventArgs e)
     {
         bloodState.SetValue();
-        Debug.Log("I have Changed State");
+        
     }
 
     private void arcaneClass(object sender, EventArgs e)
     {
         arcaneState.SetValue();
-        Debug.Log("I have Changed State");
+        
     }
 
     private void OnDisable()
