@@ -16,8 +16,14 @@ public class SpawnData : ScriptableObject
     public GameObject tankPrefab;
     public GameObject flyerPrefab;
 
+    [Header ("Particle")]
+    public ParticleSystem Particle;
+    
     [Header("Radius")]
     public float spawnRadius;
+
+    [Header("Height")]
+    public float Height;
 
     [Header("Timer")]
     public float spawnTimer;

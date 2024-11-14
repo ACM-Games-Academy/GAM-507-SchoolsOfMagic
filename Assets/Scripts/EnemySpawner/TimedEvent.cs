@@ -28,7 +28,6 @@ public class TimedEvent : SpawnEventHandler
     
     IEnumerator EventBegin()
     {
-        Debug.Log("Event Begin");
         yield return new WaitForSeconds(eventTimer);
         EventResults();
     }

@@ -39,8 +39,14 @@ public class SpawnManager : MonoBehaviour
         }
         for (int i = 0; i < spawnInformation.flyerAmount; i++)
         {
-            Instantiate(spawnInformation.flyerPrefab, location.position + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
+            Instantiate(spawnInformation.flyerPrefab, location.position + Height(spawnInformation.Height) + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
         }
+
+        if(spawnInformation.Particle != null)
+        {
+            spawnInformation.Particle.Play();
+        }
+
     }
 
     private Vector3 randomPoint(float radius)
@@ -53,5 +59,10 @@ public class SpawnManager : MonoBehaviour
         float y = MathF.Sqrt(MathF.Pow(radius, 2) - MathF.Pow(x, 2));
 
         return new Vector3(x, 0, y);
+    }
+
+    private Vector3 Height(float height)
+    {
+        return new Vector3(0, height, 0);
     }
 }

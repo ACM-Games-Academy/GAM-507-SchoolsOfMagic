@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38bb0ad3994381243acfbb435063aa1e, type: 3}
-  m_Name: TriggerSpawnData
+  m_Name: InteractSpawnData
   m_EditorClassIdentifier: 
   swarmerAmount: 0
   tankAmount: 0
   flyerAmount: 0
-  swarmerPrefab: {fileID: 1927737463598596464, guid: b9ab558532a5aaf49becc20c8a5b084e, type: 3}
-  tankPrefab: {fileID: 4534737657892870711, guid: 824820ce169f16944a7b2f84ef2ce599, type: 3}
-  flyerPrefab: {fileID: 1845937927904129662, guid: 28ed056adb6ef5145b27898f7c012831, type: 3}
+  swarmerPrefab: {fileID: 0}
+  tankPrefab: {fileID: 0}
+  flyerPrefab: {fileID: 0}
   Particle: {fileID: 0}
   spawnRadius: 0
   spawnTimer: 0
