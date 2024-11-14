@@ -8,6 +8,7 @@ public class TimedEvent : SpawnEventHandler
     [SerializeField] playerInput playerInput;
     [SerializeField] float eventTimer;
     bool eventReacted;
+    int eventCountDown = 3;
 
 
     private void OnEnable()
@@ -17,6 +18,7 @@ public class TimedEvent : SpawnEventHandler
 
     public void StartEvent()
     {
+        eventCountDown = 3;
         eventReacted = false;
         StartCoroutine(EventBegin());
     }
@@ -28,16 +30,32 @@ public class TimedEvent : SpawnEventHandler
     
     IEnumerator EventBegin()
     {
+        Debug.Log(eventCountDown);
         yield return new WaitForSeconds(eventTimer);
-        EventResults();
+        eventCountDown--;
+        Countdown();
+
     }
 
-    void EventResults()
+    void Countdown()
     {
         if (!eventReacted)
         {
-            completion = true;
+            if (eventCountDown == 0)
+            {
+                EventResults();
+            }
+
+            else
+            {
+                StartCoroutine(EventBegin());
+            }
         }
+
+    }
+    void EventResults()
+    {
+        completion = true;
     }
 
     private void OnDisable()

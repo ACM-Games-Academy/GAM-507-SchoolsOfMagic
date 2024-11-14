@@ -24,9 +24,4 @@ public class SpawnData : ScriptableObject
 
     [Header("Height")]
     public float Height;
-
-    [Header("Timer")]
-    public float spawnTimer;
-    public float minimumTimer;
-    public float maxiumumTimer;
 }
