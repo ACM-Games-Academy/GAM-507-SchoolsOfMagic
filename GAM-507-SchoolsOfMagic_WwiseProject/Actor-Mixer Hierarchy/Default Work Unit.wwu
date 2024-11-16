@@ -1747,13 +1747,15 @@
 										<Sound Name="ArmourMeleeWalk" ID="{4F0A7A95-FE28-40E6-9D20-EB837EB8949C}" ShortID="729266410">
 											<PropertyList>
 												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-780</Value>
+													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{FDA81DE7-CE32-4C19-9E3D-2F179C271486}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="1112"/>
-																	<Property Name="Min" Type="Real64" Value="-152"/>
+																	<Property Name="Max" Type="Real64" Value="607"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -1771,6 +1773,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="FOLYProp_Foley Tin Container Lid Put Downs_PSE_BR-C_LQ3Nz" ID="{9087F7EC-FF0B-4836-9578-2C8EC6C6AEB5}">
 													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.72582528621096"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="3.67082920644113"/>
 														<Property Name="TrimEnd" Type="Real64" Value="4.39665449265209"/>
@@ -1831,6 +1834,95 @@
 												<ActiveSource Name="MetalShards" ID="{C4C1DB07-F597-4708-9551-46E0F74F01BD}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="ArmourRoar" ID="{8C84605A-43FC-432C-B330-EDA3251BC91D}" ShortID="474038603">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ArmouRoar" ID="{38FB79F8-6813-4A98-8116-E828CC8B47D8}">
+													<Language>SFX</Language>
+													<AudioFile>ArmouRoar.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="957496023"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ArmouRoar" ID="{38FB79F8-6813-4A98-8116-E828CC8B47D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ArmouredThud" ID="{F2705C54-6C89-4F5C-8CF0-ED24578400A2}" ShortID="973984061">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ArmouredThud" ID="{1EA1AFFA-3AA9-4F3B-A8DC-87805BD8EE06}">
+													<Language>SFX</Language>
+													<AudioFile>ArmouredThud.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="962730881"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ArmouredThud" ID="{1EA1AFFA-3AA9-4F3B-A8DC-87805BD8EE06}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ArmourSwordHit" ID="{87432493-1511-4E92-9C86-9A150508C6E0}" ShortID="160768213">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-480</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6C23CD11-BFAD-47C8-875B-B25E77E4FE63}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="429"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SwordClang" ID="{69281203-7C41-4C95-8D6E-AB34CF37B556}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.332479191379992"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.98206301897983"/>
+														<Property Name="TrimEnd" Type="Real64" Value="8.97693816725978"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SwordClang.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="566628858"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SwordClang" ID="{69281203-7C41-4C95-8D6E-AB34CF37B556}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
@@ -1847,7 +1939,7 @@
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>1790</Value>
+												<Value>800</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -1870,23 +1962,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ROCKCrsh_Huge Rock Slide Build_PSE_CDGEN_dH7FW" ID="{3F24EC48-9B1F-46D4-9CE2-A6415C89D186}">
+										<AudioFileSource Name="DirtRustle" ID="{3F24EC48-9B1F-46D4-9CE2-A6415C89D186}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="2.14364277320799"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="4.18984723854289"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.45105565568659"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="2.60647473560516"/>
-												<Property Name="TrimEnd" Type="Real64" Value="9.50023501762631"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.22946405944858"/>
+												<Property Name="TrimEnd" Type="Real64" Value="8.68874035570458"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>ROCKCrsh_Huge Rock Slide Build_PSE_CDGEN_dH7FW.wav</AudioFile>
+											<AudioFile>DirtRustle.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="705611737"/>
+												<MediaID ID="705611738"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ROCKCrsh_Huge Rock Slide Build_PSE_CDGEN_dH7FW" ID="{3F24EC48-9B1F-46D4-9CE2-A6415C89D186}" Platform="Linked"/>
+										<ActiveSource Name="DirtRustle" ID="{3F24EC48-9B1F-46D4-9CE2-A6415C89D186}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1896,6 +1988,9 @@
 								<Sound Name="MeleeSwordHit" ID="{0B5313A0-08BF-4F87-BEBD-F869E23A10F5}" ShortID="121915515">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-480</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{44219CAA-3A72-48BA-A0EB-FF667A228FE8}">
@@ -1917,20 +2012,65 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="WEAPSwrd_Sword Broad Hits Hard 1_PSE_BR-C_I5QP9" ID="{1134336B-6A4B-4135-AB02-A91AB8F0A03E}">
+										<AudioFileSource Name="SwordClang" ID="{1134336B-6A4B-4135-AB02-A91AB8F0A03E}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.166239595689996"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.86853305555555"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>WEAPSwrd_Sword Broad Hits Hard 1_PSE_BR-C_I5QP9.wav</AudioFile>
+											<AudioFile>SwordClang.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="884371142"/>
+												<MediaID ID="884371143"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="WEAPSwrd_Sword Broad Hits Hard 1_PSE_BR-C_I5QP9" ID="{1134336B-6A4B-4135-AB02-A91AB8F0A03E}" Platform="Linked"/>
+										<ActiveSource Name="SwordClang" ID="{1134336B-6A4B-4135-AB02-A91AB8F0A03E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MeleeRoar" ID="{56DA0642-3C26-4817-995D-6AAC21A7211A}" ShortID="957868569">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MeleeRoar" ID="{619F31BD-45A9-43EF-AAB4-2F01A46ADA45}">
+											<Language>SFX</Language>
+											<AudioFile>MeleeRoar.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="2213414"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MeleeRoar" ID="{619F31BD-45A9-43EF-AAB4-2F01A46ADA45}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MeleeThud" ID="{B198245A-D387-4AC5-BED0-28943E8E039E}" ShortID="172674127">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MeleeThud" ID="{294D16AF-CC90-4164-B4DC-9991BAAFF262}">
+											<Language>SFX</Language>
+											<AudioFile>MeleeThud.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="667109897"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MeleeThud" ID="{294D16AF-CC90-4164-B4DC-9991BAAFF262}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1939,7 +2079,7 @@
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>-580</Value>
+										<Value>-1110</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -1962,7 +2102,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="FOLYFeet_Footsteps Sneakers Icy Snow Step06 Stereo_PSE_SL-FL_Bacz5" ID="{64F9442A-26D7-4806-8857-29240E2027D0}">
+								<AudioFileSource Name="IcySteps" ID="{64F9442A-26D7-4806-8857-29240E2027D0}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0441833137485311"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.124089306698002"/>
@@ -1971,14 +2111,14 @@
 										<Property Name="TrimEnd" Type="Real64" Value="0.651468860164512"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>FOLYFeet_Footsteps Sneakers Icy Snow Step06 Stereo_PSE_SL-FL_Bacz5.wav</AudioFile>
+									<AudioFile>IcySteps.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1057499054"/>
+										<MediaID ID="195203265"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="FOLYFeet_Footsteps Sneakers Icy Snow Step06 Stereo_PSE_SL-FL_Bacz5" ID="{64F9442A-26D7-4806-8857-29240E2027D0}" Platform="Linked"/>
+								<ActiveSource Name="IcySteps" ID="{64F9442A-26D7-4806-8857-29240E2027D0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
