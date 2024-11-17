@@ -24,7 +24,7 @@ public class doubleJumpAbility : movementAbility
 
         if (hasDoubleJump && !player.controller.isGrounded && player.playerController.GetIron() > 0)
         {
-            player.playerController.AddReduceValue(PlayerController.ValueType.Iron, -1, false);
+            player.playerController.AddReduceValue(PlayerController.ValueType.Iron, -1 * movementModel.doubleJumpIronCost, false);
             hasDoubleJump = false;
             player.Velocity = transform.TransformDirection(leftStick.x * movementModel.MovementSpeed, movementModel.JumpHeight, leftStick.y * movementModel.MovementSpeed);
         }

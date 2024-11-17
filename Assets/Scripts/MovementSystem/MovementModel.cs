@@ -33,6 +33,10 @@ public class MovementModel
     public float BloodBoostSpeedMod
     { get { return bloodBoostSpeedBoostMultiplier; } set { bloodBoostSpeedBoostMultiplier = value; } }
 
+    public int doubleJumpIronCost = 1;
+    public int DoubleJumpIronCost
+    { get { return doubleJumpIronCost; } set { doubleJumpIronCost = value; } }
+
     public MovementModel(movementStats data)
     {
         movementSpeed = data.movementSpeed;
