@@ -8,7 +8,6 @@ public class TankEnemy : Enemy
 {
     [SerializeField] private TankStats tankStats;
     private Transform player;
-    private Rigidbody playerRB;
     public NavMeshAgent agent;
 
     private bool IsStaggered;
@@ -44,13 +43,14 @@ public class TankEnemy : Enemy
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
+
         staggeredText.text = "";
 
         EnemyInitiate(tankStats.health, tankStats.isArmoured);        // Initialize health and armor from scriptable object
 
         agent.speed = tankStats.movementSpeed;                        // Set agent speed
 
+       
     }
 
     private void Update()
@@ -69,11 +69,7 @@ public class TankEnemy : Enemy
     {
         isAttacking = true;
         agent.isStopped = true;
-
-        // A wind-up time for the attack?
         // yield return new WaitForSeconds(tankData.attackSpeed);
-
-
         yield return new WaitForSeconds(tankStats.attackSpeed/2);
 
         // Perform the attack 
@@ -93,15 +89,17 @@ public class TankEnemy : Enemy
         Debug.Log("Attacked!");
         GetComponentInChildren<Animator>().Play("a_CG_attack");
 
-        // Calculate the direction from the enemy to the player
-        Vector3 knockbackDirection = (player.position - transform.position).normalized;
+        // Deal damage
+        if (Vector3.Distance(transform.position, player.position) < 3f)
+        {
+            print("Damage dealt!");
+        }
+        else
+        {
+            print("No damage dealt!");
+        }
 
-        // Add a force to the player's Rigidbody away from the enemy
-        float knockbackForce = 100f;
-        playerRB.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
     }
-
-
 
 
     private void MoveTowardsPlayer()
