@@ -681,11 +681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187e88dc942417c4dac5e866f1bc96ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsArmoured: 0
-  IsStaggered: 0
-  health: 100
-  staggerDuration: 1
-  staggered: {fileID: 0}
 --- !u!1 &2098081570
 GameObject:
   m_ObjectHideFlags: 0

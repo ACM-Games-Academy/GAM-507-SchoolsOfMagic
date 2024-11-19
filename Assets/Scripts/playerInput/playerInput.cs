@@ -21,6 +21,7 @@ public class playerInput : MonoBehaviour
 
     private Vector2 movementInput;
     private Vector2 cameraInput;
+    private bool runInput;
 
     public event EventHandler primaryAbil;
     public event EventHandler secondaryAbil;
@@ -107,7 +108,13 @@ public class playerInput : MonoBehaviour
     public Vector2 GetMovementInput()
     {
         movementInput = playerMovement.ReadValue<Vector2>();
-        return movementInput;   
+        return movementInput;
+    }
+
+    public bool GetRunInput()
+    {
+        runInput = playerRun.ReadValue<float>() > 0;
+        return runInput;
     }
 
     //This functions only calls when one of the abilities are performed from the input action asset

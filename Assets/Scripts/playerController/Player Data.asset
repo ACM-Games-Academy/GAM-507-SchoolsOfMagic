@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   startingHealth: 100
-  maxBlood: 0
-  startingBlood: 0
+  maxBlood: 100
+  startingBlood: 100
+  maxIron: 100
+  startingIron: 0
   startingClass: 
-  maxStamina: 0
-  startingStamina: 0
-  staminaRegen: 0
+  maxStamina: 100
+  startingStamina: 100
+  staminaRegen: 10

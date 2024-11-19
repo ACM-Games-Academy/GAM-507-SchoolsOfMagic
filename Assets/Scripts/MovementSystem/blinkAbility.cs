@@ -18,7 +18,7 @@ public class blinkAbility : movementAbility
             blinks = movementModel.BlinkAmount;
         }
 
-        if (blinks > 0 && blinkTime <= 0 && Input.GetKeyDown(KeyCode.LeftShift))
+        if (blinks > 0 && blinkTime <= 0 && player.inputModule.GetRunInput())
         {
             blinks--;
             blinkTime = 0.1f;
