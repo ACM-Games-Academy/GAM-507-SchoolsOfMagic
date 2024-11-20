@@ -6,19 +6,14 @@
 				<SoundBank Name="Main" ID="{2CF77503-93A5-4838-88E2-8F1918930026}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Blood_Gun_Reload" ID="{53EF0A7B-F92C-400B-9FC3-7507426192C1}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Title_Screen_Theme" ID="{31B202BF-BE8D-4032-99A7-F9A97A9CA260}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_GunReload" ID="{A242B614-E449-405E-B290-8B1E94B5DF67}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Nature_Shotgun_Boom" ID="{41531F92-066A-407E-8501-0442196BDE2B}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Arcane_Mana_Flux_Stack_3" ID="{E9928A20-024C-417F-AC54-36F0C9FF4BEE}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Arcane_Hat_Rustle" ID="{5C54F1BA-E5B7-4256-840B-F901F0B07E66}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Shards" ID="{3CB87D7E-2FDF-4272-83B3-0577EC967495}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Arcane_Blink" ID="{360D624B-B0B5-42C1-99DB-AC60F854538F}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Blood_Primary_Ability" ID="{75F4F036-7E5B-4414-8867-292DB82CD90A}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Whoosh" ID="{46C0E959-FBFD-4449-BF1F-79FBDC218127}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Arcane_Mana_Flux_Stack_1" ID="{85C9455C-D34A-46CB-8B67-42AE648DE42D}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Arcane_Autocannon_Reload" ID="{89AE8448-D154-470D-B6C0-53A0AAF017F4}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Blood_Gun_Fire" ID="{5E245D47-F665-4749-8740-C026380E2FB8}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Wizard_OST_Switch" ID="{8BB5B4B8-C5D3-456B-977B-83D31FEC6078}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_MagneticHum" ID="{284916A1-7ABD-47A6-A07F-15405E23C5C3}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Arcane_Autocannon_Fire" ID="{F9B4C193-ADE4-492A-8916-E2BFAFBF1C57}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Shot_Switch" ID="{7E6B8A1D-DA0C-4823-8BFD-72CFAC425BC8}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_OutOfAmmo" ID="{0E990909-906B-493D-B665-C02BE261E3E5}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Blood_Gun_Bullets" ID="{B4548FFB-091D-4961-A51C-240045D785FB}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Swoosh" ID="{581962C0-86DB-4995-8F9B-BEBD92F87A8B}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
@@ -26,9 +21,7 @@
 						<ObjectRef Name="Play_Nature_Spike" ID="{492E20DE-2D7E-4A98-B5E1-70B1D851A499}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayFootsteps" ID="{B5E9B737-25D1-4AC9-97AE-DBF19ECDBD83}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Hat_Rustle" ID="{11453ABA-5D63-4BA9-BBD5-5AFBE5955E84}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Arcane_Mana_Flux_Stack_2" ID="{8F38E2AC-E302-4BB9-A33D-B18E8255FB63}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Passive_Hum" ID="{E5D2F947-7FDB-4D5C-AEAC-FA344EBFAAC0}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Metal_GunShoot" ID="{6C203C04-19ED-4FBE-8122-BBDF9BCA0964}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

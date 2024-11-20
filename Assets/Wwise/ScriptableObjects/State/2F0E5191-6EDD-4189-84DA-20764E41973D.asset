@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43a20519d6d5bd4cb560158290130a6, type: 3}
+  m_Name: 2F0E5191-6EDD-4189-84DA-20764E41973D
+  m_EditorClassIdentifier: 
+  objectName: Blood
+  id: 3934470635
+  guid: 2F0E5191-6EDD-4189-84DA-20764E41973D
+  WwiseStateGroupReference: {fileID: 11400000, guid: ead286ab960098148a52ca59cef53528, type: 2}

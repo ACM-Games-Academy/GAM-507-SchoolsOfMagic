@@ -24,13 +24,14 @@ public class playerInputAudio : MonoBehaviour
     
     private void Awake()
     {
-        playerController = GetComponent<PlayerController>();
+        playerController = transform.GetComponent<PlayerController>();
+        input = transform.GetComponent<playerInput>();
     }
     
     private void Update()
     {
-        health.SetValue(player, playerController.GetHealth());
-        timer = Mathf.Max(timer, timer - Time.deltaTime);
+        //health.SetValue(player, playerController.GetHealth());
+        timer = Mathf.Max(timer - Time.deltaTime, 0);
     }
 
     private void FixedUpdate()
@@ -38,6 +39,7 @@ public class playerInputAudio : MonoBehaviour
         speed = (transform.position - lastPos).magnitude;
         if (speed > 0f && timer <= 0 && controller.isGrounded)
         {
+            Debug.Log("FOOTSTEP LOL");
             footsteps.Post(this.gameObject);
             timer = 0.31415926535f;
         }
@@ -56,21 +58,25 @@ public class playerInputAudio : MonoBehaviour
     private void metalClass(object sender, EventArgs e)
     {
         metalState.SetValue();
+        
     }
 
     private void natureClass(object sender, EventArgs e)
     {
         natureState.SetValue();
+        
     }
 
     private void bloodClass(object sender, EventArgs e)
     {
         bloodState.SetValue();
+        
     }
 
     private void arcaneClass(object sender, EventArgs e)
     {
         arcaneState.SetValue();
+        
     }
 
     private void OnDisable()
