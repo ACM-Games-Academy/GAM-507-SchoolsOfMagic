@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bb0ad3994381243acfbb435063aa1e, type: 3}
+  m_Name: EventSpawnData
+  m_EditorClassIdentifier: 
+  swarmerAmount: 1
+  tankAmount: 1
+  flyerAmount: 1
+  swarmerPrefab: {fileID: 1927737463598596464, guid: b9ab558532a5aaf49becc20c8a5b084e, type: 3}
+  tankPrefab: {fileID: 4534737657892870711, guid: 824820ce169f16944a7b2f84ef2ce599, type: 3}
+  flyerPrefab: {fileID: 1845937927904129662, guid: 28ed056adb6ef5145b27898f7c012831, type: 3}
+  Particle: {fileID: 0}
+  spawnRadius: 3
+  Height: 5
