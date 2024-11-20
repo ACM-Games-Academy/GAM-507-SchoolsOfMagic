@@ -14,6 +14,7 @@ public struct SpawnCriteria
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private List<SpawnCriteria> spawnEvents;
+    [SerializeField] private GameObject groundParticleEffect;
 
     private void Update()
     {
@@ -29,9 +30,13 @@ public class SpawnManager : MonoBehaviour
 
     private void Spawn(SpawnData spawnInformation, Transform location)
     {
+
+
+
         for (int i = 0; i < spawnInformation.swarmerAmount; i++)
         {
-            Instantiate(spawnInformation.swarmerPrefab, location.position + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
+            spawnEnemy(spawnInformation.swarmerPrefab, location.position + randomPoint(spawnInformation.spawnRadius));
+            //Instantiate(spawnInformation.swarmerPrefab, location.position + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
         }
         for (int i = 0; i < spawnInformation.tankAmount; i++)
         {
@@ -39,13 +44,14 @@ public class SpawnManager : MonoBehaviour
         }
         for (int i = 0; i < spawnInformation.flyerAmount; i++)
         {
-            Instantiate(spawnInformation.flyerPrefab, location.position + Height(spawnInformation.Height) + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
+            spawnEnemy(spawnInformation.tankPrefab, location.position + randomPoint(spawnInformation.spawnRadius));
+            //Instantiate(spawnInformation.flyerPrefab, location.position + Height(spawnInformation.Height) + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
         }
 
         if(spawnInformation.Particle != null)
-        {
+       {
             spawnInformation.Particle.Play();
-        }
+       }
 
     }
 
@@ -64,5 +70,17 @@ public class SpawnManager : MonoBehaviour
     private Vector3 Height(float height)
     {
         return new Vector3(0, height, 0);
+    }
+
+    private IEnumerator spawnEnemy(GameObject enemy, Vector3 position)
+    {
+        GameObject particleSfx = Instantiate(groundParticleEffect, position, Quaternion.identity);
+
+        yield return new WaitForSeconds(2f);
+
+        Destroy(particleSfx);
+
+        Instantiate(enemy, position, Quaternion.identity);
+        yield return null;
     }
 }
