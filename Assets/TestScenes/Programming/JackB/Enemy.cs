@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public bool IsArmoured;
     public bool IsStaggered;
+    public float health = 100;
 
     public float staggerDuration = 1.0f;
 
@@ -29,5 +30,10 @@ public class Enemy : MonoBehaviour
         IsStaggered = false;
         Debug.Log("Staggered over!");
         staggered.text = (" ");
+    }
+
+    public void Damage(float damage)
+    {
+        health -= damage;
     }
 }

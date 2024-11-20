@@ -3,7 +3,17 @@ guid: 2bef6eb7f53dbea44947c08baa17f1d7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hands_MAT
+    second: {fileID: 2100000, guid: 09ddf8aee76ed064597d9c27b3135e84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rings
+    second: {fileID: 2100000, guid: ff032457f9952a34183c680a7d24c604, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -23,8 +33,8 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
-    animationCompression: 3
+    importConstraints: 0
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -81,313 +91,8 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human:
-    - boneName: joint12
-      humanName: Neck
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: joint13
-      humanName: Head
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: R_Hand_JNT
-      humanName: LeftUpperArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: L_hand_JNT
-      humanName: RightUpperArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: pasted__joint2
-      humanName: LeftLowerArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: M_L_Ring1
-      humanName: LeftEye
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: joint14
-      humanName: RightEye
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: R_hand_ROTATE
-      humanName: LeftHand
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: joint2
-      humanName: RightLowerArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: L_hand_Rotate
-      humanName: RightHand
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    skeleton:
-    - name: M_Hands(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Hands_root
-      parentName: M_Hands(Clone)
-      position: {x: 0.009307667, y: 0.9513449, z: 0.09979337}
-      rotation: {x: -0.022617543, y: -0.006790606, z: 0.95749694, w: 0.2874753}
-      scale: {x: 1, y: 1, z: 1}
-    - name: L_hand_JNT
-      parentName: Hands_root
-      position: {x: -0.2203366, y: 1.479719e-16, z: -6.661338e-18}
-      rotation: {x: 0.12317137, y: -0.11663564, z: -0.22400036, w: 0.9597129}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint2
-      parentName: L_hand_JNT
-      position: {x: -0.33240494, y: -1.7169805e-16, z: 6.148388e-17}
-      rotation: {x: 0.94434536, y: -0.2657233, z: 0.048831783, w: -0.1876658}
-      scale: {x: 1, y: 1, z: 1}
-    - name: L_hand_Rotate
-      parentName: joint2
-      position: {x: -0.3600938, y: 0, z: 0}
-      rotation: {x: 0.94415146, y: -0.22761258, z: 0.051259853, w: 0.23268664}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint4
-      parentName: L_hand_Rotate
-      position: {x: -0.13919769, y: -2.2181396e-17, z: 6.712316e-17}
-      rotation: {x: 0.31400982, y: -0.52349424, z: 0.49589577, w: 0.6176075}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint5
-      parentName: joint4
-      position: {x: -0.03528168, y: -1.12038454e-17, z: 2.543737e-17}
-      rotation: {x: 0.1684862, y: -0.32676587, z: 0.45654884, w: 0.81018496}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint6
-      parentName: joint5
-      position: {x: -0.039795186, y: 1.32771984e-17, z: -3.709953e-17}
-      rotation: {x: 0.1379295, y: -0.22821163, z: 0.49852866, w: 0.82484186}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint8
-      parentName: L_hand_Rotate
-      position: {x: -0.14888725, y: 0.029606862, z: -0.0020233204}
-      rotation: {x: 0.27050135, y: -0.53622866, z: 0.49099132, w: 0.6310431}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint9
-      parentName: joint8
-      position: {x: -0.04166324, y: 3.8486213e-17, z: -8.2196964e-17}
-      rotation: {x: 0.08120046, y: -0.16211952, z: 0.6688631, w: 0.72093403}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint10
-      parentName: joint9
-      position: {x: -0.041620634, y: 8.096692e-19, z: 9.024155e-18}
-      rotation: {x: -0.39978823, y: 0.5429505, z: 0.26101404, w: 0.6908298}
-      scale: {x: 1, y: 1, z: 1}
-    - name: M_L_Ring2
-      parentName: joint8
-      position: {x: -0.02106436, y: 0.039482508, z: -0.38838938}
-      rotation: {x: 0.5333555, y: 0.33457696, z: 0.658136, w: -0.41285253}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint12
-      parentName: L_hand_Rotate
-      position: {x: -0.13947196, y: 0.057009105, z: 0.00050843786}
-      rotation: {x: 0.27472457, y: -0.59239185, z: 0.47808775, w: 0.58739287}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint13
-      parentName: joint12
-      position: {x: -0.047605574, y: 4.314234e-17, z: -3.801151e-17}
-      rotation: {x: 0.0012810578, y: -0.0029641842, z: 0.67860216, w: 0.734499}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint14
-      parentName: joint13
-      position: {x: -0.047482092, y: -3.455271e-17, z: 5.9405994e-17}
-      rotation: {x: 0, y: 0, z: 0.6452622, w: 0.7639612}
-      scale: {x: 1, y: 1, z: 1}
-    - name: M_L_Ring1
-      parentName: joint13
-      position: {x: -0.02843099, y: -0.05726364, z: -0.35335818}
-      rotation: {x: 0.6470974, y: 0.33468437, z: 0.6085667, w: -0.31448036}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint16
-      parentName: L_hand_Rotate
-      position: {x: -0.12720639, y: 0.08864533, z: -0.0059329276}
-      rotation: {x: 0.35520145, y: -0.55169404, z: 0.39682472, w: 0.641869}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint17
-      parentName: joint16
-      position: {x: -0.03659466, y: -1.0487162e-17, z: -9.451007e-18}
-      rotation: {x: -0.11783465, y: 0.15724124, z: 0.6337808, w: 0.7481391}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint18
-      parentName: joint17
-      position: {x: -0.047289427, y: -3.412618e-17, z: 4.9752614e-17}
-      rotation: {x: -0.069665514, y: 0.098942004, z: 0.58460224, w: 0.80224526}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint20
-      parentName: L_hand_Rotate
-      position: {x: -0.047895744, y: 0.07908628, z: -0.018399013}
-      rotation: {x: 0.91309065, y: -0.27498546, z: -0.04822741, w: 0.29719123}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint21
-      parentName: joint20
-      position: {x: -0.04184427, y: -2.9660923e-17, z: -1.2897234e-17}
-      rotation: {x: -0.048827417, y: 0.021099867, z: -0.22401747, w: 0.9731325}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint22
-      parentName: joint21
-      position: {x: -0.03376677, y: -7.706826e-18, z: -2.4728523e-17}
-      rotation: {x: -0.61893904, y: 0.7429649, z: 0.04863685, w: 0.25010407}
-      scale: {x: 1, y: 1, z: 1}
-    - name: M_L_Ring3
-      parentName: joint21
-      position: {x: -0.21982774, y: -0.15633054, z: -0.09368874}
-      rotation: {x: 0.8735175, y: 0.4147887, z: 0.23015894, w: -0.10929068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: M_L_Ring4
-      parentName: joint21
-      position: {x: -0.21982774, y: -0.15633054, z: -0.09368874}
-      rotation: {x: 0.8735175, y: 0.4147887, z: 0.23015894, w: -0.10929068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: R_Hand_JNT
-      parentName: Hands_root
-      position: {x: 0.063777916, y: 0.18750499, z: 0.016091002}
-      rotation: {x: 0.7313741, y: -0.6682738, z: -0.03327068, w: 0.13189098}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint2
-      parentName: R_Hand_JNT
-      position: {x: -0.32583243, y: 7.3153306e-17, z: -3.811726e-17}
-      rotation: {x: 0.46548423, y: -0.12207907, z: -0.20560597, w: 0.8521428}
-      scale: {x: 1, y: 1, z: 1}
-    - name: R_hand_ROTATE
-      parentName: pasted__joint2
-      position: {x: -0.3600938, y: 0, z: 0}
-      rotation: {x: 0.916645, y: -0.3211869, z: 0.07422737, w: 0.2260337}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint4
-      parentName: R_hand_ROTATE
-      position: {x: -0.10676616, y: -2.7866044e-17, z: 7.387679e-18}
-      rotation: {x: 0.28437886, y: -0.36685374, z: -0.06393587, w: 0.883436}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint5
-      parentName: pasted__joint4
-      position: {x: -0.03282227, y: 1.4853571e-17, z: -9.535556e-18}
-      rotation: {x: 0.33088157, y: -0.3429411, z: 0.051276848, w: 0.8776557}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint6
-      parentName: pasted__joint5
-      position: {x: -0.033318926, y: 7.345509e-19, z: -1.9610742e-17}
-      rotation: {x: 0.8777463, y: -0.34059086, z: -0.33029845, w: -0.0667999}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint8
-      parentName: R_hand_ROTATE
-      position: {x: -0.13532332, y: 0.067350596, z: 0.0025345294}
-      rotation: {x: 0.0852709, y: -0.4681646, z: 0.21486706, w: 0.8528675}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint9
-      parentName: pasted__joint8
-      position: {x: -0.038110934, y: -1.6915505e-18, z: 9.1838844e-18}
-      rotation: {x: 0.06078713, y: -0.41293097, z: 0.5407153, w: 0.73035604}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint10
-      parentName: pasted__joint9
-      position: {x: -0.051548246, y: 3.2758642e-17, z: -2.1927938e-17}
-      rotation: {x: -0.58456486, y: 0.32030413, z: 0.3640389, w: 0.65051126}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint12
-      parentName: R_hand_ROTATE
-      position: {x: -0.114238724, y: 0.09626389, z: 0.003069779}
-      rotation: {x: 0.30889162, y: -0.5701683, z: 0.31039438, w: 0.6950896}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint13
-      parentName: pasted__joint12
-      position: {x: -0.04975437, y: 0.00008120782, z: 0.0021156128}
-      rotation: {x: -0.03809611, y: 0.059428614, z: 0.472426, w: 0.8785389}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint14
-      parentName: pasted__joint13
-      position: {x: -0.047439028, y: 0.00013499097, z: -0.001580372}
-      rotation: {x: 0, y: 0, z: 0.47367835, w: 0.88069797}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint16
-      parentName: R_hand_ROTATE
-      position: {x: -0.09307228, y: 0.11364426, z: -0.011175931}
-      rotation: {x: 0.27355507, y: -0.5205772, z: 0.34456626, w: 0.73173845}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint17
-      parentName: pasted__joint16
-      position: {x: -0.04023327, y: -2.8865798e-17, z: -7.105427e-17}
-      rotation: {x: -0.051457882, y: 0.08397832, z: 0.52719766, w: 0.8440156}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint18
-      parentName: pasted__joint17
-      position: {x: -0.04830601, y: -8.881784e-18, z: 0}
-      rotation: {x: -0.52736086, y: 0.5506055, z: 0.05501359, w: 0.6447463}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint20
-      parentName: R_hand_ROTATE
-      position: {x: -0.06539672, y: 0.12022392, z: -0.025018599}
-      rotation: {x: 0.8108304, y: -0.038888544, z: 0.5137916, w: 0.27759656}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint21
-      parentName: pasted__joint20
-      position: {x: -0.03774735, y: 0.000015694299, z: -0.00007029235}
-      rotation: {x: -0.01244809, y: 0.5329296, z: -0.27747503, w: 0.79927385}
-      scale: {x: 1, y: 1, z: 1}
-    - name: pasted__joint22
-      parentName: pasted__joint21
-      position: {x: -0.037172135, y: 0.0043159476, z: 0.00007663846}
-      rotation: {x: 0.7516509, y: 0.6038589, z: 0.04753788, w: -0.26098934}
-      scale: {x: 1, y: 1, z: 1}
-    - name: L_Hand_FK
-      parentName: M_Hands(Clone)
-      position: {x: 0.34802645, y: 0.18296126, z: 0.064416885}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: M_L_Hand
-      parentName: M_Hands(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: R_Hand_FK
-      parentName: M_Hands(Clone)
-      position: {x: -0.2997345, y: 0.18296126, z: 0.064416885}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+    human: []
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -398,11 +103,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

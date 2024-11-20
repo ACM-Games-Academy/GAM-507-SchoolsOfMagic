@@ -6,9 +6,9 @@ public class doubleJumpAbility : movementAbility
 {
     private bool hasDoubleJump;
 
-    public override void MovementUpdate(movementController player)
+    public override void MovementUpdate(movementController player, MovementModel movementModel)
     {
-        base.MovementUpdate(player);
+        base.MovementUpdate(player, movementModel);
 
         if (player.controller.isGrounded)
         {
@@ -16,17 +16,17 @@ public class doubleJumpAbility : movementAbility
         }
     }
 
-    public override void Jump(movementController player)
+    public override void Jump(movementController player, MovementModel movementModel)
     {
-        base.Jump(player);
+        base.Jump(player, movementModel);
 
         Vector2 leftStick = player.inputModule.GetMovementInput().normalized;
 
-        if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump") && player.playerController.getPlayerModel().getIron() > 0)
+        if (hasDoubleJump && !player.controller.isGrounded && Input.GetButtonDown("Jump") && player.playerController.GetIron() > 0)
         {
-            player.playerController.getPlayerModel().reduceIron(1);
+            player.playerController.AddReduceValue(PlayerController.ValueType.Iron, -1, false);
             hasDoubleJump = false;
-            player.Velocity = transform.TransformDirection(leftStick.x * player.getStats().movementSpeed, player.getStats().jumpHeight, leftStick.y * player.getStats().movementSpeed);
+            player.Velocity = transform.TransformDirection(leftStick.x * movementModel.MovementSpeed, movementModel.JumpHeight, leftStick.y * movementModel.MovementSpeed);
         }
     }
 }
