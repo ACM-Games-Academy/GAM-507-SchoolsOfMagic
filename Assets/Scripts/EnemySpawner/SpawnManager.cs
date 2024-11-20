@@ -16,6 +16,10 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<SpawnCriteria> spawnEvents;
     [SerializeField] private GameObject groundParticleEffect;
 
+    [SerializeField] private GameObject swarmerPrefab;
+    [SerializeField] private GameObject tankPrefab;
+    [SerializeField] private GameObject flyerPrefab;
+
     private void Update()
     {
         foreach (SpawnCriteria script in spawnEvents)
@@ -30,29 +34,20 @@ public class SpawnManager : MonoBehaviour
 
     private void Spawn(SpawnData spawnInformation, Transform location)
     {
-
-
-
         for (int i = 0; i < spawnInformation.swarmerAmount; i++)
         {
-            spawnEnemy(spawnInformation.swarmerPrefab, location.position + randomPoint(spawnInformation.spawnRadius));
+            StartCoroutine(spawnEnemy(swarmerPrefab, location.position + randomPoint(spawnInformation.spawnRadius)));
             //Instantiate(spawnInformation.swarmerPrefab, location.position + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
         }
         for (int i = 0; i < spawnInformation.tankAmount; i++)
         {
-            Instantiate(spawnInformation.tankPrefab, location.position + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
+            StartCoroutine(spawnEnemy(tankPrefab, location.position + randomPoint(spawnInformation.spawnRadius)));           
         }
         for (int i = 0; i < spawnInformation.flyerAmount; i++)
         {
-            spawnEnemy(spawnInformation.tankPrefab, location.position + randomPoint(spawnInformation.spawnRadius));
-            //Instantiate(spawnInformation.flyerPrefab, location.position + Height(spawnInformation.Height) + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
+            //this wont use the particle effect as it spawns in the sky
+            Instantiate(flyerPrefab, location.position + Height(spawnInformation.Height) + randomPoint(spawnInformation.spawnRadius), Quaternion.identity);
         }
-
-        if(spawnInformation.Particle != null)
-       {
-            spawnInformation.Particle.Play();
-       }
-
     }
 
     private Vector3 randomPoint(float radius)

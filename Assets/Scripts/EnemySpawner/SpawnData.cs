@@ -10,14 +10,6 @@ public class SpawnData : ScriptableObject
     public int swarmerAmount;
     public int tankAmount;
     public int flyerAmount;
-
-    [Header("Enemy Prefabs")]
-    public GameObject swarmerPrefab;
-    public GameObject tankPrefab;
-    public GameObject flyerPrefab;
-
-    [Header ("Particle")]
-    public ParticleSystem Particle;
     
     [Header("Radius")]
     public float spawnRadius;

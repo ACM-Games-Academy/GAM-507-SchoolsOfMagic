@@ -39,7 +39,7 @@ public class TankEnemy : Enemy
     }
 
 
-    private void Awake()
+    private void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -78,8 +78,6 @@ public class TankEnemy : Enemy
         // Cooldown before the next attack
         yield return new WaitForSeconds(tankStats.attackSpeed);
 
-        
-
         agent.isStopped = false;
         isAttacking = false;
     }
@@ -93,6 +91,7 @@ public class TankEnemy : Enemy
         if (Vector3.Distance(transform.position, player.position) < 3f)
         {
             print("Damage dealt!");
+            player.GetComponent<PlayerController>().AddReduceValue(PlayerController.ValueType.Health, -tankStats.attackDamage, false);
         }
         else
         {
@@ -112,5 +111,11 @@ public class TankEnemy : Enemy
             GetComponentInChildren<Animator>().Play("a_CG_walk");
             
         }
+    }
+
+    protected override void EnemyDeath()
+    {
+        base.EnemyDeath();
+        Destroy(this.gameObject);
     }
 }

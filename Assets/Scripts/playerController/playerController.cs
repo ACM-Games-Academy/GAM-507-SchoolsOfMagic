@@ -123,17 +123,59 @@ public class PlayerController : MonoBehaviour
         switch (type)
         {
             case ValueType.Health:
-                if (!maxValue) { model.Health = model.Health + addedValue; }
-                else { model.MaxHealth = model.MaxHealth + addedValue; }
+                if (!maxValue) 
+                { 
+                    if (model.Health + addedValue > model.MaxHealth)
+                    {
+                        model.Health = model.MaxHealth;
+                    }
+                    else
+                    {
+                        model.Health = model.Health + addedValue;
+                    }                                  
+                }
+                else 
+                { 
+                    model.MaxHealth = model.MaxHealth + addedValue; 
+                }
                 break;
+
             case ValueType.Iron:
-                if (!maxValue) { model.Iron = model.Iron + addedValue; }
-                else { model.MaxIron = addedValue; }
+                if (!maxValue) 
+                {
+                    if (model.Iron + addedValue > model.MaxIron)
+                    {
+                        model.Iron = model.MaxIron;
+                    }
+                    else
+                    {
+                        model.Iron = model.Iron + addedValue;
+                    }
+                }
+                else 
+                { 
+                    model.MaxIron = addedValue; 
+                }
                 break;
+
             case ValueType.Blood:
-                if (!maxValue) { model.Blood = model.Blood + addedValue; }
-                else { model.MaxBlood = model.MaxBlood + addedValue; }
-                break;          
+                if (!maxValue) 
+                {
+                    if (model.Blood + addedValue > model.MaxBlood)
+                    {
+                        model.Blood = model.MaxBlood;
+                    }
+                    else
+                    {
+                        model.Blood = model.Blood + addedValue;
+                    }
+                }
+                else 
+                { 
+                    model.MaxBlood = model.MaxBlood + addedValue; 
+                }
+                break;     
+                
             default:
                 Debug.LogError("playerController: invalid buff type");
                 break;

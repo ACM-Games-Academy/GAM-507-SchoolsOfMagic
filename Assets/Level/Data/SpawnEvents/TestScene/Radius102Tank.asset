@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2ab669264a20c4b8ed922480dd1776, type: 3}
-  m_Name: Exsanguination
+  m_Script: {fileID: 11500000, guid: 38bb0ad3994381243acfbb435063aa1e, type: 3}
+  m_Name: Radius102Tank
   m_EditorClassIdentifier: 
-  cooldown: 5
-  radiusRange: 10
-  damage: 50
-  healAmount: 10
-  healRate: 2
-  speedBoost: 2
-  boostDuration: 10
+  swarmerAmount: 0
+  tankAmount: 2
+  flyerAmount: 0
+  spawnRadius: 10
+  Height: 0

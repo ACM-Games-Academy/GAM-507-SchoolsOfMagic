@@ -48,9 +48,6 @@ public class WeaponController : MonoBehaviour
 
         //we currently don't have the reload keys added yet
         playerInput.reloadPressed += OnReloadPressed;
-
-        // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(controller.GetCurrentClass());
     }
 
     private void InitializeWeaponForClass(string playerClass)

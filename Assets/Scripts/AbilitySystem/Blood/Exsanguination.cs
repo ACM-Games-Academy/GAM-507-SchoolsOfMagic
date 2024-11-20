@@ -53,7 +53,7 @@ namespace Magic
             yield return new WaitForFixedUpdate();           
 
             //this is for the position of each enemy
-            List<Vector3> enemyPos = new List<Vector3>();            
+            List<Transform> enemyPos = new List<Transform>();            
 
             //this is for counting how much health will be healed
             int healCounter = 0;
@@ -67,15 +67,15 @@ namespace Magic
             {
                 Debug.Log("Collider");
 
-                if (collider.gameObject.TryGetComponent<TempEnemy>(out TempEnemy enemyScript) == true)
+                if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemyScript) == true)
                 {
                     //dealing damge to the enemy this will be changed when enemies are made
-                    enemyScript.health = enemyScript.health - damage;
+                    enemyScript.GiveDamage(damage, false);
 
                     //the heal amount increases as more enmies are damaged by this ability
                     //the position of each enemy is then saved for the visual effect
                     healCounter++;
-                    enemyPos.Add(enemyScript.GetComponent<Transform>().position);
+                    enemyPos.Add(enemyScript.GetComponent<Transform>());
 
                     Debug.Log("Enemy hit: " + healCounter);
                 }
@@ -126,34 +126,49 @@ namespace Magic
             healing = false;
         }
 
-        private void visualEffect(List<Vector3> enemyPos)
+        private void visualEffect(List<Transform> enemyPos)
         {
             //first im going to instantiate a particle system at each position of each enemy
-            //each of these will be facing towards the player
-
+            //each of these will be facing towards the player          
             ParticleSystem[] particleSystems = new ParticleSystem[enemyPos.Count];
 
             int i = 0;
-            foreach (Vector3 vec in enemyPos)
+            foreach (Transform vec in enemyPos)
             {           
-                particleSystems[i] = Instantiate(pullEffect, vec, Quaternion.LookRotation(transform.position));
+                particleSystems[i] = Instantiate(pullEffect, vec.position, Quaternion.LookRotation(transform.position));
                 i++;
             }
 
-            StartCoroutine(updateParticle(particleSystems));
+            StartCoroutine(updateParticle(particleSystems, enemyPos));
         }
 
-        private IEnumerator updateParticle(ParticleSystem[] particleSyss)
+        private IEnumerator updateParticle(ParticleSystem[] particleSyss, List<Transform> enemyPos)
         {
             Debug.Log("updating particle rotation");
 
+            int i = 0;
             while (healing == true)
             {
+                
                 foreach(ParticleSystem particle in particleSyss)
                 {
-                    particle.transform.LookAt(transform.position);  
+                    if (particle != null)
+                    {
+                        if (enemyPos[i] != null)
+                        {
+                            particle.transform.LookAt(transform.position);
+                            particle.transform.position = enemyPos[i].position;
+                        }
+                        else
+                        {
+                            Destroy(particle.transform.gameObject);
+                        }
+                    }
+
+                    i++;
                 }
 
+                i = 0;
                 yield return new WaitForEndOfFrame();
             }
 
