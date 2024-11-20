@@ -261,6 +261,38 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Wizard_OST_Switch" ID="{8BB5B4B8-C5D3-456B-977B-83D31FEC6078}">
+					<ChildrenList>
+						<Action Name="" ID="{C4B303DC-938F-4C5B-9668-BB6FB9057876}" ShortID="291462247">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Nature" ID="{72F99C31-2C61-459A-A0D2-5DBE3A4F472A}" WorkUnitID="{AFED8336-CD5E-496F-ACCA-854FF401F669}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0E2F1F79-B8DB-457D-842A-0904E2D11057}" ShortID="644051818">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wizard OST Switch" ID="{91AFD251-23BD-4CFF-99C8-CAB70D733489}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Title_Screen_Theme" ID="{31B202BF-BE8D-4032-99A7-F9A97A9CA260}">
+					<ChildrenList>
+						<Action Name="" ID="{CE1F8119-70C4-41F8-853C-FB935530DCAB}" ShortID="527758755">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Title Screen Theme" ID="{DC2D42A8-7FC2-4073-B462-CEA8B6E08272}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
