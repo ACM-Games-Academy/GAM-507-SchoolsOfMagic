@@ -11,6 +11,11 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private PlayerController controller;
     [SerializeField] private bool isReloading;
 
+    private int loadedAmmo;
+    private int magSize;
+    public int LoadedAmmo {  get { return loadedAmmo; } }
+    public int MagSize { get { return magSize; } }
+
     private void Awake()
     {
         
@@ -82,6 +87,9 @@ public class WeaponController : MonoBehaviour
         // Enable the new weapon
         weaponGameobject[weaponIndex].SetActive(true);
         currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
+
+        magSize = currentWeapon.WeaponStats.MagazineCapacity;
+        loadedAmmo = currentWeapon.CurrentAmmo;
     }
 
     private void OnClassOneSelected(object sender, EventArgs e)
@@ -131,6 +139,21 @@ public class WeaponController : MonoBehaviour
     private IEnumerator ReloadCoroutine()
     {
         WeaponStats weaponStats = currentWeapon.WeaponStats;
+        int reloadedAmount = 0;
+
+        //first check if the player has enough iron
+        //and how much ammo the player needs. (is the magzine half loaded or only a little bit)
+
+        int ammoDeficit = currentWeapon.WeaponStats.MagazineCapacity - currentWeapon.CurrentAmmo;
+
+        if (controller.GetIron() - ammoDeficit < 0)
+        {
+            reloadedAmount = ammoDeficit;
+        }
+        else
+        {
+            reloadedAmount = Convert.ToInt32(controller.GetIron());
+        }
 
         isReloading = true;
         yield return new WaitForSeconds(weaponStats.ReloadSpeed);
@@ -139,10 +162,17 @@ public class WeaponController : MonoBehaviour
         //if not the gun won't reload
         if (weaponStats == currentWeapon.WeaponStats)
         {
-            currentWeapon.ReloadWeapon(currentWeapon.WeaponStats.MagazineCapacity);
+            currentWeapon.AddAmmo(reloadedAmount);
+            controller.AddReduceValue(PlayerController.ValueType.Iron, -reloadedAmount, false);
         }
 
         isReloading = false;
+    }
+
+    private void Update()
+    {
+        //dirty fix to update current ammo
+        loadedAmmo = currentWeapon.CurrentAmmo;
     }
 
     private void OnDisable()

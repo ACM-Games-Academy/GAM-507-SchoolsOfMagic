@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class LMGAnimation : WeaponAnimations
@@ -61,7 +59,7 @@ public class LMGAnimation : WeaponAnimations
         {
             LMGParent.localPosition = oringinalPos + Random.insideUnitSphere * shakeAmount;
 
-            shakeDuration -= Time.deltaTime * 1f;
+            shakeDuration -= Time.deltaTime;
 
             yield return new WaitForEndOfFrame();
         }
