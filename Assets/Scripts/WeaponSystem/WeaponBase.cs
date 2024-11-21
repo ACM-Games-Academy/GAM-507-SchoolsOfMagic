@@ -23,6 +23,8 @@ public class WeaponBase : MonoBehaviour
     [SerializeField] private float shootSpeedReduction;
     [SerializeField] private float holdGunSpeedReduction;
 
+    [SerializeField] private WeaponAnimations weaponAnimator;
+
     private Coroutine firingCoroutine;
 
     private void OnEnable()
@@ -51,6 +53,7 @@ public class WeaponBase : MonoBehaviour
         }
 
         ShootRay();
+        weaponAnimator.AnimateGunShot();
 
         currentAmmo--;
         nextFireTime = Time.time + weaponStats.FireRate;
