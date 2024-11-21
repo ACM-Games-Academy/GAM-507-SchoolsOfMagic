@@ -10,6 +10,7 @@ public class WeaponBase : MonoBehaviour
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private ParticleSystem bulletFireEffect;
     private int currentAmmo;
+    public int CurrentAmmo { get { return currentAmmo; } }
     private float nextFireTime;
     [SerializeField] private WeaponStats weaponStats;
     public WeaponStats WeaponStats
@@ -22,6 +23,8 @@ public class WeaponBase : MonoBehaviour
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float shootSpeedReduction;
     [SerializeField] private float holdGunSpeedReduction;
+
+    [SerializeField] private WeaponAnimations weaponAnimator;
 
     private Coroutine firingCoroutine;
 
@@ -44,15 +47,22 @@ public class WeaponBase : MonoBehaviour
     {
         if (Time.time < nextFireTime || isReloading) return;
 
-        if (bulletFireEffect != null)
+        if (bulletFireEffect != null && currentAmmo > 0)
         {
             bulletFireEffect.Play();
             gunShoot.Post(this.gameObject);
+
+            ShootRay();
+            weaponAnimator.AnimateGunShot();
+
+            currentAmmo--;
         }
-
-        ShootRay();
-
-        currentAmmo--;
+        else
+        {
+            //no ammo
+            //PUT NO AMMO SOUNDS HERE
+        }
+        
         nextFireTime = Time.time + weaponStats.FireRate;
     }
 
@@ -86,9 +96,9 @@ public class WeaponBase : MonoBehaviour
         return isArmored ? baseDamage * weaponStats.ArmourMultiplier : baseDamage;
     }
 
-    public void ReloadWeapon(int ammo)
+    public void AddAmmo(int ammo)
     {
-        currentAmmo = ammo;
+        currentAmmo += ammo;
     }  
 
     public void StartFiring()
