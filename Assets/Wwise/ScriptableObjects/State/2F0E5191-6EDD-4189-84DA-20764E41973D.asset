@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Blood
   id: 3934470635
   guid: 2F0E5191-6EDD-4189-84DA-20764E41973D
-  WwiseStateGroupReference: {fileID: 11400000, guid: ead286ab960098148a52ca59cef53528, type: 2}
+  WwiseStateGroupReference: {fileID: 11400000, guid: 247a504a362e06c4f88d6190c36c7f1e, type: 2}

@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Metal
   id: 2473969246
   guid: 937A2B04-1DD3-4846-AF7F-E5D9C7F3E961
-  WwiseStateGroupReference: {fileID: 11400000, guid: ead286ab960098148a52ca59cef53528, type: 2}
+  WwiseStateGroupReference: {fileID: 11400000, guid: 247a504a362e06c4f88d6190c36c7f1e, type: 2}
