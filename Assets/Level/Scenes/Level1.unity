@@ -964,7 +964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3092049246671086935, guid: 0633dc71554f9964584941410592ee77, type: 3}
       propertyPath: m_Name
-      value: IronDeposit (1)
+      value: IronDeposit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
