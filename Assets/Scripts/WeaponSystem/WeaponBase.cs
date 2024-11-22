@@ -26,6 +26,8 @@ public class WeaponBase : MonoBehaviour
 
     [SerializeField] private WeaponAnimations weaponAnimator;
 
+    [SerializeField] private GameObject bleedingEffect;
+
     private Coroutine firingCoroutine;
 
     private void OnEnable()
@@ -76,15 +78,21 @@ public class WeaponBase : MonoBehaviour
 
         if (Physics.Raycast(raycastOrigin.position, spread, out hit, weaponStats.BulletRange))
         {
-            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            
 
-            if (enemy != null)
+            if (hit.collider.TryGetComponent<Enemy>(out Enemy enemy))
             {
                 // Calculate fixed damage, modified by armor if applicable
                 float damage = CalculateDamage(enemy.IsArmoured);
                 Debug.Log("Hit: " + hit.collider.name + " with damage: " + damage);
 
                 enemy.GiveDamage(damage, weaponStats.CausesStagger);
+
+                if (weaponStats.CausesBleeding && !enemy.IsBleeding)
+                {
+                    GameObject particleEffect = Instantiate(bleedingEffect, hit.point, Quaternion.FromToRotation(Vector3.zero, hit.normal), hit.transform);
+                    enemy.GiveBleeding(weaponStats.BleedingDuration, weaponStats.BleedingDmgPerSecond, particleEffect);   
+                }                
             }
         }
     }
