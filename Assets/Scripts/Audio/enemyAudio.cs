@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flyerEnemyAudio : MonoBehaviour
+public class enemyAudio : MonoBehaviour
 {
     [Header("Flyer Sounds")]
     public AK.Wwise.Event flyerFlap;
@@ -26,17 +26,19 @@ public class flyerEnemyAudio : MonoBehaviour
     public AK.Wwise.Event tankMove;
     public AK.Wwise.Event tankAttack;
 
-    public void Enable()
-    {
+    public void OnEnable()
+    {  
+        
         if (this.gameObject.CompareTag("Heavy Enemy"))
         {
             tankSpawn.Post(this.gameObject);
+            Debug.Log("Tank Spawned innit");
         }
-        if (this.gameObject.CompareTag("Flying Enemy"))
+        else if (this.gameObject.CompareTag("Flying Enemy"))
         {
             flyerSpawn.Post(this.gameObject);
         }
-        if (this.gameObject.CompareTag("Melee Enemy"))
+        else if (this.gameObject.CompareTag("Melee Enemy"))
         {
             meleeSpawn.Post(this.gameObject);
         }

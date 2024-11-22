@@ -72,6 +72,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  cactusSlice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ef380fc210df9ef4280ebf8383b740cb, type: 2}
 --- !u!1 &6580546511859042382
 GameObject:
   m_ObjectHideFlags: 0

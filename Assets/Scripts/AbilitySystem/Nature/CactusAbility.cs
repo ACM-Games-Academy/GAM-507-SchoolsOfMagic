@@ -8,10 +8,18 @@ public class CactusAbility : MonoBehaviour
     public float lifetime = 1;
     public AnimationCurve sizeCurve;
 
+    [Header("Cactus Sound")]
+    public AK.Wwise.Event cactusSlice;
+
     // Start is called before the first frame update
     void Start()
     {
         DamageEnemies();
+    }
+
+    private void OnEnable()
+    {
+        cactusSlice.Post(this.gameObject);
     }
 
     // Update is called once per frame
