@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 2431267328769332200}
   m_Layer: 0
   m_Name: Shotgun
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   shootSpeedReduction: 0
   holdGunSpeedReduction: 0
   weaponAnimator: {fileID: 2431267328769332200}
+  bleedingEffect: {fileID: 1631520196625133285, guid: bd5cfd9807ececc4397882d6dcbda617, type: 3}
 --- !u!114 &2431267328769332200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ GameObject:
   - component: {fileID: 4626306863938728539}
   m_Layer: 0
   m_Name: ParticleSystem
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

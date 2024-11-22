@@ -737,6 +737,10 @@ PrefabInstance:
       propertyPath: CollisionModule.collisionMessages
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5130424436108802372, guid: c1c5f6c2c801670438617fb9acfa9037, type: 3}
+      propertyPath: bleedingEffect
+      value: 
+      objectReference: {fileID: 1631520196625133285, guid: bd5cfd9807ececc4397882d6dcbda617, type: 3}
     - target: {fileID: 8140863717068360654, guid: c1c5f6c2c801670438617fb9acfa9037, type: 3}
       propertyPath: m_Name
       value: SMG
@@ -744,6 +748,10 @@ PrefabInstance:
     - target: {fileID: 8140863717068360654, guid: c1c5f6c2c801670438617fb9acfa9037, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140863717068360654, guid: c1c5f6c2c801670438617fb9acfa9037, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

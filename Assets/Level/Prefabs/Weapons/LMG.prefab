@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5163128543673191072}
   m_Layer: 0
   m_Name: ParticleSystem
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4934,7 +4934,7 @@ GameObject:
   - component: {fileID: 7379934374668489792}
   m_Layer: 0
   m_Name: LMG
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4979,6 +4979,7 @@ MonoBehaviour:
   shootSpeedReduction: 0
   holdGunSpeedReduction: 0
   weaponAnimator: {fileID: 7379934374668489792}
+  bleedingEffect: {fileID: 1631520196625133285, guid: bd5cfd9807ececc4397882d6dcbda617, type: 3}
 --- !u!114 &7379934374668489792
 MonoBehaviour:
   m_ObjectHideFlags: 0
