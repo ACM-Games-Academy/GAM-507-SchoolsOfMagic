@@ -4,11 +4,17 @@ using System.Collections;
 
 public class WeaponBase : MonoBehaviour
 {
+    [Header("Gun Switch Event")]
+    public AK.Wwise.Event gunShoot;
+
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private ParticleSystem bulletFireEffect;
     private int currentAmmo;
     private float nextFireTime;
     [SerializeField] private WeaponStats weaponStats;
+    public WeaponStats WeaponStats
+    { get { return weaponStats; } }
+     
     private bool isShooting;
     private bool isReloading = false;
 
@@ -19,6 +25,11 @@ public class WeaponBase : MonoBehaviour
 
     private Coroutine firingCoroutine;
 
+    private void OnEnable()
+    {
+        
+    }
+
     private void Start()
     {
         originalSpeed = playerSpeed;
@@ -27,19 +38,17 @@ public class WeaponBase : MonoBehaviour
     private void Update()
     {
         playerSpeed = isShooting ? originalSpeed - shootSpeedReduction : originalSpeed - holdGunSpeedReduction;
-
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
-        {
-            StartCoroutine(ReloadCoroutine());
-        }
     }
 
     public virtual void Fire()
     {
         if (Time.time < nextFireTime || isReloading) return;
 
-        if (bulletFireEffect != null) bulletFireEffect.Play();
-
+        if (bulletFireEffect != null)
+        {
+            bulletFireEffect.Play();
+            gunShoot.Post(this.gameObject);
+        }
 
         ShootRay();
 
@@ -65,12 +74,7 @@ public class WeaponBase : MonoBehaviour
                 float damage = CalculateDamage(enemy.IsArmoured);
                 Debug.Log("Hit: " + hit.collider.name + " with damage: " + damage);
 
-
-                // Apply stagger if weapon has stagger ability
-                if (weaponStats.CausesStagger)
-                {
-                    enemy.Stagger();
-                }
+                enemy.GiveDamage(damage, weaponStats.CausesStagger);
             }
         }
     }
@@ -82,13 +86,10 @@ public class WeaponBase : MonoBehaviour
         return isArmored ? baseDamage * weaponStats.ArmourMultiplier : baseDamage;
     }
 
-    private IEnumerator ReloadCoroutine()
+    public void ReloadWeapon(int ammo)
     {
-        isReloading = true;
-        yield return new WaitForSeconds(weaponStats.ReloadSpeed);
-        currentAmmo = weaponStats.MagazineCapacity;
-        isReloading = false;
-    }
+        currentAmmo = ammo;
+    }  
 
     public void StartFiring()
     {
@@ -123,5 +124,10 @@ public class WeaponBase : MonoBehaviour
             Fire();
             yield return new WaitForSeconds(weaponStats.FireRate);
         }
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 }

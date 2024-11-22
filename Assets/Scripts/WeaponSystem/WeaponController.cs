@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class WeaponController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class WeaponController : MonoBehaviour
     private WeaponBase currentWeapon;                    // The currently active weapon
     [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
     [SerializeField] private PlayerController controller;
+    [SerializeField] private bool isReloading;
 
     private void Awake()
     {
@@ -26,6 +28,8 @@ public class WeaponController : MonoBehaviour
         playerInput.firePressed += OnFirePressed;
         playerInput.fireReleased += OnFireReleased;
 
+        playerInput.reloadPressed += OnReloadPressed;
+
         // Initialize the correct weapon based on player's class
         InitializeWeaponForClass(controller.GetCurrentClass());
     }
@@ -43,9 +47,7 @@ public class WeaponController : MonoBehaviour
         playerInput.fireReleased += OnFireReleased;
 
         //we currently don't have the reload keys added yet
-
-        // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(controller.GetCurrentClass());
+        playerInput.reloadPressed += OnReloadPressed;
     }
 
     private void InitializeWeaponForClass(string playerClass)
@@ -118,6 +120,31 @@ public class WeaponController : MonoBehaviour
         }
     }
 
+    private void OnReloadPressed(object sender, System.EventArgs e)
+    {
+        if (!isReloading)
+        {
+            StartCoroutine(ReloadCoroutine());
+        }
+    }   
+
+    private IEnumerator ReloadCoroutine()
+    {
+        WeaponStats weaponStats = currentWeapon.WeaponStats;
+
+        isReloading = true;
+        yield return new WaitForSeconds(weaponStats.ReloadSpeed);
+
+        //checks if the player is still holding the same gun. 
+        //if not the gun won't reload
+        if (weaponStats == currentWeapon.WeaponStats)
+        {
+            currentWeapon.ReloadWeapon(currentWeapon.WeaponStats.MagazineCapacity);
+        }
+
+        isReloading = false;
+    }
+
     private void OnDisable()
     {
         // unSubscribe to class change events from the playerInput
@@ -130,6 +157,6 @@ public class WeaponController : MonoBehaviour
         playerInput.firePressed -= OnFirePressed;
         playerInput.fireReleased -= OnFireReleased;
 
-        playerInput.Disable(); 
+        playerInput.reloadPressed -= OnReloadPressed;
     }
 }

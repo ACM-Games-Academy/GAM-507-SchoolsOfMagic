@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{744A3B4B-DC4F-07D8-0403-858AA7EB8C4F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FE74E220-7189-3A13-9F13-D73DFB6DDAF0}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -58,7 +58,7 @@
 				</File>
 				<File Id="118111049" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalOutOfAmmo.wav</ShortName>
-					<CachePath>SFX/MetalOutOfAmmo_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalOutOfAmmo_E4698968.wem</CachePath>
 				</File>
 				<File Id="120560503" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hat Rustle 1.wav</ShortName>
@@ -74,11 +74,11 @@
 				</File>
 				<File Id="312105102" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalMagneticHum.wav</ShortName>
-					<CachePath>SFX/MetalMagneticHum_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalMagneticHum_85E55588.wem</CachePath>
 				</File>
 				<File Id="320129865" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalSwoosh.wav</ShortName>
-					<CachePath>SFX/MetalSwoosh_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalSwoosh_230B574C.wem</CachePath>
 				</File>
 				<File Id="346264929" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Footsteps8 [KB].wav</ShortName>
@@ -110,7 +110,7 @@
 				</File>
 				<File Id="483639679" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun Boom.wav</ShortName>
-					<CachePath>SFX/Shotgun Boom_A4C2ED3C.wem</CachePath>
+					<CachePath>SFX/Shotgun Boom_9A00845E.wem</CachePath>
 				</File>
 				<File Id="498352530" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Footsteps6 [KB].wav</ShortName>
@@ -120,9 +120,21 @@
 					<ShortName>Mana Flux Stack 1.wav</ShortName>
 					<CachePath>SFX/Mana Flux Stack 1_818F3B66.wem</CachePath>
 				</File>
+				<File Id="545447485" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shotgun Cock2.wav</ShortName>
+					<CachePath>SFX/Shotgun Cock2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="571729351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shotgun Cock3.wav</ShortName>
+					<CachePath>SFX/Shotgun Cock3_818F3B66.wem</CachePath>
+				</File>
 				<File Id="574592468" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slice1.wav</ShortName>
 					<CachePath>SFX/Slice1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="589791290" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shotgun Cock1.wav</ShortName>
+					<CachePath>SFX/Shotgun Cock1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="595160429" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Primary Ability1 [KB].wav</ShortName>
@@ -194,7 +206,7 @@
 				</File>
 				<File Id="920056555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalShards.wav</ShortName>
-					<CachePath>SFX/MetalShards_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalShards_3E828F20.wem</CachePath>
 				</File>
 				<File Id="949915330" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gun_Bullets Falling2 [KB].wav</ShortName>
@@ -222,7 +234,7 @@
 				</File>
 				<File Id="1033323481" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalWhoosh.wav</ShortName>
-					<CachePath>SFX/MetalWhoosh_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalWhoosh_74169036.wem</CachePath>
 				</File>
 				<File Id="1040569390" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slice4.wav</ShortName>
@@ -303,11 +315,6 @@
 						<MediaRef Id="949915330"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3474052788" Name="Play_Blood_Gun_Fire" DurationType="OneShot" DurationMin="0.66861606" DurationMax="0.66861606">
-					<MediaRefs>
-						<MediaRef Id="1050520816"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3903496159" Name="Play_Blood_Gun_Reload" DurationType="OneShot" DurationMin="0.82489944" DurationMax="0.98097634">
 					<MediaRefs>
 						<MediaRef Id="56531854"/>
@@ -324,32 +331,27 @@
 						<MediaRef Id="1047636975"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2232792937" Name="Play_Metal_GunShoot" DurationType="OneShot" DurationMin="0.13020833" DurationMax="0.13020833">
-					<MediaRefs>
-						<MediaRef Id="479973183"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3370461538" Name="Play_Metal_MagneticHum" DurationType="OneShot" DurationMin="2" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="312105102"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2437099115" Name="Play_Metal_OutOfAmmo" DurationType="OneShot" DurationMin="0.47916666" DurationMax="0.47916666">
+				<Event Id="2437099115" Name="Play_Metal_OutOfAmmo" DurationType="OneShot" DurationMin="0.1829345" DurationMax="0.1829345">
 					<MediaRefs>
 						<MediaRef Id="118111049"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1582782641" Name="Play_Metal_Shards" DurationType="OneShot" DurationMin="12" DurationMax="12">
+				<Event Id="1582782641" Name="Play_Metal_Shards" DurationType="OneShot" DurationMin="2.2186036" DurationMax="2.2186036">
 					<MediaRefs>
 						<MediaRef Id="920056555"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2233504167" Name="Play_Metal_Swoosh" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="2233504167" Name="Play_Metal_Swoosh" DurationType="OneShot" DurationMin="1.5910878" DurationMax="1.5910878">
 					<MediaRefs>
 						<MediaRef Id="320129865"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3044732116" Name="Play_Metal_Whoosh" DurationType="OneShot" DurationMin="1.3125" DurationMax="1.3125">
+				<Event Id="3044732116" Name="Play_Metal_Whoosh" DurationType="OneShot" DurationMin="0.57100105" DurationMax="1.0692248">
 					<MediaRefs>
 						<MediaRef Id="1033323481"/>
 					</MediaRefs>
@@ -365,11 +367,6 @@
 						<MediaRef Id="851393941"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4053513558" Name="Play_Nature_Shotgun_Boom" DurationType="OneShot" DurationMin="0.74119896" DurationMax="1.115043">
-					<MediaRefs>
-						<MediaRef Id="483639679"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="275810172" Name="Play_Nature_Spike" DurationType="OneShot" DurationMin="0.25" DurationMax="1.3593333">
 					<MediaRefs>
 						<MediaRef Id="475365285"/>
@@ -378,6 +375,31 @@
 						<MediaRef Id="794819962"/>
 						<MediaRef Id="1040569390"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="4056601793" Name="Play_Shot_Switch" DurationType="OneShot" DurationMin="0.11420731" DurationMax="2.3145685">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="146841814" Id="2473969246"/>
+							<MediaRefs>
+								<MediaRef Id="479973183"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="146841814" Id="3501062356" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="483639679"/>
+								<MediaRef Id="545447485"/>
+								<MediaRef Id="571729351"/>
+								<MediaRef Id="589791290"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="146841814" Id="3934470635"/>
+							<MediaRefs>
+								<MediaRef Id="1050520816"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="1088348632" Name="PlayFootsteps" DurationType="OneShot" DurationMin="0.22112995" DurationMax="1.3593333">
 					<SwitchContainers>
@@ -391,7 +413,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="146841814" Id="3501062356"/>
+							<SwitchValue GroupType="State" GroupId="146841814" Id="3501062356" Default="true"/>
 							<MediaRefs>
 								<MediaRef Id="161432319"/>
 								<MediaRef Id="422319167"/>
@@ -427,5 +449,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{289633B5-1D06-9F30-8E11-392BE8389369}</FileHash>
+	<FileHash>{E51F5E7F-7B45-A8C4-84F3-760E116AACCA}</FileHash>
 </SoundBanksInfo>

@@ -34,7 +34,7 @@ public class CactusAbility : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, enemy.transform.position) < 5)
             {
-                enemy.Damage(50);
+                enemy.GiveDamage(50, false);
                 enemy.GetComponent<Rigidbody>().AddExplosionForce(1000, transform.position, 5);
             }
         }

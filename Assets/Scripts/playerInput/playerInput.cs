@@ -17,9 +17,11 @@ public class playerInput : MonoBehaviour
     private InputAction arcaneMagic;
     private InputAction abilityMovement;
     private InputAction playerRun;
+    private InputAction playerReload;
 
     private Vector2 movementInput;
     private Vector2 cameraInput;
+    private bool runInput;
 
     public event EventHandler primaryAbil;
     public event EventHandler secondaryAbil;
@@ -39,6 +41,8 @@ public class playerInput : MonoBehaviour
     public event EventHandler runPressed;
     public event EventHandler runReleased;
 
+    public event EventHandler reloadPressed;
+
     public void Awake()
     {
         controls = new PlayerControls();    
@@ -55,7 +59,7 @@ public class playerInput : MonoBehaviour
         arcaneMagic = controls.Player.arcaneMagic;
         abilityMovement = controls.Player.movementAbility;
         playerRun = controls.Player.Running;
-
+        playerReload = controls.Player.Reload;
 
 
         //Whenever the player presses either primary or secondary ability, this calls a function to happen
@@ -76,6 +80,8 @@ public class playerInput : MonoBehaviour
 
         playerRun.started += onRunPressed;
         playerRun.canceled += onRunReleased;
+
+        playerReload.started += onReloadPressed;
    
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
@@ -90,7 +96,7 @@ public class playerInput : MonoBehaviour
         arcaneMagic.Enable();
         abilityMovement.Enable();
         playerRun.Enable();
-
+        playerReload.Enable();
     }
 
     public Vector2 getCameraInput()
@@ -102,7 +108,13 @@ public class playerInput : MonoBehaviour
     public Vector2 GetMovementInput()
     {
         movementInput = playerMovement.ReadValue<Vector2>();
-        return movementInput;   
+        return movementInput;
+    }
+
+    public bool GetRunInput()
+    {
+        runInput = playerRun.ReadValue<float>() > 0;
+        return runInput;
     }
 
     //This functions only calls when one of the abilities are performed from the input action asset
@@ -166,6 +178,11 @@ public class playerInput : MonoBehaviour
         onButton(EventArgs.Empty, runReleased);
     }
 
+    private void onReloadPressed(InputAction.CallbackContext reload)
+    {
+        onButton(EventArgs.Empty, reloadPressed);
+    }
+
     private void onButton(EventArgs e, EventHandler button)
     {
         if (button != null)
@@ -188,5 +205,6 @@ public class playerInput : MonoBehaviour
         arcaneMagic.Disable();
         abilityMovement.Disable();
         playerRun.Disable();
+        playerReload.Disable();
     }
 }
