@@ -1449,13 +1449,19 @@
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{9F4DCB31-5C26-4665-95DE-F1442A5B28D9}"/>
+											<Modifier Name="" ID="{9F4DCB31-5C26-4665-95DE-F1442A5B28D9}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="632"/>
+													<Property Name="Min" Type="Real64" Value="-632"/>
+												</PropertyList>
+											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-16</Value>
+										<Value>-27</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1479,6 +1485,12 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MetalFootstep1" ID="{97E6FFA6-954D-4417-A77C-6D2C55A37E92}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0216810726950355"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0767176418439716"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.142316784869976"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MetalFootstep1.wav</AudioFile>
 											<MediaIDList>
@@ -1501,6 +1513,12 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MetalFootstep2" ID="{309E01F3-0D9B-412E-98AB-4E5C253B4473}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0274816538613081"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0532807574862096"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.1525512214342"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MetalFootstep2.wav</AudioFile>
 											<MediaIDList>
@@ -1523,6 +1541,12 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MetalFootstep3" ID="{31893A9D-B9EE-4D78-8FE6-7D1E5CBEEB55}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0302859042553192"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.051598207249803"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.117778516548464"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MetalFootstep3.wav</AudioFile>
 											<MediaIDList>
@@ -1545,6 +1569,12 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MetalFootstep4" ID="{7EDF99B4-1B00-46D0-9DBB-ADDD38C43627}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0654230693459417"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0390427994483846"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.139815430457053"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MetalFootstep4.wav</AudioFile>
 											<MediaIDList>
