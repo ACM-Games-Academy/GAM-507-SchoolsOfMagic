@@ -69,15 +69,18 @@ namespace Magic
 
                 if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemyScript) == true)
                 {
-                    //dealing damge to the enemy this will be changed when enemies are made
-                    enemyScript.GiveDamage(damage, false);
+                    if (enemyScript.IsBleeding)
+                    {
+                        //dealing damge to the enemy this will be changed when enemies are made
+                        enemyScript.GiveDamage(damage, false);
 
-                    //the heal amount increases as more enmies are damaged by this ability
-                    //the position of each enemy is then saved for the visual effect
-                    healCounter++;
-                    enemyPos.Add(enemyScript.GetComponent<Transform>());
+                        //the heal amount increases as more enmies are damaged by this ability
+                        //the position of each enemy is then saved for the visual effect
+                        healCounter++;
+                        enemyPos.Add(enemyScript.GetComponent<Transform>());
 
-                    Debug.Log("Enemy hit: " + healCounter);
+                        Debug.Log("Enemy hit: " + healCounter);
+                    }                  
                 }
             }
 
