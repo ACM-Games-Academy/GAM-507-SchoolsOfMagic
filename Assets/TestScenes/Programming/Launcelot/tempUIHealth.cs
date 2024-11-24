@@ -9,7 +9,9 @@ public class tempUIHealth : MonoBehaviour
 
     private PlayerController controller;
     private WeaponController weaponController;
+    public BossEnemy bossEnemy;
     private TextMeshProUGUI healthText;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,6 @@ public class tempUIHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Health: " + controller.GetHealth() + "/" + controller.GetMaxHealth() + "\nCurrent Ammo: " + weaponController.LoadedAmmo + "/" + weaponController.MagSize;
+        healthText.text = "Health: " + controller.GetHealth() + "/" + controller.GetMaxHealth() + "\nCurrent Ammo: " + weaponController.LoadedAmmo + "/" + weaponController.MagSize  + "\nDeactivated Pillars: " + bossEnemy.pillarsActive + "/4";
     }
 }

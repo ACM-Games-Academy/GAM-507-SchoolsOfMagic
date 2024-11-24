@@ -127,7 +127,7 @@ public class MagicController : MonoBehaviour
             Debug.LogError("Invalid ability type: " + magicType.ToString());
         }
 
-        Debug.Log("Magic changed to: " + magicType.ToString());
+        //Debug.Log("Magic changed to: " + magicType.ToString());
     }
 
     private void OnDisable()
