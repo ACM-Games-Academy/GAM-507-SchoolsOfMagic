@@ -92,7 +92,7 @@ namespace Magic
 
             if (healAmount > 0)
             {
-                StartCoroutine(movementController.addSpeedModT(speedBoost, boostDuration));
+                movementController.AddSpeedBuffT(speedBoost, boostDuration);
                 StartCoroutine(healPlayer());
                 visualEffect(enemyPos);
             }
