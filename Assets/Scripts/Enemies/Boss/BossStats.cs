@@ -11,8 +11,9 @@ public class BossStats : ScriptableObject
     [Header(" ")]
     public float rootSlamDamage;
     public float rootSlamCooldown;
-    public float rootSlamRange;
+    public float rootSlamAttackRange;
     public float rootSlamSplashDamageRange;
+    public float rootSlamDuration;
 
     [Header("========== Roots from ground ==========")]
     [Header(" ")]
@@ -25,6 +26,7 @@ public class BossStats : ScriptableObject
     public float sporeAttackCooldown;
     public float sporeAttackSplashDamageSize;
     public float sporeAttackProjectileSpeed;
+    public float sporeAttackDuration;
 
     [Header("========== Spawn enemies ==========")]
     [Header(" ")]
