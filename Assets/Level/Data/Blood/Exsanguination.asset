@@ -18,4 +18,4 @@ MonoBehaviour:
   healAmount: 10
   healRate: 2
   speedBoost: 2
-  boostDuration: 10
+  boostDuration: 5
