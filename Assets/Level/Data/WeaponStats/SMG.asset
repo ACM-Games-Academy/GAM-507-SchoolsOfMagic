@@ -24,6 +24,3 @@ MonoBehaviour:
   reloadSpeed: 1.5
   armourMultiplier: 0.1
   causesStagger: 0
-  causesBleeding: 1
-  bleedingDmgPerSecond: 5
-  bleedingDuration: 5

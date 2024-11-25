@@ -14,10 +14,7 @@ public class WeaponStats : ScriptableObject
     [SerializeField] private bool isAutomatic = false;
     [SerializeField] private float reloadSpeed = 1.5f;
     [SerializeField] private float armourMultiplier = 0f;
-    [SerializeField] private bool causesStagger;
-    [SerializeField] private bool causesBleeding;
-    [SerializeField] private float bleedingDmgPerSecond;
-    [SerializeField] private float bleedingDuration;
+    [SerializeField] private bool causesStagger;   
 
 
     public int MagazineCapacity => magazineCapacity;
@@ -34,7 +31,5 @@ public class WeaponStats : ScriptableObject
     public float ArmourMultiplier => armourMultiplier;
     public bool CausesStagger => causesStagger;
 
-    public bool CausesBleeding => causesBleeding;
-    public float BleedingDmgPerSecond => bleedingDmgPerSecond;
-    public float BleedingDuration => bleedingDuration;
+
 }
