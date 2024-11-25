@@ -16,6 +16,8 @@ namespace Magic
 
         [SerializeField] private ParticleSystem pullEffect;
 
+        private AK.Wwise.Event exsangSound;
+        
         private float cooldown;
         private float radiusRange;
         private float damage;
@@ -28,7 +30,7 @@ namespace Magic
 
         // Start is called before the first frame update
         void OnEnable()
-        {
+        { 
             //setting all the variables from the scriptable obj
             cooldown = data.cooldown;
             radiusRange = data.radiusRange;
@@ -42,8 +44,9 @@ namespace Magic
             StartCoroutine(startAbility());
         }
 
-        public void InitAbil(PlayerController Controller, movementController MovementController)
+        public void InitAbil(PlayerController Controller, movementController MovementController, AK.Wwise.Event ExsangSound)
         {
+            exsangSound = ExsangSound;
             controller = Controller;
             movementController = MovementController;
         }
@@ -102,7 +105,7 @@ namespace Magic
             Debug.Log("Started healing: " + healAmount);
             //while the healamount is above 0 it will heal the player
             //the healrate is the amount it will heal in one second 
-
+            exsangSound.Post(this.gameObject);
             float frameHeal;
 
             while (healAmount > 0)

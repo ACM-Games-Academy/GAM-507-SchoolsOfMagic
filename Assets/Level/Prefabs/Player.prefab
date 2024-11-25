@@ -260,6 +260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e300d5833314a4ba1557ddc746b13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exsangSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   movementController: {fileID: 8639430874210451526}
   primaryData: {fileID: 11400000, guid: 451085d5e13993840b646d011fdd9ad4, type: 2}
   abilityReady: 1

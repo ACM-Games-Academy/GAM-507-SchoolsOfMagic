@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E0B7579F-C1A4-320C-D83F-BDFD17A9426C}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9D330F26-76AE-9363-47B7-D80500722C3E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -158,7 +158,7 @@
 				</File>
 				<File Id="483639679" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun Boom.wav</ShortName>
-					<CachePath>SFX/Shotgun Boom_A3AE7EF1.wem</CachePath>
+					<CachePath>SFX/Shotgun Boom_B2CDE14F.wem</CachePath>
 				</File>
 				<File Id="498352530" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Footsteps6 [KB].wav</ShortName>
@@ -166,7 +166,7 @@
 				</File>
 				<File Id="501951875" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Flap x4.wav</ShortName>
-					<CachePath>SFX/Enemies/Flap x4_B5F39B8A.wem</CachePath>
+					<CachePath>SFX/Enemies/Flap x4_FB09AD84.wem</CachePath>
 				</File>
 				<File Id="545447485" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun Cock2.wav</ShortName>
@@ -194,11 +194,11 @@
 				</File>
 				<File Id="607323947" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalFootstep4.wav</ShortName>
-					<CachePath>SFX/MetalFootstep4_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalFootstep4_24F0F963.wem</CachePath>
 				</File>
 				<File Id="625086626" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalFootstep2.wav</ShortName>
-					<CachePath>SFX/MetalFootstep2_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalFootstep2_D19B3A24.wem</CachePath>
 				</File>
 				<File Id="641837714" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Gun_Armour Hit1 [KB].wav</ShortName>
@@ -262,7 +262,7 @@
 				</File>
 				<File Id="907561064" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Flap x4.wav</ShortName>
-					<CachePath>SFX/Enemies/Flap x4_FA2CB406.wem</CachePath>
+					<CachePath>SFX/Enemies/Flap x4_A82F7DB8.wem</CachePath>
 				</File>
 				<File Id="917046987" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Flap x4.wav</ShortName>
@@ -290,7 +290,7 @@
 				</File>
 				<File Id="979254127" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalFootstep3.wav</ShortName>
-					<CachePath>SFX/MetalFootstep3_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalFootstep3_B44A2E9C.wem</CachePath>
 				</File>
 				<File Id="981205382" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Footsteps7 [KB].wav</ShortName>
@@ -314,7 +314,7 @@
 				</File>
 				<File Id="1059275467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalFootstep1.wav</ShortName>
-					<CachePath>SFX/MetalFootstep1_818F3B66.wem</CachePath>
+					<CachePath>SFX/MetalFootstep1_4AAA52F9.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -497,7 +497,7 @@
 						<ActionSetStateEntry GroupId="146841814" Id="3501062356" Name="Nature"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1088348632" Name="PlayFootsteps" DurationType="OneShot" DurationMin="0.22112995" DurationMax="1.3593333">
+				<Event Id="1088348632" Name="PlayFootsteps" DurationType="OneShot" DurationMin="0.081756756" DurationMax="1.3593333">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="146841814" Id="2473969246"/>
@@ -545,5 +545,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A489AB92-52FA-8650-287D-52908820DAB7}</FileHash>
+	<FileHash>{F1C9ACD7-253A-EC0C-A2C2-1083065C6B9A}</FileHash>
 </SoundBanksInfo>

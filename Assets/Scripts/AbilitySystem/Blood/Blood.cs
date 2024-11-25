@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 
 public class Blood : MagicBase
 {
+    public AK.Wwise.Event exsangSound;
     //these need to be public so that the other abilties can access them
     private playerInput playerInput;
     private PlayerController controller;
@@ -57,8 +58,7 @@ public class Blood : MagicBase
         if (abilityReady == true)
         {
             GameObject instance = GameObject.Instantiate(primaryPrefab, transform.position, transform.rotation, transform);
-            instance.GetComponent<Exsanguination>().InitAbil(controller, movementController);
-
+            instance.GetComponent<Exsanguination>().InitAbil(controller, movementController, exsangSound);
             StartCoroutine(coolDownTimer(primaryData.cooldown));
             abilityReady = false;
         }

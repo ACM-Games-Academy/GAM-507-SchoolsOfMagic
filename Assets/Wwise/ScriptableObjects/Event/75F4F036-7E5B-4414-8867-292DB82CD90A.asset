@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2ab669264a20c4b8ed922480dd1776, type: 3}
-  m_Name: Exsanguination
+  m_Script: {fileID: 11500000, guid: 625987617fb7e704883e75472905aee8, type: 3}
+  m_Name: 75F4F036-7E5B-4414-8867-292DB82CD90A
   m_EditorClassIdentifier: 
-  cooldown: 5
-  radiusRange: 10
-  damage: 50
-  healAmount: 10
-  healRate: 2
-  speedBoost: 2
-  boostDuration: 5
+  objectName: Play_Blood_Primary_Ability
+  id: 16303742
+  guid: 75F4F036-7E5B-4414-8867-292DB82CD90A
