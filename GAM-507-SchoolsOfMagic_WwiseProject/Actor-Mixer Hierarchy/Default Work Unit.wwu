@@ -1453,6 +1453,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1564,7 +1569,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-19</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1835,6 +1840,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="ArmourRoar" ID="{8C84605A-43FC-432C-B330-EDA3251BC91D}" ShortID="474038603">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-13</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -1908,9 +1920,10 @@
 												<AudioFileSource Name="SwordClang" ID="{69281203-7C41-4C95-8D6E-AB34CF37B556}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.332479191379992"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.37392136437909"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="6.98206301897983"/>
-														<Property Name="TrimEnd" Type="Real64" Value="8.97693816725978"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.66389884944932"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SwordClang.wav</AudioFile>
@@ -2030,6 +2043,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="MeleeRoar" ID="{56DA0642-3C26-4817-995D-6AAC21A7211A}" ShortID="957868569">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-13</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -2040,6 +2060,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MeleeRoar" ID="{619F31BD-45A9-43EF-AAB4-2F01A46ADA45}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.149328249818446"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.257352941176471"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MeleeRoar.wav</AudioFile>
 											<MediaIDList>
@@ -2123,162 +2148,19 @@
 						</Sound>
 						<Folder Name="Tank Enemy SFX" ID="{E88FD84A-E5D7-46AA-A592-6A410DB07F44}" ShortID="5964512">
 							<ChildrenList>
-								<Sound Name="Tank Spawn 1" ID="{86296F4D-F97A-44D1-A2A2-85AEC4F623C9}" ShortID="735350624">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank spawn" ID="{AF3BB5B2-1868-4982-9D9C-1AD23913E730}">
-											<Language>SFX</Language>
-											<AudioFile>Tank spawn.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="427133055"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank spawn" ID="{AF3BB5B2-1868-4982-9D9C-1AD23913E730}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Spawn 2" ID="{C6F68323-D620-4C68-AEF5-80206049483F}" ShortID="122820074">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank spawn 2" ID="{42B380EA-E2CE-4EB8-B0C0-A011762DA5A5}">
-											<Language>SFX</Language>
-											<AudioFile>Tank spawn 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="126320717"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank spawn 2" ID="{42B380EA-E2CE-4EB8-B0C0-A011762DA5A5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Spawn 3" ID="{38175A58-8E09-4041-9FA4-48A3EDFAA5AF}" ShortID="973702934">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank spawn 3" ID="{22FAF8B5-8939-4E6F-A43E-A7D383CC55A3}">
-											<Language>SFX</Language>
-											<AudioFile>Tank spawn 3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="149892432"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank spawn 3" ID="{22FAF8B5-8939-4E6F-A43E-A7D383CC55A3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Footstep 1" ID="{B4B20892-E897-421C-8BFF-55A69116E9ED}" ShortID="526942317">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank walk 1" ID="{A6A004C6-B204-4D84-8CA1-746537E7397F}">
-											<Language>SFX</Language>
-											<AudioFile>Tank walk 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="387595346"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank walk 1" ID="{A6A004C6-B204-4D84-8CA1-746537E7397F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Footstep 2" ID="{E057C35A-65BD-41A6-9D36-8853DD22251D}" ShortID="267635824">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank walk 2" ID="{3F90E5C8-3B36-4E05-853B-61916D78D7D3}">
-											<Language>SFX</Language>
-											<AudioFile>Tank walk 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="688162122"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank walk 2" ID="{3F90E5C8-3B36-4E05-853B-61916D78D7D3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Footstep 3" ID="{1FE71BF0-135D-480C-873B-82E680B56301}" ShortID="505899630">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank walk 3" ID="{B2F9A0F0-4AB5-40BB-9156-5F082B11CC3E}">
-											<Language>SFX</Language>
-											<AudioFile>Tank walk 3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="153942118"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank walk 3" ID="{B2F9A0F0-4AB5-40BB-9156-5F082B11CC3E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Footstep 4" ID="{D71A2C80-F7DA-4FCC-9BCD-2A905E74E07F}" ShortID="233030050">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank walk 4" ID="{E1EB5FDE-6D1F-414C-9E77-9300B9E6D0F6}">
-											<Language>SFX</Language>
-											<AudioFile>Tank walk 4.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="400000926"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank walk 4" ID="{E1EB5FDE-6D1F-414C-9E77-9300B9E6D0F6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Tank Attack" ID="{2B7E49E6-18E0-4D4E-B91F-CC8538667E61}" ShortID="810635807">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Footsteps" ID="{08483B27-A031-4BD2-9609-6325F7A5D5F8}" WorkUnitID="{82800CCE-5252-4A9E-A067-8B1E2875E960}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
 										</Reference>
@@ -2299,7 +2181,118 @@
 										<ActiveSource Name="Tank attack" ID="{77BD5692-DD1C-4401-90D9-633ECCF6DB6F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Tank Damage 1" ID="{A28C1242-FFF6-43B9-BF40-F69E0F6E9F87}" ShortID="148573369">
+								<RandomSequenceContainer Name="Tank Footstep Rand" ID="{D76F28BE-CF4F-46BE-9561-37C403CE928A}" ShortID="777647669">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Footsteps" ID="{08483B27-A031-4BD2-9609-6325F7A5D5F8}" WorkUnitID="{82800CCE-5252-4A9E-A067-8B1E2875E960}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Tank Footstep 1" ID="{B4B20892-E897-421C-8BFF-55A69116E9ED}" ShortID="526942317">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank walk 1" ID="{A6A004C6-B204-4D84-8CA1-746537E7397F}">
+													<Language>SFX</Language>
+													<AudioFile>Tank walk 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="387595346"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank walk 1" ID="{A6A004C6-B204-4D84-8CA1-746537E7397F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Footstep 2" ID="{E057C35A-65BD-41A6-9D36-8853DD22251D}" ShortID="267635824">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank walk 2" ID="{3F90E5C8-3B36-4E05-853B-61916D78D7D3}">
+													<Language>SFX</Language>
+													<AudioFile>Tank walk 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="688162122"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank walk 2" ID="{3F90E5C8-3B36-4E05-853B-61916D78D7D3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Footstep 3" ID="{1FE71BF0-135D-480C-873B-82E680B56301}" ShortID="505899630">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank walk 3" ID="{B2F9A0F0-4AB5-40BB-9156-5F082B11CC3E}">
+													<Language>SFX</Language>
+													<AudioFile>Tank walk 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="153942118"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank walk 3" ID="{B2F9A0F0-4AB5-40BB-9156-5F082B11CC3E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Footstep 4" ID="{D71A2C80-F7DA-4FCC-9BCD-2A905E74E07F}" ShortID="233030050">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank walk 4" ID="{E1EB5FDE-6D1F-414C-9E77-9300B9E6D0F6}">
+													<Language>SFX</Language>
+													<AudioFile>Tank walk 4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="400000926"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank walk 4" ID="{E1EB5FDE-6D1F-414C-9E77-9300B9E6D0F6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Tank Damage Rand" ID="{7BC84AC1-6166-45D1-B957-6AF0A923C0AF}" ShortID="775365056">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -2309,19 +2302,97 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Tank damage 1" ID="{914D501C-230B-45CC-8203-10439681667A}">
-											<Language>SFX</Language>
-											<AudioFile>Tank damage 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="931528556"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Tank Damage 1" ID="{A28C1242-FFF6-43B9-BF40-F69E0F6E9F87}" ShortID="148573369">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank damage 1" ID="{914D501C-230B-45CC-8203-10439681667A}">
+													<Language>SFX</Language>
+													<AudioFile>Tank damage 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="931528556"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank damage 1" ID="{914D501C-230B-45CC-8203-10439681667A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Damage 2" ID="{44A401EA-EFEC-466C-B85B-EA01C038C1F8}" ShortID="1037033754">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank damage 2" ID="{452D97F7-F21D-48D1-8F14-AF81E3F10AC0}">
+													<Language>SFX</Language>
+													<AudioFile>Tank damage 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="406628026"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank damage 2" ID="{452D97F7-F21D-48D1-8F14-AF81E3F10AC0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Damage 3" ID="{2EF26A19-43DC-4262-AAD4-513FD959E743}" ShortID="801396260">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank damage 3" ID="{7C4811AB-5266-4B80-AA15-505DFB371EB9}">
+													<Language>SFX</Language>
+													<AudioFile>Tank damage 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="221151309"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank damage 3" ID="{7C4811AB-5266-4B80-AA15-505DFB371EB9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Damage 4" ID="{6F1160B4-AC12-4FE3-8D7D-DD22D6DB6FA0}" ShortID="974507606">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank damage 4" ID="{0ED918D2-F6F9-46C2-BC74-7CB318226F38}">
+													<Language>SFX</Language>
+													<AudioFile>Tank damage 4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="868763616"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank damage 4" ID="{0ED918D2-F6F9-46C2-BC74-7CB318226F38}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank damage 1" ID="{914D501C-230B-45CC-8203-10439681667A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Damage 2" ID="{44A401EA-EFEC-466C-B85B-EA01C038C1F8}" ShortID="1037033754">
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Tank Death Rand" ID="{CB20760C-1232-42E2-913C-D9FB300265BA}" ShortID="443968513">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -2331,19 +2402,141 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Tank damage 2" ID="{452D97F7-F21D-48D1-8F14-AF81E3F10AC0}">
-											<Language>SFX</Language>
-											<AudioFile>Tank damage 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="406628026"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Tank Death 1" ID="{0D77668E-18A2-49CE-B97A-2980EFA9C9DF}" ShortID="600838156">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank death 1" ID="{93F15120-435A-4112-907B-BB0A51DCBE0E}">
+													<Language>SFX</Language>
+													<AudioFile>Tank death 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1054770755"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank death 1" ID="{93F15120-435A-4112-907B-BB0A51DCBE0E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Death 2" ID="{AD0D38D7-B0F6-44A1-8F2F-73E740132341}" ShortID="964068479">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank death 2" ID="{CFF39C82-EC7E-4902-AB20-27FED80092D9}">
+													<Language>SFX</Language>
+													<AudioFile>Tank death 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="685268182"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank death 2" ID="{CFF39C82-EC7E-4902-AB20-27FED80092D9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank damage 2" ID="{452D97F7-F21D-48D1-8F14-AF81E3F10AC0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Damage 3" ID="{2EF26A19-43DC-4262-AAD4-513FD959E743}" ShortID="801396260">
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Tank Spawn Rand" ID="{D8485F69-904E-4D3B-9F0A-CE420AEC53EA}" ShortID="549971644">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Spawning" ID="{E404F27C-B74A-4110-B75B-52C75A05ED0A}" WorkUnitID="{82800CCE-5252-4A9E-A067-8B1E2875E960}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Tank Spawn 1" ID="{86296F4D-F97A-44D1-A2A2-85AEC4F623C9}" ShortID="735350624">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank spawn" ID="{AF3BB5B2-1868-4982-9D9C-1AD23913E730}">
+													<Language>SFX</Language>
+													<AudioFile>Tank spawn.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="427133055"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank spawn" ID="{AF3BB5B2-1868-4982-9D9C-1AD23913E730}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Spawn 2" ID="{C6F68323-D620-4C68-AEF5-80206049483F}" ShortID="122820074">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank spawn 2" ID="{42B380EA-E2CE-4EB8-B0C0-A011762DA5A5}">
+													<Language>SFX</Language>
+													<AudioFile>Tank spawn 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="126320717"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank spawn 2" ID="{42B380EA-E2CE-4EB8-B0C0-A011762DA5A5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tank Spawn 3" ID="{38175A58-8E09-4041-9FA4-48A3EDFAA5AF}" ShortID="973702934">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tank spawn 3" ID="{22FAF8B5-8939-4E6F-A43E-A7D383CC55A3}">
+													<Language>SFX</Language>
+													<AudioFile>Tank spawn 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="149892432"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tank spawn 3" ID="{22FAF8B5-8939-4E6F-A43E-A7D383CC55A3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Flyer SFX" ID="{49EC9AEC-F0A2-46BB-A00E-2FDE54E4BD74}" ShortID="544631484">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Flyer Spawn Rand" ID="{9771CB3B-F1BD-4177-B49B-9C91C8C8BA2D}" ShortID="536436900">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -2353,19 +2546,60 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Tank damage 3" ID="{7C4811AB-5266-4B80-AA15-505DFB371EB9}">
-											<Language>SFX</Language>
-											<AudioFile>Tank damage 3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="221151309"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Spawn1" ID="{F71C5557-9AE5-49C6-9C50-E2086DD6EB1C}" ShortID="342213646">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Spawn1" ID="{8294B535-E837-42A0-9EE3-F3D04BD193A1}">
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Spawn1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="859604764"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Spawn1" ID="{8294B535-E837-42A0-9EE3-F3D04BD193A1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Spawn2" ID="{BF0FCCB5-6D2B-44A3-BDE9-F7218E322E83}" ShortID="577042350">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Spawn2" ID="{E9BAAC3B-16BC-4336-AD8D-9AF9A8C7D543}">
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Spawn2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="11823176"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Spawn2" ID="{E9BAAC3B-16BC-4336-AD8D-9AF9A8C7D543}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank damage 3" ID="{7C4811AB-5266-4B80-AA15-505DFB371EB9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Damage 4" ID="{6F1160B4-AC12-4FE3-8D7D-DD22D6DB6FA0}" ShortID="974507606">
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Flyer Attack Rand" ID="{551FF486-6BBB-4084-B0E3-F45D5C6F2810}" ShortID="524495267">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -2375,19 +2609,53 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Tank damage 4" ID="{0ED918D2-F6F9-46C2-BC74-7CB318226F38}">
-											<Language>SFX</Language>
-											<AudioFile>Tank damage 4.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="868763616"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Attack1" ID="{456862CE-2022-42E7-A209-C73F06985C8B}" ShortID="119355882">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Attack1" ID="{7639BABA-94AF-4BB2-88B5-653AB4A7F5B8}">
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Attack1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="897023637"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Attack1" ID="{7639BABA-94AF-4BB2-88B5-653AB4A7F5B8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Attack2" ID="{2C818CB1-5F68-4E36-ADEF-C3DFFFA3BD81}" ShortID="808416583">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Attack2" ID="{7939F656-9AEE-4D1E-B460-F82C248EF0DD}">
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Attack2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="907536225"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Attack2" ID="{7939F656-9AEE-4D1E-B460-F82C248EF0DD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank damage 4" ID="{0ED918D2-F6F9-46C2-BC74-7CB318226F38}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Death 1" ID="{0D77668E-18A2-49CE-B97A-2980EFA9C9DF}" ShortID="600838156">
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Flyer Flap Rand" ID="{7F7213D2-E412-4928-8BE8-6F0524B2BC51}" ShortID="539394032">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -2397,40 +2665,110 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Tank death 1" ID="{93F15120-435A-4112-907B-BB0A51DCBE0E}">
-											<Language>SFX</Language>
-											<AudioFile>Tank death 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1054770755"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Flap1" ID="{B3556D64-6A3C-4901-9E99-F2ECC2503E85}" ShortID="878814710">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Flap x4" ID="{CFC52762-64AF-4E08-BE7A-585C0828EE23}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.107843137254902"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0931372549019607"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.333333333333333"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.980392156862747"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Flap x4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="501951875"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Flap x4" ID="{CFC52762-64AF-4E08-BE7A-585C0828EE23}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Flap2" ID="{D16E90A7-0F7A-4F96-A003-05A2AE079E69}" ShortID="1068076735">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Flap x4" ID="{7DFC9144-C239-4D3C-AC9F-FC2A22CE2514}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0686274509803921"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0686274509803921"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.44117647058823"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.97058823529412"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Flap x4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="907561064"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Flap x4" ID="{7DFC9144-C239-4D3C-AC9F-FC2A22CE2514}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Flap3" ID="{5B5E59AC-15ED-48C8-8B50-E695069D8DA7}" ShortID="70735233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Flap x4" ID="{14E76EDD-85B4-49C5-A4F5-1B74B9EEAF85}">
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Flap x4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="917046987"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Flap x4" ID="{14E76EDD-85B4-49C5-A4F5-1B74B9EEAF85}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Flap4" ID="{407DD85B-6012-4B96-B6CC-1556CBA25F7A}" ShortID="785580598">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Flap x4" ID="{1EAC91C7-58AA-4C92-80B7-B8D128181EA5}">
+													<Language>SFX</Language>
+													<AudioFile>Enemies\Flap x4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="917046987"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Flap x4" ID="{1EAC91C7-58AA-4C92-80B7-B8D128181EA5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank death 1" ID="{93F15120-435A-4112-907B-BB0A51DCBE0E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Tank Death 2" ID="{AD0D38D7-B0F6-44A1-8F2F-73E740132341}" ShortID="964068479">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Tank death 2" ID="{CFF39C82-EC7E-4902-AB20-27FED80092D9}">
-											<Language>SFX</Language>
-											<AudioFile>Tank death 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="685268182"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Tank death 2" ID="{CFF39C82-EC7E-4902-AB20-27FED80092D9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -2503,9 +2841,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="Shotgun Boom" ID="{E94FB0B4-CB72-431E-8DFA-22B83D730646}">
 											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.166210602759622"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.389863879957128"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.15728727069691"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.979204482025884"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Shotgun Boom.wav</AudioFile>

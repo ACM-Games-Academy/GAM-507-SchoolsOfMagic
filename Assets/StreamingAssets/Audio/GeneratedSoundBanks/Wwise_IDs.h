@@ -13,17 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_ARCANE_AUTOCANNON_FIRE = 3209639876U;
-        static const AkUniqueID PLAY_ARCANE_AUTOCANNON_RELOAD = 1562330543U;
-        static const AkUniqueID PLAY_ARCANE_BLINK = 2725967099U;
-        static const AkUniqueID PLAY_ARCANE_HAT_RUSTLE = 1535985346U;
-        static const AkUniqueID PLAY_ARCANE_MANA_FLUX_STACK_1 = 3122977081U;
-        static const AkUniqueID PLAY_ARCANE_MANA_FLUX_STACK_2 = 3122977082U;
-        static const AkUniqueID PLAY_ARCANE_MANA_FLUX_STACK_3 = 3122977083U;
         static const AkUniqueID PLAY_BLOOD_ARMOUR_HIT = 1481612363U;
         static const AkUniqueID PLAY_BLOOD_GUN_BULLETS = 4087362955U;
         static const AkUniqueID PLAY_BLOOD_GUN_RELOAD = 3903496159U;
         static const AkUniqueID PLAY_BLOOD_PRIMARY_ABILITY = 16303742U;
+        static const AkUniqueID PLAY_FLYER_ATTACK_RAND = 1054381211U;
+        static const AkUniqueID PLAY_FLYER_FLAP_RAND = 3183334536U;
+        static const AkUniqueID PLAY_FLYER_SPAWN_RAND = 1467661062U;
         static const AkUniqueID PLAY_METAL_GUNRELOAD = 1688851195U;
         static const AkUniqueID PLAY_METAL_MAGNETICHUM = 3370461538U;
         static const AkUniqueID PLAY_METAL_OUTOFAMMO = 2437099115U;
@@ -34,6 +30,12 @@ namespace AK
         static const AkUniqueID PLAY_NATURE_PASSIVE_HUM = 1540153786U;
         static const AkUniqueID PLAY_NATURE_SPIKE = 275810172U;
         static const AkUniqueID PLAY_SHOT_SWITCH = 4056601793U;
+        static const AkUniqueID PLAY_TANK_ATTACK = 194405145U;
+        static const AkUniqueID PLAY_TANK_DAMAGE_RAND = 3692906616U;
+        static const AkUniqueID PLAY_TANK_FOOTSTEP_RAND = 1290140931U;
+        static const AkUniqueID PLAY_TANK_SPAWN_RAND = 2496273332U;
+        static const AkUniqueID PLAY_TITLE_SCREEN_THEME = 794644545U;
+        static const AkUniqueID PLAY_WIZARD_OST_SWITCH = 4121109043U;
         static const AkUniqueID PLAYFOOTSTEPS = 1088348632U;
     } // namespace EVENTS
 
