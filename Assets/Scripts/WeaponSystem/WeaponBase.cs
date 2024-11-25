@@ -10,7 +10,6 @@ public class WeaponBase : MonoBehaviour
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private ParticleSystem bulletFireEffect;
     private int currentAmmo;
-    public int CurrentAmmo { get { return currentAmmo; } }
     private float nextFireTime;
     [SerializeField] private WeaponStats weaponStats;
     public WeaponStats WeaponStats
@@ -23,10 +22,6 @@ public class WeaponBase : MonoBehaviour
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float shootSpeedReduction;
     [SerializeField] private float holdGunSpeedReduction;
-
-    [SerializeField] private WeaponAnimations weaponAnimator;
-
-    [SerializeField] private GameObject bleedingEffect;
 
     private Coroutine firingCoroutine;
 
@@ -49,22 +44,15 @@ public class WeaponBase : MonoBehaviour
     {
         if (Time.time < nextFireTime || isReloading) return;
 
-        if (bulletFireEffect != null && currentAmmo > 0)
+        if (bulletFireEffect != null)
         {
             bulletFireEffect.Play();
             gunShoot.Post(this.gameObject);
-
-            ShootRay();
-            weaponAnimator.AnimateGunShot();
-
-            currentAmmo--;
         }
-        else
-        {
-            //no ammo
-            //PUT NO AMMO SOUNDS HERE
-        }
-        
+
+        ShootRay();
+
+        currentAmmo--;
         nextFireTime = Time.time + weaponStats.FireRate;
     }
 
@@ -78,21 +66,15 @@ public class WeaponBase : MonoBehaviour
 
         if (Physics.Raycast(raycastOrigin.position, spread, out hit, weaponStats.BulletRange))
         {
-            
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
 
-            if (hit.collider.TryGetComponent<Enemy>(out Enemy enemy))
+            if (enemy != null)
             {
                 // Calculate fixed damage, modified by armor if applicable
                 float damage = CalculateDamage(enemy.IsArmoured);
                 Debug.Log("Hit: " + hit.collider.name + " with damage: " + damage);
 
                 enemy.GiveDamage(damage, weaponStats.CausesStagger);
-
-                if (weaponStats.CausesBleeding && !enemy.IsBleeding)
-                {
-                    GameObject particleEffect = Instantiate(bleedingEffect, hit.point, Quaternion.FromToRotation(Vector3.zero, hit.normal), hit.transform);
-                    enemy.GiveBleeding(weaponStats.BleedingDuration, weaponStats.BleedingDmgPerSecond, particleEffect);   
-                }                
             }
         }
     }
@@ -104,9 +86,9 @@ public class WeaponBase : MonoBehaviour
         return isArmored ? baseDamage * weaponStats.ArmourMultiplier : baseDamage;
     }
 
-    public void AddAmmo(int ammo)
+    public void ReloadWeapon(int ammo)
     {
-        currentAmmo += ammo;
+        currentAmmo = ammo;
     }  
 
     public void StartFiring()

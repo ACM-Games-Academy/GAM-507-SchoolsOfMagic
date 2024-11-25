@@ -1,4 +1,4 @@
-using System.Collections; 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -13,10 +13,6 @@ public class Enemy : MonoBehaviour
     public float Health
     { get { return health; } }
 
-    private bool isBleeding;
-    public bool IsBleeding
-    { get { return isBleeding; } }
-
     public void GiveDamage(float damage, bool isStaggerable)
     {
         if (isStaggerable)
@@ -30,12 +26,6 @@ public class Enemy : MonoBehaviour
         {
             EnemyDeath();
         }
-    }
-
-    public void GiveBleeding(float time, float damagePerSec, GameObject bleedingEffect)
-    {
-        isBleeding = true;
-        StartCoroutine(Bleeding(time, damagePerSec, bleedingEffect));
     }
 
     protected void EnemyInitiate(float initHealth, bool initIsArmoured)
@@ -56,18 +46,5 @@ public class Enemy : MonoBehaviour
     {
         //do something when the enemy dies
         //this will be overriden in the specific enemy class
-    }
-
-    private IEnumerator Bleeding(float time ,float damagePerSec, GameObject bleedingEffect)
-    {
-        for (float i = 0; i < time;)
-        {
-            GiveDamage(damagePerSec * Time.deltaTime, false);            
-            i += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
-
-        Destroy(bleedingEffect);
-        isBleeding = false;
     }
 }

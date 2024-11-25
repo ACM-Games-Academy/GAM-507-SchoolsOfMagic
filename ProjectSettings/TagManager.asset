@@ -6,9 +6,6 @@ TagManager:
   tags:
   - Heavy Enemy
   - Water
-  - Flying Enemy
-  - Melee Enemy
-  - Boss Enemy
   layers:
   - Default
   - TransparentFX
