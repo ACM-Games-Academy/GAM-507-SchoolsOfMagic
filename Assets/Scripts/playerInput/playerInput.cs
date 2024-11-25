@@ -18,6 +18,7 @@ public class playerInput : MonoBehaviour
     private InputAction abilityMovement;
     private InputAction playerRun;
     private InputAction playerReload;
+    private InputAction playerInteract;
 
     private Vector2 movementInput;
     private Vector2 cameraInput;
@@ -42,6 +43,7 @@ public class playerInput : MonoBehaviour
     public event EventHandler runReleased;
 
     public event EventHandler reloadPressed;
+    public event EventHandler interactPressed;
 
     public void Awake()
     {
@@ -60,6 +62,7 @@ public class playerInput : MonoBehaviour
         abilityMovement = controls.Player.movementAbility;
         playerRun = controls.Player.Running;
         playerReload = controls.Player.Reload;
+        playerInteract = controls.Player.Interact;
 
 
         //Whenever the player presses either primary or secondary ability, this calls a function to happen
@@ -82,6 +85,7 @@ public class playerInput : MonoBehaviour
         playerRun.canceled += onRunReleased;
 
         playerReload.started += onReloadPressed;
+        playerInteract.started += onInteractPressed;
    
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
@@ -97,6 +101,7 @@ public class playerInput : MonoBehaviour
         abilityMovement.Enable();
         playerRun.Enable();
         playerReload.Enable();
+        playerInteract.Enable();
     }
 
     public Vector2 getCameraInput()
@@ -183,6 +188,11 @@ public class playerInput : MonoBehaviour
         onButton(EventArgs.Empty, reloadPressed);
     }
 
+    private void onInteractPressed(InputAction.CallbackContext reload)
+    {
+        onButton(EventArgs.Empty, interactPressed);
+    }
+
     private void onButton(EventArgs e, EventHandler button)
     {
         if (button != null)
@@ -206,5 +216,6 @@ public class playerInput : MonoBehaviour
         abilityMovement.Disable();
         playerRun.Disable();
         playerReload.Disable();
+        playerInteract.Disable();
     }
 }
