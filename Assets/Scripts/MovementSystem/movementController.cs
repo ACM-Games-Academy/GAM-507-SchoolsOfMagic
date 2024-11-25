@@ -130,17 +130,24 @@ public class movementController : MonoBehaviour
         }
     }
 
+    public void AddSpeedBuffT(float speedMod, float time)
+    {
+        StartCoroutine(addSpeedBuffT(speedMod, time));
+    }
+
     //this is for speed buffs this was taken from the playerController - Launcelot
-    public IEnumerator addSpeedModT(float modifier, float time)
+    private IEnumerator addSpeedBuffT(float modifier, float time)
     {   
         float increasedSpeed = movementModel.MovementSpeed * modifier;
 
 
         movementModel.MovementSpeed += increasedSpeed;
+        Debug.Log("Movement Speed: " + movementModel.MovementSpeed);
 
         yield return new WaitForSeconds(time);
 
-        movementModel.MovementSpeed -= movementModel.MovementSpeed * (increasedSpeed / movementModel.MovementSpeed);
+        movementModel.MovementSpeed -= increasedSpeed;
+        Debug.Log("Movement Speed After: " + movementModel.MovementSpeed);
     }
 
     private void switchNature(object sender, EventArgs e)
