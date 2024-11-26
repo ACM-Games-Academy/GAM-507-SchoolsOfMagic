@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class SporeAttack : MonoBehaviour
 {
-    [SerializeField] private BossStats bossStats;              
-    [SerializeField] private float projectileCooldown = 3f;     
-    [SerializeField] private GameObject projectilePrefab;       
-    [SerializeField] private Transform projectileSpawnPoint;    
+    [SerializeField] private BossStats bossStats;               // Boss stats
+    [SerializeField] private GameObject projectilePrefab;       // Projectile prefab
+    [SerializeField] private Transform projectileSpawnPoint;    // Spawn point for the spores
+    [SerializeField] private float burstCooldown = 5f;          // Cooldown between bursts
+
     private float lastAttackTime;
 
     public void TriggerSpore(Vector3 targetPosition)
     {
         // Check if cooldown has elapsed
-        if (Time.time - lastAttackTime >= bossStats.sporeAttackCooldown)
+        if (Time.time - lastAttackTime >= burstCooldown)
         {
             lastAttackTime = Time.time; // Update attack timestamp
-           SpawnSpore(targetPosition);
+            StartCoroutine(SpawnSporeBurst(targetPosition));
         }
     }
 
+    private IEnumerator SpawnSporeBurst(Vector3 targetPosition)
+    {
+        for (int i = 0; i < bossStats.sporesPerBurst; i++)
+        {
+            SpawnSpore(targetPosition);
+
+            // Wait between spawning each spore
+            yield return new WaitForSeconds(bossStats.timeBetweenSpores);
+        }
+    }
 
     private void SpawnSpore(Vector3 targetPosition)
     {
@@ -35,7 +46,6 @@ public class SporeAttack : MonoBehaviour
             if (projectileScript != null)
             {
                 projectileScript.player = GameObject.FindGameObjectWithTag("Player")?.GetComponent<PlayerController>();
-
             }
         }
     }
