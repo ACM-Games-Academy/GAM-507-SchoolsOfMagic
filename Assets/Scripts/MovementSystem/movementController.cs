@@ -65,7 +65,7 @@ public class movementController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        cameraDirection.y += inputModule.getCameraInput().x;
+        cameraDirection.y += inputModule.getCameraInput().x / 7.5f;
         cameraDirection.x = Mathf.Clamp(cameraDirection.x - inputModule.getCameraInput().y, -90, 90);
 
         transform.rotation = Quaternion.Euler(0, cameraDirection.y, 0);
