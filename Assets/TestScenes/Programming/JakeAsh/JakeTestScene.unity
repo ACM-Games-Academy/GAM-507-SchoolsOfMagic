@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 99906090}
   - component: {fileID: 99906089}
   m_Layer: 0
-  m_Name: SpawnBack
+  m_Name: KillZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1169746d8c1464c8214ef4cfb16b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPosition: {fileID: 1364416847}
 --- !u!65 &99906090
 BoxCollider:
   m_ObjectHideFlags: 0
