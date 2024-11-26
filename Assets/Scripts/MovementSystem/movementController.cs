@@ -24,7 +24,6 @@ public class movementController : MonoBehaviour
     [SerializeField] private movementAbility natureMovement;
     [SerializeField] private movementAbility bloodMovement;
     [SerializeField] private movementAbility metalMovement;
-    [SerializeField] private movementAbility arcaneMovement;
     [Header("Stats")]
 
     [SerializeField] private movementStats stats;
@@ -46,7 +45,6 @@ public class movementController : MonoBehaviour
         inputModule.NatureMagic += switchNature;
         inputModule.BloodMagic += switchBlood;
         inputModule.MetalMagic += switchMetal;
-        inputModule.ArcaneMagic += switchArcane;
     }
 
     // Update is called once per frame
@@ -67,7 +65,7 @@ public class movementController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        cameraDirection.y += inputModule.getCameraInput().x;
+        cameraDirection.y += inputModule.getCameraInput().x / 7.5f;
         cameraDirection.x = Mathf.Clamp(cameraDirection.x - inputModule.getCameraInput().y, -90, 90);
 
         transform.rotation = Quaternion.Euler(0, cameraDirection.y, 0);
@@ -121,26 +119,30 @@ public class movementController : MonoBehaviour
             case "Metal":
                 currentMovement = metalMovement;
                 break;
-            case "Arcane":
-                currentMovement = arcaneMovement;
-                break;
             default:
                 Debug.LogWarning("Movement ability init: Invalid magic");
                 break;
         }
     }
 
+    public void AddSpeedBuffT(float speedMod, float time)
+    {
+        StartCoroutine(addSpeedBuffT(speedMod, time));
+    }
+
     //this is for speed buffs this was taken from the playerController - Launcelot
-    public IEnumerator addSpeedModT(float modifier, float time)
+    private IEnumerator addSpeedBuffT(float modifier, float time)
     {   
         float increasedSpeed = movementModel.MovementSpeed * modifier;
 
 
         movementModel.MovementSpeed += increasedSpeed;
+        Debug.Log("Movement Speed: " + movementModel.MovementSpeed);
 
         yield return new WaitForSeconds(time);
 
-        movementModel.MovementSpeed -= movementModel.MovementSpeed * (increasedSpeed / movementModel.MovementSpeed);
+        movementModel.MovementSpeed -= increasedSpeed;
+        Debug.Log("Movement Speed After: " + movementModel.MovementSpeed);
     }
 
     private void switchNature(object sender, EventArgs e)
@@ -158,10 +160,6 @@ public class movementController : MonoBehaviour
         currentMovement = metalMovement;
     }
 
-    private void switchArcane(object sender, EventArgs e)
-    {
-        currentMovement = arcaneMovement;
-    }
 
     private void OnDisable()
     {
@@ -170,7 +168,6 @@ public class movementController : MonoBehaviour
         inputModule.NatureMagic -= switchNature;
         inputModule.BloodMagic -= switchBlood;
         inputModule.MetalMagic -= switchMetal;
-        inputModule.ArcaneMagic -= switchArcane;
 
         inputModule.Disable();
     }

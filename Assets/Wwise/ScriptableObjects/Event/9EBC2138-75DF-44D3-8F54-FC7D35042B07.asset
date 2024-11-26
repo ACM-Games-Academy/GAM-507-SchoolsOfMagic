@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625987617fb7e704883e75472905aee8, type: 3}
+  m_Name: 9EBC2138-75DF-44D3-8F54-FC7D35042B07
+  m_EditorClassIdentifier: 
+  objectName: Play_Tank_Footstep_Rand
+  id: 1290140931
+  guid: 9EBC2138-75DF-44D3-8F54-FC7D35042B07

@@ -5,10 +5,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
-public enum MagicType { None, Blood, Metal, Nature, Arcane }
+public enum MagicType { None, Blood, Metal, Nature }
 
 [System.Serializable]
 public struct MagicPrefab
@@ -127,7 +124,7 @@ public class MagicController : MonoBehaviour
             Debug.LogError("Invalid ability type: " + magicType.ToString());
         }
 
-        Debug.Log("Magic changed to: " + magicType.ToString());
+        //Debug.Log("Magic changed to: " + magicType.ToString());
     }
 
     private void OnDisable()

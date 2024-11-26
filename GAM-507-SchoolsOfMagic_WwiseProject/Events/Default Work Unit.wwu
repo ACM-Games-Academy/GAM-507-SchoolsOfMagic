@@ -293,6 +293,91 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Enemy Flyer Events" ID="{A12B828C-2153-4357-B56B-4F72D407FFAA}" ShortID="983943474">
+					<ChildrenList>
+						<Event Name="Play_Flyer_Attack_Rand" ID="{014B8CC7-1676-455D-90C3-74D81431038B}">
+							<ChildrenList>
+								<Action Name="" ID="{08849F1B-A4BD-4A27-92EB-6AC6A2CE0031}" ShortID="821001232">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flyer Attack Rand" ID="{551FF486-6BBB-4084-B0E3-F45D5C6F2810}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Flyer_Flap_Rand" ID="{5D1A460F-4BFA-4F18-A1BC-6445B7998D01}">
+							<ChildrenList>
+								<Action Name="" ID="{D08C35D0-637C-464C-B0F7-B8FC0ACC97CF}" ShortID="236203850">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flyer Flap Rand" ID="{7F7213D2-E412-4928-8BE8-6F0524B2BC51}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Flyer_Spawn_Rand" ID="{5B1A5946-15F6-45E9-8B50-BA1FD9FBE706}">
+							<ChildrenList>
+								<Action Name="" ID="{C108BBCA-9DCF-47BD-90C2-6FD637B43B42}" ShortID="45664774">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flyer Spawn Rand" ID="{9771CB3B-F1BD-4177-B49B-9C91C8C8BA2D}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy Tank Events" ID="{71705CD0-2DC4-4717-B384-A464A1F50EF3}" ShortID="792734513">
+					<ChildrenList>
+						<Event Name="Play_Tank_Damage_Rand" ID="{588CC74A-35B4-4BDF-A127-9DA8CC4A0B51}">
+							<ChildrenList>
+								<Action Name="" ID="{6F25B9EE-7B84-4628-AB58-B0BD6BF714FD}" ShortID="147168764">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tank Damage Rand" ID="{7BC84AC1-6166-45D1-B957-6AF0A923C0AF}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Tank_Footstep_Rand" ID="{9EBC2138-75DF-44D3-8F54-FC7D35042B07}">
+							<ChildrenList>
+								<Action Name="" ID="{05B5D8A2-717C-4FB8-88D6-48020555EEE0}" ShortID="241120580">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tank Footstep Rand" ID="{D76F28BE-CF4F-46BE-9561-37C403CE928A}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Tank_Spawn_Rand" ID="{1B5CF1EC-891F-4D69-B790-DB917A45E4C9}">
+							<ChildrenList>
+								<Action Name="" ID="{E9AC1BD6-6586-4AC5-AF2D-7229C4D7B349}" ShortID="794620415">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tank Spawn Rand" ID="{D8485F69-904E-4D3B-9F0A-CE420AEC53EA}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Tank_Attack" ID="{552AAA65-B579-4F48-BD50-A8CA075E5E3C}">
+							<ChildrenList>
+								<Action Name="" ID="{1EE0F610-E524-4EB1-8C8D-2D15B09345F1}" ShortID="838657808">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tank Attack" ID="{2B7E49E6-18E0-4D4E-B91F-CC8538667E61}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
