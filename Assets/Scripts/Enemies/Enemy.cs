@@ -58,6 +58,13 @@ public class Enemy : MonoBehaviour
         //this will be overriden in the specific enemy class
     }
 
+    // Reset the bosse's health
+    public void ResetHealth(float newHealth)
+    {
+        health = newHealth;
+    }
+
+
     private IEnumerator Bleeding(float time ,float damagePerSec, GameObject bleedingEffect)
     {
         for (float i = 0; i < time;)

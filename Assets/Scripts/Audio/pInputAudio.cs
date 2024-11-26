@@ -39,7 +39,7 @@ public class playerInputAudio : MonoBehaviour
         speed = (transform.position - lastPos).magnitude;
         if (speed > 0f && timer <= 0 && controller.isGrounded)
         {
-            Debug.Log("FOOTSTEP LOL");
+       
             footsteps.Post(this.gameObject);
             timer = 0.31415926535f;
         }

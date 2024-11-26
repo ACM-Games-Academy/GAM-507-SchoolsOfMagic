@@ -8,66 +8,64 @@ public class PillarObjective : MonoBehaviour
     private Transform player;
     [SerializeField] private TextMeshPro interactPrompt;
     private BossEnemy bossEnemy;
-    private playerInput playerInput;
-    public float interactRange = 5;
-    private bool canInteract = false;
+    private float interactRange = 12f;         // Distance the player has to be to start the countdown
+    private bool isPlayerInRange = false;
+    private float timeInRange = 0f;
+    private float requiredTimeToActivate = 5f; // Time the player needs to stand near the pillar
+    private bool hasActivated = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Get player position and interact button
+        // Get player position
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerInput = player.GetComponent<playerInput>();
-        playerInput.interactPressed += OnInteractPressed;
-        //Assign boss enemy script
+
+        // Assign boss enemy script
         GameObject bossObject = GameObject.Find("Boss");
         bossEnemy = bossObject.GetComponent<BossEnemy>();
     }
 
-    private bool hasInteracted = false;
-
-    private void OnInteractPressed(object sender, System.EventArgs e)
+    private void Update()
     {
-        if (canInteract && !hasInteracted)
-        {
-            hasInteracted = true; // Prevent further interactions
-            bossEnemy.pillarsActive++;
-
-            // Debug.Log("Interacted!");
-            //Debug.Log("Active pillars: " + bossEnemy.pillarsActive);
-
-
-        }
-        else if (!canInteract)
-        {
-            //Debug.Log("Player is too far or has alread interacted with this pillar.");
-        }
-    }
-
-
-    private void FixedUpdate()
-    {
+        // Check player distance
         float distance = Vector3.Distance(player.position, transform.position);
 
         if (distance <= interactRange)
         {
-            if (hasInteracted) { interactPrompt.text = (""); }
-            else
+            if (!hasActivated)
             {
-             
-                interactPrompt.text = ("E");
-                canInteract = true;
+                isPlayerInRange = true;
+
+                int remainingTime = Mathf.CeilToInt(Mathf.Clamp(requiredTimeToActivate - timeInRange, 0f, requiredTimeToActivate));
+                interactPrompt.text = remainingTime.ToString();
             }
         }
-    
         else
         {
-            interactPrompt.text = (" ");
-            canInteract = false;
-            
+            isPlayerInRange = false;
+            timeInRange = 0f;     // Reset the timer if the player leaves
+            if (!hasActivated)
+            {
+                interactPrompt.text = "X";
+            }
+        }
+
+        // Count time when player is close
+        if (isPlayerInRange && !hasActivated)
+        {
+            timeInRange += Time.deltaTime;
+
+            if (timeInRange >= requiredTimeToActivate)
+            {
+                ActivatePillar();
+            }
         }
     }
 
-
-
+    private void ActivatePillar()
+    {
+        hasActivated = true; // Prevent further activations
+        bossEnemy.pillarsActive++;
+        interactPrompt.text = " "; // Clear the text after activation
+    }
 }
