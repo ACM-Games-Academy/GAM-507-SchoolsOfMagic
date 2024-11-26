@@ -52,7 +52,6 @@ public class playerInputAudio : MonoBehaviour
         input.NatureMagic += natureClass;
         input.MetalMagic += metalClass;
         input.BloodMagic += bloodClass;
-        input.ArcaneMagic += arcaneClass;
     }
 
     private void metalClass(object sender, EventArgs e)
@@ -73,17 +72,10 @@ public class playerInputAudio : MonoBehaviour
         
     }
 
-    private void arcaneClass(object sender, EventArgs e)
-    {
-        arcaneState.SetValue();
-        
-    }
-
     private void OnDisable()
     {
         input.NatureMagic -= natureClass;
         input.MetalMagic -= metalClass;
         input.BloodMagic -= bloodClass;
-        input.ArcaneMagic -= arcaneClass;
     }
 }
