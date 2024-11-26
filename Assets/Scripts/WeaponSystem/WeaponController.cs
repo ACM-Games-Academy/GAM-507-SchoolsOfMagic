@@ -7,9 +7,12 @@ public class WeaponController : MonoBehaviour
     [Header("Weapon prefab array \n in order of Nature, Blood, Metal, Arcane")]
     [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
+    [SerializeField] private WeaponBase previousWeapon;
     [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
     [SerializeField] private PlayerController controller;
     [SerializeField] private bool isReloading;
+
+    Animator handAnimations;
 
     private int loadedAmmo;
     private int magSize;
@@ -74,17 +77,32 @@ public class WeaponController : MonoBehaviour
 
     private void ActivateWeapon(int weaponIndex)
     {
-        if (currentWeapon != null)
+        if (currentWeapon == weaponGameobject[weaponIndex].GetComponent<WeaponBase>())
         {
-            currentWeapon.gameObject.SetActive(false);  // Disable the previously active weapon
+            return;
         }
 
-        // Enable the new weapon
-        weaponGameobject[weaponIndex].SetActive(true);
-        currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
+        if (currentWeapon != null)
+        {
+            previousWeapon = currentWeapon;
+            currentWeapon.gameObject.SetActive(false);  // Disable the previously active weapon
+            weaponGameobject[weaponIndex].SetActive(true);
+            currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
+        }
+        else
+        {
+            // Enable the new weapon   
+            weaponGameobject[weaponIndex].SetActive(true);
+            currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
+            previousWeapon = currentWeapon;
 
-        magSize = currentWeapon.WeaponStats.MagazineCapacity;
-        loadedAmmo = currentWeapon.CurrentAmmo;
+            magSize = currentWeapon.WeaponStats.MagazineCapacity;
+            loadedAmmo = currentWeapon.CurrentAmmo;
+
+            //when there is no animation it won't enable the weapons model
+            //so it needs to be ran here
+            SwitchWeaponModels();
+        }    
     }
 
     private void OnClassOneSelected(object sender, EventArgs e)
@@ -170,6 +188,12 @@ public class WeaponController : MonoBehaviour
         }
 
         isReloading = false;
+    }
+
+    public void SwitchWeaponModels()
+    {
+        previousWeapon.GetGunModel().SetActive(false);
+        currentWeapon.GetGunModel().SetActive(true);
     }
 
     private void Update()

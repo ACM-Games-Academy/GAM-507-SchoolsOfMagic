@@ -38,6 +38,7 @@ public class WeaponBase : MonoBehaviour
     private void Start()
     {
         originalSpeed = playerSpeed;
+        currentAmmo = weaponStats.MagazineCapacity;
     }
 
     private void Update()
@@ -142,6 +143,11 @@ public class WeaponBase : MonoBehaviour
             Fire();
             yield return new WaitForSeconds(weaponStats.FireRate);
         }
+    }
+
+    public GameObject GetGunModel()
+    {
+        return weaponAnimator.gameObject;
     }
 
     private void OnDisable()
