@@ -16,6 +16,8 @@ namespace Magic
 
         [SerializeField] private ParticleSystem pullEffect;
 
+        private AK.Wwise.Event exsangSound;
+        
         private float cooldown;
         private float radiusRange;
         private float damage;
@@ -28,7 +30,7 @@ namespace Magic
 
         // Start is called before the first frame update
         void OnEnable()
-        {
+        { 
             //setting all the variables from the scriptable obj
             cooldown = data.cooldown;
             radiusRange = data.radiusRange;
@@ -42,8 +44,9 @@ namespace Magic
             StartCoroutine(startAbility());
         }
 
-        public void InitAbil(PlayerController Controller, movementController MovementController)
+        public void InitAbil(PlayerController Controller, movementController MovementController, AK.Wwise.Event ExsangSound)
         {
+            exsangSound = ExsangSound;
             controller = Controller;
             movementController = MovementController;
         }
@@ -69,15 +72,18 @@ namespace Magic
 
                 if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemyScript) == true)
                 {
-                    //dealing damge to the enemy this will be changed when enemies are made
-                    enemyScript.GiveDamage(damage, false);
+                    if (enemyScript.IsBleeding)
+                    {
+                        //dealing damge to the enemy this will be changed when enemies are made
+                        enemyScript.GiveDamage(damage, false);
 
-                    //the heal amount increases as more enmies are damaged by this ability
-                    //the position of each enemy is then saved for the visual effect
-                    healCounter++;
-                    enemyPos.Add(enemyScript.GetComponent<Transform>());
+                        //the heal amount increases as more enmies are damaged by this ability
+                        //the position of each enemy is then saved for the visual effect
+                        healCounter++;
+                        enemyPos.Add(enemyScript.GetComponent<Transform>());
 
-                    Debug.Log("Enemy hit: " + healCounter);
+                        Debug.Log("Enemy hit: " + healCounter);
+                    }                  
                 }
             }
 
@@ -86,7 +92,7 @@ namespace Magic
 
             if (healAmount > 0)
             {
-                StartCoroutine(movementController.addSpeedModT(speedBoost, boostDuration));
+                movementController.AddSpeedBuffT(speedBoost, boostDuration);
                 StartCoroutine(healPlayer());
                 visualEffect(enemyPos);
             }
@@ -102,7 +108,7 @@ namespace Magic
             Debug.Log("Started healing: " + healAmount);
             //while the healamount is above 0 it will heal the player
             //the healrate is the amount it will heal in one second 
-
+            exsangSound.Post(this.gameObject);
             float frameHeal;
 
             while (healAmount > 0)

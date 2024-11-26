@@ -14,14 +14,12 @@ public class passiveController : MonoBehaviour
     [SerializeField] passiveBase naturePassive;
     [SerializeField] passiveBase bloodPassive;
     [SerializeField] passiveBase metalPassive;
-    [SerializeField] passiveBase arcanePassive;
 
     private void OnEnable()
     {
         playerInput.NatureMagic += changeMagicNature;
         playerInput.BloodMagic += changeMagicBlood;
         playerInput.MetalMagic += changeMagicMetal;
-        playerInput.ArcaneMagic += changeMagicArcane;
     }
 
     private void Start()
@@ -40,11 +38,6 @@ public class passiveController : MonoBehaviour
         else if (controller.GetCurrentClass() == "Blood")
         {
             currentPassive = bloodPassive;
-            currentPassive.enabled = true;
-        }
-        else if (controller.GetCurrentClass() == "Arcane")
-        {
-            currentPassive = arcanePassive;
             currentPassive.enabled = true;
         }
         else
@@ -74,19 +67,10 @@ public class passiveController : MonoBehaviour
         currentPassive.enabled = true;
     }
 
-    private void changeMagicArcane(object sender, EventArgs e)
-    {
-        currentPassive.enabled = false;
-        currentPassive = arcanePassive;
-        currentPassive.enabled = true;
-    }
-
-
     private void OnDisable()
     {
         playerInput.NatureMagic -= changeMagicNature;
         playerInput.BloodMagic -= changeMagicBlood;
         playerInput.MetalMagic -= changeMagicMetal;
-        playerInput.ArcaneMagic -= changeMagicArcane;
     }
 }
