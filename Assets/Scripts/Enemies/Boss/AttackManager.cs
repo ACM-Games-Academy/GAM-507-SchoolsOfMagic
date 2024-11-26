@@ -13,17 +13,21 @@ public class AttackManager : MonoBehaviour
     // Attacks
     private RootSlam rootSlam;
     private SporeAttack sporeAttack;
+    private RootsFromGround rootsAttack;
+    private SpawnManager spawnManager;
 
     private float rootSlamLastAttackTime;
     private float sporeAttackLastAttackTime;
+    private float rootsAttackLastAttackTime; 
 
-    private enum AttackType { None, RootSlam, SporeAttack }
+    private enum AttackType { None, RootSlam, SporeAttack, RootsAttack, SpawnEmeny }
     private AttackType currentAttack = AttackType.None;
 
     private void Start()
     {
         rootSlam = GetComponent<RootSlam>();
         sporeAttack = GetComponent<SporeAttack>();
+        rootsAttack = GetComponent<RootsFromGround>(); // Reference the RootsFromGround component
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -47,31 +51,43 @@ public class AttackManager : MonoBehaviour
             case AttackType.SporeAttack:
                 TriggerSporeAttack(playerPosition);
                 break;
+            case AttackType.RootsAttack:
+                TriggerRootsAttack(playerPosition);
+                break;
             default:
                 // No attack to perform
                 break;
         }
+        //Debug.Log(nextAttack);
     }
 
     private AttackType DetermineNextAttack(float playerDistance)
     {
         // Prioritize Root Slam if the player is within range
-        if (playerDistance <= bossStats.rootSlamAttackRange && IsRootSlamOffCooldown())
+        if (playerDistance <= bossStats.rootSlamAttackRange)
         {
             return AttackType.RootSlam;
         }
 
-     
+        // Use Spore Attack if available
         if (IsSporeAttackOffCooldown())
-        {
+        { 
             return AttackType.SporeAttack;
         }
-
+       
+        // Use Roots Attack if available
+        if (IsRootsAttackOffCooldown())
+        {
+            return AttackType.RootsAttack;
+        }
 
         return AttackType.None;
+
+
     }
 
     //========== Root Slam ==========
+
     private bool IsRootSlamOffCooldown()
     {
         return Time.time - rootSlamLastAttackTime >= bossStats.rootSlamCooldown;
@@ -85,11 +101,11 @@ public class AttackManager : MonoBehaviour
         rootSlamLastAttackTime = Time.time; // Update last attack time
         rootSlam.TriggerSlam(playerPosition);
 
-        // Use a coroutine to manage attack completion
         StartCoroutine(ResetAttackStateAfterDelay(bossStats.rootSlamDuration));
     }
 
     //========== Spore Attack ==========
+
     private bool IsSporeAttackOffCooldown()
     {
         return Time.time - sporeAttackLastAttackTime >= bossStats.sporeAttackCooldown;
@@ -107,7 +123,29 @@ public class AttackManager : MonoBehaviour
         StartCoroutine(ResetAttackStateAfterDelay(bossStats.sporeAttackDuration));
     }
 
+    //========== Roots Attack ==========
+
+    private bool IsRootsAttackOffCooldown()
+    {
+        return Time.time - rootsAttackLastAttackTime >= bossStats.rootsFromGroundCooldown;
+    }
+
+    private void TriggerRootsAttack(Vector3 playerPosition)
+    {
+        attackInProgress = true; // Mark attack as in progress
+        currentAttack = AttackType.RootsAttack;
+
+        rootsAttackLastAttackTime = Time.time; // Update last attack time
+
+        // Pass the player's position at the start of the attack
+        rootsAttack.TriggerRoots(playerPosition);
+
+        // Use a coroutine to manage attack completion
+        StartCoroutine(ResetAttackStateAfterDelay(bossStats.rootsAttackDuration));
+    }
+
     //========== Reset Attack State ==========
+
     private IEnumerator ResetAttackStateAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -115,4 +153,6 @@ public class AttackManager : MonoBehaviour
         attackInProgress = false;        // Allow new attacks
         currentAttack = AttackType.None; // Reset current attack
     }
+
+   
 }

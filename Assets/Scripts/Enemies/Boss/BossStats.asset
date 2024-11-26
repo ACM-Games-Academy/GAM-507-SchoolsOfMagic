@@ -19,12 +19,13 @@ MonoBehaviour:
   rootSlamAttackRange: 25
   rootSlamSplashDamageRange: 10
   rootSlamDuration: 3
-  rootsFromGroundDamage: 0
-  rootsFromGroundCooldown: 0
-  sporeAttackDamage: 0
-  sporeAttackCooldown: 0
-  sporeAttackSplashDamageSize: 0
-  sporeAttackProjectileSpeed: 0
-  sporeAttackDuration: 2
+  rootsFromGroundDamage: 10
+  rootsFromGroundCooldown: 5
+  rootsAttackDuration: 5
+  sporeAttackDamage: 10
+  sporeAttackCooldown: 10
+  sporeAttackDuration: 1
+  sporesPerBurst: 5
+  timeBetweenSpores: 0.4
   spawnEnemiesCooldown: 0
   spawnEnemiesRange: 0
