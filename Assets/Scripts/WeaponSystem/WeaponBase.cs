@@ -32,7 +32,7 @@ public class WeaponBase : MonoBehaviour
 
     private void OnEnable()
     {
-        
+
     }
 
     private void Start()
