@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class WeaponController : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private PlayerController controller;
     [SerializeField] private bool isReloading;
 
-    Animator handAnimations;
+    [SerializeField] Animator handAnimator;
+    [SerializeField] private bool canSwitchGun;
 
     private int loadedAmmo;
     private int magSize;
@@ -54,6 +56,8 @@ public class WeaponController : MonoBehaviour
 
         //we currently don't have the reload keys added yet
         playerInput.reloadPressed += OnReloadPressed;
+
+        canSwitchGun = false;   
     }
 
     private void InitializeWeaponForClass(string playerClass)
@@ -82,26 +86,20 @@ public class WeaponController : MonoBehaviour
             return;
         }
 
-        if (currentWeapon != null)
-        {
-            previousWeapon = currentWeapon;
-            currentWeapon.gameObject.SetActive(false);  // Disable the previously active weapon
-            weaponGameobject[weaponIndex].SetActive(true);
-            currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
-        }
-        else
+        if (currentWeapon == null) //no previous weapon so it just needs to be set Active
         {
             // Enable the new weapon   
             weaponGameobject[weaponIndex].SetActive(true);
             currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
-            previousWeapon = currentWeapon;
 
             magSize = currentWeapon.WeaponStats.MagazineCapacity;
-            loadedAmmo = currentWeapon.CurrentAmmo;
+            loadedAmmo = currentWeapon.CurrentAmmo;                    
+        }
+        else  //was a previous weapon so weapon will need to swithc in time with the animations
+        {
+            currentWeapon.SetActiveShooting(false);         
 
-            //when there is no animation it won't enable the weapons model
-            //so it needs to be ran here
-            SwitchWeaponModels();
+            StartCoroutine(SwitchWeaponModels(currentWeapon, weaponGameobject[weaponIndex].GetComponent<WeaponBase>()));            
         }    
     }
 
@@ -190,16 +188,33 @@ public class WeaponController : MonoBehaviour
         isReloading = false;
     }
 
-    public void SwitchWeaponModels()
+    public IEnumerator SwitchWeaponModels(WeaponBase currentWeapon, WeaponBase nextWeapon)
     {
-        previousWeapon.GetGunModel().SetActive(false);
-        currentWeapon.GetGunModel().SetActive(true);
+        AnimatorStateInfo stateInfo = handAnimator.GetCurrentAnimatorStateInfo(0);
+
+        yield return new WaitUntil(() => canSwitchGun);
+
+        currentWeapon.gameObject.SetActive(false);
+        currentWeapon = nextWeapon;
+        currentWeapon.gameObject.SetActive(true);
     }
 
     private void Update()
     {
         //dirty fix to update current ammo
         loadedAmmo = currentWeapon.CurrentAmmo;
+
+        AnimatorStateInfo stateInfo = handAnimator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.fullPathHash == Animator.StringToHash("a_H_pulls-out-gun"))
+        {
+            canSwitchGun = true;
+        }
+
+        else
+        {
+            canSwitchGun = false;
+            Debug.Log("current anim state: " + stateInfo.fullPathHash + "   Desired hash: " + Animator.StringToHash("a_H_pulls-out-gun"));
+        }
     }
 
     private void OnDisable()

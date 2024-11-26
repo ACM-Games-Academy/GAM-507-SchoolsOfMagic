@@ -302,6 +302,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1187420998 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8211847789825818995, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+  m_PrefabInstance: {fileID: 1907517463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1907517463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313,6 +318,18 @@ PrefabInstance:
     - target: {fileID: 607852696033028994, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551770990651040292, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: magicChangeCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065735010422097065, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: handAnimator
+      value: 
+      objectReference: {fileID: 1187420998}
+    - target: {fileID: 7419718919479698130, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8754184609010367472, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
       propertyPath: m_LocalPosition.x

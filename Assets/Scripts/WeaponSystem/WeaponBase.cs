@@ -9,15 +9,19 @@ public class WeaponBase : MonoBehaviour
 
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private ParticleSystem bulletFireEffect;
+
     private int currentAmmo;
     public int CurrentAmmo { get { return currentAmmo; } }
+
     private float nextFireTime;
+
     [SerializeField] private WeaponStats weaponStats;
     public WeaponStats WeaponStats
     { get { return weaponStats; } }
      
     private bool isShooting;
     private bool isReloading = false;
+    private bool canShoot;
 
     private float originalSpeed;
     [SerializeField] private float playerSpeed = 5f;
@@ -32,7 +36,9 @@ public class WeaponBase : MonoBehaviour
 
     private void OnEnable()
     {
+        canShoot = true;
 
+        weaponAnimator.gameObject.SetActive(true);
     }
 
     private void Start()
@@ -50,12 +56,13 @@ public class WeaponBase : MonoBehaviour
     {
         if (Time.time < nextFireTime || isReloading) return;
 
-        if (bulletFireEffect != null && currentAmmo > 0)
+        if (bulletFireEffect != null && currentAmmo > 0 && canShoot)
         {
             bulletFireEffect.Play();
             gunShoot.Post(this.gameObject);
 
             ShootRay();
+
             weaponAnimator.AnimateGunShot();
 
             currentAmmo--;
@@ -145,6 +152,11 @@ public class WeaponBase : MonoBehaviour
         }
     }
 
+    public void SetActiveShooting(bool active)
+    {
+        canShoot = active;
+    }
+
     public GameObject GetGunModel()
     {
         return weaponAnimator.gameObject;
@@ -152,6 +164,7 @@ public class WeaponBase : MonoBehaviour
 
     private void OnDisable()
     {
+        weaponAnimator.gameObject.SetActive(false);
         StopAllCoroutines();
     }
 }
