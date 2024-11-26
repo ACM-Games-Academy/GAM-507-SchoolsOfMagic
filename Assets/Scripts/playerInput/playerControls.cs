@@ -312,7 +312,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b71f65c0-ca45-41a5-9532-0d0eff28e700"",
-                    ""path"": ""<Keyboard>/1"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -334,7 +334,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""04312440-bfdc-4031-8ce4-1a0c0ee35a0f"",
-                    ""path"": ""<Keyboard>/2"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -378,7 +378,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""67cc28e4-a67b-493c-a9fb-7fdd4035acae"",
-                    ""path"": ""<Keyboard>/3"",
+                    ""path"": ""<Keyboard>/f10"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -400,7 +400,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b737082b-c744-4a66-ab88-63ff33b89609"",
-                    ""path"": ""<Keyboard>/4"",
+                    ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -422,7 +422,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8affdb65-a16b-44fa-9e39-7d1ce959cc52"",
-                    ""path"": ""<Keyboard>/5"",
+                    ""path"": ""<Pen>/barrel3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -532,7 +532,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f805934e-1b1c-46fe-b679-e5fdfd08242b"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
