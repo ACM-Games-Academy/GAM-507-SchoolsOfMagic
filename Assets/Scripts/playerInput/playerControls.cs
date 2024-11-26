@@ -109,15 +109,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""arcaneMagic"",
-                    ""type"": ""Button"",
-                    ""id"": ""eb474350-3ec0-4b9d-97f4-531dde96d4bd"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""movementAbility"",
                     ""type"": ""Button"",
                     ""id"": ""8adb816c-abbf-4ddb-b080-1aaec2a2f74a"",
@@ -443,28 +434,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0b8a05ca-2366-4a05-b467-1835bce547a9"",
-                    ""path"": ""<Keyboard>/6"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""arcaneMagic"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1aee251d-487f-43cc-97fa-cb25ecd95491"",
-                    ""path"": ""<Gamepad>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""arcaneMagic"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""21eb481b-fd17-42fd-b5a0-9b84d6b240d3"",
                     ""path"": ""<Keyboard>/ctrl"",
                     ""interactions"": """",
@@ -567,7 +536,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_natureMagic = m_Player.FindAction("natureMagic", throwIfNotFound: true);
         m_Player_bloodMagic = m_Player.FindAction("bloodMagic", throwIfNotFound: true);
         m_Player_metalMagic = m_Player.FindAction("metalMagic", throwIfNotFound: true);
-        m_Player_arcaneMagic = m_Player.FindAction("arcaneMagic", throwIfNotFound: true);
         m_Player_movementAbility = m_Player.FindAction("movementAbility", throwIfNotFound: true);
         m_Player_Running = m_Player.FindAction("Running", throwIfNotFound: true);
         m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
@@ -642,7 +610,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_natureMagic;
     private readonly InputAction m_Player_bloodMagic;
     private readonly InputAction m_Player_metalMagic;
-    private readonly InputAction m_Player_arcaneMagic;
     private readonly InputAction m_Player_movementAbility;
     private readonly InputAction m_Player_Running;
     private readonly InputAction m_Player_Reload;
@@ -660,7 +627,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @natureMagic => m_Wrapper.m_Player_natureMagic;
         public InputAction @bloodMagic => m_Wrapper.m_Player_bloodMagic;
         public InputAction @metalMagic => m_Wrapper.m_Player_metalMagic;
-        public InputAction @arcaneMagic => m_Wrapper.m_Player_arcaneMagic;
         public InputAction @movementAbility => m_Wrapper.m_Player_movementAbility;
         public InputAction @Running => m_Wrapper.m_Player_Running;
         public InputAction @Reload => m_Wrapper.m_Player_Reload;
@@ -701,9 +667,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @metalMagic.started += instance.OnMetalMagic;
             @metalMagic.performed += instance.OnMetalMagic;
             @metalMagic.canceled += instance.OnMetalMagic;
-            @arcaneMagic.started += instance.OnArcaneMagic;
-            @arcaneMagic.performed += instance.OnArcaneMagic;
-            @arcaneMagic.canceled += instance.OnArcaneMagic;
             @movementAbility.started += instance.OnMovementAbility;
             @movementAbility.performed += instance.OnMovementAbility;
             @movementAbility.canceled += instance.OnMovementAbility;
@@ -747,9 +710,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @metalMagic.started -= instance.OnMetalMagic;
             @metalMagic.performed -= instance.OnMetalMagic;
             @metalMagic.canceled -= instance.OnMetalMagic;
-            @arcaneMagic.started -= instance.OnArcaneMagic;
-            @arcaneMagic.performed -= instance.OnArcaneMagic;
-            @arcaneMagic.canceled -= instance.OnArcaneMagic;
             @movementAbility.started -= instance.OnMovementAbility;
             @movementAbility.performed -= instance.OnMovementAbility;
             @movementAbility.canceled -= instance.OnMovementAbility;
@@ -790,7 +750,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnNatureMagic(InputAction.CallbackContext context);
         void OnBloodMagic(InputAction.CallbackContext context);
         void OnMetalMagic(InputAction.CallbackContext context);
-        void OnArcaneMagic(InputAction.CallbackContext context);
         void OnMovementAbility(InputAction.CallbackContext context);
         void OnRunning(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
