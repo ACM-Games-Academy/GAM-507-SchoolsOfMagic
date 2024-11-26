@@ -10,7 +10,8 @@ public class Nature : MagicBase
     private MagicController magicController;
     private GameObject cactusPrefab;
     [SerializeField] float primaryCooldown = 5;
-    private bool cooldown;
+    [SerializeField] float currentPrimaryCooldown;
+    [SerializeField] private bool cooldown;
 
     playerInput playerInput;
     PlayerController controller;
@@ -25,6 +26,11 @@ public class Nature : MagicBase
 
         playerInput = transform.GetComponentInParent<playerInput>();
         controller = transform.GetComponentInParent<PlayerController>();
+    }
+
+    private void Update()
+    {
+        currentPrimaryCooldown -= Time.deltaTime;
     }
 
     // Called when Metal is equipped in MagicController object
@@ -54,11 +60,14 @@ public class Nature : MagicBase
     //this has been changed to use the current input system not the legacy version - Launcelot
     private void primaryFired(object sender, EventArgs e)
     {
-        if (!cooldown)
+        //if (!cooldown)
+        if (currentPrimaryCooldown < 0)
         {
             GameObject cactus = GameObject.Instantiate(cactusPrefab, transform.position, Quaternion.identity);
             cactus.GetComponent<CactusAbility>().controller = controller;
-            startCooldown(primaryCooldown);
+            currentPrimaryCooldown = primaryCooldown;
+            //cooldown = true;
+            //StartCoroutine(startCooldown(primaryCooldown));
         }
     }
 
