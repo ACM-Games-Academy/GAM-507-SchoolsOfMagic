@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0920649d4b023544811c2fb065ef935, type: 3}
+  m_Name: BossStats
+  m_EditorClassIdentifier: 
+  health: 50
+  isArmoured: 1
+  rootSlamDamage: 30
+  rootSlamCooldown: 3
+  rootSlamAttackRange: 25
+  rootSlamSplashDamageRange: 10
+  rootSlamDuration: 3
+  rootsFromGroundDamage: 0
+  rootsFromGroundCooldown: 0
+  sporeAttackDamage: 0
+  sporeAttackCooldown: 0
+  sporeAttackSplashDamageSize: 0
+  sporeAttackProjectileSpeed: 0
+  sporeAttackDuration: 2
+  spawnEnemiesCooldown: 0
+  spawnEnemiesRange: 0

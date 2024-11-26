@@ -14,10 +14,10 @@ public class playerInput : MonoBehaviour
     private InputAction natureMagic;
     private InputAction bloodMagic;
     private InputAction metalMagic;
-    private InputAction arcaneMagic;
     private InputAction abilityMovement;
     private InputAction playerRun;
     private InputAction playerReload;
+    private InputAction playerInteract;
 
     private Vector2 movementInput;
     private Vector2 cameraInput;
@@ -34,7 +34,6 @@ public class playerInput : MonoBehaviour
     public event EventHandler NatureMagic;
     public event EventHandler BloodMagic;
     public event EventHandler MetalMagic;
-    public event EventHandler ArcaneMagic;
 
     public event EventHandler movingAbility;
 
@@ -42,6 +41,7 @@ public class playerInput : MonoBehaviour
     public event EventHandler runReleased;
 
     public event EventHandler reloadPressed;
+    public event EventHandler interactPressed;
 
     public void Awake()
     {
@@ -56,10 +56,10 @@ public class playerInput : MonoBehaviour
         natureMagic = controls.Player.natureMagic;
         bloodMagic = controls.Player.bloodMagic;
         metalMagic = controls.Player.metalMagic;
-        arcaneMagic = controls.Player.arcaneMagic;
         abilityMovement = controls.Player.movementAbility;
         playerRun = controls.Player.Running;
         playerReload = controls.Player.Reload;
+        playerInteract = controls.Player.Interact;
 
 
         //Whenever the player presses either primary or secondary ability, this calls a function to happen
@@ -74,7 +74,6 @@ public class playerInput : MonoBehaviour
         natureMagic.performed += ChangeClassOne;
         bloodMagic.performed += ChangeClassTwo;
         metalMagic.performed += ChangeClassThree;
-        arcaneMagic.performed += ChangeClassFour;
 
         abilityMovement.started += AbilityMovement;
 
@@ -82,6 +81,7 @@ public class playerInput : MonoBehaviour
         playerRun.canceled += onRunReleased;
 
         playerReload.started += onReloadPressed;
+        playerInteract.started += onInteractPressed;
    
         //This enable the inputs to allow the player to perform the functions in the game
         playerMovement.Enable();
@@ -93,10 +93,10 @@ public class playerInput : MonoBehaviour
         natureMagic.Enable();
         bloodMagic.Enable();
         metalMagic.Enable();
-        arcaneMagic.Enable();
         abilityMovement.Enable();
         playerRun.Enable();
         playerReload.Enable();
+        playerInteract.Enable();
     }
 
     public Vector2 getCameraInput()
@@ -158,11 +158,6 @@ public class playerInput : MonoBehaviour
         onButton(EventArgs.Empty, MetalMagic);
     }
 
-    private void ChangeClassFour(InputAction.CallbackContext fourClass)
-    {
-        onButton(EventArgs.Empty, ArcaneMagic);
-    }
-
     private void AbilityMovement(InputAction.CallbackContext movement)
     {
         onButton(EventArgs.Empty, movingAbility);
@@ -181,6 +176,11 @@ public class playerInput : MonoBehaviour
     private void onReloadPressed(InputAction.CallbackContext reload)
     {
         onButton(EventArgs.Empty, reloadPressed);
+    }
+
+    private void onInteractPressed(InputAction.CallbackContext reload)
+    {
+        onButton(EventArgs.Empty, interactPressed);
     }
 
     private void onButton(EventArgs e, EventHandler button)
@@ -202,9 +202,9 @@ public class playerInput : MonoBehaviour
         natureMagic.Disable();
         bloodMagic.Disable();
         metalMagic.Disable();
-        arcaneMagic.Disable();
         abilityMovement.Disable();
         playerRun.Disable();
         playerReload.Disable();
+        playerInteract.Disable();
     }
 }

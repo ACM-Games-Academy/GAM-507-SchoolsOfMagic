@@ -39,7 +39,7 @@ public class playerInputAudio : MonoBehaviour
         speed = (transform.position - lastPos).magnitude;
         if (speed > 0f && timer <= 0 && controller.isGrounded)
         {
-            Debug.Log("FOOTSTEP LOL");
+       
             footsteps.Post(this.gameObject);
             timer = 0.31415926535f;
         }
@@ -52,7 +52,6 @@ public class playerInputAudio : MonoBehaviour
         input.NatureMagic += natureClass;
         input.MetalMagic += metalClass;
         input.BloodMagic += bloodClass;
-        input.ArcaneMagic += arcaneClass;
     }
 
     private void metalClass(object sender, EventArgs e)
@@ -73,17 +72,10 @@ public class playerInputAudio : MonoBehaviour
         
     }
 
-    private void arcaneClass(object sender, EventArgs e)
-    {
-        arcaneState.SetValue();
-        
-    }
-
     private void OnDisable()
     {
         input.NatureMagic -= natureClass;
         input.MetalMagic -= metalClass;
         input.BloodMagic -= bloodClass;
-        input.ArcaneMagic -= arcaneClass;
     }
 }

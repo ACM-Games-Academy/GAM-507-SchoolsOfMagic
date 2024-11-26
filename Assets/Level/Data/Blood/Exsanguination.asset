@@ -17,5 +17,5 @@ MonoBehaviour:
   damage: 50
   healAmount: 10
   healRate: 2
-  speedBoost: 2
-  boostDuration: 10
+  speedBoost: 0.5
+  boostDuration: 5
