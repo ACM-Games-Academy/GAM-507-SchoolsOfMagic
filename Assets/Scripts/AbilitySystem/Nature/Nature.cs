@@ -58,7 +58,7 @@ public class Nature : MagicBase
         {
             GameObject cactus = GameObject.Instantiate(cactusPrefab, transform.position, Quaternion.identity);
             cactus.GetComponent<CactusAbility>().controller = controller;
-            startCooldown(primaryCooldown);
+            StartCoroutine(startCooldown(primaryCooldown));
         }
     }
 
