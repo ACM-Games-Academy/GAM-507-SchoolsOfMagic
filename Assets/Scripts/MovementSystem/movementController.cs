@@ -24,7 +24,6 @@ public class movementController : MonoBehaviour
     [SerializeField] private movementAbility natureMovement;
     [SerializeField] private movementAbility bloodMovement;
     [SerializeField] private movementAbility metalMovement;
-    [SerializeField] private movementAbility arcaneMovement;
     [Header("Stats")]
 
     [SerializeField] private movementStats stats;
@@ -46,7 +45,6 @@ public class movementController : MonoBehaviour
         inputModule.NatureMagic += switchNature;
         inputModule.BloodMagic += switchBlood;
         inputModule.MetalMagic += switchMetal;
-        inputModule.ArcaneMagic += switchArcane;
     }
 
     // Update is called once per frame
@@ -121,9 +119,6 @@ public class movementController : MonoBehaviour
             case "Metal":
                 currentMovement = metalMovement;
                 break;
-            case "Arcane":
-                currentMovement = arcaneMovement;
-                break;
             default:
                 Debug.LogWarning("Movement ability init: Invalid magic");
                 break;
@@ -165,10 +160,6 @@ public class movementController : MonoBehaviour
         currentMovement = metalMovement;
     }
 
-    private void switchArcane(object sender, EventArgs e)
-    {
-        currentMovement = arcaneMovement;
-    }
 
     private void OnDisable()
     {
@@ -177,7 +168,6 @@ public class movementController : MonoBehaviour
         inputModule.NatureMagic -= switchNature;
         inputModule.BloodMagic -= switchBlood;
         inputModule.MetalMagic -= switchMetal;
-        inputModule.ArcaneMagic -= switchArcane;
 
         inputModule.Disable();
     }

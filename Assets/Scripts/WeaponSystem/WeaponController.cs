@@ -27,7 +27,6 @@ public class WeaponController : MonoBehaviour
         playerInput.NatureMagic += OnClassOneSelected;
         playerInput.BloodMagic += OnClassTwoSelected;
         playerInput.MetalMagic += OnClassThreeSelected;
-        playerInput.ArcaneMagic += OnClassFourSelected;
 
         // Subscribe to fire events
         playerInput.firePressed += OnFirePressed;
@@ -45,7 +44,6 @@ public class WeaponController : MonoBehaviour
         playerInput.NatureMagic += OnClassOneSelected;
         playerInput.BloodMagic += OnClassTwoSelected;
         playerInput.MetalMagic += OnClassThreeSelected;
-        playerInput.ArcaneMagic += OnClassFourSelected;
 
         // Subscribe to fire events
         playerInput.firePressed += OnFirePressed;
@@ -67,9 +65,6 @@ public class WeaponController : MonoBehaviour
                 break;
             case "Metal":
                 ActivateWeapon(2);
-                break;
-            case "Arcane":
-                ActivateWeapon(3);
                 break;
             default:
                 Debug.LogWarning("Weapon Init: invalid magic " + playerClass);
@@ -105,11 +100,6 @@ public class WeaponController : MonoBehaviour
     private void OnClassThreeSelected(object sender, System.EventArgs e)
     {
         ActivateWeapon(2);
-    }
-
-    private void OnClassFourSelected(object sender, System.EventArgs e)
-    {
-        ActivateWeapon(3);
     }
 
     private void OnFirePressed(object sender, System.EventArgs e)
@@ -194,7 +184,6 @@ public class WeaponController : MonoBehaviour
         playerInput.NatureMagic -= OnClassOneSelected;
         playerInput.BloodMagic -= OnClassTwoSelected;
         playerInput.MetalMagic -= OnClassThreeSelected;
-        playerInput.ArcaneMagic -= OnClassFourSelected;
 
         // unSubscribe to fire events
         playerInput.firePressed -= OnFirePressed;
