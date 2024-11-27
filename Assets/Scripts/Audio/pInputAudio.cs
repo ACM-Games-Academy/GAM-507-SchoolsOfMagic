@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
-
 public class playerInputAudio : MonoBehaviour
 {
     playerInput input;
@@ -19,8 +18,9 @@ public class playerInputAudio : MonoBehaviour
     public CharacterController controller;
     private AK.Wwise.RTPC health = null;
     private float speed = 0f;
-    private float timer = 0f;
+    public float timer = 0f;
     private Vector3 lastPos = Vector3.zero;
+    private bool playerInput;
     
     private void Awake()
     {
@@ -36,15 +36,19 @@ public class playerInputAudio : MonoBehaviour
 
     private void FixedUpdate()
     {
-        speed = (transform.position - lastPos).magnitude;
-        if (speed > 0f && timer <= 0 && controller.isGrounded)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            playerInput = true;
+        }
+
+        if (timer <= 0 && controller.isGrounded && playerInput == true)
         {
        
             footsteps.Post(this.gameObject);
             timer = 0.31415926535f;
         }
+        playerInput = false;
 
-        lastPos = transform.position;
     }
 
     private void OnEnable()

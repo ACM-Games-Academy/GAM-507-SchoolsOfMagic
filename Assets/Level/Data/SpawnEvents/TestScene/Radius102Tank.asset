@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Radius102Tank
   m_EditorClassIdentifier: 
   swarmerAmount: 0
-  tankAmount: 2
+  tankAmount: 1
   flyerAmount: 0
   spawnRadius: 10
   Height: 0

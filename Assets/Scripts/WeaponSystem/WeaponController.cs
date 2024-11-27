@@ -1,25 +1,25 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class WeaponController : MonoBehaviour
 {
     [Header("Weapon prefab array \n in order of Nature, Blood, Metal, Arcane")]
     [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
     private WeaponBase currentWeapon;                    // The currently active weapon
+    [SerializeField] private WeaponBase previousWeapon;
     [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
     [SerializeField] private PlayerController controller;
     [SerializeField] private bool isReloading;
+
+    [SerializeField] HandAnimations handAnimator;
+    [SerializeField] private bool canSwitchGun;
 
     private int loadedAmmo;
     private int magSize;
     public int LoadedAmmo {  get { return loadedAmmo; } }
     public int MagSize { get { return magSize; } }
-
-    private void Awake()
-    {
-        
-    }
 
     private void Start()
     {
@@ -36,6 +36,7 @@ public class WeaponController : MonoBehaviour
 
         // Initialize the correct weapon based on player's class
         InitializeWeaponForClass(controller.GetCurrentClass());
+        handAnimator.GunAnimInit(currentWeapon);
     }
 
     private void OnEnable()
@@ -51,6 +52,8 @@ public class WeaponController : MonoBehaviour
 
         //we currently don't have the reload keys added yet
         playerInput.reloadPressed += OnReloadPressed;
+
+        canSwitchGun = false;   
     }
 
     private void InitializeWeaponForClass(string playerClass)
@@ -74,17 +77,28 @@ public class WeaponController : MonoBehaviour
 
     private void ActivateWeapon(int weaponIndex)
     {
-        if (currentWeapon != null)
+        if (currentWeapon == weaponGameobject[weaponIndex].GetComponent<WeaponBase>())
         {
-            currentWeapon.gameObject.SetActive(false);  // Disable the previously active weapon
+            return;
         }
 
-        // Enable the new weapon
-        weaponGameobject[weaponIndex].SetActive(true);
-        currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
+        if (currentWeapon == null) //no previous weapon so it just needs to be set Active
+        {
+            // Enable the new weapon   
+            weaponGameobject[weaponIndex].SetActive(true);
+            currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
 
-        magSize = currentWeapon.WeaponStats.MagazineCapacity;
-        loadedAmmo = currentWeapon.CurrentAmmo;
+            magSize = currentWeapon.WeaponStats.MagazineCapacity;
+            loadedAmmo = currentWeapon.CurrentAmmo;                    
+        }
+        else  //was a previous weapon so weapon will need to swithc in time with the animations
+        {
+            currentWeapon.SetActiveShooting(false);         
+
+            handAnimator.SetNextWeapon(weaponGameobject[weaponIndex].GetComponent<WeaponBase>());       //sick code lol 
+
+            currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
+        }    
     }
 
     private void OnClassOneSelected(object sender, EventArgs e)

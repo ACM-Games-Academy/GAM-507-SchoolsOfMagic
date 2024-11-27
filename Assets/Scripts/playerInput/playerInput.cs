@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,7 +46,11 @@ public class playerInput : MonoBehaviour
     public event EventHandler reloadPressed;
     public event EventHandler interactPressed;
 
+
     public event EventHandler gamePaused;
+
+    bool canChangeMagic;
+    [SerializeField] float magicChangeCooldown;
 
     public void Awake()
     {
@@ -104,6 +110,8 @@ public class playerInput : MonoBehaviour
         playerReload.Enable();
         playerInteract.Enable();
         pauseGame.Enable();
+
+        canChangeMagic = true;
     }
 
     public Vector2 getCameraInput()
@@ -152,17 +160,29 @@ public class playerInput : MonoBehaviour
 
     private void ChangeClassOne(InputAction.CallbackContext oneClass)
     {
-        onButton(EventArgs.Empty, NatureMagic);
+        if (canChangeMagic)
+        {
+            onButton(EventArgs.Empty, NatureMagic);
+            StartCoroutine(MagicChangeCooldown(magicChangeCooldown));
+        }       
     }
 
     private void ChangeClassTwo(InputAction.CallbackContext twoClass)
     {
-        onButton(EventArgs.Empty, BloodMagic);
+        if (canChangeMagic)
+        {
+            onButton(EventArgs.Empty, BloodMagic);
+            StartCoroutine(MagicChangeCooldown(magicChangeCooldown));
+        }    
     }
 
     private void ChangeClassThree(InputAction.CallbackContext threeClass)
     {
-        onButton(EventArgs.Empty, MetalMagic);
+        if (canChangeMagic)
+        {
+            onButton(EventArgs.Empty, MetalMagic);
+            StartCoroutine(MagicChangeCooldown(magicChangeCooldown));
+        }
     }
 
     private void AbilityMovement(InputAction.CallbackContext movement)
@@ -201,6 +221,13 @@ public class playerInput : MonoBehaviour
         {
             button.Invoke(this, e);
         }
+    }
+
+    private IEnumerator MagicChangeCooldown(float time)
+    {
+        canChangeMagic = false;
+        yield return new WaitForSeconds(time);
+        canChangeMagic = true;
     }
 
     public void Disable()

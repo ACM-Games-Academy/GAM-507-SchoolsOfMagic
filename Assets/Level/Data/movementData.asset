@@ -16,3 +16,6 @@ MonoBehaviour:
   groundedAcceleration: 10
   aerialAcceleration: 2.5
   jumpHeight: 5
+  forwardBurstSpeed: 20
+  blinkAmount: 2
+  bloodBoostSpeedBoostMultiplier: 0.3

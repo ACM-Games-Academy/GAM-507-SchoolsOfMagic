@@ -136,6 +136,11 @@ public class PlayerController : MonoBehaviour
                 { 
                     model.MaxHealth = model.MaxHealth + addedValue; 
                 }
+
+                if (model.Health <= 0)
+                {
+                    onPlayerDeath(EventArgs.Empty);
+                }
                 break;
 
             case ValueType.Iron:
