@@ -87,15 +87,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "arcaneMagic",
-                    "type": "Button",
-                    "id": "eb474350-3ec0-4b9d-97f4-531dde96d4bd",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "movementAbility",
                     "type": "Button",
                     "id": "8adb816c-abbf-4ddb-b080-1aaec2a2f74a",
@@ -356,7 +347,7 @@
                 {
                     "name": "",
                     "id": "67cc28e4-a67b-493c-a9fb-7fdd4035acae",
-                    "path": "<Keyboard>/f10",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -400,7 +391,7 @@
                 {
                     "name": "",
                     "id": "8affdb65-a16b-44fa-9e39-7d1ce959cc52",
-                    "path": "<Pen>/barrel3",
+                    "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -416,28 +407,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "metalMagic",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0b8a05ca-2366-4a05-b467-1835bce547a9",
-                    "path": "<Keyboard>/6",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "arcaneMagic",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1aee251d-487f-43cc-97fa-cb25ecd95491",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "arcaneMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
