@@ -5239,6 +5239,7 @@ MonoBehaviour:
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b1c99a1dc404a2243bd73b819cef334b, type: 2}
   controller: {fileID: 6565546591105466195}
+  timer: 0
 --- !u!114 &7351525599454663329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5946,6 +5947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryCooldown: 5
+  currentPrimaryCooldown: 0
+  cooldown: 0
 --- !u!114 &8419980935672080594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11602,6 +11605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 4791361591801510143}
+  reduceY: 0.6
+  reduceZ: 0.6
   controller: {fileID: 6565546591105466195}
   cameraComponent: {fileID: 5946880323400845239}
   inputModule: {fileID: 6551770990651040292}
