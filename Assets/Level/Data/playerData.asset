@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   startingHealth: 180
-  maxBlood: 10
-  startingBlood: 10
+  maxBlood: 50
+  startingBlood: 20
+  maxIron: 500
+  startingIron: 498.9
   startingClass: Nature
   maxStamina: 10
   startingStamina: 10

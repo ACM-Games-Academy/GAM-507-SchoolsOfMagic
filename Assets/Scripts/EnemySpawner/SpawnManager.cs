@@ -57,7 +57,7 @@ public class SpawnManager : MonoBehaviour
         float x = UnityEngine.Random.Range(-radius, radius);
 
         //equaiton of circle rearanged to find y
-        float y = MathF.Sqrt(MathF.Pow(radius, 2) - MathF.Pow(x, 2));
+        float y = MathF.Sqrt(MathF.Pow(radius, 1) - MathF.Pow(x, 1));
 
         return new Vector3(x, 0, y);
     }
