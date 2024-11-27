@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9D330F26-76AE-9363-47B7-D80500722C3E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{590A8740-4D85-6F4D-8910-865F66EEC1E3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -106,7 +106,7 @@
 				</File>
 				<File Id="312105102" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalMagneticHum.wav</ShortName>
-					<CachePath>SFX/MetalMagneticHum_85E55588.wem</CachePath>
+					<CachePath>SFX/MetalMagneticHum_F271BBD1.wem</CachePath>
 				</File>
 				<File Id="320129865" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalSwoosh.wav</ShortName>
@@ -270,7 +270,7 @@
 				</File>
 				<File Id="920056555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalShards.wav</ShortName>
-					<CachePath>SFX/MetalShards_3E828F20.wem</CachePath>
+					<CachePath>SFX/MetalShards_D9EF6AA7.wem</CachePath>
 				</File>
 				<File Id="931528556" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tank damage 1.wav</ShortName>
@@ -369,7 +369,7 @@
 						<MediaRef Id="1047636975"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3370461538" Name="Play_Metal_MagneticHum" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3370461538" Name="Play_Metal_MagneticHum" DurationType="OneShot" DurationMin="2" DurationMax="3.4822023">
 					<MediaRefs>
 						<MediaRef Id="312105102"/>
 					</MediaRefs>
@@ -379,12 +379,12 @@
 						<MediaRef Id="118111049"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1582782641" Name="Play_Metal_Shards" DurationType="OneShot" DurationMin="2.2186036" DurationMax="2.2186036">
+				<Event Id="1582782641" Name="Play_Metal_Shards" DurationType="OneShot" DurationMin="0.89006007" DurationMax="1.1576036">
 					<MediaRefs>
 						<MediaRef Id="920056555"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2233504167" Name="Play_Metal_Swoosh" DurationType="OneShot" DurationMin="1.5910878" DurationMax="1.5910878">
+				<Event Id="2233504167" Name="Play_Metal_Swoosh" DurationType="OneShot" DurationMin="3.20061" DurationMax="3.20061">
 					<MediaRefs>
 						<MediaRef Id="320129865"/>
 					</MediaRefs>
@@ -545,5 +545,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F1C9ACD7-253A-EC0C-A2C2-1083065C6B9A}</FileHash>
+	<FileHash>{A955A8CE-F8AA-E132-B12A-3485D95A6A41}</FileHash>
 </SoundBanksInfo>
