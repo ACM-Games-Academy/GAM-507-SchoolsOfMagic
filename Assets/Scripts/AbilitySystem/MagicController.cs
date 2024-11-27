@@ -5,10 +5,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
-public enum MagicType { None, Blood, Metal, Nature, Arcane }
+public enum MagicType { None, Blood, Metal, Nature }
 
 [System.Serializable]
 public struct MagicPrefab

@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
         input.NatureMagic += natureClass;
         input.MetalMagic += metalClass;
         input.BloodMagic += bloodClass;
-        input.ArcaneMagic += arcaneClass;
     }
 
     void OnDisable()
@@ -58,7 +57,6 @@ public class PlayerController : MonoBehaviour
         input.NatureMagic -= natureClass;
         input.MetalMagic -= metalClass;
         input.BloodMagic -= bloodClass;
-        input.ArcaneMagic -= arcaneClass;
 
         input.Disable();
     }
@@ -201,12 +199,6 @@ public class PlayerController : MonoBehaviour
     {
         model.CurrentClass = "Blood";
     }
-
-    private void arcaneClass(object sender, EventArgs e)
-    {
-        model.CurrentClass = "Arcane";
-    }
-
 
 
     public enum buffType { Health, Dmg, Blood, Iron };
