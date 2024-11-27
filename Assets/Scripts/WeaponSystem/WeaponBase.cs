@@ -21,7 +21,7 @@ public class WeaponBase : MonoBehaviour
      
     private bool isShooting;
     private bool isReloading = false;
-    private bool canShoot;
+    public bool canShoot;
 
     private float originalSpeed;
     [SerializeField] private float playerSpeed = 5f;
