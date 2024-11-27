@@ -7735,6 +7735,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1116739627724698966, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: footsteps.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f5416ffe5d54da54fb2253ed6db7e97f, type: 2}
+    - target: {fileID: 1116739627724698966, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: bloodState.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d19b3671db7fbdf448499915be4545a1, type: 2}
+    - target: {fileID: 1116739627724698966, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: metalState.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 2469e2d3995823643ac822c2168f48cd, type: 2}
+    - target: {fileID: 1116739627724698966, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: natureState.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4616ad0c88f1a5b45b91f6068be4fb84, type: 2}
+    - target: {fileID: 7351525599454663329, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4616ad0c88f1a5b45b91f6068be4fb84, type: 2}
+    - target: {fileID: 8191719128091294513, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8754184609010367472, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
       propertyPath: m_LocalScale.x
       value: 8.098328
