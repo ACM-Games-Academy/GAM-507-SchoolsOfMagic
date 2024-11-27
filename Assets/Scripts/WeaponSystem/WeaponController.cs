@@ -13,18 +13,13 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private PlayerController controller;
     [SerializeField] private bool isReloading;
 
-    [SerializeField] Animator handAnimator;
+    [SerializeField] HandAnimations handAnimator;
     [SerializeField] private bool canSwitchGun;
 
     private int loadedAmmo;
     private int magSize;
     public int LoadedAmmo {  get { return loadedAmmo; } }
     public int MagSize { get { return magSize; } }
-
-    private void Awake()
-    {
-        
-    }
 
     private void Start()
     {
@@ -41,6 +36,7 @@ public class WeaponController : MonoBehaviour
 
         // Initialize the correct weapon based on player's class
         InitializeWeaponForClass(controller.GetCurrentClass());
+        handAnimator.GunAnimInit(currentWeapon);
     }
 
     private void OnEnable()
@@ -99,7 +95,9 @@ public class WeaponController : MonoBehaviour
         {
             currentWeapon.SetActiveShooting(false);         
 
-            StartCoroutine(SwitchWeaponModels(currentWeapon, weaponGameobject[weaponIndex].GetComponent<WeaponBase>()));            
+            handAnimator.SetNextWeapon(weaponGameobject[weaponIndex].GetComponent<WeaponBase>());       //sick code lol 
+
+            currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
         }    
     }
 
@@ -188,33 +186,10 @@ public class WeaponController : MonoBehaviour
         isReloading = false;
     }
 
-    public IEnumerator SwitchWeaponModels(WeaponBase currentWeapon, WeaponBase nextWeapon)
-    {
-        AnimatorStateInfo stateInfo = handAnimator.GetCurrentAnimatorStateInfo(0);
-
-        yield return new WaitUntil(() => canSwitchGun);
-
-        currentWeapon.gameObject.SetActive(false);
-        currentWeapon = nextWeapon;
-        currentWeapon.gameObject.SetActive(true);
-    }
-
     private void Update()
     {
         //dirty fix to update current ammo
         loadedAmmo = currentWeapon.CurrentAmmo;
-
-        AnimatorStateInfo stateInfo = handAnimator.GetCurrentAnimatorStateInfo(0);
-        if (stateInfo.fullPathHash == Animator.StringToHash("a_H_pulls-out-gun"))
-        {
-            canSwitchGun = true;
-        }
-
-        else
-        {
-            canSwitchGun = false;
-            Debug.Log("current anim state: " + stateInfo.fullPathHash + "   Desired hash: " + Animator.StringToHash("a_H_pulls-out-gun"));
-        }
     }
 
     private void OnDisable()

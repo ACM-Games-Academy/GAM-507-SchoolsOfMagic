@@ -38,7 +38,7 @@ public class WeaponBase : MonoBehaviour
     {
         canShoot = true;
 
-        weaponAnimator.gameObject.SetActive(true);
+        GetGunModel().SetActive(true);
     }
 
     private void Start()
@@ -164,7 +164,7 @@ public class WeaponBase : MonoBehaviour
 
     private void OnDisable()
     {
-        weaponAnimator.gameObject.SetActive(false);
+        GetGunModel().SetActive(false);
         StopAllCoroutines();
     }
 }

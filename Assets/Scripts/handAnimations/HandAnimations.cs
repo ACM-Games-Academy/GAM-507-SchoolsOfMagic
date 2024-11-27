@@ -9,6 +9,8 @@ public class HandAnimations : MonoBehaviour
     Animator handAnim;
     playerInput input;
 
+    WeaponBase currentWeapon;
+    WeaponBase previousWeapon;
 
     private void Start()
     {
@@ -24,6 +26,12 @@ public class HandAnimations : MonoBehaviour
         input.secondaryAbil += AbilityFire;
     }
 
+    public void GunAnimInit(WeaponBase startingWeapon)
+    {
+        currentWeapon = startingWeapon;
+        previousWeapon = startingWeapon;
+    }
+
     private void ClassChange(object sender, EventArgs e)
     {
         handAnim.SetTrigger("ChangeGun");
@@ -32,5 +40,17 @@ public class HandAnimations : MonoBehaviour
     private void AbilityFire(object sender, EventArgs e)
     {
         handAnim.SetTrigger("AbilityFire");
+    }
+
+    public void SwitchGuns()
+    {
+        previousWeapon.gameObject.SetActive(false);
+        currentWeapon.gameObject.SetActive(true);
+    }
+
+    public void SetNextWeapon(WeaponBase nextWeapon)
+    {
+        previousWeapon = currentWeapon;
+        currentWeapon = nextWeapon;
     }
 }
