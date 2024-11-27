@@ -53,4 +53,16 @@ public class HandAnimations : MonoBehaviour
         previousWeapon = currentWeapon;
         currentWeapon = nextWeapon;
     }
+
+    public void SetInactiveGun()
+    {
+        currentWeapon.GetGunModel().SetActive(false);
+        currentWeapon.SetActiveShooting(false);
+    }
+
+    public void SetActiveGun()
+    {
+        currentWeapon.GetGunModel().SetActive(true);
+        currentWeapon.SetActiveShooting(true);
+    }
 }
