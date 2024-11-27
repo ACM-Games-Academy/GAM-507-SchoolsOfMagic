@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2ab669264a20c4b8ed922480dd1776, type: 3}
   m_Name: Exsanguination
   m_EditorClassIdentifier: 
-  cooldown: 5
-  radiusRange: 10
-  damage: 50
+  cooldown: 8
+  radiusRange: 15
+  damage: 90
   healAmount: 10
   healRate: 2
-  speedBoost: 0.5
+  speedBoost: 0.3
   boostDuration: 5
