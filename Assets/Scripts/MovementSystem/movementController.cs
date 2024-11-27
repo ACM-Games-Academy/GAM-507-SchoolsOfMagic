@@ -15,6 +15,10 @@ public class movementController : MonoBehaviour
 
     private Vector3 cameraDirection;
 
+    //Jake Ash - Added unique value for reducing y & z sensitivity
+    [SerializeField] float reduceY;
+    [SerializeField] float reduceZ;
+
     public CharacterController controller;
 
     [SerializeField] private Camera cameraComponent;
@@ -65,8 +69,8 @@ public class movementController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        cameraDirection.y += inputModule.getCameraInput().x;
-        cameraDirection.x = Mathf.Clamp(cameraDirection.x - inputModule.getCameraInput().y, -90, 90);
+        cameraDirection.y += inputModule.getCameraInput().x / reduceY;
+        cameraDirection.x = Mathf.Clamp(cameraDirection.x - (inputModule.getCameraInput().y / reduceZ), -90, 90);
 
         transform.rotation = Quaternion.Euler(0, cameraDirection.y, 0);
         cameraComponent.transform.rotation = Quaternion.Euler(cameraDirection.x, transform.eulerAngles.y, 0);
