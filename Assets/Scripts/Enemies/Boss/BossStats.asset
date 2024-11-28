@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0920649d4b023544811c2fb065ef935, type: 3}
   m_Name: BossStats
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
   isArmoured: 1
   rootSlamDamage: 30
   rootSlamCooldown: 3
@@ -24,7 +24,7 @@ MonoBehaviour:
   rootsAttackDuration: 5
   sporeAttackDamage: 10
   sporeAttackCooldown: 10
-  sporeAttackDuration: 1
+  sporeAttackDuration: 3
   sporesPerBurst: 5
   timeBetweenSpores: 0.4
   spawnEnemiesCooldown: 0

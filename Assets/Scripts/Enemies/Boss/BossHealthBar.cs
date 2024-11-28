@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class BossHealthBar : MonoBehaviour
@@ -11,11 +8,21 @@ public class BossHealthBar : MonoBehaviour
 
     private void Start()
     {
-        healthSlider.value = bossEnemy.Health;
-        healthSlider.maxValue = bossEnemy.Health;
-    
+        if (bossEnemy != null)
+        {
+            // Subscribe to the event
+            bossEnemy.OnHealthInitialized.AddListener(Initialize);
+        }
     }
-    public void Update()
+
+    public void Initialize()
+    {
+        // Initialize the health bar values
+        healthSlider.maxValue = bossEnemy.Health;
+        healthSlider.value = bossEnemy.Health;
+    }
+
+    private void Update()
     {
         healthSlider.value = bossEnemy.Health;
     }

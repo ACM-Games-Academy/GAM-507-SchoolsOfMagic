@@ -18,7 +18,7 @@ public class AttackManager : MonoBehaviour
 
     private float rootSlamLastAttackTime;
     private float sporeAttackLastAttackTime;
-    private float rootsAttackLastAttackTime; 
+    private float rootsAttackLastAttackTime;
 
     private enum AttackType { None, RootSlam, SporeAttack, RootsAttack, SpawnEmeny }
     private AttackType currentAttack = AttackType.None;
@@ -58,7 +58,7 @@ public class AttackManager : MonoBehaviour
                 // No attack to perform
                 break;
         }
-        //Debug.Log(nextAttack);
+        Debug.Log(nextAttack);
     }
 
     private AttackType DetermineNextAttack(float playerDistance)
@@ -71,10 +71,10 @@ public class AttackManager : MonoBehaviour
 
         // Use Spore Attack if available
         if (IsSporeAttackOffCooldown())
-        { 
+        {
             return AttackType.SporeAttack;
         }
-       
+
         // Use Roots Attack if available
         if (IsRootsAttackOffCooldown())
         {
@@ -113,6 +113,7 @@ public class AttackManager : MonoBehaviour
 
     private void TriggerSporeAttack(Vector3 playerPosition)
     {
+        GetComponentInChildren<Animator>().Play("Projectile Attack");
         attackInProgress = true; // Mark attack as in progress
         currentAttack = AttackType.SporeAttack;
 
@@ -132,6 +133,7 @@ public class AttackManager : MonoBehaviour
 
     private void TriggerRootsAttack(Vector3 playerPosition)
     {
+        GetComponentInChildren<Animator>().Play("Root Raise");
         attackInProgress = true; // Mark attack as in progress
         currentAttack = AttackType.RootsAttack;
 
@@ -154,5 +156,5 @@ public class AttackManager : MonoBehaviour
         currentAttack = AttackType.None; // Reset current attack
     }
 
-   
+
 }

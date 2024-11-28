@@ -9,6 +9,8 @@ public class RootsFromGround : MonoBehaviour
     [SerializeField] private ParticleSystem chargeEffectPrefab;     // Particle effect for wind-up
     [SerializeField] private int numberOfRoots = 3;                 // Total number of roots to spawn
     [SerializeField] private float timeBetweenRoots = 2f;           // Time interval between spawning roots
+    [SerializeField] private Vector3 rootRotation = Vector3.zero;   // Desired rotation for the roots
+    [SerializeField] private float heightOffset = 0f;               // Height offset for root spawn position
 
     private float lastAttackTime = -Mathf.Infinity;                 // Tracks the last time the ability was used
 
@@ -37,7 +39,7 @@ public class RootsFromGround : MonoBehaviour
         // Spawn roots at the captured position with delays
         for (int i = 0; i < numberOfRoots; i++)
         {
-            SpawnRoot(initialPlayerPosition); 
+            SpawnRoot(initialPlayerPosition, Quaternion.Euler(rootRotation));
 
             // Wait between spawning roots
             if (i < numberOfRoots - 1)
@@ -47,11 +49,13 @@ public class RootsFromGround : MonoBehaviour
         }
     }
 
-
-    private void SpawnRoot(Vector3 playerPosition)
+    private void SpawnRoot(Vector3 playerPosition, Quaternion rotation)
     {
-        // Spawn the root spike at the player's position
-        GameObject root = Instantiate(rootPrefab, playerPosition, Quaternion.identity);
+        // Apply the height offset to the spawn position
+        Vector3 spawnPosition = new Vector3(playerPosition.x, playerPosition.y + heightOffset, playerPosition.z);
+
+        // Spawn the root spike at the modified position with the specified rotation
+        GameObject root = Instantiate(rootPrefab, spawnPosition, rotation);
 
         // Attach a particle effect to the root
         if (chargeEffectPrefab != null)
