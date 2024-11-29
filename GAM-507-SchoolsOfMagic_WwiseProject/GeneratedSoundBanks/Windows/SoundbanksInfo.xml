@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{590A8740-4D85-6F4D-8910-865F66EEC1E3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FE3BECA4-68C1-936D-25AF-F9913A8F75CC}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -88,6 +88,10 @@
 					<ShortName>Tank walk 3.wav</ShortName>
 					<CachePath>SFX/Tank walk 3_818F3B66.wem</CachePath>
 				</File>
+				<File Id="155587235" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Death.wav</ShortName>
+					<CachePath>SFX/Boss Death_818F3B66.wem</CachePath>
+				</File>
 				<File Id="161432319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footstep1.wav</ShortName>
 					<CachePath>SFX/Footstep1_818F3B66.wem</CachePath>
@@ -128,6 +132,10 @@
 					<ShortName>Blood Wizard_Footsteps2 [KB].wav</ShortName>
 					<CachePath>SFX/Blood Wizard_Footsteps2 [KB]_7420D3BE.wem</CachePath>
 				</File>
+				<File Id="396989441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Root Shoot Attack 2.wav</ShortName>
+					<CachePath>SFX/Root Shoot Attack 2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="400000926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tank walk 4.wav</ShortName>
 					<CachePath>SFX/Tank walk 4_818F3B66.wem</CachePath>
@@ -167,6 +175,10 @@
 				<File Id="501951875" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Flap x4.wav</ShortName>
 					<CachePath>SFX/Enemies/Flap x4_FB09AD84.wem</CachePath>
+				</File>
+				<File Id="529100105" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tree Slam.wav</ShortName>
+					<CachePath>SFX/Tree Slam_818F3B66.wem</CachePath>
 				</File>
 				<File Id="545447485" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun Cock2.wav</ShortName>
@@ -220,6 +232,10 @@
 					<ShortName>Tank walk 2.wav</ShortName>
 					<CachePath>SFX/Tank walk 2_818F3B66.wem</CachePath>
 				</File>
+				<File Id="725972511" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Root Shoot Attack 3.wav</ShortName>
+					<CachePath>SFX/Root Shoot Attack 3_818F3B66.wem</CachePath>
+				</File>
 				<File Id="729945790" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Primary Ability2 [KB].wav</ShortName>
 					<CachePath>SFX/Blood Wizard_Primary Ability2 [KB]_D954E8DD.wem</CachePath>
@@ -227,6 +243,10 @@
 				<File Id="738174852" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Footsteps1 [KB].wav</ShortName>
 					<CachePath>SFX/Blood Wizard_Footsteps1 [KB]_72309AE6.wem</CachePath>
+				</File>
+				<File Id="765566039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Root Shoot Attack 1.wav</ShortName>
+					<CachePath>SFX/Root Shoot Attack 1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="794819962" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slice3.wav</ShortName>
@@ -247,6 +267,10 @@
 				<File Id="867227185" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Gun_Armour Hit5 [KB].wav</ShortName>
 					<CachePath>SFX/Blood Wizard_Gun_Armour Hit5 [KB]_230212E6.wem</CachePath>
+				</File>
+				<File Id="868714443" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Idle.wav</ShortName>
+					<CachePath>SFX/Boss Idle_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="868763616" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tank damage 4.wav</ShortName>
@@ -345,6 +369,16 @@
 						<MediaRef Id="729945790"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3695176782" Name="Play_Boss_Death" MaxAttenuation="100" DurationType="OneShot" DurationMin="5.25" DurationMax="5.25">
+					<MediaRefs>
+						<MediaRef Id="155587235"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2006500702" Name="Play_Boss_Idle" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="868714443"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1054381211" Name="Play_Flyer_Attack_Rand" DurationType="OneShot" DurationMin="0.88807255" DurationMax="1.051474">
 					<MediaRefs>
 						<MediaRef Id="897023637"/>
@@ -439,6 +473,13 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1030645097" Name="Play_SporeShot" DurationType="OneShot" DurationMin="1.2" DurationMax="1.35">
+					<MediaRefs>
+						<MediaRef Id="396989441"/>
+						<MediaRef Id="725972511"/>
+						<MediaRef Id="765566039"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="194405145" Name="Play_Tank_Attack" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.8701813" DurationMax="2.8701813">
 					<MediaRefs>
 						<MediaRef Id="84748072"/>
@@ -470,6 +511,11 @@
 				<Event Id="794644545" Name="Play_Title_Screen_Theme" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="249426065"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1827333942" Name="Play_Tree_Slam" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.7093878" DurationMax="2.7093878">
+					<MediaRefs>
+						<MediaRef Id="529100105"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4121109043" Name="Play_Wizard_OST_Switch" DurationType="Infinite">
@@ -531,6 +577,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2343322892" Name="Stop_Boss_Idle" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="146841814" Name="WizardStates">
@@ -545,5 +592,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8B9CAB06-A03A-4DFD-7769-693AFCF3C4B5}</FileHash>
+	<FileHash>{6285F887-FD5B-BF2F-3B90-C10984CAF6C4}</FileHash>
 </SoundBanksInfo>

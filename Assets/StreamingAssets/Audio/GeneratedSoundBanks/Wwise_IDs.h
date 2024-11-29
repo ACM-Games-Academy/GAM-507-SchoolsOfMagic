@@ -17,6 +17,8 @@ namespace AK
         static const AkUniqueID PLAY_BLOOD_GUN_BULLETS = 4087362955U;
         static const AkUniqueID PLAY_BLOOD_GUN_RELOAD = 3903496159U;
         static const AkUniqueID PLAY_BLOOD_PRIMARY_ABILITY = 16303742U;
+        static const AkUniqueID PLAY_BOSS_DEATH = 3695176782U;
+        static const AkUniqueID PLAY_BOSS_IDLE = 2006500702U;
         static const AkUniqueID PLAY_FLYER_ATTACK_RAND = 1054381211U;
         static const AkUniqueID PLAY_FLYER_FLAP_RAND = 3183334536U;
         static const AkUniqueID PLAY_FLYER_SPAWN_RAND = 1467661062U;
@@ -30,13 +32,16 @@ namespace AK
         static const AkUniqueID PLAY_NATURE_PASSIVE_HUM = 1540153786U;
         static const AkUniqueID PLAY_NATURE_SPIKE = 275810172U;
         static const AkUniqueID PLAY_SHOT_SWITCH = 4056601793U;
+        static const AkUniqueID PLAY_SPORESHOT = 1030645097U;
         static const AkUniqueID PLAY_TANK_ATTACK = 194405145U;
         static const AkUniqueID PLAY_TANK_DAMAGE_RAND = 3692906616U;
         static const AkUniqueID PLAY_TANK_FOOTSTEP_RAND = 1290140931U;
         static const AkUniqueID PLAY_TANK_SPAWN_RAND = 2496273332U;
         static const AkUniqueID PLAY_TITLE_SCREEN_THEME = 794644545U;
+        static const AkUniqueID PLAY_TREE_SLAM = 1827333942U;
         static const AkUniqueID PLAY_WIZARD_OST_SWITCH = 4121109043U;
         static const AkUniqueID PLAYFOOTSTEPS = 1088348632U;
+        static const AkUniqueID STOP_BOSS_IDLE = 2343322892U;
     } // namespace EVENTS
 
     namespace STATES
