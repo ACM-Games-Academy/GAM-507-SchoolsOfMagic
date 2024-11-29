@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 {
     //Events
     public event EventHandler playerDeath;
+    public event EventHandler healthChange;
 
     //runtime data and input 
     private playerModel model;
@@ -141,6 +142,7 @@ public class PlayerController : MonoBehaviour
                 {
                     onPlayerDeath(EventArgs.Empty);
                 }
+                
                 break;
 
             case ValueType.Iron:
@@ -185,6 +187,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void onHealthChange(EventArgs e)
+    {
+        healthChange.Invoke(this, e);
+    }
+    
     private void onPlayerDeath(EventArgs e)
     {
         playerDeath.Invoke(this, e);
