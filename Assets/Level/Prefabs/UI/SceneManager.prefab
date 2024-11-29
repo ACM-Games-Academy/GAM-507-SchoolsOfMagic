@@ -134,7 +134,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &2850982371015175666
 MonoBehaviour:
@@ -255,4 +255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossFade: {fileID: 0}
+  MenuIndex: 0
+  GameIndex: 0
   transTime: 1
