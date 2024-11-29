@@ -1724,7 +1724,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-27</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3066,72 +3066,6 @@
 						</Folder>
 						<Folder Name="Boss Enemy SFX" ID="{B339D6A1-812A-4329-979E-B06969AE8F8E}" ShortID="129590357">
 							<ChildrenList>
-								<Sound Name="Root Shoot Attack 1" ID="{5B632EF5-E7C7-4865-AEF7-D8CA380A64B9}" ShortID="69849006">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Root Shoot Attack 1" ID="{092ED662-D614-4D08-A17F-A445A3B25114}">
-											<Language>SFX</Language>
-											<AudioFile>Root Shoot Attack 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="765566039"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Root Shoot Attack 1" ID="{092ED662-D614-4D08-A17F-A445A3B25114}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Root Shoot Attack 2" ID="{26AF1159-E4E8-41FB-8798-302D84C2532D}" ShortID="538417156">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Root Shoot Attack 2" ID="{AFEB99E1-4561-4286-860F-735E2447E3AA}">
-											<Language>SFX</Language>
-											<AudioFile>Root Shoot Attack 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="396989441"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Root Shoot Attack 2" ID="{AFEB99E1-4561-4286-860F-735E2447E3AA}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Root Shoot Attack 3" ID="{B596ED72-6CA5-40FE-BA31-3E5610C3B57E}" ShortID="970738599">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Root Shoot Attack 3" ID="{26EC6673-AACB-4892-A7E2-77C6ADC7C278}">
-											<Language>SFX</Language>
-											<AudioFile>Root Shoot Attack 3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="725972511"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Root Shoot Attack 3" ID="{26EC6673-AACB-4892-A7E2-77C6ADC7C278}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Root Shoot Sound Queue" ID="{986C73BB-2AA6-4324-84BA-B32353349E73}" ShortID="675131825">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -3155,7 +3089,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Boss Death" ID="{E40B81A1-426E-481C-8D2B-2B987CCB0E64}" ShortID="325529232">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Spawning" ID="{E404F27C-B74A-4110-B75B-52C75A05ED0A}" WorkUnitID="{82800CCE-5252-4A9E-A067-8B1E2875E960}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
 										</Reference>
@@ -3177,7 +3117,14 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Boss Idle" ID="{79554500-2CA4-41A3-8DBD-F9B2432AC2C5}" ShortID="471167326">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Footsteps" ID="{08483B27-A031-4BD2-9609-6325F7A5D5F8}" WorkUnitID="{82800CCE-5252-4A9E-A067-8B1E2875E960}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
 										</Reference>
@@ -3199,7 +3146,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Tree Slam" ID="{51F9ECFD-BA43-4736-87BA-4E8744485146}" ShortID="121647084">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Footsteps" ID="{08483B27-A031-4BD2-9609-6325F7A5D5F8}" WorkUnitID="{82800CCE-5252-4A9E-A067-8B1E2875E960}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
 										</Reference>
@@ -3220,6 +3173,87 @@
 										<ActiveSource Name="Tree Slam" ID="{E1F66AD0-5000-40E3-A9F9-C952FA16D4F2}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="SporeShotRandom" ID="{54917659-EC9A-49ED-BC15-B7F65C3DF815}" ShortID="256591174">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Root Shoot Attack 1" ID="{5B632EF5-E7C7-4865-AEF7-D8CA380A64B9}" ShortID="69849006">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Root Shoot Attack 1" ID="{092ED662-D614-4D08-A17F-A445A3B25114}">
+													<Language>SFX</Language>
+													<AudioFile>Root Shoot Attack 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="765566039"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Root Shoot Attack 1" ID="{092ED662-D614-4D08-A17F-A445A3B25114}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Root Shoot Attack 2" ID="{26AF1159-E4E8-41FB-8798-302D84C2532D}" ShortID="538417156">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Root Shoot Attack 2" ID="{AFEB99E1-4561-4286-860F-735E2447E3AA}">
+													<Language>SFX</Language>
+													<AudioFile>Root Shoot Attack 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="396989441"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Root Shoot Attack 2" ID="{AFEB99E1-4561-4286-860F-735E2447E3AA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Root Shoot Attack 3" ID="{B596ED72-6CA5-40FE-BA31-3E5610C3B57E}" ShortID="970738599">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Root Shoot Attack 3" ID="{26EC6673-AACB-4892-A7E2-77C6ADC7C278}">
+													<Language>SFX</Language>
+													<AudioFile>Root Shoot Attack 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="725972511"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Root Shoot Attack 3" ID="{26EC6673-AACB-4892-A7E2-77C6ADC7C278}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

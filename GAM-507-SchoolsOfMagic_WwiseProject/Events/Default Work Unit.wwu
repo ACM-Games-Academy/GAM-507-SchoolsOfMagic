@@ -378,6 +378,68 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Boss Events" ID="{218CAABE-A543-4AB7-9BB0-0244F8F9D6F2}" ShortID="269119262">
+					<ChildrenList>
+						<Event Name="Play_Boss_Death" ID="{5CA1869F-1573-43D2-AB31-5A67E6FC4758}">
+							<ChildrenList>
+								<Action Name="" ID="{19C54865-65D9-470D-9C98-AF7288A0B520}" ShortID="187108440">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Death" ID="{E40B81A1-426E-481C-8D2B-2B987CCB0E64}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Boss_Idle" ID="{2805A6CD-7F89-4C2A-A466-C04481D1ECFD}">
+							<ChildrenList>
+								<Action Name="" ID="{9367AD57-8BB8-4909-9E38-67BEA4CB470C}" ShortID="755000159">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Idle" ID="{79554500-2CA4-41A3-8DBD-F9B2432AC2C5}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Boss_Idle" ID="{C839BF70-1FBD-47D9-823F-D8893D9C5EC1}">
+							<ChildrenList>
+								<Action Name="" ID="{C01887D5-C84E-4F0A-A0F6-1E8216028028}" ShortID="275803975">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Idle" ID="{79554500-2CA4-41A3-8DBD-F9B2432AC2C5}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SporeShot" ID="{5F0E92B7-D4E7-4A1E-8507-63284CAAC27B}">
+							<ChildrenList>
+								<Action Name="" ID="{E46DAF73-6780-44C7-BF31-4F1C08B1C24B}" ShortID="102998177">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SporeShotRandom" ID="{54917659-EC9A-49ED-BC15-B7F65C3DF815}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Tree_Slam" ID="{F6697A46-B726-44DC-BDCB-EC477BFAEA68}">
+							<ChildrenList>
+								<Action Name="" ID="{3489C5F0-0118-43A6-A30A-6821D654F43A}" ShortID="395717646">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tree Slam" ID="{51F9ECFD-BA43-4736-87BA-4E8744485146}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
