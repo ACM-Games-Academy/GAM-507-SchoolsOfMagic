@@ -64,7 +64,7 @@ public class PillarObjective : SpawnEventHandler
 
     private void ActivatePillar()
     {
-	completion = true;
+	    completion = true;
         hasActivated = true; // Prevent further activations
         bossEnemy.pillarsActive++;
         interactPrompt.text = " "; // Clear the text after activation
