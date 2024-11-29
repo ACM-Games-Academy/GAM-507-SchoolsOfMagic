@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pillar3
   m_EditorClassIdentifier: 
   swarmerAmount: 0
-  tankAmount: 0
-  flyerAmount: 0
-  spawnRadius: 0
+  tankAmount: 1
+  flyerAmount: 5
+  spawnRadius: 4
   Height: 0
