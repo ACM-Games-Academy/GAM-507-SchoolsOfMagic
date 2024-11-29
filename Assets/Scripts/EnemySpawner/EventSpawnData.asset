@@ -12,12 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bb0ad3994381243acfbb435063aa1e, type: 3}
   m_Name: EventSpawnData
   m_EditorClassIdentifier: 
-  swarmerAmount: 1
-  tankAmount: 1
-  flyerAmount: 1
-  swarmerPrefab: {fileID: 1927737463598596464, guid: b9ab558532a5aaf49becc20c8a5b084e, type: 3}
-  tankPrefab: {fileID: 4534737657892870711, guid: 824820ce169f16944a7b2f84ef2ce599, type: 3}
-  flyerPrefab: {fileID: 1845937927904129662, guid: 28ed056adb6ef5145b27898f7c012831, type: 3}
-  Particle: {fileID: 0}
+  swarmerAmount: 0
+  tankAmount: 2
+  flyerAmount: 2
   spawnRadius: 3
   Height: 5

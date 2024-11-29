@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PillarObjective : MonoBehaviour
+public class PillarObjective : SpawnEventHandler
 {
     private Transform player;
     [SerializeField] private TextMeshPro interactPrompt;
@@ -64,6 +64,7 @@ public class PillarObjective : MonoBehaviour
 
     private void ActivatePillar()
     {
+	completion = true;
         hasActivated = true; // Prevent further activations
         bossEnemy.pillarsActive++;
         interactPrompt.text = " "; // Clear the text after activation
