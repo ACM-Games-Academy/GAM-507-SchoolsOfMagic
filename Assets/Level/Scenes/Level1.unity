@@ -2580,7 +2580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2282530870210091751, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2314328518497482950, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
@@ -3340,7 +3340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7435466276488803665, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7528554970891592066, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -13392,11 +13392,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911140362532828108, guid: cb5d33b5ef7b8b24e8c395807e78e068, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7911140362532828108, guid: cb5d33b5ef7b8b24e8c395807e78e068, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7911140362532828108, guid: cb5d33b5ef7b8b24e8c395807e78e068, type: 3}
       propertyPath: m_LocalScale.x
