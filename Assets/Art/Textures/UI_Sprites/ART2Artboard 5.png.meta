@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -551,7 +551,7 @@ TextureImporter:
         width: 128
         height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -559,6 +559,27 @@ TextureImporter:
       bones: []
       spriteID: 4a86de1ee574946478e537a80902cc9a
       internalID: 165200209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ART2Artboard 5_21
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 79
+        width: 61
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d1de27f58df7d43ab34da175d4d834
+      internalID: 1614797367
       vertices: []
       indices: 
       edges: []
@@ -588,6 +609,7 @@ TextureImporter:
       ART2Artboard 5_19: 1302631699
       ART2Artboard 5_2: 920464217
       ART2Artboard 5_20: 165200209
+      ART2Artboard 5_21: 1614797367
       ART2Artboard 5_3: 1087708389
       ART2Artboard 5_4: 1883867815
       ART2Artboard 5_5: -1922428405
