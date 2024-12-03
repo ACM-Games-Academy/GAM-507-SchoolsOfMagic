@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pillar2
   m_EditorClassIdentifier: 
   swarmerAmount: 0
-  tankAmount: 5
+  tankAmount: 1
   flyerAmount: 2
-  spawnRadius: 5
+  spawnRadius: 8
   Height: 0
