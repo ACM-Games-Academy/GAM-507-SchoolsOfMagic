@@ -540,6 +540,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1009340989603400934, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1455017107929680568, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -548,18 +552,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1671458004564565775, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: BloodWizardHat
-      value: 
-      objectReference: {fileID: 1770952249}
-    - target: {fileID: 1671458004564565775, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: MetalWizardHat
-      value: 
-      objectReference: {fileID: 1770952248}
-    - target: {fileID: 1671458004564565775, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: NatureWizardHat
-      value: 
-      objectReference: {fileID: 1770952250}
+    - target: {fileID: 1455017107929680568, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455017107929680568, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1780173151874716024, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_Name
       value: MenuManager
@@ -620,6 +620,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6468456808872789817, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906020497447395906, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8940788610959233060, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -633,21 +641,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
---- !u!1 &1770952248 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1210216269674347905, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 1770952247}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1770952249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8843825073074651994, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 1770952247}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1770952250 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3452340855034201525, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 1770952247}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

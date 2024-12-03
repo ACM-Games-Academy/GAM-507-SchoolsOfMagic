@@ -6,7 +6,7 @@ using TMPro.SpriteAssetUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -68,9 +68,9 @@ public class MenuManager : MonoBehaviour
         pCurrentAmmo = weaponControl.LoadedAmmo;
         pMaxAmmo = weaponControl.MagSize;
         
-        HealthBar.GetComponent<Slider>().highValue = pHealthMax;
-        IronBar.GetComponent<Slider>().highValue = pIronMax;
-        BloodBar.GetComponent<Slider>().highValue = pBloodMax;
+        HealthBar.GetComponent<Slider>().maxValue = pHealthMax;
+        IronBar.GetComponent<Slider>().maxValue = pIronMax;
+        BloodBar.GetComponent<Slider>().maxValue = pBloodMax;
         
         pControl.playerDeath += OnDeath;
         pControl.healthChange += OnHealthChange;
@@ -101,14 +101,14 @@ public class MenuManager : MonoBehaviour
     {
         if (!isPaused && !freezeOverride)
         {
-            Time.timeScale = 0f;
             ActiveUI(pauseMenu);
+            Time.timeScale = 0f;
             isPaused = true;
         }
         else if (isPaused && !freezeOverride)
         {
-            Time.timeScale = 1f;
             ActiveUI(playerHud);
+            Time.timeScale = 1f;
             isPaused = false;
         }
     }
@@ -118,8 +118,8 @@ public class MenuManager : MonoBehaviour
     private void OnDeath(object sender, EventArgs e) // Death event
     {
         freezeOverride = true;
-        Time.timeScale = 0f;
         ActiveUI(deathScreen);
+        Time.timeScale = 0f;
     }
 
     private void ActiveUI(GameObject activeUI) // Disables all UI and re-enables intended UI

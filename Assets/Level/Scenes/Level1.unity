@@ -1825,9 +1825,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1455017107929680568, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455017107929680568, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1780173151874716024, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_Name
       value: MenuManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161015622765570330, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838130293549562417, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838130293549562417, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6245268585878523683, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1869,12 +1889,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8299534816592525283, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
+    - target: {fileID: 8906020497447395906, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_Value
+      value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 8299534816592525283, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: m_AnchorMax.y
+    - target: {fileID: 8906020497447395906, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940788610959233060, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3801,17 +3825,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1408793914}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &838955429 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3073642342252522725, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &862815386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 827812019481160402, guid: e2d2b5c31c02ef641a64e574a13059b9, type: 3}
@@ -7863,11 +7876,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9955ca1ea4b27ec4e9dbbd00aaf7c02a, type: 3}
   m_PrefabInstance: {fileID: 1072257176}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1593629914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3465173550967175758, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1598452817
 PrefabInstance:
@@ -12137,7 +12145,7 @@ MonoBehaviour:
   bossStats: {fileID: 11400000, guid: a754123856de5904eb1348c4c005d8e2, type: 2}
   pillarsActive: 0
   turnSpeed: 0.1
-  bossUI: {fileID: 1593629914}
+  bossUI: {fileID: 0}
   player: {fileID: 0}
   canBossRotate: 1
   OnHealthInitialized:
@@ -12490,7 +12498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4184bf05dd6bf4648bf8e06596acbad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 838955429}
+  healthSlider: {fileID: 0}
   bossEnemy: {fileID: 3077853017073197934}
   bossDeathSound:
     idInternal: 0
