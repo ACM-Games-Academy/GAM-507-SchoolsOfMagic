@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magazineCapacity: 8
   fireRate: 1
-  bulletSpread: 0.2
-  bulletRange: 20
+  bulletSpread: 2
+  bulletRange: 40
   maxAmmo: 8
   damage: 40
-  damageDropOffStart: 20
+  damageDropOffStart: 40
   bulletFireEffect: {fileID: 0}
   isAutomatic: 0
   reloadSpeed: 3

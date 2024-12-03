@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LMG
   m_EditorClassIdentifier: 
   magazineCapacity: 60
-  fireRate: 0.17
-  bulletSpread: 0.05
+  fireRate: 0.14
+  bulletSpread: 0.1
   bulletRange: 50
   maxAmmo: 60
   damage: 5
@@ -22,7 +22,7 @@ MonoBehaviour:
   bulletFireEffect: {fileID: 0}
   isAutomatic: 1
   reloadSpeed: 3
-  armourMultiplier: 2
+  armourMultiplier: 1.4
   causesStagger: 0
   causesBleeding: 0
   bleedingDmgPerSecond: 5
