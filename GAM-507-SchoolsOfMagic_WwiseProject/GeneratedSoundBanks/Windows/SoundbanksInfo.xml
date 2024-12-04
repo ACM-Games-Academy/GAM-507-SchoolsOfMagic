@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FE3BECA4-68C1-936D-25AF-F9913A8F75CC}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AFC73971-DF11-E67C-4302-BD3E14E0AC90}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -207,6 +207,10 @@
 				<File Id="607323947" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalFootstep4.wav</ShortName>
 					<CachePath>SFX/MetalFootstep4_24F0F963.wem</CachePath>
+				</File>
+				<File Id="615855665" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TreeBoss.wav</ShortName>
+					<CachePath>SFX/TreeBoss_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="625086626" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalFootstep2.wav</ShortName>
@@ -518,6 +522,11 @@
 						<MediaRef Id="529100105"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3957539569" Name="Play_TreeBoss" DurationType="OneShot" DurationMin="125.70053" DurationMax="125.70053">
+					<MediaRefs>
+						<MediaRef Id="615855665"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4121109043" Name="Play_Wizard_OST_Switch" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -578,6 +587,7 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="2343322892" Name="Stop_Boss_Idle" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2080081355" Name="Stop_TreeBoss" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="146841814" Name="WizardStates">
@@ -592,5 +602,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6285F887-FD5B-BF2F-3B90-C10984CAF6C4}</FileHash>
+	<FileHash>{D229AA3A-BB74-4A7B-9E2E-089F4B7111F2}</FileHash>
 </SoundBanksInfo>

@@ -440,6 +440,31 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_TreeBoss" ID="{A3703883-2ABA-4B31-83A2-6D6CB75C65D8}">
+					<ChildrenList>
+						<Action Name="" ID="{C3B0AF98-8814-4559-B158-E60FD5F22F40}" ShortID="909081663">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TreeBoss" ID="{79E8488B-2410-48ED-8DB0-3FB68007B3A8}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_TreeBoss" ID="{0FF9AC10-CCBB-4D17-8CBC-A18DA5B9C259}">
+					<ChildrenList>
+						<Action Name="" ID="{D3A08376-B383-43F3-871C-9F46AE1C833F}" ShortID="291679845">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TreeBoss" ID="{79E8488B-2410-48ED-8DB0-3FB68007B3A8}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
