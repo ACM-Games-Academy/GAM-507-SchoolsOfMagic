@@ -1,22 +1,33 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BossEnemy : Enemy
 {
     [SerializeField] private BossStats bossStats;
-    public int pillarsActive = 4;
+    public int pillarsActive = 0;
     [SerializeField] private float turnSpeed = 0.5f;
     [SerializeField] private GameObject bossUI;
+
+    [Header("Wwise Music Events")]
+    public AK.Wwise.Event bossMusicStart;
+    public AK.Wwise.Event mainMusicStop;
 
     [HideInInspector] public Transform player;
     private bool bossStarted = false;
 
     public bool canBossRotate = true;
 
+    // Declare the UnityEvent
+    public UnityEvent OnHealthInitialized = new UnityEvent();
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         bossUI.SetActive(false);
+
+        // Initialize health 
         EnemyInitiate(bossStats.health, bossStats.isArmoured);
+        OnHealthInitialized?.Invoke(); 
     }
 
     private void Update()
@@ -34,11 +45,14 @@ public class BossEnemy : Enemy
 
     public void BossStart()
     {
+
         if (!bossStarted)
         {
+            mainMusicStop.Post(this.gameObject);
+            bossMusicStart.Post(this.gameObject);
             bossStarted = true;
             bossUI.SetActive(true);
-            
+
             // Reset boss health when fight begins
             ResetBossHealth();
         }
@@ -55,6 +69,7 @@ public class BossEnemy : Enemy
     public void ResetBossHealth()
     {
         ResetHealth(bossStats.health); // Reset to full health
+        OnHealthInitialized?.Invoke();
     }
 
     protected override void EnemyDeath()
@@ -68,7 +83,6 @@ public class BossEnemy : Enemy
         base.EnemyDeath();
         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y - 40f, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 0.5f);
-        bossUI.SetActive(false);
         GetComponentInChildren<Animator>().Play("Boss Idle");
     }
 }

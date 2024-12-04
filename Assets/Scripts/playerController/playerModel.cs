@@ -57,5 +57,8 @@ public class playerModel
         health = playerData.startingHealth;
         stamina = playerData.startingStamina;
         currentClass = playerData.startingClass;
+
+        //setting values not defined in the playerdata scritableObj
+        dmgModifier = 1;
     }
 }

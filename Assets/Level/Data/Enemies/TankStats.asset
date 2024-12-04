@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e80ea1cfd135a54c9c5838b7c6e9752, type: 3}
   m_Name: TankStats
   m_EditorClassIdentifier: 
-  health: 100
+  health: 250
   movementSpeed: 2
   attackSpeed: 1
   attackDamage: 10

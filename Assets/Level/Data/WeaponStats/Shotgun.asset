@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28094f5ffcdfe1b4ea4f632c78722447, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  magazineCapacity: 30
+  magazineCapacity: 8
   fireRate: 1
-  bulletSpread: 0.05
-  bulletRange: 100
-  maxAmmo: 120
-  damage: 25
-  damageDropOffStart: 50
+  bulletSpread: 2
+  bulletRange: 40
+  maxAmmo: 8
+  damage: 40
+  damageDropOffStart: 40
   bulletFireEffect: {fileID: 0}
   isAutomatic: 0
-  reloadSpeed: 1.5
+  reloadSpeed: 3
   armourMultiplier: 1
   causesStagger: 1
+  causesBleeding: 0
+  bleedingDmgPerSecond: 0
+  bleedingDuration: 0

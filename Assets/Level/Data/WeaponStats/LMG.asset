@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28094f5ffcdfe1b4ea4f632c78722447, type: 3}
   m_Name: LMG
   m_EditorClassIdentifier: 
-  magazineCapacity: 30
-  fireRate: 0.3
-  bulletSpread: 0.05
-  bulletRange: 100
-  maxAmmo: 120
-  damage: 25
+  magazineCapacity: 60
+  fireRate: 0.14
+  bulletSpread: 0.1
+  bulletRange: 50
+  maxAmmo: 60
+  damage: 5
   damageDropOffStart: 50
   bulletFireEffect: {fileID: 0}
   isAutomatic: 1
-  reloadSpeed: 1.5
-  armourMultiplier: 0.1
+  reloadSpeed: 3
+  armourMultiplier: 1.4
   causesStagger: 0
-  causesBleeding: 1
+  causesBleeding: 0
   bleedingDmgPerSecond: 5
   bleedingDuration: 5
