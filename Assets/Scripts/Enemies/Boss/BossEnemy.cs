@@ -8,6 +8,10 @@ public class BossEnemy : Enemy
     [SerializeField] private float turnSpeed = 0.5f;
     [SerializeField] private GameObject bossUI;
 
+    [Header("Wwise Music Events")]
+    public AK.Wwise.Event bossMusicStart;
+    public AK.Wwise.Event mainMusicStop;
+
     [HideInInspector] public Transform player;
     private bool bossStarted = false;
 
@@ -41,8 +45,11 @@ public class BossEnemy : Enemy
 
     public void BossStart()
     {
+
         if (!bossStarted)
         {
+            mainMusicStop.Post(this.gameObject);
+            bossMusicStart.Post(this.gameObject);
             bossStarted = true;
             bossUI.SetActive(true);
 
