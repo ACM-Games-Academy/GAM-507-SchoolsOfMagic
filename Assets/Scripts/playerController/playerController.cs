@@ -8,12 +8,15 @@ using UnityEditor;
 using Magic;
 using TMPro;
 using JetBrains.Annotations;
+using Unity.XR.OpenVR;
 
 public class PlayerController : MonoBehaviour
 {
     //Events
     public event EventHandler playerDeath;
     public event EventHandler healthChange;
+    public event EventHandler ironChange;
+    public event EventHandler bloodChange;
 
     //runtime data and input 
     private playerModel model;
@@ -190,6 +193,16 @@ public class PlayerController : MonoBehaviour
     private void onHealthChange(EventArgs e)
     {
         healthChange.Invoke(this, e);
+    }
+
+    private void onIronChange(EventArgs e)
+    {
+        ironChange.Invoke(this, e);
+    }
+
+    private void onBloodChange(EventArgs e)
+    {
+        bloodChange.Invoke(this, e);
     }
     
     private void onPlayerDeath(EventArgs e)
