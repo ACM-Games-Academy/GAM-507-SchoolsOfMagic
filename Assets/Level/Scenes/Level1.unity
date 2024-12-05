@@ -366,11 +366,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 827812019481160402, guid: e2d2b5c31c02ef641a64e574a13059b9, type: 3}
   m_PrefabInstance: {fileID: 977448198}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &90745663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7435466276488803665, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &93166258
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,48 +558,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9955ca1ea4b27ec4e9dbbd00aaf7c02a, type: 3}
   m_PrefabInstance: {fileID: 112761821}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &115742045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1818787846486738542, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &115742046 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 306748750103637004, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115742045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &115742048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115742045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4184bf05dd6bf4648bf8e06596acbad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSlider: {fileID: 115742046}
-  bossEnemy: {fileID: 3077853017073197934}
-  bossDeathSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  bossIdleStop:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  bossIdle:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &128927010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1880,33 +1833,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1671458004564565775, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 90745663}
-    - target: {fileID: 1671458004564565775, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: playerHud
-      value: 
-      objectReference: {fileID: 1307645055}
-    - target: {fileID: 1671458004564565775, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: deathScreen
-      value: 
-      objectReference: {fileID: 1207143353}
-    - target: {fileID: 1671458004564565775, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: victoryScreen
-      value: 
-      objectReference: {fileID: 1826412102}
     - target: {fileID: 1780173151874716024, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_Name
       value: MenuManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1780173151874716024, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3452340855034201525, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4161015622765570330, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1960,10 +1889,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8843825073074651994, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 7828669237046169772, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: bossEnemy
+      value: 
+      objectReference: {fileID: 3077853017073197934}
     - target: {fileID: 8940788610959233060, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1971,10 +1900,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1818787846486738542, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 115742048}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
 --- !u!1 &422048267
 GameObject:
@@ -5938,11 +5864,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 827812019481160402, guid: e2d2b5c31c02ef641a64e574a13059b9, type: 3}
   m_PrefabInstance: {fileID: 1168687096}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1207143353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2853948938125872640, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1212559304
 GameObject:
   m_ObjectHideFlags: 0
@@ -6704,11 +6625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cb772b45ad2c649b7fd775a3691441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1307645055 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2282530870210091751, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1346823150
 GameObject:
   m_ObjectHideFlags: 0
@@ -9524,11 +9440,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9955ca1ea4b27ec4e9dbbd00aaf7c02a, type: 3}
   m_PrefabInstance: {fileID: 1820655745}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1826412102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1411566902105592188, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
-  m_PrefabInstance: {fileID: 419109074}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1828616879
 PrefabInstance:
