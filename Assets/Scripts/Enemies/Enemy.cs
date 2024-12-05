@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     public bool IsBleeding
     { get { return isBleeding; } }
 
-    public event EventHandler healthChange;
+    public event EventHandler enemyHealthChange;
 
     public void GiveDamage(float damage, bool isStaggerable)
     {
@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
             EnemyDeath();
         }
 
-        healthChange.Invoke(this, EventArgs.Empty);
+        enemyHealthChange?.Invoke(this, EventArgs.Empty);
     }
 
     public void GiveBleeding(float time, float damagePerSec, GameObject bleedingEffect)
@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
     public void ResetHealth(float newHealth)
     {
         health = newHealth;
-        healthChange.Invoke(this, EventArgs.Empty);
+        enemyHealthChange?.Invoke(this, EventArgs.Empty);
     }
 
 
@@ -79,10 +79,12 @@ public class Enemy : MonoBehaviour
             i += Time.deltaTime;
             yield return new WaitForEndOfFrame();
 
-            healthChange.Invoke(this, EventArgs.Empty);
+            enemyHealthChange?.Invoke(this, EventArgs.Empty);
         }
 
         Destroy(bleedingEffect);
         isBleeding = false;
+
+
     }
 }

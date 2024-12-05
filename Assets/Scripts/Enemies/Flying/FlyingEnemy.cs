@@ -12,6 +12,7 @@ public class FlyingEnemy : Enemy
     public float projectileTimer = 0;
 
     public EnemyProjectile projectilePrefab;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -42,5 +43,18 @@ public class FlyingEnemy : Enemy
             projectile.player = player;
             projectile.transform.LookAt(player.transform);
         }
+    }
+
+    protected override void EnemyDeath()
+    {
+        base.EnemyDeath();
+
+        Destroy(this.gameObject);
+    }
+
+    protected override void GiveStagger()
+    {
+        base.GiveStagger();
+        //do nothing lol
     }
 }

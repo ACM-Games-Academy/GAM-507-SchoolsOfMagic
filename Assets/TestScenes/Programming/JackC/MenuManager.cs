@@ -91,7 +91,7 @@ public class MenuManager : MonoBehaviour
         
         pInput.gamePaused += onPause;
 
-        bossEnemy.healthChange += OnBossHealthChange;
+        bossEnemy.enemyHealthChange += OnBossHealthChange;
 
         weaponControl.reloadFired += OnWeaponReloaded;
         
@@ -112,7 +112,7 @@ public class MenuManager : MonoBehaviour
         
         pInput.gamePaused -= onPause;
 
-        bossEnemy.healthChange -= OnBossHealthChange;
+        bossEnemy.enemyHealthChange -= OnBossHealthChange;
 
         weaponControl.currentWeapon.gunFired -= OnWeaponShoot;
         weaponControl.reloadFired -= OnWeaponReloaded;
