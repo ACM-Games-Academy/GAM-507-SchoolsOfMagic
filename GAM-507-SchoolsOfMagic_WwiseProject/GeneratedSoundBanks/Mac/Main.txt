@@ -19,6 +19,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2006500702	Play_Boss_Idle			\Default Work Unit\Boss Events\Play_Boss_Idle	
 	2080081355	Stop_TreeBoss			\Default Work Unit\Stop_TreeBoss	
 	2233504167	Play_Metal_Swoosh			\Default Work Unit\Metal Events\Play_Metal_Swoosh	
+	2333807947	Play_Death_Screen_Music_SFX			\Default Work Unit\Play_Death_Screen_Music_SFX	
 	2343322892	Stop_Boss_Idle			\Default Work Unit\Boss Events\Stop_Boss_Idle	
 	2437099115	Play_Metal_OutOfAmmo			\Default Work Unit\Metal Events\Play_Metal_OutOfAmmo	
 	2496273332	Play_Tank_Spawn_Rand			\Default Work Unit\Enemy Tank Events\Play_Tank_Spawn_Rand	
@@ -77,6 +78,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	422319167	Footstep2	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Footstep2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep Switch\Nature Footstep Random\Footstep2		261152
 	427133055	Tank Spawn 1	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Tank spawn_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies SFX\Tank Enemy SFX\Tank Spawn Rand\Tank Spawn 1		768540
 	457077370	Hat Rustle 2	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Hat Rustle 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Hat Rustle Random\Hat Rustle 2		261152
+	470240288	Death Screen Music_SFX	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Death Screen Music_SFX_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Death Screen Music_SFX\Death Screen Music_SFX		3363772
 	475365285	Slice 5	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Slice 5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Slice Random\Slice 5		261152
 	479973183	MetalGunShoot	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\MetalGunShoot_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shot Switch\MetalGunShoot		25160
 	483639679	Shotgun Boom	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Shotgun Boom_B2CDE14F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shot Switch\Shotgun Shot\Shotgun Boom		113252

@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{651CA881-D652-4283-385B-DFEF71D86D11}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{312AC51E-B8A4-D359-BC8C-B174526D53E5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -159,6 +159,10 @@
 				<File Id="457077370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hat Rustle 2.wav</ShortName>
 					<CachePath>SFX/Hat Rustle 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="470240288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Screen Music_SFX.wav</ShortName>
+					<CachePath>SFX/Death Screen Music_SFX_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="475365285" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slice 5.wav</ShortName>
@@ -401,6 +405,11 @@
 				<Event Id="2006500702" Name="Play_Boss_Idle" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="868714443"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2333807947" Name="Play_Death_Screen_Music_SFX" DurationType="OneShot" DurationMin="19.068186" DurationMax="19.068186">
+					<MediaRefs>
+						<MediaRef Id="470240288"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1054381211" Name="Play_Flyer_Attack_Rand" DurationType="OneShot" DurationMin="0.88807255" DurationMax="1.051474">
@@ -647,5 +656,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{53C1A013-2A02-7465-38D6-36BB07A9A7E9}</FileHash>
+	<FileHash>{330A4940-A73D-CCDE-5838-51F7888D3D14}</FileHash>
 </SoundBanksInfo>

@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_BLOOD_PRIMARY_ABILITY = 16303742U;
         static const AkUniqueID PLAY_BOSS_DEATH = 3695176782U;
         static const AkUniqueID PLAY_BOSS_IDLE = 2006500702U;
+        static const AkUniqueID PLAY_DEATH_SCREEN_MUSIC_SFX = 2333807947U;
         static const AkUniqueID PLAY_FLYER_ATTACK_RAND = 1054381211U;
         static const AkUniqueID PLAY_FLYER_FLAP_RAND = 3183334536U;
         static const AkUniqueID PLAY_FLYER_SPAWN_RAND = 1467661062U;
