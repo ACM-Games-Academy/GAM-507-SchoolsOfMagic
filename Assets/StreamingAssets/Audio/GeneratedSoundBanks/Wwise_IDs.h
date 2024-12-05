@@ -39,10 +39,6 @@ namespace AK
         static const AkUniqueID PLAY_TANK_SPAWN_RAND = 2496273332U;
         static const AkUniqueID PLAY_TITLE_SCREEN_THEME = 794644545U;
         static const AkUniqueID PLAY_TREE_SLAM = 1827333942U;
-        static const AkUniqueID PLAY_UI_BACK = 1386224142U;
-        static const AkUniqueID PLAY_UI_HOVER = 1339559671U;
-        static const AkUniqueID PLAY_UI_PAUSE = 3624587671U;
-        static const AkUniqueID PLAY_UI_SWITCH = 3714076275U;
         static const AkUniqueID PLAY_WIZARD_OST_SWITCH = 4121109043U;
         static const AkUniqueID PLAYFOOTSTEPS = 1088348632U;
         static const AkUniqueID STOP_BOSS_IDLE = 2343322892U;

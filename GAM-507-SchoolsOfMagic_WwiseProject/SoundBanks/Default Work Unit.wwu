@@ -9,7 +9,6 @@
 						<ObjectRef Name="Play_Title_Screen_Theme" ID="{31B202BF-BE8D-4032-99A7-F9A97A9CA260}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_GunReload" ID="{A242B614-E449-405E-B290-8B1E94B5DF67}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Shards" ID="{3CB87D7E-2FDF-4272-83B3-0577EC967495}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_UI_Switch" ID="{1FD448EF-3D57-437D-BF9A-E7F0BBC33964}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Boss_Death" ID="{5CA1869F-1573-43D2-AB31-5A67E6FC4758}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Blood_Primary_Ability" ID="{75F4F036-7E5B-4414-8867-292DB82CD90A}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Whoosh" ID="{46C0E959-FBFD-4449-BF1F-79FBDC218127}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
@@ -18,12 +17,9 @@
 						<ObjectRef Name="Play_Flyer_Attack_Rand" ID="{014B8CC7-1676-455D-90C3-74D81431038B}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Wizard_OST_Switch" ID="{8BB5B4B8-C5D3-456B-977B-83D31FEC6078}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Flyer_Spawn_Rand" ID="{5B1A5946-15F6-45E9-8B50-BA1FD9FBE706}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_UI_Hover" ID="{5539183C-C2F7-469A-B266-2BBB15C9C8E8}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_MagneticHum" ID="{284916A1-7ABD-47A6-A07F-15405E23C5C3}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_UI_Back" ID="{76FAB33B-2487-47BB-AE71-D726D3042856}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Boss_Idle" ID="{C839BF70-1FBD-47D9-823F-D8893D9C5EC1}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Shot_Switch" ID="{7E6B8A1D-DA0C-4823-8BFD-72CFAC425BC8}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_UI_Pause" ID="{4BCE3599-3531-4837-9A30-272111ED8045}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_OutOfAmmo" ID="{0E990909-906B-493D-B665-C02BE261E3E5}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Blood_Gun_Bullets" ID="{B4548FFB-091D-4961-A51C-240045D785FB}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Swoosh" ID="{581962C0-86DB-4995-8F9B-BEBD92F87A8B}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>

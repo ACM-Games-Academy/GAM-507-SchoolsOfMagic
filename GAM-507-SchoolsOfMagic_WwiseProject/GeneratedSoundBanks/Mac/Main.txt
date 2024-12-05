@@ -7,8 +7,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1054381211	Play_Flyer_Attack_Rand			\Default Work Unit\Enemy Flyer Events\Play_Flyer_Attack_Rand	
 	1088348632	PlayFootsteps			\Default Work Unit\PlayFootsteps	
 	1290140931	Play_Tank_Footstep_Rand			\Default Work Unit\Enemy Tank Events\Play_Tank_Footstep_Rand	
-	1339559671	Play_UI_Hover			\Default Work Unit\UI SFX Events\Play_UI_Hover	
-	1386224142	Play_UI_Back			\Default Work Unit\UI SFX Events\Play_UI_Back	
 	1467661062	Play_Flyer_Spawn_Rand			\Default Work Unit\Enemy Flyer Events\Play_Flyer_Spawn_Rand	
 	1481612363	Play_Blood_Armour_Hit			\Default Work Unit\Blood Events\Play_Blood_Armour_Hit	
 	1540153786	Play_Nature_Passive_Hum			\Default Work Unit\Nature Events\Play_Nature_Passive_Hum	
@@ -24,10 +22,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	3049387599	Play_Nature_Hat_Rustle			\Default Work Unit\Nature Events\Play_Nature_Hat_Rustle	
 	3183334536	Play_Flyer_Flap_Rand			\Default Work Unit\Enemy Flyer Events\Play_Flyer_Flap_Rand	
 	3370461538	Play_Metal_MagneticHum			\Default Work Unit\Metal Events\Play_Metal_MagneticHum	
-	3624587671	Play_UI_Pause			\Default Work Unit\UI SFX Events\Play_UI_Pause	
 	3692906616	Play_Tank_Damage_Rand			\Default Work Unit\Enemy Tank Events\Play_Tank_Damage_Rand	
 	3695176782	Play_Boss_Death			\Default Work Unit\Boss Events\Play_Boss_Death	
-	3714076275	Play_UI_Switch			\Default Work Unit\UI SFX Events\Play_UI_Switch	
 	3903496159	Play_Blood_Gun_Reload			\Default Work Unit\Blood Events\Play_Blood_Gun_Reload	
 	4056601793	Play_Shot_Switch			\Default Work Unit\Play_Shot_Switch	
 	4087362955	Play_Blood_Gun_Bullets			\Default Work Unit\Blood Events\Play_Blood_Gun_Bullets	
@@ -51,7 +47,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	62049592	Wizard Battle Theme_Blood	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Wizard Battle Theme_Blood_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Wizard OST Switch\Battle Theme_Blood\Wizard Battle Theme_Blood_01\Wizard Battle Theme_Blood		31810024
 	84734626	Wizard Battle Theme Main_Nature_01	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Wizard Battle Theme Main_Nature_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Wizard OST Switch\Battle Theme_Nature\Wizard Battle Theme Main_Nature_01\Wizard Battle Theme Main_Nature_01		31809336
 	84748072	Tank Attack	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Tank attack_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies SFX\Tank Enemy SFX\Tank Attack		506396
-	86633116	UI Hover	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\UI Hover_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI SFX\UI Hover		244252
 	118111049	MetalOutOfAmmo	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\MetalOutOfAmmo_E4698968.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalOutOfAmmo		77208
 	120560503	Hat Rustle 1	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Hat Rustle 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Hat Rustle Random\Hat Rustle 1		261152
 	126320717	Tank Spawn 2	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Tank spawn 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies SFX\Tank Enemy SFX\Tank Spawn Rand\Tank Spawn 2		768540
@@ -96,11 +91,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	725972511	Root Shoot Attack 3	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Root Shoot Attack 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies SFX\Boss Enemy SFX\SporeShotRandom\Root Shoot Attack 3		233716
 	729945790	Blood Wizard_Primary Ability2 [KB]	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Blood Wizard_Primary Ability2 [KB]_D954E8DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood Wizard SFX\Blood Wizard_Primary Ability\Blood Wizard_Primary Ability2 [KB]		921980
 	738174852	Blood Wizard_Footsteps1 [KB]	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Blood Wizard_Footsteps1 [KB]_72309AE6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep Switch\Blood Wizard_Footstep\Blood Wizard_Footsteps1 [KB]		43692
-	744141565	UI Select 1	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\UI Select 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI SFX\UI Switch\UI Select 1		506396
-	757080791	UI Pause	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\UI Pause_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI SFX\UI Pause		244252
 	765566039	Root Shoot Attack 1	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Root Shoot Attack 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies SFX\Boss Enemy SFX\SporeShotRandom\Root Shoot Attack 1		211776
 	794819962	Slice3	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Slice3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Slice Random\Slice3		261152
-	809101366	UI Back	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\UI Back_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI SFX\UI Back		244252
 	818263443	Blood Wizard_Footsteps4 [KB]	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Blood Wizard_Footsteps4 [KB]_DEFDAEF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep Switch\Blood Wizard_Footstep\Blood Wizard_Footsteps4 [KB]		66172
 	851393941	Passive Hum	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Passive Hum_2945E187.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nature Wizard SFX\Passive Hum		947700
 	859604764	Spawn1	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Enemies\Spawn1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies SFX\Flyer SFX\Flyer Spawn Rand\Spawn1		303380
@@ -123,5 +115,4 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1047636975	MetalGunReload	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\MetalGunReload_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal Wizard SFX\MetalGunReload		768160
 	1050520816	Blood Wizard_Gun_Fire [KB]	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\Blood Wizard_Gun_Fire [KB]_F412FDF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shot Switch\Blood Wizard_Gun_Fire [KB]		118040
 	1059275467	MetalFootstep1	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\MetalFootstep1_4AAA52F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep Switch\Metal Footstep Random\MetalFootstep1		27484
-	1072828595	UI Select 2	C:\Users\jackt\OneDrive\Documents\GitHub\GAM-507-SchoolsOfMagic\GAM-507-SchoolsOfMagic_WwiseProject\.cache\Mac\SFX\UI Select 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI SFX\UI Switch\UI Select 2		244252
 
