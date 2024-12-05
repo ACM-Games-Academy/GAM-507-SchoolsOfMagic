@@ -465,6 +465,65 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="UI SFX events" ID="{574E3C4F-DB90-49AC-B384-F48E118FBC5E}" ShortID="278394336">
+					<ChildrenList>
+						<Event Name="Play_UI_Back" ID="{DFE933A8-F529-4C84-B58C-80C27D564764}">
+							<ChildrenList>
+								<Action Name="" ID="{86EA5F5E-3E60-46DA-91F6-85A769A1F566}" ShortID="411094646">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Back" ID="{1CA0301E-2DD7-424F-9B74-8D4559225F24}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Hover" ID="{CDA01CEC-BD4E-4BD4-A1F3-5DA8524074BC}">
+							<ChildrenList>
+								<Action Name="" ID="{6619A0BF-6B60-4032-A20B-E443EBA4B657}" ShortID="26632217">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Hover" ID="{7D4E8717-DD1A-4D43-98FD-3E6A266250A3}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Pause" ID="{9A1D4C83-8083-4F82-B52A-540208933DB9}">
+							<ChildrenList>
+								<Action Name="" ID="{48778F0B-E115-4467-95D7-74EC5CDD20C7}" ShortID="709287552">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Pause" ID="{A3D93585-61BE-4BAB-8E17-F5C04E1DAE4E}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Select" ID="{1DD06697-50C0-47BE-9BC8-CED6B29733E0}">
+							<ChildrenList>
+								<Action Name="" ID="{6A02F544-C9CA-4A85-B9C3-F7BBA78F0F7A}" ShortID="953717334">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Select 2" ID="{9F72A8FF-57B9-4FF4-B131-F3A102A10DA4}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Play_Select" ID="{AF14A875-2EDB-4048-8675-19BD94575235}">
+							<ChildrenList>
+								<Action Name="" ID="{E1E45078-8B6E-4D62-BA95-9BB436E6AE32}" ShortID="570498735">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Select 1" ID="{A16CB2C6-A319-4F52-A153-43051D026E75}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
