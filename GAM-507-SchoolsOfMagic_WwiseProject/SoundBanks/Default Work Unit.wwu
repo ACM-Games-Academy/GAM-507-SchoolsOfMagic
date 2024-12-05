@@ -27,9 +27,11 @@
 						<ObjectRef Name="Play_Blood_Armour_Hit" ID="{94276734-7A70-4A2D-8C39-6CD4831AA8C1}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Spike" ID="{492E20DE-2D7E-4A98-B5E1-70B1D851A499}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayFootsteps" ID="{B5E9B737-25D1-4AC9-97AE-DBF19ECDBD83}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TreeBoss" ID="{A3703883-2ABA-4B31-83A2-6D6CB75C65D8}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Hat_Rustle" ID="{11453ABA-5D63-4BA9-BBD5-5AFBE5955E84}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Tank_Damage_Rand" ID="{588CC74A-35B4-4BDF-A127-9DA8CC4A0B51}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Boss_Idle" ID="{2805A6CD-7F89-4C2A-A466-C04481D1ECFD}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TreeBoss" ID="{0FF9AC10-CCBB-4D17-8CBC-A18DA5B9C259}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Passive_Hum" ID="{E5D2F947-7FDB-4D5C-AEAC-FA344EBFAAC0}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Tank_Spawn_Rand" ID="{1B5CF1EC-891F-4D69-B790-DB917A45E4C9}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Flyer_Flap_Rand" ID="{5D1A460F-4BFA-4F18-A1BC-6445B7998D01}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>

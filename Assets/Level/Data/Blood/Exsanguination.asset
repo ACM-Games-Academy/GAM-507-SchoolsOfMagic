@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Exsanguination
   m_EditorClassIdentifier: 
   cooldown: 8
-  radiusRange: 15
+  radiusRange: 20
   damage: 90
-  healAmount: 10
-  healRate: 2
-  speedBoost: 0.3
-  boostDuration: 5
+  healAmount: 50
+  healRate: 5
+  speedBoost: 1
+  boostDuration: 4

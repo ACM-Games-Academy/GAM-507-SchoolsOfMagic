@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,10 +9,16 @@ public class BossEnemy : Enemy
     [SerializeField] private float turnSpeed = 0.5f;
     [SerializeField] private GameObject bossUI;
 
+    [Header("Wwise Music Events")]
+    public AK.Wwise.Event bossMusicStart;
+    public AK.Wwise.Event mainMusicStop;
+
     [HideInInspector] public Transform player;
     private bool bossStarted = false;
 
     public bool canBossRotate = true;
+
+    private event EventHandler bossHealthChange;
 
     // Declare the UnityEvent
     public UnityEvent OnHealthInitialized = new UnityEvent();
@@ -41,8 +48,11 @@ public class BossEnemy : Enemy
 
     public void BossStart()
     {
+
         if (!bossStarted)
         {
+            mainMusicStop.Post(this.gameObject);
+            bossMusicStart.Post(this.gameObject);
             bossStarted = true;
             bossUI.SetActive(true);
 

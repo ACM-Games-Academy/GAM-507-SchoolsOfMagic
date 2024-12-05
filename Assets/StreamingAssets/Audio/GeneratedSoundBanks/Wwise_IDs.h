@@ -39,9 +39,11 @@ namespace AK
         static const AkUniqueID PLAY_TANK_SPAWN_RAND = 2496273332U;
         static const AkUniqueID PLAY_TITLE_SCREEN_THEME = 794644545U;
         static const AkUniqueID PLAY_TREE_SLAM = 1827333942U;
+        static const AkUniqueID PLAY_TREEBOSS = 3957539569U;
         static const AkUniqueID PLAY_WIZARD_OST_SWITCH = 4121109043U;
         static const AkUniqueID PLAYFOOTSTEPS = 1088348632U;
         static const AkUniqueID STOP_BOSS_IDLE = 2343322892U;
+        static const AkUniqueID STOP_TREEBOSS = 2080081355U;
     } // namespace EVENTS
 
     namespace STATES

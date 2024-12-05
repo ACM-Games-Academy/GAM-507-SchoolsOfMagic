@@ -12486,7 +12486,6 @@ MonoBehaviour:
   - {fileID: 4965288291323649386}
   - {fileID: 9102991830887704485}
   - {fileID: 8191719128091294513}
-  - {fileID: 0}
   previousWeapon: {fileID: 0}
   playerInput: {fileID: 6551770990651040292}
   controller: {fileID: 4791361591801510143}

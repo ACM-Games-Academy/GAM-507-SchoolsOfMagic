@@ -8,12 +8,15 @@ using UnityEditor;
 using Magic;
 using TMPro;
 using JetBrains.Annotations;
+using Unity.XR.OpenVR;
 
 public class PlayerController : MonoBehaviour
 {
     //Events
     public event EventHandler playerDeath;
     public event EventHandler healthChange;
+    public event EventHandler ironChange;
+    public event EventHandler bloodChange;
 
     //runtime data and input 
     private playerModel model;
@@ -62,6 +65,13 @@ public class PlayerController : MonoBehaviour
         input.Disable();
     }
 
+    private void Start()
+    {
+        onHealthChange(EventArgs.Empty);
+        onBloodChange(EventArgs.Empty);
+        onIronChange(EventArgs.Empty);
+    }
+
     private void Update()
     {
         //updating debug values
@@ -75,6 +85,8 @@ public class PlayerController : MonoBehaviour
     {
         float processedDamage = amount * model.DmgModifier;
         model.Health -= processedDamage;
+
+        onHealthChange(EventArgs.Empty);
 
         if (model.Health < 0)
         {
@@ -90,10 +102,14 @@ public class PlayerController : MonoBehaviour
         model.MaxHealth += increasedMaxHealth;
         model.Health += increasedHealth;
 
+        onHealthChange(EventArgs.Empty);
+
         yield return new WaitForSeconds(time);
 
         model.MaxHealth -= model.MaxHealth * (increasedMaxHealth / model.MaxHealth);
         model.Health -= model.Health * (increasedHealth / model.Health);
+
+        onHealthChange(EventArgs.Empty);
     }
 
     public float GetHealth() { return model.Health; }
@@ -103,19 +119,6 @@ public class PlayerController : MonoBehaviour
     public float GetIron() { return model.Iron; }
     public float GetMaxIron() { return model.MaxIron; }
     public string GetCurrentClass() { return model.CurrentClass; }
-
-    public void SetMaxBlood(float amount)
-    {
-        model.MaxBlood = amount;
-    }
-    public void SetIron(float amount)
-    {
-        model.Iron = amount;
-    }
-    public void SetMaxIron(float amount)
-    {
-        model.MaxIron = amount;
-    }
 
     public void AddReduceValue(ValueType type, float addedValue, bool maxValue)
     {
@@ -143,6 +146,7 @@ public class PlayerController : MonoBehaviour
                     onPlayerDeath(EventArgs.Empty);
                 }
                 
+                onHealthChange(EventArgs.Empty);
                 break;
 
             case ValueType.Iron:
@@ -161,6 +165,8 @@ public class PlayerController : MonoBehaviour
                 { 
                     model.MaxIron = addedValue; 
                 }
+
+                onIronChange(EventArgs.Empty);
                 break;
 
             case ValueType.Blood:
@@ -179,6 +185,8 @@ public class PlayerController : MonoBehaviour
                 { 
                     model.MaxBlood = model.MaxBlood + addedValue; 
                 }
+
+                onBloodChange(EventArgs.Empty);
                 break;     
                 
             default:
@@ -190,6 +198,16 @@ public class PlayerController : MonoBehaviour
     private void onHealthChange(EventArgs e)
     {
         healthChange.Invoke(this, e);
+    }
+
+    private void onIronChange(EventArgs e)
+    {
+        ironChange.Invoke(this, e);
+    }
+
+    private void onBloodChange(EventArgs e)
+    {
+        bloodChange.Invoke(this, e);
     }
     
     private void onPlayerDeath(EventArgs e)
