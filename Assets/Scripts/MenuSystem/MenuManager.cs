@@ -101,7 +101,7 @@ public class MenuManager : MonoBehaviour
         pInput.NatureMagic += OnNatureClass;
         pInput.BloodMagic += OnBloodClass;
         
-        pInput.gamePaused += onPause;
+        pInput.gamePaused += OnPause;
 
         bossEnemy.enemyHealthChange += OnBossHealthChange;
         bossEnemy.bossDeath += OnVictory;
@@ -124,21 +124,29 @@ public class MenuManager : MonoBehaviour
     {
         pControl.playerDeath -= OnDeath;
         pControl.healthChange -= OnHealthChange;
+        pControl.ironChange -= OnIronChange;
+        pControl.bloodChange -= OnBloodChange;
+
+        pInput.MetalMagic -= OnMetalClass;
+        pInput.NatureMagic -= OnNatureClass;
+        pInput.BloodMagic -= OnBloodClass;
         
-        pInput.gamePaused -= onPause;
+        pInput.gamePaused -= OnPause;
 
         bossEnemy.enemyHealthChange -= OnBossHealthChange;
-
-        weaponControl.currentWeapon.gunFired -= OnWeaponShoot;
+        bossEnemy.bossDeath -= OnVictory;
+        
         weaponControl.reloadFired -= OnWeaponReloaded;
+        weaponControl.currentWeapon.gunFired -= OnWeaponShoot;
+        
     }
 
-    private void onPause(object sender, EventArgs e) // Pause Event
+    private void OnPause(object sender, EventArgs e) // Pause Event
     {
-        pauseNav();
+        PauseNav();
     }
 
-    public void pauseNav()
+    public void PauseNav()
     {
         if (!isPaused && !freezeOverride)
         {
