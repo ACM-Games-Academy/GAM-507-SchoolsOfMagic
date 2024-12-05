@@ -1,6 +1,9 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using System;
+
+
 
 public class WeaponBase : MonoBehaviour
 {
@@ -34,6 +37,10 @@ public class WeaponBase : MonoBehaviour
 
     private Coroutine firingCoroutine;
 
+    public event EventHandler gunFired;
+
+    private bool initalized = false;
+
     private void OnEnable()
     {
         canShoot = true;
@@ -41,10 +48,15 @@ public class WeaponBase : MonoBehaviour
         GetGunModel().SetActive(true);
     }
 
-    private void Start()
+    public void enableWeapon()
     {
-        originalSpeed = playerSpeed;
-        currentAmmo = weaponStats.MagazineCapacity;
+        if (!initalized)
+        {
+            currentAmmo = weaponStats.MagazineCapacity;
+            originalSpeed = playerSpeed;
+
+            initalized = true;
+        }
     }
 
     private void Update()
@@ -74,14 +86,17 @@ public class WeaponBase : MonoBehaviour
         }
         
         nextFireTime = Time.time + weaponStats.FireRate;
+
+        //put fire event here
+        gunFired.Invoke(this, EventArgs.Empty);
     }
 
     protected virtual void ShootRay()
     {
         RaycastHit hit;
         Vector3 spread = raycastOrigin.forward;
-        spread += new Vector3(Random.Range(-weaponStats.BulletSpread, weaponStats.BulletSpread),
-                              Random.Range(-weaponStats.BulletSpread, weaponStats.BulletSpread), 0);
+        spread += new Vector3(UnityEngine.Random.Range(-weaponStats.BulletSpread, weaponStats.BulletSpread),
+                              UnityEngine.Random.Range(-weaponStats.BulletSpread, weaponStats.BulletSpread), 0);
         spread.Normalize();
 
         if (Physics.Raycast(raycastOrigin.position, spread, out hit, weaponStats.BulletRange))

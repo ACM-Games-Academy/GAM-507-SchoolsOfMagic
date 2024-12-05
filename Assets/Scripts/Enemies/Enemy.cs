@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Enemy : MonoBehaviour
     public bool IsBleeding
     { get { return isBleeding; } }
 
+    public event EventHandler healthChange;
+
     public void GiveDamage(float damage, bool isStaggerable)
     {
         if (isStaggerable)
@@ -30,6 +33,8 @@ public class Enemy : MonoBehaviour
         {
             EnemyDeath();
         }
+
+        healthChange.Invoke(this, EventArgs.Empty);
     }
 
     public void GiveBleeding(float time, float damagePerSec, GameObject bleedingEffect)
@@ -62,6 +67,7 @@ public class Enemy : MonoBehaviour
     public void ResetHealth(float newHealth)
     {
         health = newHealth;
+        healthChange.Invoke(this, EventArgs.Empty);
     }
 
 
@@ -72,6 +78,8 @@ public class Enemy : MonoBehaviour
             GiveDamage(damagePerSec * Time.deltaTime, false);            
             i += Time.deltaTime;
             yield return new WaitForEndOfFrame();
+
+            healthChange.Invoke(this, EventArgs.Empty);
         }
 
         Destroy(bleedingEffect);

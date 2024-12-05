@@ -7,8 +7,7 @@ public class WeaponController : MonoBehaviour
 {
     [Header("Weapon prefab array \n in order of Nature, Blood, Metal, Arcane")]
     [SerializeField] private GameObject[] weaponGameobject; // Array of weapon prefabs for different classes
-    private WeaponBase currentWeapon;                    // The currently active weapon
-    [SerializeField] private WeaponBase previousWeapon;
+    public WeaponBase currentWeapon;                    // The currently active weapon
     [SerializeField] private playerInput playerInput;                     // Reference to the player's input script
     [SerializeField] private PlayerController controller;
     [SerializeField] private bool isReloading;
@@ -20,6 +19,8 @@ public class WeaponController : MonoBehaviour
     private int magSize;
     public int LoadedAmmo {  get { return loadedAmmo; } }
     public int MagSize { get { return magSize; } }
+
+    public event EventHandler reloadFired;
 
     private void Start()
     {
@@ -87,7 +88,7 @@ public class WeaponController : MonoBehaviour
             // Enable the new weapon   
             weaponGameobject[weaponIndex].SetActive(true);
             currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
-
+            currentWeapon.enableWeapon();
             magSize = currentWeapon.WeaponStats.MagazineCapacity;
             loadedAmmo = currentWeapon.CurrentAmmo;                    
         }
@@ -98,6 +99,10 @@ public class WeaponController : MonoBehaviour
             handAnimator.SetNextWeapon(weaponGameobject[weaponIndex].GetComponent<WeaponBase>());       //sick code lol 
 
             currentWeapon = weaponGameobject[weaponIndex].GetComponent<WeaponBase>();
+            currentWeapon.enableWeapon();
+
+            magSize = currentWeapon.WeaponStats.MagazineCapacity;
+            loadedAmmo = currentWeapon.CurrentAmmo; 
         }    
     }
 
@@ -184,12 +189,14 @@ public class WeaponController : MonoBehaviour
         }
 
         isReloading = false;
+        reloadFired.Invoke(this, EventArgs.Empty);
+        loadedAmmo = currentWeapon.CurrentAmmo;
     }
 
     private void Update()
     {
         //dirty fix to update current ammo
-        loadedAmmo = currentWeapon.CurrentAmmo;
+        //loadedAmmo = currentWeapon.CurrentAmmo;
     }
 
     private void OnDisable()
