@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,8 @@ public class BossEnemy : Enemy
     private bool bossStarted = false;
 
     public bool canBossRotate = true;
+
+    private event EventHandler bossHealthChange;
 
     // Declare the UnityEvent
     public UnityEvent OnHealthInitialized = new UnityEvent();

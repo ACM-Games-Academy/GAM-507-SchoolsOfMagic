@@ -16,7 +16,9 @@ public class FlyingEnemy : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
+
+        EnemyInitiate(150, false);
     }
 
     // Update is called once per frame

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   maxHealth: 200
-  startingHealth: 180
+  startingHealth: 200
   maxBlood: 50
   startingBlood: 20
   maxIron: 500
