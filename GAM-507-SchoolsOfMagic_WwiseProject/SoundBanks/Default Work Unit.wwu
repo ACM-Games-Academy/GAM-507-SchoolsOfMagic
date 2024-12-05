@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Blood_Gun_Reload" ID="{53EF0A7B-F92C-400B-9FC3-7507426192C1}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Title_Screen_Theme" ID="{31B202BF-BE8D-4032-99A7-F9A97A9CA260}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Play_Select" ID="{AF14A875-2EDB-4048-8675-19BD94575235}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_GunReload" ID="{A242B614-E449-405E-B290-8B1E94B5DF67}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Shards" ID="{3CB87D7E-2FDF-4272-83B3-0577EC967495}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Boss_Death" ID="{5CA1869F-1573-43D2-AB31-5A67E6FC4758}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
@@ -18,6 +19,7 @@
 						<ObjectRef Name="Play_Wizard_OST_Switch" ID="{8BB5B4B8-C5D3-456B-977B-83D31FEC6078}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Flyer_Spawn_Rand" ID="{5B1A5946-15F6-45E9-8B50-BA1FD9FBE706}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_MagneticHum" ID="{284916A1-7ABD-47A6-A07F-15405E23C5C3}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_Select" ID="{1DD06697-50C0-47BE-9BC8-CED6B29733E0}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Boss_Idle" ID="{C839BF70-1FBD-47D9-823F-D8893D9C5EC1}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Shot_Switch" ID="{7E6B8A1D-DA0C-4823-8BFD-72CFAC425BC8}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_OutOfAmmo" ID="{0E990909-906B-493D-B665-C02BE261E3E5}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
@@ -29,13 +31,16 @@
 						<ObjectRef Name="PlayFootsteps" ID="{B5E9B737-25D1-4AC9-97AE-DBF19ECDBD83}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TreeBoss" ID="{A3703883-2ABA-4B31-83A2-6D6CB75C65D8}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Hat_Rustle" ID="{11453ABA-5D63-4BA9-BBD5-5AFBE5955E84}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_Hover" ID="{CDA01CEC-BD4E-4BD4-A1F3-5DA8524074BC}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Tank_Damage_Rand" ID="{588CC74A-35B4-4BDF-A127-9DA8CC4A0B51}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Boss_Idle" ID="{2805A6CD-7F89-4C2A-A466-C04481D1ECFD}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_Back" ID="{DFE933A8-F529-4C84-B58C-80C27D564764}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TreeBoss" ID="{0FF9AC10-CCBB-4D17-8CBC-A18DA5B9C259}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Passive_Hum" ID="{E5D2F947-7FDB-4D5C-AEAC-FA344EBFAAC0}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Tank_Spawn_Rand" ID="{1B5CF1EC-891F-4D69-B790-DB917A45E4C9}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Flyer_Flap_Rand" ID="{5D1A460F-4BFA-4F18-A1BC-6445B7998D01}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Tank_Attack" ID="{552AAA65-B579-4F48-BD50-A8CA075E5E3C}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_Pause" ID="{9A1D4C83-8083-4F82-B52A-540208933DB9}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

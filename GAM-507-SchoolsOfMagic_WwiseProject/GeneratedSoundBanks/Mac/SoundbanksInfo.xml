@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AFC73971-DF11-E67C-4302-BD3E14E0AC90}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{651CA881-D652-4283-385B-DFEF71D86D11}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -67,6 +67,10 @@
 				<File Id="84748072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tank attack.wav</ShortName>
 					<CachePath>SFX/Tank attack_818F3B66.wem</CachePath>
+				</File>
+				<File Id="86633116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI Hover.wav</ShortName>
+					<CachePath>SFX/UI Hover_818F3B66.wem</CachePath>
 				</File>
 				<File Id="118111049" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalOutOfAmmo.wav</ShortName>
@@ -248,6 +252,14 @@
 					<ShortName>Blood Wizard_Footsteps1 [KB].wav</ShortName>
 					<CachePath>SFX/Blood Wizard_Footsteps1 [KB]_72309AE6.wem</CachePath>
 				</File>
+				<File Id="744141565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI Select 1.wav</ShortName>
+					<CachePath>SFX/UI Select 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="757080791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI Pause.wav</ShortName>
+					<CachePath>SFX/UI Pause_818F3B66.wem</CachePath>
+				</File>
 				<File Id="765566039" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Root Shoot Attack 1.wav</ShortName>
 					<CachePath>SFX/Root Shoot Attack 1_818F3B66.wem</CachePath>
@@ -255,6 +267,10 @@
 				<File Id="794819962" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slice3.wav</ShortName>
 					<CachePath>SFX/Slice3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="809101366" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI Back.wav</ShortName>
+					<CachePath>SFX/UI Back_818F3B66.wem</CachePath>
 				</File>
 				<File Id="818263443" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blood Wizard_Footsteps4 [KB].wav</ShortName>
@@ -343,6 +359,10 @@
 				<File Id="1059275467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MetalFootstep1.wav</ShortName>
 					<CachePath>SFX/MetalFootstep1_4AAA52F9.wem</CachePath>
+				</File>
+				<File Id="1072828595" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI Select 2.wav</ShortName>
+					<CachePath>SFX/UI Select 2_818F3B66.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -452,6 +472,11 @@
 						<MediaRef Id="1040569390"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="397412463" Name="Play_Play_Select" DurationType="OneShot" DurationMin="2.8701813" DurationMax="2.8701813">
+					<MediaRefs>
+						<MediaRef Id="744141565"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4056601793" Name="Play_Shot_Switch" DurationType="OneShot" DurationMin="0.11420731" DurationMax="2.0929036">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -525,6 +550,26 @@
 				<Event Id="3957539569" Name="Play_TreeBoss" DurationType="OneShot" DurationMin="125.70053" DurationMax="125.70053">
 					<MediaRefs>
 						<MediaRef Id="615855665"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1386224142" Name="Play_UI_Back" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="809101366"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1339559671" Name="Play_UI_Hover" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="86633116"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3624587671" Name="Play_UI_Pause" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="757080791"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3308548503" Name="Play_UI_Select" DurationType="OneShot" DurationMin="1.3841043" DurationMax="1.3841043">
+					<MediaRefs>
+						<MediaRef Id="1072828595"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4121109043" Name="Play_Wizard_OST_Switch" DurationType="Infinite">
@@ -602,5 +647,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FF53327F-8EB0-3960-7095-DB2CC5D30DBD}</FileHash>
+	<FileHash>{53C1A013-2A02-7465-38D6-36BB07A9A7E9}</FileHash>
 </SoundBanksInfo>
