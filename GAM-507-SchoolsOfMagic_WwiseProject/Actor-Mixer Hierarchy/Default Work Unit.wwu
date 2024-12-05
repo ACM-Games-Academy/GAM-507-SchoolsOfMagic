@@ -1392,50 +1392,6 @@
 								<ActiveSource Name="UI Pause" ID="{26C49832-C825-40E3-95E3-3960CA03638F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="UI Select 1" ID="{A16CB2C6-A319-4F52-A153-43051D026E75}" ShortID="71899731">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="UI Select 1" ID="{217C4BFF-6B4C-4EED-9515-13E1FCB186D4}">
-									<Language>SFX</Language>
-									<AudioFile>UI Select 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="744141565"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="UI Select 1" ID="{217C4BFF-6B4C-4EED-9515-13E1FCB186D4}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="UI Select 2" ID="{9F72A8FF-57B9-4FF4-B131-F3A102A10DA4}" ShortID="293808874">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="UI Select 2" ID="{69FE08AF-6249-4FAF-9904-491F1CCCAE68}">
-									<Language>SFX</Language>
-									<AudioFile>UI Select 2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1072828595"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="UI Select 2" ID="{69FE08AF-6249-4FAF-9904-491F1CCCAE68}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Ultimate Bar" ID="{29749FB9-17DA-4040-9CFC-3020484E5905}" ShortID="961578338">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1458,6 +1414,62 @@
 								<ActiveSource Name="Ultimate Bar" ID="{D734392F-C134-4124-8ED1-9B702ECB030B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="UI Switch" ID="{8BBBA7D4-36A1-4950-A6E9-CC709A17462A}" ShortID="519544022">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI Select 1" ID="{A16CB2C6-A319-4F52-A153-43051D026E75}" ShortID="71899731">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI Select 1" ID="{217C4BFF-6B4C-4EED-9515-13E1FCB186D4}">
+											<Language>SFX</Language>
+											<AudioFile>UI Select 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="744141565"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI Select 1" ID="{217C4BFF-6B4C-4EED-9515-13E1FCB186D4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI Select 2" ID="{9F72A8FF-57B9-4FF4-B131-F3A102A10DA4}" ShortID="293808874">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI Select 2" ID="{69FE08AF-6249-4FAF-9904-491F1CCCAE68}">
+											<Language>SFX</Language>
+											<AudioFile>UI Select 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1072828595"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI Select 2" ID="{69FE08AF-6249-4FAF-9904-491F1CCCAE68}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<SwitchContainer Name="Footstep Switch" ID="{83CF8FBD-517E-463F-8FC3-1916AA750D74}" ShortID="244198282">

@@ -440,6 +440,54 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI SFX Events" ID="{FD4F3E2F-5DA1-41EE-A460-AEB0CE6E9B9A}" ShortID="757275640">
+					<ChildrenList>
+						<Event Name="Play_UI_Back" ID="{76FAB33B-2487-47BB-AE71-D726D3042856}">
+							<ChildrenList>
+								<Action Name="" ID="{E3D7AAAE-6142-4856-9164-8A4EC27A0F20}" ShortID="697410151">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Back" ID="{1CA0301E-2DD7-424F-9B74-8D4559225F24}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Hover" ID="{5539183C-C2F7-469A-B266-2BBB15C9C8E8}">
+							<ChildrenList>
+								<Action Name="" ID="{56448B01-1517-451E-95A6-7A24E3BE708E}" ShortID="587649301">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Hover" ID="{7D4E8717-DD1A-4D43-98FD-3E6A266250A3}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Pause" ID="{4BCE3599-3531-4837-9A30-272111ED8045}">
+							<ChildrenList>
+								<Action Name="" ID="{550D250E-CAD9-44CB-BEEB-D27D4EFDF39E}" ShortID="115863403">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Pause" ID="{A3D93585-61BE-4BAB-8E17-F5C04E1DAE4E}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Switch" ID="{1FD448EF-3D57-437D-BF9A-E7F0BBC33964}">
+							<ChildrenList>
+								<Action Name="" ID="{869F17D3-6B23-40A5-A537-D0A05E5EBA56}" ShortID="1013071205">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI Switch" ID="{8BBBA7D4-36A1-4950-A6E9-CC709A17462A}" WorkUnitID="{7CF5F170-D3B4-4979-82E3-0FF84739A6CA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
