@@ -19,6 +19,7 @@ public class BossEnemy : Enemy
     public bool canBossRotate = true;
 
     private event EventHandler bossHealthChange;
+    public event EventHandler bossDeath;
 
     // Declare the UnityEvent
     public UnityEvent OnHealthInitialized = new UnityEvent();
@@ -84,6 +85,7 @@ public class BossEnemy : Enemy
         }
 
         base.EnemyDeath();
+        bossDeath.Invoke(this, EventArgs.Empty);
         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y - 40f, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 0.5f);
         GetComponentInChildren<Animator>().Play("Boss Idle");

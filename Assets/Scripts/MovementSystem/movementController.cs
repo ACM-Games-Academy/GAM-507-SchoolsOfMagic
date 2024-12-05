@@ -39,6 +39,8 @@ public class movementController : MonoBehaviour
         movementModel = new MovementModel(stats);
 
         initAbilties(playerController.GetCurrentClass());
+        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnEnable()
@@ -60,15 +62,6 @@ public class movementController : MonoBehaviour
 
     void CameraUpdate()
     {
-        //these will be temporary for the time being until we have a menu / pause menu setup
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
         cameraDirection.y += inputModule.getCameraInput().x / reduceY;
         cameraDirection.x = Mathf.Clamp(cameraDirection.x - (inputModule.getCameraInput().y / reduceZ), -90, 90);
 
