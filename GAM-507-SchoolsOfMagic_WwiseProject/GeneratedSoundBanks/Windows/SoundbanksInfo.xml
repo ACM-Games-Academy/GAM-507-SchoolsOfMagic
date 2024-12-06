@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{312AC51E-B8A4-D359-BC8C-B174526D53E5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6C8D92EC-0B7D-B47E-2ACE-C577D1EA8BF4}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -59,10 +59,6 @@
 				<File Id="62049592" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wizard Battle Theme_Blood.wav</ShortName>
 					<CachePath>SFX/Wizard Battle Theme_Blood_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="84734626" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Wizard Battle Theme Main_Nature.wav</ShortName>
-					<CachePath>SFX/Wizard Battle Theme Main_Nature_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="84748072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tank attack.wav</ShortName>
@@ -183,6 +179,10 @@
 				<File Id="501951875" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Flap x4.wav</ShortName>
 					<CachePath>SFX/Enemies/Flap x4_FB09AD84.wem</CachePath>
+				</File>
+				<File Id="506714782" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wizard Battle Music Nature.wav</ShortName>
+					<CachePath>SFX/Wizard Battle Music Nature_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="529100105" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tree Slam.wav</ShortName>
@@ -598,7 +598,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="146841814" Id="3501062356"/>
 							<MediaRefs>
-								<MediaRef Id="84734626"/>
+								<MediaRef Id="506714782"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -656,5 +656,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{05D3C9B7-CBF5-9476-143F-29BAD5827DAF}</FileHash>
+	<FileHash>{6FE8C4BA-4A34-35FA-BDDA-AE74249A5DF8}</FileHash>
 </SoundBanksInfo>

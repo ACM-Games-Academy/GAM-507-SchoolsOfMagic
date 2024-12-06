@@ -524,6 +524,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Death_Screen_Music_SFX" ID="{4DD5C2ED-1322-4246-8763-343AE1FEB987}">
+					<ChildrenList>
+						<Action Name="" ID="{432C7D97-A0BF-467C-88D6-59FD8FA0D00A}" ShortID="39695420">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death Screen Music_SFX" ID="{A2E3D472-0E9E-487E-9EE0-51C2C3713A3B}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

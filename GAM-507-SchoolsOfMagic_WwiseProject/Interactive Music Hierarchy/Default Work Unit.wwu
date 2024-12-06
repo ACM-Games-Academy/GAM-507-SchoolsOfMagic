@@ -59,7 +59,6 @@
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{93D28829-7EB5-4DA0-AA27-BECA96FAE4A9}">
 											<PropertyList>
-												<Property Name="DestinationContextType" Type="int16" Value="2"/>
 												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
@@ -67,9 +66,6 @@
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Battle Theme_Nature" ID="{0402B593-BDA3-418A-B01D-7EF72288ABC6}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="Battle Theme_Blood" ID="{E718C040-C020-43D0-9563-3CF3EE30DF82}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
@@ -131,7 +127,6 @@
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{7A98B44F-F198-47A0-8848-B2737B89C3BD}">
 											<PropertyList>
-												<Property Name="DestinationContextType" Type="int16" Value="2"/>
 												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
@@ -139,9 +134,6 @@
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Battle Theme_Nature" ID="{0402B593-BDA3-418A-B01D-7EF72288ABC6}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="Battle Theme_Metal" ID="{632EA467-8951-44E0-B293-BA0846D742FF}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
@@ -172,14 +164,10 @@
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
 													<ObjectRef Name="Battle Theme_Blood" ID="{E718C040-C020-43D0-9563-3CF3EE30DF82}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-												</Reference>
-												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Battle Theme_Nature" ID="{0402B593-BDA3-418A-B01D-7EF72288ABC6}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo>
@@ -208,14 +196,10 @@
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
 													<ObjectRef Name="Battle Theme_Metal" ID="{632EA467-8951-44E0-B293-BA0846D742FF}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-												</Reference>
-												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Battle Theme_Nature" ID="{0402B593-BDA3-418A-B01D-7EF72288ABC6}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo>
@@ -244,351 +228,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicPlaylistContainer Name="Battle Theme_Nature" ID="{0402B593-BDA3-418A-B01D-7EF72288ABC6}" ShortID="1014664684">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-								</Reference>
-								<Reference Name="PlaylistRoot">
-									<Custom>
-										<MusicPlaylistItem Name="" ID="{8B461BCA-A890-49A9-A4B6-967B978A8A0A}" ShortID="762986674">
-											<ChildrenList>
-												<MusicPlaylistItem Name="" ID="{13B32CC9-1B26-4CF2-824F-C8A6D4A09AC3}" ShortID="717946446">
-													<PropertyList>
-														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Segment">
-															<ObjectRef Name="Wizard Battle Theme Main_Nature" ID="{81DCA19B-954F-45BC-988A-1B314675D114}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-														</Reference>
-													</ReferenceList>
-												</MusicPlaylistItem>
-												<MusicPlaylistItem Name="" ID="{39E613AF-7A37-4D44-9DD4-2CF267605556}" ShortID="718407422">
-													<PropertyList>
-														<Property Name="LoopCount" Type="int16" Value="0"/>
-														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Segment">
-															<ObjectRef Name="Wizard Battle Theme Main_Nature_01" ID="{BD2218F8-C4DB-4AE6-A32E-5F922DA0BD54}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-														</Reference>
-													</ReferenceList>
-												</MusicPlaylistItem>
-											</ChildrenList>
-										</MusicPlaylistItem>
-									</Custom>
-								</Reference>
-								<Reference Name="TransitionRoot">
-									<Custom>
-										<MusicTransition Name="Root" ID="{B7FCB782-CEB3-4F80-87B4-11AFC75985F1}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<ChildrenList>
-												<MusicTransition Name="Transition" ID="{2D911B5A-B792-4172-BE32-B08DE568EBB7}">
-													<TransitionInfo/>
-												</MusicTransition>
-											</ChildrenList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</Custom>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicSegment Name="Wizard Battle Theme Main_Nature" ID="{81DCA19B-954F-45BC-988A-1B314675D114}" ShortID="574332024">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="180375"/>
-										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
-										<Property Name="Tempo" Type="Real64" Value="160"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Wizard Battle Theme Main_Nature" ID="{142EA7CF-22B7-42EA-A64F-CA912D5A5606}" ShortID="975610836">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{F4F62FD7-10D5-4BE3-ABFD-63EF3862BE3A}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Wizard Battle Theme Main_Nature" ID="{68F25DC6-039C-45DF-B7A1-B13F13775FFA}">
-													<Language>SFX</Language>
-													<AudioFile>Wizard Battle Theme Main_Nature.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="84734626"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{0FEC4D69-C06C-4433-AD81-0F6A50E6B389}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="Wizard Battle Theme Main_Nature" ID="{C4E99249-1B5A-455D-BB98-1D58E68C9349}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="180324.217687075"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="Wizard Battle Theme Main_Nature" ID="{68F25DC6-039C-45DF-B7A1-B13F13775FFA}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{5EF12A85-9A0C-4597-B4A9-58F063F27E2B}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{4EB8DC8E-09B2-4D4A-B934-680BD5C850EF}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="174750"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="Wizard Battle Theme Main_Nature_01" ID="{BD2218F8-C4DB-4AE6-A32E-5F922DA0BD54}" ShortID="565052543">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="180375"/>
-										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
-										<Property Name="Tempo" Type="Real64" Value="160"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Wizard Battle Theme Main_Nature" ID="{4B7FAC36-AAF3-4AE0-9F38-FAECAA84A164}" ShortID="1050960586">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{1153B578-DEC7-4EEF-B258-3FC0D192194E}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Wizard Battle Theme Main_Nature" ID="{1A2412D5-1B51-4AF1-95D9-A387A97E9563}">
-													<Language>SFX</Language>
-													<AudioFile>Wizard Battle Theme Main_Nature.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="84734626"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{5DD2DE09-AB86-4567-ABF3-F88381D119FA}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="Wizard Battle Theme Main_Nature" ID="{63BD782F-3E95-40C5-A9AC-9B19C721BF81}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="180324.217687075"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="Wizard Battle Theme Main_Nature" ID="{1A2412D5-1B51-4AF1-95D9-A387A97E9563}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-										<MusicTrack Name="Wizard Battle Theme Main_Nature_01" ID="{EF713789-69D4-4D2B-8C33-A616CFE14410}" ShortID="537064174">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{64180163-E325-4A6A-B8C0-093D885B5AFA}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Wizard Battle Theme Main_Nature" ID="{77E32955-7728-42FA-AC22-D48D70A0BEB0}">
-													<Language>SFX</Language>
-													<AudioFile>Wizard Battle Theme Main_Nature.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="84734626"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{78024634-F4A9-4A5D-AD4C-D55306237A5A}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="Wizard Battle Theme Main_Nature" ID="{CEFA3442-27A6-4B71-A848-9277E617EE93}">
-																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="174749.999999999"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="180324.217687075"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="-174749.999999999"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="Wizard Battle Theme Main_Nature" ID="{77E32955-7728-42FA-AC22-D48D70A0BEB0}"/>
-																					<PropertyCurveList>
-																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{1DBAB6A7-1E0E-4315-8878-E3FD399D54E0}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>174.75</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>180.324217687075</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{3ABBA7D7-DFCC-4888-A595-27306297C9CA}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>174.75</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>180.324217687075</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{B6CDDE7E-B28F-4D25-8A05-BAA5D4FAD771}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>174.75</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>180.324217687075</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																					</PropertyCurveList>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{4134B70F-8358-4A31-A8C2-19CDA769A5FD}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{0D261C68-EDAC-4C1D-8DF7-D61E2FCDAE53}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="174750"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-							</ChildrenList>
-						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Battle Theme_Metal" ID="{632EA467-8951-44E0-B293-BA0846D742FF}" ShortID="973856936">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1279,6 +918,140 @@
 								</MusicSegment>
 							</ChildrenList>
 						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Battle Theme_Nature" ID="{2C388B84-289C-43E5-9181-FF1FF1F3D10C}" ShortID="91804419">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{326C89E3-3471-437E-A397-1DDE9DBAAFC3}" ShortID="280690130">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{DFBF2270-051E-4741-A56E-A34B1CDF9475}" ShortID="622902161">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Wizard Battle Music Nature" ID="{27E8C069-4998-4586-A438-488C1C254FCF}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{3D357FAB-9301-4E13-A05F-B7F719A081F2}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{89AE50E1-0215-4FF7-8921-64D46FAED703}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Wizard Battle Music Nature" ID="{27E8C069-4998-4586-A438-488C1C254FCF}" ShortID="289795412">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="180453.129251701"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Wizard Battle Music Nature" ID="{4FF56D73-B93D-4FC0-BB2B-B0E1288C4B4F}" ShortID="48247069">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DCEA4962-F5F1-4EDF-9026-70B331457649}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{835C21E3-0FE7-4FA9-8DFE-42AC7D130811}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wizard Battle Music Nature" ID="{4EBA8445-CBF4-41C4-94E5-1E8AD0212E3A}">
+													<Language>SFX</Language>
+													<AudioFile>Wizard Battle Music Nature.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="506714782"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{46E06ABF-A077-492B-B666-E0F30B0B2DC5}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Wizard Battle Music Nature" ID="{9416C9BF-46A0-4D95-8A8F-DD0A93051E05}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="180453.129251701"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Wizard Battle Music Nature" ID="{4EBA8445-CBF4-41C4-94E5-1E8AD0212E3A}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{589FD0FC-4115-4EC9-9325-F549F39ACB8C}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{BCA5BCE4-E057-45BF-B9DC-1EA3A32C031B}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="180453.129251701"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="Arguments">
@@ -1328,7 +1101,7 @@
 									<MultiSwitchEntry Name="" ID="{9096422C-B40E-4E31-8CA1-DB5D4CF4E4C1}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
-												<ObjectRef Name="Battle Theme_Nature" ID="{0402B593-BDA3-418A-B01D-7EF72288ABC6}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+												<ObjectRef Name="Battle Theme_Nature" ID="{2C388B84-289C-43E5-9181-FF1FF1F3D10C}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 											</Reference>
 										</ReferenceList>
 										<ObjectLists>
