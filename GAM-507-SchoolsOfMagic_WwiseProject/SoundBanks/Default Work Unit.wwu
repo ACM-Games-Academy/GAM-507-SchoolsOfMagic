@@ -9,6 +9,7 @@
 						<ObjectRef Name="Play_Title_Screen_Theme" ID="{31B202BF-BE8D-4032-99A7-F9A97A9CA260}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Play_Select" ID="{AF14A875-2EDB-4048-8675-19BD94575235}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_GunReload" ID="{A242B614-E449-405E-B290-8B1E94B5DF67}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Death_Screen_Music_SFX" ID="{4DD5C2ED-1322-4246-8763-343AE1FEB987}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Metal_Shards" ID="{3CB87D7E-2FDF-4272-83B3-0577EC967495}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Boss_Death" ID="{5CA1869F-1573-43D2-AB31-5A67E6FC4758}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Blood_Primary_Ability" ID="{75F4F036-7E5B-4414-8867-292DB82CD90A}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
