@@ -12540,11 +12540,13 @@ MonoBehaviour:
   bossMusicStart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  mainMusicStop:
+    WwiseObjectReference: {fileID: 11400000, guid: a47cfe1b44e559645abd7beb8176956b, type: 2}
+  arcane:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6940b9815d7e1f74e9e4e40673e1a40b, type: 2}
   player: {fileID: 0}
   canBossRotate: 1
   OnHealthInitialized:
