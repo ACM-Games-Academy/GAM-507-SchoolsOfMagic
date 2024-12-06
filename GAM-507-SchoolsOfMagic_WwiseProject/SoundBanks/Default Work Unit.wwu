@@ -37,6 +37,7 @@
 						<ObjectRef Name="Play_UI_Hover" ID="{CDA01CEC-BD4E-4BD4-A1F3-5DA8524074BC}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Tank_Damage_Rand" ID="{588CC74A-35B4-4BDF-A127-9DA8CC4A0B51}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Boss_Idle" ID="{2805A6CD-7F89-4C2A-A466-C04481D1ECFD}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Wizard_OST_Switch" ID="{FD7DC769-8233-4C67-9A4D-06F5A6C7C317}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UI_Back" ID="{DFE933A8-F529-4C84-B58C-80C27D564764}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TreeBoss" ID="{0FF9AC10-CCBB-4D17-8CBC-A18DA5B9C259}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Nature_Passive_Hum" ID="{E5D2F947-7FDB-4D5C-AEAC-FA344EBFAAC0}" WorkUnitID="{9B7433C0-A5FD-4052-A39F-4F716EAEA7B2}" Origin="Manual" Filter="7"/>

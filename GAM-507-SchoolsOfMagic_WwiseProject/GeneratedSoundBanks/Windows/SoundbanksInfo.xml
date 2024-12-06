@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BCD5914D-4E42-5CAE-387C-04B4395AF0D5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{12779C77-FECD-1D86-C24C-2790183AEC3B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -644,6 +644,7 @@
 				<Event Id="1244266485" Name="Stop_Death_Screen_Music_SFX" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3018433415" Name="Stop_Title_Screen_Theme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2080081355" Name="Stop_TreeBoss" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3897811285" Name="Stop_Wizard_OST_Switch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="146841814" Name="WizardStates">
@@ -658,5 +659,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5F054C0A-2718-1D89-734B-458F8BBF1873}</FileHash>
+	<FileHash>{681DC56E-ED3D-01CE-772D-3261B8280DC8}</FileHash>
 </SoundBanksInfo>

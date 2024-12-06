@@ -33,6 +33,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3624587671	Play_UI_Pause			\Default Work Unit\UI SFX events\Play_UI_Pause	
 	3692906616	Play_Tank_Damage_Rand			\Default Work Unit\Enemy Tank Events\Play_Tank_Damage_Rand	
 	3695176782	Play_Boss_Death			\Default Work Unit\Boss Events\Play_Boss_Death	
+	3897811285	Stop_Wizard_OST_Switch			\Default Work Unit\Stop_Wizard_OST_Switch	
 	3903496159	Play_Blood_Gun_Reload			\Default Work Unit\Blood Events\Play_Blood_Gun_Reload	
 	3957539569	Play_TreeBoss			\Default Work Unit\Play_TreeBoss	
 	4056601793	Play_Shot_Switch			\Default Work Unit\Play_Shot_Switch	

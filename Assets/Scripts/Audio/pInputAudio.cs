@@ -13,6 +13,7 @@ public class playerInputAudio : MonoBehaviour
     public AK.Wwise.State natureState;
     public AK.Wwise.State metalState;
     public AK.Wwise.State arcaneState;
+    public AK.Wwise.Event playMainMusic;
 
     private PlayerController playerController;
     public CharacterController controller;
@@ -21,7 +22,9 @@ public class playerInputAudio : MonoBehaviour
     public float timer = 0f;
     private Vector3 lastPos = Vector3.zero;
     private bool playerInput;
-    
+
+
+
     private void Awake()
     {
         playerController = transform.GetComponent<PlayerController>();
@@ -53,6 +56,7 @@ public class playerInputAudio : MonoBehaviour
 
     private void OnEnable()
     {   
+        playMainMusic.Post(this.gameObject);
         input.NatureMagic += natureClass;
         input.MetalMagic += metalClass;
         input.BloodMagic += bloodClass;

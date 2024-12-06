@@ -563,6 +563,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Wizard_OST_Switch" ID="{FD7DC769-8233-4C67-9A4D-06F5A6C7C317}">
+					<ChildrenList>
+						<Action Name="" ID="{3E9D5BA7-922F-4CEB-96BB-30B09659FC49}" ShortID="455512212">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wizard OST Switch" ID="{91AFD251-23BD-4CFF-99C8-CAB70D733489}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

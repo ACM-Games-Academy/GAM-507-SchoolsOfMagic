@@ -52,6 +52,7 @@ namespace AK
         static const AkUniqueID STOP_DEATH_SCREEN_MUSIC_SFX = 1244266485U;
         static const AkUniqueID STOP_TITLE_SCREEN_THEME = 3018433415U;
         static const AkUniqueID STOP_TREEBOSS = 2080081355U;
+        static const AkUniqueID STOP_WIZARD_OST_SWITCH = 3897811285U;
     } // namespace EVENTS
 
     namespace STATES

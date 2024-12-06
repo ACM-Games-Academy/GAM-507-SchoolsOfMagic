@@ -14,6 +14,8 @@ public class buttonAudioScript : MonoBehaviour
     public AK.Wwise.Event startTitleMusic;
     public AK.Wwise.Event playDeathTheme;
     public AK.Wwise.Event stopDeathTheme;
+    public AK.Wwise.Event stopMainMusic;
+    public GameObject playerObject;
 
 
     public void Start()
@@ -63,5 +65,9 @@ public class buttonAudioScript : MonoBehaviour
         uiSelect.Post(this.gameObject);
     }
 
+    public void StopMainMusic()
+    {
+        stopMainMusic.Post(playerObject);
+    }
 
 }
