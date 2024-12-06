@@ -9,6 +9,8 @@ TagManager:
   - Flying Enemy
   - Melee Enemy
   - Boss Enemy
+  - deathMenu
+  - pauseMenu
   layers:
   - Default
   - TransparentFX

@@ -49,6 +49,8 @@ namespace AK
         static const AkUniqueID PLAY_WIZARD_OST_SWITCH = 4121109043U;
         static const AkUniqueID PLAYFOOTSTEPS = 1088348632U;
         static const AkUniqueID STOP_BOSS_IDLE = 2343322892U;
+        static const AkUniqueID STOP_DEATH_SCREEN_MUSIC_SFX = 1244266485U;
+        static const AkUniqueID STOP_TITLE_SCREEN_THEME = 3018433415U;
         static const AkUniqueID STOP_TREEBOSS = 2080081355U;
     } // namespace EVENTS
 

@@ -535,6 +535,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Title_Screen_Theme" ID="{4346786B-6784-4098-AC3E-09376506F4FA}">
+					<ChildrenList>
+						<Action Name="" ID="{921AFB85-EF2E-4BD1-82E1-7547B61B213A}" ShortID="865666818">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Title Screen Theme" ID="{DC2D42A8-7FC2-4073-B462-CEA8B6E08272}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Death_Screen_Music_SFX" ID="{D514DED9-BE02-412D-8C1A-DFBD692D54EF}">
+					<ChildrenList>
+						<Action Name="" ID="{17212888-F7FE-49A8-BC1D-2311C32D02B1}" ShortID="21469886">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death Screen Music_SFX" ID="{A2E3D472-0E9E-487E-9EE0-51C2C3713A3B}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

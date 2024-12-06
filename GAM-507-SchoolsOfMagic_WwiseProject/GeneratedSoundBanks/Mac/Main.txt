@@ -7,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1030645097	Play_SporeShot			\Default Work Unit\Boss Events\Play_SporeShot	
 	1054381211	Play_Flyer_Attack_Rand			\Default Work Unit\Enemy Flyer Events\Play_Flyer_Attack_Rand	
 	1088348632	PlayFootsteps			\Default Work Unit\PlayFootsteps	
+	1244266485	Stop_Death_Screen_Music_SFX			\Default Work Unit\Stop_Death_Screen_Music_SFX	
 	1290140931	Play_Tank_Footstep_Rand			\Default Work Unit\Enemy Tank Events\Play_Tank_Footstep_Rand	
 	1339559671	Play_UI_Hover			\Default Work Unit\UI SFX events\Play_UI_Hover	
 	1386224142	Play_UI_Back			\Default Work Unit\UI SFX events\Play_UI_Back	
@@ -23,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2343322892	Stop_Boss_Idle			\Default Work Unit\Boss Events\Stop_Boss_Idle	
 	2437099115	Play_Metal_OutOfAmmo			\Default Work Unit\Metal Events\Play_Metal_OutOfAmmo	
 	2496273332	Play_Tank_Spawn_Rand			\Default Work Unit\Enemy Tank Events\Play_Tank_Spawn_Rand	
+	3018433415	Stop_Title_Screen_Theme			\Default Work Unit\Stop_Title_Screen_Theme	
 	3044732116	Play_Metal_Whoosh			\Default Work Unit\Metal Events\Play_Metal_Whoosh	
 	3049387599	Play_Nature_Hat_Rustle			\Default Work Unit\Nature Events\Play_Nature_Hat_Rustle	
 	3183334536	Play_Flyer_Flap_Rand			\Default Work Unit\Enemy Flyer Events\Play_Flyer_Flap_Rand	

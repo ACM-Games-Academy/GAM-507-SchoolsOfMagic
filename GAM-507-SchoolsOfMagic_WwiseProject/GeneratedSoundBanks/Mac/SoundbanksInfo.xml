@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6C8D92EC-0B7D-B47E-2ACE-C577D1EA8BF4}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BCD5914D-4E42-5CAE-387C-04B4395AF0D5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -641,6 +641,8 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="2343322892" Name="Stop_Boss_Idle" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1244266485" Name="Stop_Death_Screen_Music_SFX" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3018433415" Name="Stop_Title_Screen_Theme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2080081355" Name="Stop_TreeBoss" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
@@ -656,5 +658,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1169413E-8E41-80AC-E74A-BC7C406EB927}</FileHash>
+	<FileHash>{5ED2CAA3-12F5-CF68-0A16-2B9DBF880751}</FileHash>
 </SoundBanksInfo>
