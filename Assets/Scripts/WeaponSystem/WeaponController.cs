@@ -147,6 +147,11 @@ public class WeaponController : MonoBehaviour
 
     private void ReloadCurrentGun()
     {
+        if (isReloading)
+        {
+            return;
+        }
+
         WeaponStats weaponStats = currentWeapon.WeaponStats;
         int reloadedAmount = 0;
 
@@ -189,7 +194,7 @@ public class WeaponController : MonoBehaviour
         }
 
         isReloading = false;
-        reloadFired.Invoke(this, EventArgs.Empty);
+        reloadFired?.Invoke(this, EventArgs.Empty);
         loadedAmmo = currentWeapon.CurrentAmmo;
     }
 

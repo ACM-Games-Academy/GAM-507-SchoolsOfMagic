@@ -88,7 +88,7 @@ public class WeaponBase : MonoBehaviour
         nextFireTime = Time.time + weaponStats.FireRate;
 
         //put fire event here
-        gunFired.Invoke(this, EventArgs.Empty);
+        gunFired?.Invoke(this, EventArgs.Empty);
     }
 
     protected virtual void ShootRay()
