@@ -13,10 +13,12 @@ public class LevelManager : MonoBehaviour
     
     public void LoadMainMenu()
     {
+        Time.timeScale = 1f;
         StartCoroutine(ChangeScene(MenuIndex));
     }
     public void LoadGameScene()
     {
+        Time.timeScale = 1f;
         StartCoroutine(ChangeScene(GameIndex));
     }
 
