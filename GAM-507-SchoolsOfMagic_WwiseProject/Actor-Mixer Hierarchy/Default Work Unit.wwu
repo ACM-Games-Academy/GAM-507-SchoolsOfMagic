@@ -2893,7 +2893,18 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Flyer Attack Rand" ID="{551FF486-6BBB-4084-B0E3-F45D5C6F2810}" ShortID="524495267">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Footsteps" ID="{08483B27-A031-4BD2-9609-6325F7A5D5F8}" WorkUnitID="{82800CCE-5252-4A9E-A067-8B1E2875E960}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
 										</Reference>
@@ -2913,6 +2924,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Attack1" ID="{7639BABA-94AF-4BB2-88B5-653AB4A7F5B8}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0388562591890059"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.600505823830092"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Enemies\Attack1.wav</AudioFile>
 													<MediaIDList>
@@ -2935,6 +2951,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Attack2" ID="{7939F656-9AEE-4D1E-B460-F82C248EF0DD}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00696137506887784"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.521108648013143"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Enemies\Attack2.wav</AudioFile>
 													<MediaIDList>

@@ -440,31 +440,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_TreeBoss" ID="{A3703883-2ABA-4B31-83A2-6D6CB75C65D8}">
-					<ChildrenList>
-						<Action Name="" ID="{C3B0AF98-8814-4559-B158-E60FD5F22F40}" ShortID="909081663">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="TreeBoss" ID="{79E8488B-2410-48ED-8DB0-3FB68007B3A8}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_TreeBoss" ID="{0FF9AC10-CCBB-4D17-8CBC-A18DA5B9C259}">
-					<ChildrenList>
-						<Action Name="" ID="{D3A08376-B383-43F3-871C-9F46AE1C833F}" ShortID="291679845">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="TreeBoss" ID="{79E8488B-2410-48ED-8DB0-3FB68007B3A8}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="UI SFX events" ID="{574E3C4F-DB90-49AC-B384-F48E118FBC5E}" ShortID="278394336">
 					<ChildrenList>
 						<Event Name="Play_UI_Back" ID="{DFE933A8-F529-4C84-B58C-80C27D564764}">
@@ -573,6 +548,31 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Wizard OST Switch" ID="{91AFD251-23BD-4CFF-99C8-CAB70D733489}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TreeBoss" ID="{9F1DBA14-E616-4516-8342-9BC4F73677E5}">
+					<ChildrenList>
+						<Action Name="" ID="{606B9A53-29C1-48FB-97E7-2B4EDA910D31}" ShortID="530209601">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TreeBoss" ID="{C29DC14D-3EDB-479D-BEDE-3DE57D252829}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_TreeBoss" ID="{92A9708B-2C17-4842-91D9-43F2B3E4AF7B}">
+					<ChildrenList>
+						<Action Name="" ID="{1298F6A0-F7E0-4081-A2AC-7AA20EA2D757}" ShortID="230994949">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TreeBoss" ID="{C29DC14D-3EDB-479D-BEDE-3DE57D252829}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

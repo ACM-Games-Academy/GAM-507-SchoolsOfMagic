@@ -15,8 +15,9 @@ public class buttonAudioScript : MonoBehaviour
     public AK.Wwise.Event playDeathTheme;
     public AK.Wwise.Event stopDeathTheme;
     public AK.Wwise.Event stopMainMusic;
-    public GameObject playerObject;
-
+    public AK.Wwise.Event stopBossMusic;
+    [SerializeField] private GameObject wwiseGlobal;
+    [SerializeField] private GameObject bossObject;
 
     public void Start()
     {
@@ -27,7 +28,10 @@ public class buttonAudioScript : MonoBehaviour
     {
         if (this.gameObject.tag == "deathMenu")
         {
+            stopMainMusic.Post(wwiseGlobal);
+            stopBossMusic.Post(bossObject);
             playDeathTheme.Post(this.gameObject);
+            
         }
         if (this.gameObject.tag == "pauseMenu")
         {
@@ -67,7 +71,7 @@ public class buttonAudioScript : MonoBehaviour
 
     public void StopMainMusic()
     {
-        stopMainMusic.Post(playerObject);
+        stopMainMusic.Post(wwiseGlobal);
     }
 
 }

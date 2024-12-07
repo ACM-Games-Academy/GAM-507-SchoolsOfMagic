@@ -55,6 +55,10 @@ MonoBehaviour:
   targetDistance: 3
   projectileCooldown: 3
   projectileTimer: 0
+  flyerAttack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6503fd0d822006f4aa3e20de04a8be7b, type: 2}
   projectilePrefab: {fileID: 3382289255389954540, guid: 40a40bda2c5b79e4ebe4c6dc5f08c39f, type: 3}
 --- !u!33 &2958453055407483019
 MeshFilter:

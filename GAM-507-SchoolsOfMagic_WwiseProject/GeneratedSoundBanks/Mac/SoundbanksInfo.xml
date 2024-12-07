@@ -36,7 +36,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{12779C77-FECD-1D86-C24C-2790183AEC3B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B867F6C6-2723-490E-0B91-0C45F570CEE4}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -302,11 +302,11 @@
 				</File>
 				<File Id="897023637" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Attack1.wav</ShortName>
-					<CachePath>SFX/Enemies/Attack1_818F3B66.wem</CachePath>
+					<CachePath>SFX/Enemies/Attack1_CDC2CA0E.wem</CachePath>
 				</File>
 				<File Id="907536225" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Attack2.wav</ShortName>
-					<CachePath>SFX/Enemies/Attack2_818F3B66.wem</CachePath>
+					<CachePath>SFX/Enemies/Attack2_F141EC47.wem</CachePath>
 				</File>
 				<File Id="907561064" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemies\Flap x4.wav</ShortName>
@@ -412,7 +412,7 @@
 						<MediaRef Id="470240288"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1054381211" Name="Play_Flyer_Attack_Rand" DurationType="OneShot" DurationMin="0.88807255" DurationMax="1.051474">
+				<Event Id="1054381211" Name="Play_Flyer_Attack_Rand" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.36696392" DurationMax="0.4509681">
 					<MediaRefs>
 						<MediaRef Id="897023637"/>
 						<MediaRef Id="907536225"/>
@@ -556,7 +556,7 @@
 						<MediaRef Id="529100105"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3957539569" Name="Play_TreeBoss" DurationType="OneShot" DurationMin="125.70053" DurationMax="125.70053">
+				<Event Id="3957539569" Name="Play_TreeBoss" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="615855665"/>
 					</MediaRefs>
@@ -659,5 +659,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CEB7BF75-3AFE-C253-3BB7-6F1EA0B4F3E7}</FileHash>
+	<FileHash>{9F9AC4FB-FE83-93A6-2694-0A8F29E8F40E}</FileHash>
 </SoundBanksInfo>

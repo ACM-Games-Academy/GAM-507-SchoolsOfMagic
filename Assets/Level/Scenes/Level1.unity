@@ -2391,6 +2391,22 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 865672722}
+    - target: {fileID: 8755103689413742738, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: bossObject
+      value: 
+      objectReference: {fileID: 25539377883647748}
+    - target: {fileID: 8755103689413742738, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: wwiseGlobal
+      value: 
+      objectReference: {fileID: 2016453145}
+    - target: {fileID: 8755103689413742738, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: stopBossMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 82bc5cecab30125408a1b47bd3c53630, type: 2}
+    - target: {fileID: 8755103689413742738, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
+      propertyPath: stopMainMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: eb74b0b22c6a3074bb9959653376103e, type: 2}
     - target: {fileID: 8940788610959233060, guid: 93ef8d3e24254294292bf601c649168e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4848,7 +4864,12 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: eb74b0b22c6a3074bb9959653376103e, type: 2}
-  playerObject: {fileID: 1909681220}
+  stopBossMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 82bc5cecab30125408a1b47bd3c53630, type: 2}
+  wwiseGlobal: {fileID: 2016453145}
+  bossObject: {fileID: 25539377883647748}
 --- !u!4 &865672723
 Transform:
   m_ObjectHideFlags: 0
@@ -10909,6 +10930,10 @@ PrefabInstance:
       propertyPath: playMainMusic.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 5223f81ac4cb8454bab24a2e3958b4dd, type: 2}
+    - target: {fileID: 1356597614859800211, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: exsangSound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c7433ed163d5b42b14d28b11341eb7, type: 2}
     - target: {fileID: 4965288291323649386, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10978,11 +11003,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
---- !u!1 &1909681220 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 607852696033028994, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
-  m_PrefabInstance: {fileID: 1909681219}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1911796983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13309,7 +13329,7 @@ MonoBehaviour:
   bossMusicStart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a47cfe1b44e559645abd7beb8176956b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 38da110508c58004fa5939304f583ffb, type: 2}
   mainMusicStop:
     idInternal: 0
     valueGuidInternal: 

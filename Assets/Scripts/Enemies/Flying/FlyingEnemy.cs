@@ -10,6 +10,7 @@ public class FlyingEnemy : Enemy
     public float targetDistance = 3;
     public float projectileCooldown = 3;
     public float projectileTimer = 0;
+    public AK.Wwise.Event flyerAttack;
 
     public EnemyProjectile projectilePrefab;
     
@@ -39,6 +40,7 @@ public class FlyingEnemy : Enemy
         if (projectileTimer >= projectileCooldown)
         {
             projectileTimer = 0;
+            flyerAttack.Post(this.gameObject);
             EnemyProjectile projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
             projectile.player = player;
             projectile.transform.LookAt(player.transform);
