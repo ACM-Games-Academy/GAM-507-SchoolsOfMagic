@@ -10913,9 +10913,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7065735010422097065, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: currentWeapon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8191719128091294513, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639430874210451526, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: reduceY
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639430874210451526, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
+      propertyPath: reduceZ
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8754184609010367472, guid: 57f24d1ee9611054b9de933decd8effe, type: 3}
       propertyPath: m_LocalPosition.x

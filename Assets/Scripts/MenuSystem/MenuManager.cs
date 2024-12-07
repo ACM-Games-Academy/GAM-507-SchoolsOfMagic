@@ -62,12 +62,9 @@ public class MenuManager : MonoBehaviour
     public AK.Wwise.Event bossIdleStop;
     public AK.Wwise.Event bossIdle;
 
-    private void Start()
-    {
-        
-    }
+    
 
-    private void OnEnable()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         pControl = player.GetComponent<PlayerController>();
@@ -114,12 +111,13 @@ public class MenuManager : MonoBehaviour
         ActiveUI(playerHud);
         isPaused = false;
         freezeOverride = false;
-
+        
         weaponControl.currentWeapon.gunFired += OnWeaponShoot;
 
         bossIdle.Post(this.gameObject);
 
         StartCoroutine(RedrawHUD(pHealth, pClass, pCurrentAmmo, pMaxAmmo, pIron, pBlood, bHealth));
+        
     }
 
     private void OnDisable()
@@ -169,6 +167,12 @@ public class MenuManager : MonoBehaviour
         {
             Debug.Log("Pause blocked - Freeze override: " + freezeOverride);
         }
+    }
+
+    public void InitialiseUI()
+    {
+        
+        StartCoroutine(RedrawHUD(pHealth, pClass, pCurrentAmmo, pMaxAmmo, pIron, pBlood, bHealth));
     }
 
     // Victory Screen - Win Condition required

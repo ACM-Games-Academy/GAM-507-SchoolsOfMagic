@@ -36,8 +36,8 @@ public class WeaponController : MonoBehaviour
         playerInput.reloadPressed += OnReloadPressed;
 
         // Initialize the correct weapon based on player's class
-        InitializeWeaponForClass(controller.GetCurrentClass());
-        handAnimator.GunAnimInit(currentWeapon);
+        //InitializeWeaponForClass(controller.GetCurrentClass());
+        //handAnimator.GunAnimInit(currentWeapon);
     }
 
     private void OnEnable()
@@ -55,6 +55,8 @@ public class WeaponController : MonoBehaviour
         playerInput.reloadPressed += OnReloadPressed;
 
         canSwitchGun = false;   
+        InitializeWeaponForClass(controller.GetCurrentClass());
+        handAnimator.GunAnimInit(currentWeapon);
     }
 
     private void InitializeWeaponForClass(string playerClass)
