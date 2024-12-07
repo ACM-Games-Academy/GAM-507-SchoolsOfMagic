@@ -1565,6 +1565,9 @@
 					</ObjectLists>
 				</MusicSegment>
 				<MusicPlaylistContainer Name="TreeBoss" ID="{C29DC14D-3EDB-479D-BEDE-3DE57D252829}" ShortID="755649235">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="140"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4878575C-0BA5-4CEB-8568-1FD28A60A309}"/>
@@ -1603,6 +1606,40 @@
 										<MusicTransition Name="Transition" ID="{A98941A7-E53E-4513-9F15-483842061745}">
 											<TransitionInfo/>
 										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{2D74BDD9-DC5D-4CE6-8F07-5CC9EC9A50BB}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="TreeBoss" ID="{79E8488B-2410-48ED-8DB0-3FB68007B3A8}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="TreeBoss" ID="{79E8488B-2410-48ED-8DB0-3FB68007B3A8}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{AE6746D9-E0DA-488D-9349-14475186492C}">
+														<PropertyList>
+															<Property Name="FadeOffset" Type="Real64" Value="0.5"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{F445728F-7703-4E45-95B3-BB12959605AD}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
 									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
@@ -1612,7 +1649,7 @@
 					<ChildrenList>
 						<MusicSegment Name="TreeBoss" ID="{79E8488B-2410-48ED-8DB0-3FB68007B3A8}" ShortID="732911078">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="125700.531769905"/>
+								<Property Name="EndPosition" Type="Real64" Value="132117.044270293"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1662,6 +1699,7 @@
 																				<Property Name="EndTrimOffset" Type="Real64" Value="125700.531769905"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="3681.60553300977"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="TreeBoss" ID="{F1189C29-DC84-45D2-8C02-CAEE76FBF2DE}"/>
 																			<PropertyCurveList>
@@ -1739,7 +1777,11 @@
 								<ObjectList Name="Cues">
 									<Reference>
 										<Local>
-											<MusicCue Name="Entry Cue" ID="{F21327CE-DA1F-4960-B157-2C49F9C7F37F}"/>
+											<MusicCue Name="Entry Cue" ID="{F21327CE-DA1F-4960-B157-2C49F9C7F37F}">
+												<PropertyList>
+													<Property Name="TimeMs" Type="Real64" Value="3683.22932835651"/>
+												</PropertyList>
+											</MusicCue>
 										</Local>
 									</Reference>
 									<Reference>
@@ -1747,7 +1789,7 @@
 											<MusicCue Name="Exit Cue" ID="{8F5A0E99-9181-4BD7-8F61-ED7F59A66CAF}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="125142.854166667"/>
+													<Property Name="TimeMs" Type="Real64" Value="127111.800756928"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
