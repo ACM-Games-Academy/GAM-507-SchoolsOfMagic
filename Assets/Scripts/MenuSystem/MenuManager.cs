@@ -54,7 +54,7 @@ public class MenuManager : MonoBehaviour
     private float bHealth;
     private float bHealthMax;
 
-    private bool isPaused = false;
+    public bool isPaused = false;
     private bool freezeOverride = false;
     
     [Header("Boss Audio Events")]

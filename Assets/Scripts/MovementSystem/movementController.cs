@@ -31,16 +31,21 @@ public class movementController : MonoBehaviour
     [Header("Stats")]
 
     [SerializeField] private movementStats stats;
+
+    private bool paused = false;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        
         movementModel = new MovementModel(stats);
 
         initAbilties(playerController.GetCurrentClass());
         
         Cursor.lockState = CursorLockMode.Locked;
+
+        
     }
 
     private void OnEnable()
@@ -56,8 +61,12 @@ public class movementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CameraUpdate();
-        MovementUpdate();
+        paused = GameObject.Find("MenuManager").GetComponent<MenuManager>().isPaused;
+        if (!paused)
+        {
+            CameraUpdate();
+            MovementUpdate();
+        }
     }
 
     void CameraUpdate()
