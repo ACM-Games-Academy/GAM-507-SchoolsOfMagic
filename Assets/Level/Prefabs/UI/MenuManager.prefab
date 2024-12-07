@@ -458,14 +458,14 @@ RectTransform:
   m_GameObject: {fileID: 425723461445031418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3447, y: 1.3447, z: 1.3447}
+  m_LocalScale: {x: 0.7684, y: 0.7684, z: 0.7684}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8212802799264905621}
+  m_Father: {fileID: 4352826831704360773}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095963, y: 575.4}
+  m_AnchoredPosition: {x: 0.000030694384, y: 68.62863}
   m_SizeDelta: {x: 406.28, y: 53.1315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1575649981117384395
@@ -2554,6 +2554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponControl: {fileID: 0}
+  bossStats: {fileID: 0}
   playerHud: {fileID: 2282530870210091751}
   pauseMenu: {fileID: 7435466276488803665}
   victoryScreen: {fileID: 1411566902105592188}
@@ -2690,6 +2691,8 @@ RectTransform:
   m_Children:
   - {fileID: 5838130293549562417}
   - {fileID: 2164176531617587054}
+  - {fileID: 197686475477376930}
+  - {fileID: 903295260095802022}
   m_Father: {fileID: 8212802799264905621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3126,8 +3129,6 @@ RectTransform:
   - {fileID: 3828348447354981611}
   - {fileID: 640923552939929660}
   - {fileID: 4352826831704360773}
-  - {fileID: 197686475477376930}
-  - {fileID: 903295260095802022}
   m_Father: {fileID: 2353683885769273127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4819,6 +4820,11 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b63603a253083994c8c5003040181418, type: 2}
+  stopMainMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  playerObject: {fileID: 0}
 --- !u!1 &2964189702945645159
 GameObject:
   m_ObjectHideFlags: 0
@@ -7770,14 +7776,14 @@ RectTransform:
   m_GameObject: {fileID: 3716541833524952526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3447, y: 1.3447, z: 1.3447}
+  m_LocalScale: {x: 0.7684, y: 0.7684, z: 0.7684}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8212802799264905621}
+  m_Father: {fileID: 4352826831704360773}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: 519.19}
+  m_AnchoredPosition: {x: 0, y: 36.508636}
   m_SizeDelta: {x: 547.0428, y: 59.2874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8974280442082661009
@@ -15500,6 +15506,11 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  stopMainMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  playerObject: {fileID: 0}
 --- !u!1 &7476696891732214010
 GameObject:
   m_ObjectHideFlags: 0

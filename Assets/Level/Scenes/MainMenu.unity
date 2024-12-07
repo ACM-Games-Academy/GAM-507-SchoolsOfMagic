@@ -343,6 +343,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  playerObject: {fileID: 0}
 --- !u!4 &243081641
 Transform:
   m_ObjectHideFlags: 0
@@ -939,6 +940,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 456409528484877084, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 456409528484877084, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 456409528484877084, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 756070129012433726, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -967,9 +980,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1049317645698017915, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049317645698017915, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049317645698017915, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 1214915843945987814, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_text
       value: Jake Ash
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214915843945987814, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214915843945987814, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214915843945987814, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1353974009708881929, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1005,9 +1042,69 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 1380687936891925475, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380687936891925475, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380687936891925475, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268037714654906677, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268037714654906677, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268037714654906677, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759868712108423581, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759868712108423581, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759868712108423581, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 3929946992975713808, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007225659955500620, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007225659955500620, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007225659955500620, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223608276107640166, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223608276107640166, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223608276107640166, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4336137013815436004, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1040,6 +1137,18 @@ PrefabInstance:
     - target: {fileID: 4336137013815436004, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466333734574046805, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466333734574046805, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466333734574046805, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4552486484224457329, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_Camera
@@ -1077,6 +1186,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4661538434306883943, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661538434306883943, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661538434306883943, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 4997398615579491757, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -1113,6 +1234,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Launcelot Raven - Lead
       objectReference: {fileID: 0}
+    - target: {fileID: 5252616830177460972, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252616830177460972, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252616830177460972, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 5475562540087881887, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -1144,6 +1277,18 @@ PrefabInstance:
     - target: {fileID: 5475562540087881887, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996536500973885406, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996536500973885406, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996536500973885406, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6082367588641618399, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1265,6 +1410,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -191.99994
       objectReference: {fileID: 0}
+    - target: {fileID: 6800432758403743105, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800432758403743105, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800432758403743105, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 7056435078373872910, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -569.99994
@@ -1297,9 +1454,45 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7540833552167742654, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540833552167742654, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540833552167742654, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 8280286773918715628, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_Name
       value: Canvas_MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898545097024994277, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898545097024994277, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898545097024994277, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123097118512821905, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123097118512821905, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123097118512821905, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

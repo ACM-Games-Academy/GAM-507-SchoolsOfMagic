@@ -22,16 +22,16 @@ public class BossEnemy : Enemy
     public event EventHandler bossDeath;
 
     // Declare the UnityEvent
-    public UnityEvent OnHealthInitialized = new UnityEvent();
+    //public UnityEvent OnHealthInitialized = new UnityEvent();
 
-    private void Start()
+    private void OnEnable()
     {
         player = GameObject.FindWithTag("Player").transform;
         bossUI.SetActive(false);
 
         // Initialize health 
         EnemyInitiate(bossStats.health, bossStats.isArmoured);
-        OnHealthInitialized?.Invoke(); 
+        //OnHealthInitialized?.Invoke(); 
     }
 
     private void Update()
@@ -73,7 +73,7 @@ public class BossEnemy : Enemy
     public void ResetBossHealth()
     {
         ResetHealth(bossStats.health); // Reset to full health
-        OnHealthInitialized?.Invoke();
+        //OnHealthInitialized?.Invoke();
     }
 
     protected override void EnemyDeath()

@@ -16,6 +16,8 @@ public class MenuManager : MonoBehaviour
     private playerInput pInput;
     public WeaponController weaponControl;
     private BossEnemy bossEnemy;
+
+    [SerializeField] private BossStats bossStats;
     
     [SerializeField] private GameObject playerHud;
     [SerializeField] private GameObject pauseMenu;
@@ -62,7 +64,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-       
+        
     }
 
     private void OnEnable()
@@ -83,9 +85,9 @@ public class MenuManager : MonoBehaviour
         pIronMax = pControl.GetMaxIron();
         pCurrentAmmo = weaponControl.LoadedAmmo;
         pMaxAmmo = weaponControl.MagSize;
-
-        bHealth = bossEnemy.Health;
-        bHealthMax = bossEnemy.Health;
+        
+        bHealth = bossStats.health;
+        bHealthMax = bossStats.health;
         
         HealthBar.GetComponent<Slider>().maxValue = pHealthMax;
         IronBar.GetComponent<Slider>().maxValue = pIronMax;
@@ -254,6 +256,7 @@ public class MenuManager : MonoBehaviour
     private void OnBossHealthChange(object sender, EventArgs e)
     {
         bHealth = bossEnemy.Health;
+        Debug.Log(bossEnemy.Health);
         StartCoroutine(RedrawHUD(pHealth, pClass, pCurrentAmmo, pMaxAmmo, pIron, pBlood, bHealth));
     }
     

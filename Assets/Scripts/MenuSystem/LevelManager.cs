@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
     {
         crossFade.SetTrigger("Start");
         yield return new WaitForSeconds(transTime);
+        Debug.Log("Quitting...");
         Application.Quit();
     }
 }

@@ -17,7 +17,7 @@ public class BossHealthBar : MonoBehaviour
         if (bossEnemy != null)
         {
             // Subscribe to the event
-            bossEnemy.OnHealthInitialized.AddListener(Initialize);
+            //bossEnemy.OnHealthInitialized.AddListener(Initialize);
         }
     }
 
