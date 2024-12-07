@@ -59,6 +59,7 @@
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{93D28829-7EB5-4DA0-AA27-BECA96FAE4A9}">
 											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
 												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
@@ -66,6 +67,9 @@
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Battle Theme_Nature" ID="{2C388B84-289C-43E5-9181-FF1FF1F3D10C}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="Battle Theme_Blood" ID="{E718C040-C020-43D0-9563-3CF3EE30DF82}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
@@ -127,6 +131,7 @@
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{7A98B44F-F198-47A0-8848-B2737B89C3BD}">
 											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
 												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
@@ -134,6 +139,9 @@
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Battle Theme_Nature" ID="{2C388B84-289C-43E5-9181-FF1FF1F3D10C}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="Battle Theme_Metal" ID="{632EA467-8951-44E0-B293-BA0846D742FF}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
@@ -164,10 +172,14 @@
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
 													<ObjectRef Name="Battle Theme_Blood" ID="{E718C040-C020-43D0-9563-3CF3EE30DF82}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Battle Theme_Nature" ID="{2C388B84-289C-43E5-9181-FF1FF1F3D10C}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo>
@@ -196,10 +208,14 @@
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
 													<ObjectRef Name="Battle Theme_Metal" ID="{632EA467-8951-44E0-B293-BA0846D742FF}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Battle Theme_Nature" ID="{2C388B84-289C-43E5-9181-FF1FF1F3D10C}" WorkUnitID="{360FCC35-65D0-4512-8D3D-EE6F8747BDF0}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo>
