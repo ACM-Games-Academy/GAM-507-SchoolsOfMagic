@@ -11,7 +11,8 @@ public class BossEnemy : Enemy
 
     [Header("Wwise Music Events")]
     public AK.Wwise.Event bossMusicStart;
-    public AK.Wwise.State arcane; //ARCANE WIZARD !!?!?!?!!?!?!?!!? it makes sense trust me
+    public AK.Wwise.Event mainMusicStop;
+    public GameObject wwiseGlobal;
 
     [HideInInspector] public Transform player;
     private bool bossStarted = false;
@@ -52,7 +53,7 @@ public class BossEnemy : Enemy
 
         if (!bossStarted)
         {
-            arcane.SetValue();
+            mainMusicStop.Post(wwiseGlobal);
             bossMusicStart.Post(this.gameObject);
             bossStarted = true;
             bossUI.SetActive(true);

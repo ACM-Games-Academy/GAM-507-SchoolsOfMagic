@@ -12313,6 +12313,7 @@ GameObject:
   - component: {fileID: 2016453148}
   - component: {fileID: 2016453151}
   - component: {fileID: 2016453149}
+  - component: {fileID: 2016453152}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -12434,6 +12435,40 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &2016453152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016453145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47f0d20309a55d488cb3b7727ac4a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5223f81ac4cb8454bab24a2e3958b4dd, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1001 &2088607781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13275,12 +13310,11 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a47cfe1b44e559645abd7beb8176956b, type: 2}
-  arcane:
+  mainMusicStop:
     idInternal: 0
     valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6940b9815d7e1f74e9e4e40673e1a40b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: eb74b0b22c6a3074bb9959653376103e, type: 2}
+  wwiseGlobal: {fileID: 2016453145}
   player: {fileID: 0}
   canBossRotate: 1
 --- !u!1 &3216943863900101837
