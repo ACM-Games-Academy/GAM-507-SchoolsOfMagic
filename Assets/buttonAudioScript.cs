@@ -74,4 +74,9 @@ public class buttonAudioScript : MonoBehaviour
         stopMainMusic.Post(wwiseGlobal);
     }
 
+    public void StopBossMusic()
+    {
+        stopBossMusic.Post(wwiseGlobal);
+    }
+
 }

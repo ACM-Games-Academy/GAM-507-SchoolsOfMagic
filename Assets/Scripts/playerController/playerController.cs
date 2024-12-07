@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         onBloodChange(EventArgs.Empty);
         onIronChange(EventArgs.Empty);
         
-        //GameObject.Find("MenuManager").GetComponent<MenuManager>().InitialiseUI();
+        GameObject.Find("MenuManager").GetComponent<MenuManager>().InitialiseUI();
     }
 
     private void Update()

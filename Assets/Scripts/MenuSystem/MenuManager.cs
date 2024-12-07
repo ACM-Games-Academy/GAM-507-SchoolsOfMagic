@@ -183,6 +183,7 @@ public class MenuManager : MonoBehaviour
         bossDeathSound.Post(this.gameObject);
         ActiveUI(victoryScreen);
         Cursor.lockState = CursorLockMode.None;
+        isPaused = true;
         Time.timeScale = 0f;
     }
     
@@ -191,6 +192,7 @@ public class MenuManager : MonoBehaviour
         freezeOverride = true;
         ActiveUI(deathScreen);
         Cursor.lockState = CursorLockMode.None;
+        isPaused = true;
         Time.timeScale = 0f;
     }
 
