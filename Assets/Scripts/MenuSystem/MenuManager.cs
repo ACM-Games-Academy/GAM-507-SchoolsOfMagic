@@ -57,10 +57,6 @@ public class MenuManager : MonoBehaviour
     public bool isPaused = false;
     private bool freezeOverride = false;
     
-    [Header("Boss Audio Events")]
-    public AK.Wwise.Event bossDeathSound;
-    public AK.Wwise.Event bossIdleStop;
-    public AK.Wwise.Event bossIdle;
 
     
 
@@ -114,7 +110,6 @@ public class MenuManager : MonoBehaviour
         
         weaponControl.currentWeapon.gunFired += OnWeaponShoot;
 
-        bossIdle.Post(this.gameObject);
 
         StartCoroutine(RedrawHUD(pHealth, pClass, pCurrentAmmo, pMaxAmmo, pIron, pBlood, bHealth));
         
@@ -179,8 +174,6 @@ public class MenuManager : MonoBehaviour
     private void OnVictory(object sender, EventArgs e)
     {
         freezeOverride = true;
-        bossIdleStop.Post(this.gameObject);
-        bossDeathSound.Post(this.gameObject);
         ActiveUI(victoryScreen);
         Cursor.lockState = CursorLockMode.None;
         isPaused = true;

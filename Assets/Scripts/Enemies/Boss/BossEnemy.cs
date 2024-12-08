@@ -12,6 +12,10 @@ public class BossEnemy : Enemy
     [Header("Wwise Music Events")]
     public AK.Wwise.Event bossMusicStart;
     public AK.Wwise.Event mainMusicStop;
+    public AK.Wwise.Event bossMusicStop;
+    public AK.Wwise.Event bossIdlestart;
+    public AK.Wwise.Event bossIdleStop;
+    public AK.Wwise.Event bossDeathSound;
     public GameObject wwiseGlobal;
 
     [HideInInspector] public Transform player;
@@ -27,6 +31,7 @@ public class BossEnemy : Enemy
 
     private void OnEnable()
     {
+        bossIdlestart.Post(this.gameObject);
         player = GameObject.FindWithTag("Player").transform;
         bossUI.SetActive(false);
 
@@ -85,6 +90,9 @@ public class BossEnemy : Enemy
             return;
         }
 
+        bossMusicStop.Post(this.gameObject);
+        bossIdleStop.Post(this.gameObject);
+        bossDeathSound.Post(this.gameObject);
         base.EnemyDeath();
         bossDeath.Invoke(this, EventArgs.Empty);
         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y - 40f, transform.position.z);

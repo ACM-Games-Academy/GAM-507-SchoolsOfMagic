@@ -33,6 +33,8 @@ public class movementController : MonoBehaviour
     [SerializeField] private movementStats stats;
 
     private bool paused = false;
+
+    [SerializeField] private GameObject menuManager;
     
 
     // Start is called before the first frame update
@@ -61,7 +63,7 @@ public class movementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        paused = GameObject.Find("MenuManager").GetComponent<MenuManager>().isPaused;
+        paused = menuManager.GetComponent<MenuManager>().isPaused;
         if (!paused)
         {
             CameraUpdate();
