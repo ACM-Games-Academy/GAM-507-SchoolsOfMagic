@@ -17,6 +17,7 @@ public class BossEnemy : Enemy
     public AK.Wwise.Event bossIdleStop;
     public AK.Wwise.Event bossDeathSound;
     public GameObject wwiseGlobal;
+    private bool bossDeathTracker = false;
 
     [HideInInspector] public Transform player;
     private bool bossStarted = false;
@@ -25,6 +26,7 @@ public class BossEnemy : Enemy
 
     private event EventHandler bossHealthChange;
     public event EventHandler bossDeath;
+
 
     // Declare the UnityEvent
     //public UnityEvent OnHealthInitialized = new UnityEvent();
@@ -90,11 +92,13 @@ public class BossEnemy : Enemy
         {
             return;
         }
-
-        bossMusicStop.Post(this.gameObject);
-        bossIdleStop.Post(this.gameObject);
-        bossDeathSound.Post(this.gameObject);
-        
+        if (!bossDeathTracker)
+        {
+            bossMusicStop.Post(this.gameObject);
+            bossIdleStop.Post(this.gameObject);
+            bossDeathSound.Post(this.gameObject);
+            bossDeathTracker = true;
+        }
         bossDeath.Invoke(this, EventArgs.Empty);
         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y - 40f, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 0.5f);
