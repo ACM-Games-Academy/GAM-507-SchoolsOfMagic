@@ -343,7 +343,12 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  playerObject: {fileID: 0}
+  stopBossMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  wwiseGlobal: {fileID: 0}
+  bossObject: {fileID: 0}
 --- !u!4 &243081641
 Transform:
   m_ObjectHideFlags: 0
@@ -1349,6 +1354,14 @@ PrefabInstance:
     - target: {fileID: 6272078415738347360, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_Looping
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272078415738347360, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_TimeUpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272078415738347360, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491418932076295049, guid: 019329c9201d161479d168d0f9f34ec7, type: 3}
       propertyPath: m_IsActive
