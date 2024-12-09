@@ -84,6 +84,7 @@ public class BossEnemy : Enemy
 
     protected override void EnemyDeath()
     {
+        base.EnemyDeath();
         //Prevent death before fight
         if (!bossStarted)
         {
@@ -93,7 +94,7 @@ public class BossEnemy : Enemy
         bossMusicStop.Post(this.gameObject);
         bossIdleStop.Post(this.gameObject);
         bossDeathSound.Post(this.gameObject);
-        base.EnemyDeath();
+        
         bossDeath.Invoke(this, EventArgs.Empty);
         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y - 40f, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 0.5f);
